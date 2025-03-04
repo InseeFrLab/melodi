@@ -1,0 +1,54 @@
+---
+title: "Filtrer par critère géographique"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Filtrer par critère géographique}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, include = FALSE}
+library(melodi)
+```
+
+# Filtrer sur le territoire de mon choix
+
+Pour les jeux de données proposant plusieurs niveaux géographique de diffusion, la fonction `get_local_data` facilite le filtrage de données par critère géographique.
+
+Pour cela, il est nécessaire de passer en paramètre le code géographique (`GEO`) et le niveau géographique (`GEO_OBJECT`). 
+
+**Exemple :** je souhaite filtrer le jeu de données sur les capacités en hébergement touristique (identifiant `DS_TOUR_CAP`) pour le département de Loire-Atlantique uniquement (`GEO=44` et `GEO_OBJECT=DEP`)
+
+```{r get_local_data, eval = FALSE}
+get_local_data(
+  ds_name = "DS_POPULATIONS_REFERENCE",
+  geo = "44",
+  geo_object = "DEP"
+) |> 
+  dplyr::arrange(POPREF_MEASURE, TIME_PERIOD)
+
+```
+
+# Filtrer sur toutes les communes du territoire de mon choix
+
+Pour les jeux de données proposant une diffusion au niveau communal, la fonction `get_local_data_by_com` facilite le filtrage de données sur toutes les communes du territoire de mon choix.
+
+**Exemple :** je souhaite filtrer le jeu de données sur les populations de référence issues du recensement de la population (identifiant `DS_POPULATIONS_REFERENCE`) sur toutes les communes de Nantes Métropole (`GEO=244400404` et `GEO_OBJECT=EPCI`)
+
+```{r get_local_data_by_com, eval = FALSE}
+my_local_data_by_com <- get_local_data_by_com(
+  ds_name = "DS_POPULATIONS_REFERENCE",
+  geo = "244400404",
+  geo_object = "EPCI"
+)
+```
+
+
+

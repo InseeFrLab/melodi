@@ -1,0 +1,33 @@
+Package: melodi
+Title: Retrieve Data from the Insee Melodi APIs
+Version: 0.1.1
+Authors@R: c(
+    person("Cédric", "Bobinec", email = "cedric.bobinec@insee.fr", role = c("aut", "cre")),
+    person(family = "Institut national de la statistique et des études économiques", role = "cph")
+  )
+Description: A wrapper for the Insee Melodi APIs that returns data frames and metadata.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Language: fr
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0),
+    vcr (>= 0.6.0)
+Config/testthat/edition: 3
+Imports: 
+    dplyr,
+    tidyr,
+    httr2,
+    magrittr,
+    glue,
+    data.table,
+    zip,
+    labelled,
+    tibble,
+    stats
+VignetteBuilder: knitr
+URL: https://InseeFrLab.github.io/melodi/, https://github.com/InseeFrLab/melodi
+BugReports: https://github.com/InseeFrLab/melodi/issues

@@ -1,0 +1,75 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=EPCI-244400404%2ACOM&POPREF_MEASURE=PMUN&totalCount=TRUE&maxResult=0
+    body:
+      encoding: ''
+      string: ''
+    headers: []
+  response:
+    status:
+      status_code: 200
+      message: OK
+    headers:
+      Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+      Connection: keep-alive
+      Content-Type: application/json
+      Date: Wed, 19 Feb 2025 13:45:53 GMT
+      Expires: '0'
+      Pragma: no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=100000; includeSubDomains
+      transfer-encoding: chunked
+      Vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: DENY
+      X-Gravitee-Request-Id: 1d2a5661-c5b3-4612-aa56-61c5b3961251
+      X-Gravitee-Transaction-Id: 1d2a5661-c5b3-4612-aa56-61c5b3961251
+      X-XSS-Protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '{"identifier":"DS_POPULATIONS_REFERENCE","title":{"fr":"Populations
+        de référence","en":"Reference populations "},"publisher":{"id":"INSEE","label":[{"lang":"fr","content":"Institut
+        national de la statistique et des etudes economiques (INSEE)"},{"lang":"en","content":"National
+        Institute of Statistics and Economic Studies"}]},"observations":[],"paging":{"first":"https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=EPCI-244400404%2ACOM&POPREF_MEASURE=PMUN&totalCount=TRUE&maxResult=0&page=1","next":"https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=EPCI-244400404%2ACOM&POPREF_MEASURE=PMUN&totalCount=TRUE&maxResult=0&page=2","last":"https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=EPCI-244400404%2ACOM&POPREF_MEASURE=PMUN&totalCount=TRUE&maxResult=0&page=2147483647","isLast":false,"count":72}}'
+  recorded_at: 2025-02-19 13:45:54 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0
+- request:
+    method: get
+    uri: https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=EPCI-244400404%2ACOM&POPREF_MEASURE=PMUN&idTerritoire=TRUE&maxResult=10000
+    body:
+      encoding: ''
+      string: ''
+    headers: []
+  response:
+    status:
+      status_code: 200
+      message: OK
+    headers:
+      Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+      Connection: keep-alive
+      Content-Type: application/json
+      Date: Wed, 19 Feb 2025 13:45:54 GMT
+      Expires: '0'
+      Pragma: no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=100000; includeSubDomains
+      transfer-encoding: chunked
+      Vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: DENY
+      X-Gravitee-Request-Id: 7dc4029d-027a-4e94-8402-9d027a2e9448
+      X-Gravitee-Transaction-Id: 7dc4029d-027a-4e94-8402-9d027a2e9448
+      X-XSS-Protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '{"identifier":"DS_POPULATIONS_REFERENCE","title":{"fr":"Populations
+        de référence","en":"Reference populations "},"publisher":{"id":"INSEE","label":[{"lang":"fr","content":"Institut
+        national de la statistique et des etudes economiques (INSEE)"},{"lang":"en","content":"National
+        Institute of Statistics and Economic Studies"}]},"observations":[{"dimensions":{"GEO":"2024-COM-44120","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":5050.0}}},{"dimensions":{"GEO":"2024-COM-44162","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":50561.0}}},{"dimensions":{"GEO":"2024-COM-44109","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":325070.0}}},{"dimensions":{"GEO":"2024-COM-44198","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":9163.0}}},{"dimensions":{"GEO":"2024-COM-44190","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":26872.0}}},{"dimensions":{"GEO":"2024-COM-44024","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":2586.0}}},{"dimensions":{"GEO":"2024-COM-44047","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":19085.0}}},{"dimensions":{"GEO":"2024-COM-44114","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":28341.0}}},{"dimensions":{"GEO":"2024-COM-44047","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":20900.0}}},{"dimensions":{"GEO":"2024-COM-44020","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":19049.0}}},{"dimensions":{"GEO":"2024-COM-44035","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":19348.0}}},{"dimensions":{"GEO":"2024-COM-44215","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":23581.0}}},{"dimensions":{"GEO":"2024-COM-44120","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":5335.0}}},{"dimensions":{"GEO":"2024-COM-44009","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":8867.0}}},{"dimensions":{"GEO":"2024-COM-44026","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":20535.0}}},{"dimensions":{"GEO":"2024-COM-44026","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":19384.0}}},{"dimensions":{"GEO":"2024-COM-44074","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":4026.0}}},{"dimensions":{"GEO":"2024-COM-44101","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":5972.0}}},{"dimensions":{"GEO":"2024-COM-44171","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":2114.0}}},{"dimensions":{"GEO":"2024-COM-44150","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":3912.0}}},{"dimensions":{"GEO":"2024-COM-44094","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":3208.0}}},{"dimensions":{"GEO":"2024-COM-44035","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":17443.0}}},{"dimensions":{"GEO":"2024-COM-44024","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":2790.0}}},{"dimensions":{"GEO":"2024-COM-44018","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":8281.0}}},{"dimensions":{"GEO":"2024-COM-44150","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":3548.0}}},{"dimensions":{"GEO":"2024-COM-44018","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":6003.0}}},{"dimensions":{"GEO":"2024-COM-44009","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":9617.0}}},{"dimensions":{"GEO":"2024-COM-44026","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":18022.0}}},{"dimensions":{"GEO":"2024-COM-44020","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":20590.0}}},{"dimensions":{"GEO":"2024-COM-44172","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":15247.0}}},{"dimensions":{"GEO":"2024-COM-44194","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":7915.0}}},{"dimensions":{"GEO":"2024-COM-44094","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":3393.0}}},{"dimensions":{"GEO":"2024-COM-44171","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":1529.0}}},{"dimensions":{"GEO":"2024-COM-44109","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":287845.0}}},{"dimensions":{"GEO":"2024-COM-44172","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":12699.0}}},{"dimensions":{"GEO":"2024-COM-44024","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":2760.0}}},{"dimensions":{"GEO":"2024-COM-44035","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":20483.0}}},{"dimensions":{"GEO":"2024-COM-44074","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":3915.0}}},{"dimensions":{"GEO":"2024-COM-44194","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":8534.0}}},{"dimensions":{"GEO":"2024-COM-44171","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":1776.0}}},{"dimensions":{"GEO":"2024-COM-44198","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":7575.0}}},{"dimensions":{"GEO":"2024-COM-44143","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":38932.0}}},{"dimensions":{"GEO":"2024-COM-44150","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":3991.0}}},{"dimensions":{"GEO":"2024-COM-44109","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":306694.0}}},{"dimensions":{"GEO":"2024-COM-44162","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":43082.0}}},{"dimensions":{"GEO":"2024-COM-44018","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":7620.0}}},{"dimensions":{"GEO":"2024-COM-44114","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":24556.0}}},{"dimensions":{"GEO":"2024-COM-44143","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":40368.0}}},{"dimensions":{"GEO":"2024-COM-44190","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":28373.0}}},{"dimensions":{"GEO":"2024-COM-44172","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":16227.0}}},{"dimensions":{"GEO":"2024-COM-44074","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":4172.0}}},{"dimensions":{"GEO":"2024-COM-44204","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":9778.0}}},{"dimensions":{"GEO":"2024-COM-44190","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":25293.0}}},{"dimensions":{"GEO":"2024-COM-44198","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":8216.0}}},{"dimensions":{"GEO":"2024-COM-44204","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":10956.0}}},{"dimensions":{"GEO":"2024-COM-44215","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":26048.0}}},{"dimensions":{"GEO":"2024-COM-44143","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":43349.0}}},{"dimensions":{"GEO":"2024-COM-44009","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":8168.0}}},{"dimensions":{"GEO":"2024-COM-44101","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":6523.0}}},{"dimensions":{"GEO":"2024-COM-44162","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":46603.0}}},{"dimensions":{"GEO":"2024-COM-44166","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":5692.0}}},{"dimensions":{"GEO":"2024-COM-44215","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":21681.0}}},{"dimensions":{"GEO":"2024-COM-44166","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":5238.0}}},{"dimensions":{"GEO":"2024-COM-44047","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":23541.0}}},{"dimensions":{"GEO":"2024-COM-44194","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":6945.0}}},{"dimensions":{"GEO":"2024-COM-44101","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":6215.0}}},{"dimensions":{"GEO":"2024-COM-44094","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":3056.0}}},{"dimensions":{"GEO":"2024-COM-44204","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":7886.0}}},{"dimensions":{"GEO":"2024-COM-44120","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":4504.0}}},{"dimensions":{"GEO":"2024-COM-44166","FREQ":"A","TIME_PERIOD":"2022","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":6024.0}}},{"dimensions":{"GEO":"2024-COM-44020","FREQ":"A","TIME_PERIOD":"2011","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":18343.0}}},{"dimensions":{"GEO":"2024-COM-44114","FREQ":"A","TIME_PERIOD":"2016","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":25931.0}}}],"paging":{}}'
+  recorded_at: 2025-02-19 13:45:54 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

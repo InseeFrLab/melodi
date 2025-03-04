@@ -1,0 +1,13 @@
+^melodi\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^\.gitlab-ci\.yml$
+^dev/creation_history\.R$
+^dev/dev_history\.R$
+^README\.Rmd$
+^doc$
+^docs$
+^Meta$
+pkgdown
+^.github
+^\.github$

@@ -1,0 +1,38 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.insee.fr/melodi/data/DS_NEXISTEPAS?totalCount=TRUE&maxResult=0
+    body:
+      encoding: ''
+      string: ''
+    headers: []
+  response:
+    status:
+      status_code: 400
+      message: Bad Request
+    headers:
+      Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+      Connection: keep-alive
+      Content-Length: '27'
+      Content-Type: text/plain;charset=UTF-8
+      Date: Wed, 19 Feb 2025 13:48:48 GMT
+      Expires: '0'
+      Pragma: no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=100000; includeSubDomains
+      Vary:
+      - Origin
+      - Access-Control-Request-Method
+      - Access-Control-Request-Headers
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: DENY
+      X-Gravitee-Request-Id: 7f8bac91-abbe-44c0-8bac-91abbe84c02d
+      X-Gravitee-Transaction-Id: 7f8bac91-abbe-44c0-8bac-91abbe84c02d
+      X-XSS-Protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: DS_NEXISTEPAS n'existe pas.
+  recorded_at: 2025-02-19 13:48:48 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

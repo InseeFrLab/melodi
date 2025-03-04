@@ -1,0 +1,181 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.insee.fr/melodi/catalog/all
+    body:
+      encoding: ''
+      string: ''
+    headers: []
+  response:
+    status:
+      status_code: 200
+      message: OK
+    headers:
+      Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+      Connection: keep-alive
+      Content-Type: application/json
+      Date: Wed, 19 Feb 2025 13:29:53 GMT
+      Expires: '0'
+      Pragma: no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=100000; includeSubDomains
+      transfer-encoding: chunked
+      Vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: DENY
+      X-Gravitee-Request-Id: 6d89febe-081d-4d94-89fe-be081d7d943d
+      X-Gravitee-Transaction-Id: 6d89febe-081d-4d94-89fe-be081d7d943d
+      X-XSS-Protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '[{"identifier":"DS_RP_EDUCATION","title":[{"lang":"fr","content":"Éducation
+        - Scolarisation"},{"lang":"en","content":"Education - Schooling"}],"subtitle":[{"lang":"fr","content":"Recensement
+        de la population - Exploitation principale "},{"lang":"en","content":"Main
+        operation"}],"description":[{"lang":"fr","content":"Les données sont détaillées
+        pour la population scolarisée âgée de 2 ans ou plus selon l''âge et le sexe.
+        Elles sont fournies à différents niveaux géographiques (commune, arrondissement
+        municipal, arrondissement, département, région, établissement public de coopération
+        intercommunal, unité urbaines 2020, aire d''attraction des villes 2020, bassin
+        de vie 2022, zone d''emploi 2020, France)."},{"lang":"en","content":"Data
+        are broken down by age and gender for the school-age population aged 2 and
+        over. They are provided at different geographical levels (commune, municipal
+        district, arrondissement, département, region, public inter-municipal cooperation
+        establishment, 2020 urban unit, 2020 city catchment area, 2022 catchment area,
+        2020 employment zone, France)."}],"accessRights":[{"lang":"fr","content":"Libre"},{"lang":"en","content":"Free"}],"processStep":[{"lang":"fr","content":"inseeApi"},{"lang":"en","content":"inseeApi"}],"confidentialityStatus":[{"lang":"fr","content":"Libre"},{"lang":"en","content":"Free"}],"type":[{"lang":"fr","content":"Données
+        agrégées"},{"lang":"en","content":"Aggregated data"}],"issued":"2025-02-18T09:36:19","creator":"Insee","modified":"2025-02-18T12:02:07","publisher":{"id":"INSEE","label":[{"lang":"fr","content":"Institut
+        national de la statistique et des etudes economiques (INSEE)"},{"lang":"en","content":"National
+        Institute of Statistics and Economic Studies"}]},"wasGeneratedBy":[{"id":"s21","label":[{"lang":"fr","content":"Recensement
+        de la population"},{"lang":"en","content":"Population census"}]}],"temporal":{"startPeriod":"2010-01-01T00:00:00","endPeriod":"2021-01-01T00:00:00"},"temporalResolution":[{"label":[{"lang":"fr","content":"Annuel"},{"lang":"en","content":"Annual"}]}],"accrualPeriodicity":{"label":[{"lang":"fr","content":"Annuel"},{"lang":"en","content":"Annual"}]},"spatial":{"id":"FEHM","label":[{"lang":"fr","content":"France
+        hors Mayotte"},{"lang":"en","content":"France excluding Mayotte"}]},"spatialResolution":[{"id":"COM","label":[{"lang":"fr","content":"Commune"},{"lang":"en","content":"Commune"}]},{"id":"ARR","label":[{"lang":"fr","content":"Arrondissement"},{"lang":"en","content":"District"}]},{"id":"DEP","label":[{"lang":"fr","content":"Département"},{"lang":"en","content":"Department"}]},{"id":"REG","label":[{"lang":"fr","content":"Région"},{"lang":"en","content":"Region"}]},{"id":"EPCI","label":[{"lang":"fr","content":"Etablissement
+        public de coopération intercommunal"},{"lang":"en","content":"Intercommunal
+        cooperation public Establishment"}]},{"id":"AAV2020","label":[{"lang":"fr","content":"Aires
+        d''attraction des villes 2020"},{"lang":"en","content":"Functional areas"}]},{"id":"UU2020","label":[{"lang":"fr","content":"Unités
+        urbaines 2020"},{"lang":"en","content":"Urban unit"}]},{"id":"ZE2020","label":[{"lang":"fr","content":"Zones
+        d''emploi 2020"},{"lang":"en","content":"Employment zone"}]},{"id":"BV2022","label":[{"lang":"fr","content":"Bassins
+        de vie 2022"},{"lang":"en","content":"Commuter belt"}]},{"id":"ARM","label":[{"lang":"fr","content":"Arrondissement
+        municipal"},{"lang":"en","content":"Municipal district"}]},{"id":"FRANCE","label":[{"lang":"fr","content":"France"},{"lang":"en","content":"France"}]}],"spatialTemporal":"2024-01-01T01:00:00","statisticalUnit":[{"label":[{"lang":"fr","content":"Individu"},{"lang":"en","content":"Person"}]}],"theme":[{"label":[{"lang":"fr","content":"1.3
+        Education"},{"lang":"en","content":"1.3 Education"}],"themeTaxonomy":"classificationOfStatisticalDomain"},{"label":[{"lang":"fr","content":"1.
+        Statistiques démographiques et sociales"},{"lang":"en","content":"1. Demographic
+        and social statistics"}],"themeTaxonomy":"classificationOfStatisticalDomain"},{"label":[{"lang":"fr","content":"Démographie"},{"lang":"en","content":"Demography"}],"themeTaxonomy":"inseeTheme"},{"label":[{"lang":"fr","content":"Éducation
+        – Formation – Compétences"},{"lang":"en","content":"Education – Training –
+        Skills"}],"themeTaxonomy":"inseeTheme"}],"landingPage":[[{"lang":"fr","url":""},{"lang":"en","url":""}]],"structure":{"dsd":"DSD_RP_EDUCATION"},"product":[{"id":"DS_RP_EDUCATION_CSV_FR","format":"CSV","issued":"2025-02-18T11:52:41","modified":"2025-02-18T11:52:41","title":"Éducation
+        - Scolarisation","accessURL":"https://api.insee.fr/melodi/file/DS_RP_EDUCATION/DS_RP_EDUCATION_CSV_FR","byteSize":67456361,"packageFormat":"application/zip","mediaType":"text/csv","language":"FR"}],"numObservations":7054374,"numSeries":0,"keyword":[{"label":[{"lang":"fr","content":"éducation"},{"lang":"en","content":"education"}]},{"label":[{"lang":"fr","content":"scolarisation"},{"lang":"en","content":"schooling"}]}],"scopeNote":[{"lang":"fr","content":"Ce
+        jeu de données a été modifié depuis sa diffusion de juin 2024. "},{"lang":"en","content":""}],"relations":["https://www.insee.fr/fr/information/2383177","https://www.insee.fr/fr/information/2383278"],"abstract":[{"lang":"fr","content":"Caractéristiques
+        de la population scolarisée âgée de 2 ans ou plus selon l''âge et le sexe
+        au niveau communal et supracommunal pour la France hors Mayotte."},{"lang":"en","content":"Characteristics
+        of the school-going population aged 2 and over by age and gender at municipal
+        and supra-municipal level for France excluding Mayotte."}]},{"identifier":"DD_EEC_SERIES","uri":"http://id.insee.fr/catalogues/jeuDeDonnees/25baaf1f-61cf-4d50-9124-1477afca2aa4","title":[{"lang":"fr","content":"Activité,
+        emploi et chômage - séries longues"},{"lang":"en","content":"Activity, employment
+        and unemployment - times series"}],"subtitle":[{"lang":"fr","content":"Enquête
+        Emploi en Continu "},{"lang":"en","content":"Labour Force Survey - High Value
+        Dataset"}],"description":[{"lang":"fr","content":"Les données sont détaillées
+        par sexe, âge, diplôme et catégorie socio-professionnelle (PCS). Pour l’emploi,
+        les données sont détaillées par type de contrat, composante du sous-emploi,
+        temps de travail (temps complet ou partiel). Plusieurs indicateurs en taux
+        sont disponibles : taux d''activité, taux d''emploi ou taux de chômage. \n\nCe
+        jeu de données regroupe notamment les données annuelles de forte valeur (High
+        Value Dataset ou HVD statistiques) désignées par Eurostat sur les sujets suivants
+        : l''emploi , le chômage et la main d’œuvre potentielle."},{"lang":"en","content":"The
+        data is broken down by gender, age, qualification and socio-professional category
+        (PCS). For employment, data is broken down by type of contract, component
+        of underemployment, working time (full or part-time). Several rate indicators
+        are available: activity rate, employment rate and unemployment rate. \n\nThis
+        dataset includes the annual High Value Dataset (HVD statistics) designated
+        by Eurostat on the following subjects: employment, unemployment and potential
+        labour force."}],"accessRights":[{"lang":"fr","content":"Libre"},{"lang":"en","content":"Free"}],"processStep":[{"lang":"fr","content":"inseeApi"},{"lang":"en","content":"inseeApi"}],"confidentialityStatus":[{"lang":"fr","content":"Libre"},{"lang":"en","content":"Free"}],"type":[{"lang":"fr","content":"Données
+        agrégées"},{"lang":"en","content":"Aggregated data"}],"issued":"2023-12-15T10:34:50","creator":"Insee","modified":"2024-09-09T17:47:40","publisher":{"id":"INSEE","label":[{"lang":"fr","content":"Institut
+        national de la statistique et des etudes economiques (INSEE)"},{"lang":"en","content":"National
+        Institute of Statistics and Economic Studies"}]},"wasGeneratedBy":[{"id":"s1223","label":[{"lang":"fr","content":"Enquête
+        emploi en continu"},{"lang":"en","content":"Labour force survey"}]},{"id":"s23","label":[{"lang":"fr","content":"Enquête
+        Emploi"},{"lang":"en","content":"Employment survey"}]}],"temporal":{"startPeriod":"1975-01-01T00:00:00","endPeriod":"2023-01-01T00:00:00"},"temporalResolution":[{"label":[{"lang":"fr","content":"Annuel"},{"lang":"en","content":"Annual"}]}],"accrualPeriodicity":{"label":[{"lang":"fr","content":"Annuel"},{"lang":"en","content":"Annual"}]},"spatial":{"id":"FEHM","label":[{"lang":"fr","content":"France
+        hors Mayotte"},{"lang":"en","content":"France excluding Mayotte"}]},"spatialResolution":[{"id":"NAT","label":[{"lang":"fr","content":"Niveau
+        national"},{"lang":"en","content":"National level"}]}],"statisticalUnit":[{"label":[{"lang":"fr","content":"Individu"},{"lang":"en","content":"Person"}]}],"theme":[{"label":[{"lang":"fr","content":"1.2
+        Travail"},{"lang":"en","content":"1.2 Labour"}],"themeTaxonomy":"classificationOfStatisticalDomain"},{"label":[{"lang":"fr","content":"Emploi
+        – Population active"},{"lang":"en","content":"Employment – Labour force"}],"themeTaxonomy":"inseeTheme"},{"label":[{"lang":"fr","content":"Chômage"},{"lang":"en","content":"Unemployment"}],"themeTaxonomy":"inseeTheme"}],"landingPage":[[{"lang":"fr","url":""},{"lang":"en","url":""}]],"structure":{"dsd":"DSD_EEC"},"product":[{"id":"DD_EEC_SERIES_CSV_FR","format":"CSV","issued":"2024-07-15T15:26:32","modified":"2025-02-04T09:49:11","title":"Activité,
+        emploi et chômage - séries longues","accessURL":"https://api.insee.fr/melodi/file/DD_EEC_SERIES/DD_EEC_SERIES_CSV_FR","byteSize":535410,"packageFormat":"application/zip","mediaType":"text/csv","language":"FR"}],"numObservations":71781,"numSeries":0,"raccourcis":[{"raccourcis":[{"idComponent":"FREQ","choix":["A"]},{"idComponent":"SEX","choix":["_T"]},{"idComponent":"AGE","choix":["_T"]},{"idComponent":"ANCSORFI2","choix":["_T"]},{"idComponent":"COMPOHALO","choix":["_T"]},{"idComponent":"UNEMPDUR","choix":["_T"]},{"idComponent":"UNDEREMP","choix":["_T"]},{"idComponent":"ACTIVITY","choix":["_T"]},{"idComponent":"WKTIME","choix":["_T"]},{"idComponent":"IMMI","choix":["_T"]},{"idComponent":"EDUC","choix":["_T"]},{"idComponent":"PCS","choix":["_T"]},{"idComponent":"EMPFORM","choix":["_T"]},{"idComponent":"EMPSTA","choix":["_T"]},{"idComponent":"EEC_MEASURE","choix":["ACTRATE"]}],"titre":{"fr":"Taux
+        d''activité","en":"Activity rate"},"description":{"fr":"","en":""}},{"raccourcis":[{"idComponent":"FREQ","choix":["A"]},{"idComponent":"SEX","choix":["_T"]},{"idComponent":"AGE","choix":["_T"]},{"idComponent":"ANCSORFI2","choix":["_T"]},{"idComponent":"COMPOHALO","choix":["_T"]},{"idComponent":"UNEMPDUR","choix":["_T"]},{"idComponent":"UNDEREMP","choix":["_T"]},{"idComponent":"ACTIVITY","choix":["_T"]},{"idComponent":"WKTIME","choix":["_T"]},{"idComponent":"IMMI","choix":["_T"]},{"idComponent":"EDUC","choix":["_T"]},{"idComponent":"PCS","choix":["_T"]},{"idComponent":"EMPFORM","choix":["_T"]},{"idComponent":"EEC_MEASURE","choix":["EMPRATE"]},{"idComponent":"EMPSTA","choix":["1"]}],"titre":{"fr":"Taux
+        d''emploi","en":"Employment rate"},"description":{"fr":"","en":""}},{"raccourcis":[{"idComponent":"FREQ","choix":["A"]},{"idComponent":"SEX","choix":["_T"]},{"idComponent":"AGE","choix":["_T"]},{"idComponent":"ANCSORFI2","choix":["_T"]},{"idComponent":"COMPOHALO","choix":["_T"]},{"idComponent":"UNEMPDUR","choix":["_T"]},{"idComponent":"UNDEREMP","choix":["_T"]},{"idComponent":"ACTIVITY","choix":["_T"]},{"idComponent":"EEC_MEASURE","choix":["UNEMPRATE"]},{"idComponent":"WKTIME","choix":["_T"]},{"idComponent":"IMMI","choix":["_T"]},{"idComponent":"EDUC","choix":["_T"]},{"idComponent":"PCS","choix":["_T"]},{"idComponent":"EMPFORM","choix":["_T"]},{"idComponent":"EMPSTA","choix":["2"]}],"titre":{"fr":"Taux
+        de chômage ","en":"Unemployment rate"},"description":{"fr":"","en":""}}],"keyword":[{"label":[{"lang":"fr","content":"HVD"},{"lang":"en","content":"HVD"}]}],"ordreComposants":["TIME_PERIOD","OBS_VALUE","EEC_MEASURE","SEX","AGE","EMPFORM","EMPSTA","PCS","EDUC","IMMI","WKTIME","ACTIVITY","UNDEREMP","UNEMPDUR","COMPOHALO","ANCSORFI2","OBS_STATUS","CONF_STATUS","UNIT_MULT","DECIMALS","FREQ"],"scopeNote":[{"lang":"fr","content":"Des
+        corrections sur les données concernant la population totale ainsi que sur
+        l''emploi et la part dans l''emploi selon le plus haut diplôme obtenu, par
+        sexe et âge regroupé, en moyenne annuelle ont été apportées en septembre 2024
+        afin de rectifier une erreur, portant sur les années 2018, 2019 et 2020 uniquement."},{"lang":"en","content":"Corrections
+        to the data on the total population and on employment and the share of employment
+        by highest qualification obtained, by gender and age grouped together, as
+        an annual average, were made in September 2024 in order to rectify an error
+        relating to the years 2018, 2019 and 2020 only."}],"relations":["https://www.insee.fr/fr/statistiques/8201155"],"abstract":[{"lang":"fr","content":"Séries
+        longues sur la population active, l’emploi, le chômage et le halo autour du
+        chômage."},{"lang":"en","content":"Time series on the active population, employment,
+        unemployment and the halo around unemployment."}]},{"identifier":"DS_EC_DECES","title":[{"lang":"fr","content":"Nombre
+        de décès "},{"lang":"en","content":"Number of deaths"}],"subtitle":[{"lang":"fr","content":"Décès
+        comptabilisés au lieu du décès"},{"lang":"en","content":"Deaths are recorded
+        based on the location of death"}],"description":[{"lang":"fr","content":"Les
+        décès sont dénombrés selon leur date de survenue et selon le département ou
+        la région du lieu de décès (et non du lieu de domicile du défunt)."},{"lang":"en","content":"Deaths
+        are counted based on their occurrence date and by the department or region
+        of the place of death (not the deceased person''s place of residence)."}],"accessRights":[{"lang":"fr","content":"Libre"},{"lang":"en","content":"Free"}],"processStep":[{"lang":"fr","content":"inseeApi"},{"lang":"en","content":"inseeApi"}],"confidentialityStatus":[{"lang":"fr","content":"Libre"},{"lang":"en","content":"Free"}],"type":[{"lang":"fr","content":"Données
+        agrégées"},{"lang":"en","content":"Aggregated data"}],"issued":"2024-04-08T15:39:49","creator":"Insee","modified":"2025-02-03T18:14:11","publisher":{"id":"INSEE","label":[{"lang":"fr","content":"Institut
+        national de la statistique et des etudes economiques (INSEE)"},{"lang":"en","content":"National
+        Institute of Statistics and Economic Studies"}]},"wasGeneratedBy":[{"id":"s1170","label":[{"lang":"fr","content":"État
+        civil"},{"lang":"en","content":"Civil register"}]},{"id":"s89","label":[{"lang":"fr","content":"Répertoires
+        de personnes physiques"},{"lang":"en","content":"Register of natural persons"}]}],"temporal":{"startPeriod":"2014-01-01T00:00:00","endPeriod":"2024-12-31T00:00:00"},"temporalResolution":[{"label":[{"lang":"fr","content":"Annuel"},{"lang":"en","content":"Annual"}]},{"label":[{"lang":"fr","content":"Daily"},{"lang":"en","content":"Daily"}]},{"label":[{"lang":"fr","content":"Mensuel"},{"lang":"en","content":"Monthly"}]}],"accrualPeriodicity":{"label":[{"lang":"fr","content":"Mensuel"},{"lang":"en","content":"Monthly"}]},"spatial":{"id":"FE","label":[{"lang":"fr","content":"France
+        entière"},{"lang":"en","content":"France"}]},"spatialResolution":[{"id":"REG","label":[{"lang":"fr","content":"Région"},{"lang":"en","content":"Region"}]},{"id":"DEP","label":[{"lang":"fr","content":"Département"},{"lang":"en","content":"Department"}]},{"id":"FRANCE","label":[{"lang":"fr","content":"France"},{"lang":"en","content":"France"}]}],"spatialTemporal":"2021-01-01T01:00:00","statisticalUnit":[{"label":[{"lang":"fr","content":"Individu"},{"lang":"en","content":"Person"}]}],"theme":[{"label":[{"lang":"fr","content":"1.1
+        Population et immigration"},{"lang":"en","content":"1.1 Population and migration"}],"themeTaxonomy":"classificationOfStatisticalDomain"},{"label":[{"lang":"fr","content":"1.
+        Statistiques démographiques et sociales"},{"lang":"en","content":"1. Demographic
+        and social statistics"}],"themeTaxonomy":"classificationOfStatisticalDomain"},{"label":[{"lang":"fr","content":"Décès
+        – Mortalité – Espérance de vie"},{"lang":"en","content":"Deaths – Mortality
+        – Life expectancy"}],"themeTaxonomy":"inseeTheme"},{"label":[{"lang":"fr","content":"Démographie"},{"lang":"en","content":"Demography"}],"themeTaxonomy":"inseeTheme"}],"landingPage":[[{"lang":"fr","url":""},{"lang":"en","url":""}]],"structure":{"dsd":"DSD_DECES"},"product":[{"id":"T1_DECES_JOUR_DEP_REG_FR","format":"XLSX","issued":"2025-02-03T18:11:08","modified":"2025-02-03T18:11:08","title":"Nombre
+        de décès par jour par département et par région de décès","accessURL":"https://api.insee.fr/melodi/file/DS_EC_DECES/T1_DECES_JOUR_DEP_REG_FR","byteSize":1540802,"mediaType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","language":"FR"},{"id":"T1_DECES_JOUR_NAT_FR","format":"XLSX","issued":"2025-02-03T18:10:32","modified":"2025-02-03T18:10:32","title":"Nombre
+        de décès par jour au niveau national","accessURL":"https://api.insee.fr/melodi/file/DS_EC_DECES/T1_DECES_JOUR_NAT_FR","byteSize":17820,"mediaType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","language":"FR"},{"id":"T2_DECES_AN_DEP_REG_FR","format":"XLSX","issued":"2025-02-03T18:10:36","modified":"2025-02-03T18:10:36","title":"Nombre
+        de décès annuels au niveau départemental et régional","accessURL":"https://api.insee.fr/melodi/file/DS_EC_DECES/T2_DECES_AN_DEP_REG_FR","byteSize":20320,"mediaType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","language":"FR"},{"id":"T3_DECES_JOUR_SEX_AGE_NAT_FR","format":"XLSX","issued":"2025-02-03T18:10:39","modified":"2025-02-03T18:10:39","title":"Nombre
+        de décès quotidiens selon le sexe et l''âge, au niveau national","accessURL":"https://api.insee.fr/melodi/file/DS_EC_DECES/T3_DECES_JOUR_SEX_AGE_NAT_FR","byteSize":82295,"mediaType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","language":"FR"},{"id":"T4_DECES_JOUR_LIEU_NAT_FR","format":"XLSX","issued":"2025-02-03T18:10:45","modified":"2025-02-03T18:10:45","title":"Nombre
+        de décès quotidiens selon le lieu de décès, au niveau national","accessURL":"https://api.insee.fr/melodi/file/DS_EC_DECES/T4_DECES_JOUR_LIEU_NAT_FR","byteSize":20519,"mediaType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","language":"FR"},{"id":"T5_DECES_MOIS_LIEU_DEP_REG_FR","format":"XLSX","issued":"2025-02-03T18:10:46","modified":"2025-02-03T18:10:46","title":"Nombre
+        de décès par mois selon le lieu de décès, par département et par région de
+        décès","accessURL":"https://api.insee.fr/melodi/file/DS_EC_DECES/T5_DECES_MOIS_LIEU_DEP_REG_FR","byteSize":66014,"mediaType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","language":"FR"},{"id":"DS_EC_DECES_CSV_FR","format":"CSV","issued":"2025-02-03T18:10:48","modified":"2025-02-03T18:10:48","title":"Nombre
+        de décès ","accessURL":"https://api.insee.fr/melodi/file/DS_EC_DECES/DS_EC_DECES_CSV_FR","byteSize":7035135,"packageFormat":"application/zip","mediaType":"text/csv","language":"FR"}],"numObservations":1289797,"numSeries":0,"scopeNote":[{"lang":"fr","content":"En
+        raison des perturbations consécutives au passage du cyclone Chido à Mayotte,
+        l’enregistrement des décès et des naissances survenus dans ce territoire au
+        mois de décembre 2024 a pu subir des retards. Des décès et naissances de décembre
+        2024 pourront être déclarés les mois suivants.\n\nL’Insee gère le Répertoire
+        National d’Identification des Personnes Physiques (RNIPP) conformément au
+        décret n° 82-103 du 22 janvier 1982. D’après ce décret, les communes doivent
+        transmettre à l’Insee les informations dès qu’un acte d’état civil est dressé
+        sur le territoire français. Des délais légaux de transmission sont prévus,
+        qui peuvent être allongés en situation particulière, par exemple en ce moment
+        avec les circonstances exceptionnelles liées au passage du cyclone à Mayotte.\n\nLes
+        décès comptabilisés par l’Insee sont ceux qui ont été enregistrés en mairie
+        et transmis à l’Insee. Conformément aux dispositions des articles 78 à 92
+        du Code civil, les décès sont enregistrés dans la commune où ils sont survenus
+        (et non dans la commune de domicile du défunt). Un acte de décès doit être
+        établi pour toute personne décédée, quelle que soit sa nationalité, son statut
+        administratif (régulier ou irrégulier), y compris si la personne ne peut pas
+        être identifiée (décès sous X) et quel que soit le temps écoulé entre le décès
+        et la découverte du corps.\n\nLes décès comptabilisés par l’Insee sont par
+        ailleurs des décès toutes causes confondues. En effet, les informations relatives
+        aux décès dont est destinataire l’Insee ne comprennent pas les causes de décès.
+        "},{"lang":"en","content":"Due to disruptions following the passage of Cyclone
+        Chido in Mayotte, the registration of deaths and births that occurred in this
+        territory in December 2024 may have been delayed. Deaths and births from December
+        2024 may be declared in the following months.\n\nInsee manages the National
+        Directory for the Identification of Natural Persons (RNIPP) in accordance
+        with Decree No. 82-103 of January 22, 1982. According to this decree, municipalities
+        must transmit information to Insee as soon as a civil status record is issued
+        in French territory. Legal transmission deadlines are established, which may
+        be extended in special circumstances, such as the current exceptional situation
+        caused by the cyclone in Mayotte."}],"relations":["https://www.insee.fr/fr/statistiques/7764286"],"abstract":[{"lang":"fr","content":"Le
+        nombre de décès quotidien, mensuel et annuel est disponible au niveau départemental,
+        régional et national. Certains indicateurs sont ventilés par lieu de décès
+        ou par sexe et âge. Selon l’indicateur, la disponibilité des données varie
+        des deux aux dix dernières années. D’autres indicateurs tels que le nombre
+        de décès cumulés depuis le 1er janvier, le nombre moyen de décès par jour
+        au cours des sept derniers jours ou par mois sont également disponibles."},{"lang":"en","content":"The
+        number of daily, monthly, and annual deaths is available at the departmental,
+        regional, and national levels. Some indicators are broken down by place of
+        death or by sex and age. Depending on the indicator, data availability ranges
+        from the last two to ten years. Other indicators, such as the number of deaths
+        accumulated since January 1st, the average number of deaths per day over the
+        past seven days, or per month, are also available."}]}]'
+  recorded_at: 2025-02-19 13:29:54 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0
