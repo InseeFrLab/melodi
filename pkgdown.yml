@@ -1,0 +1,12 @@
+pandoc: 3.1.3
+pkgdown: 2.1.1
+pkgdown_sha: ~
+articles:
+  A-filtre-explorateur: A-filtre-explorateur.html
+  B-donnees-locales: B-donnees-locales.html
+  C-usage_backoffice: C-usage_backoffice.html
+  melodi: melodi.html
+last_built: 2025-03-04T15:58Z
+urls:
+  reference: https://InseeFrLab.github.io/melodi/reference
+  article: https://InseeFrLab.github.io/melodi/articles
