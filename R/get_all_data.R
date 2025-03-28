@@ -21,20 +21,50 @@ get_all_data <- function(
   # lang parameter not exported yet (today most DS only have FR version)
   lang <- "FR"
 
-  downloaded_zip_path <- get_file(
+  # get product url from DS metadata
+  ds_products <- get_metadata(
     ds_name = ds_name,
-    file_name = glue::glue("{ds_name}_CSV_{lang}"),
-    download_file_name = glue::glue("{ds_name}.zip"),
-    base_url_melodi = base_url_melodi,
-    download_directory = download_directory
-  )
+    base_url_melodi = base_url_melodi
+  )$product
+
+  csv_list <- ds_products |>
+    dplyr::filter(language == lang & format == "CSV")
+
+  if(nrow(csv_list) == 0) {
+    stop("No CSV found for ", ds_name)
+  }
+  else if(nrow(csv_list) > 1) {
+    stop("Error : more than 1 CSV found for ", ds_name)
+  }
+
+  # only one URL found : OK
+  zip_url <-  csv_list |>
+    dplyr::pull(accessURL)
+
+  # Download file
+  message("Request ZIP CSV file : ", zip_url)
+  downloaded_zip_path <- file.path(download_directory, glue::glue("{ds_name}.zip"))
+
+  httr2::request(zip_url) |>
+    httr2::req_progress() |>
+    httr2::req_perform(downloaded_zip_path)
+
+  files_in_zip <- zip::zip_list(downloaded_zip_path)
+
+  data_filename <- files_in_zip |>
+    dplyr::filter(grepl('_data.csv', filename)) |>
+    dplyr::pull(filename)
+
+  metadata_filename <- files_in_zip |>
+    dplyr::filter(grepl('_metadata.csv', filename)) |>
+    dplyr::pull(filename)
 
   zip::unzip(zipfile = downloaded_zip_path,
              exdir = download_directory)
 
   # Load data and metadata
-  data_path <- file.path(download_directory, glue::glue("{ds_name}_data.csv"))
-  metadata_path <- file.path(download_directory, glue::glue("{ds_name}_metadata.csv"))
+  data_path <- file.path(download_directory, data_filename)
+  metadata_path <- file.path(download_directory, metadata_filename)
 
   data <- data.table::fread(
     input = data_path,

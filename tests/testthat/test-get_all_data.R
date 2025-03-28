@@ -72,3 +72,23 @@ test_that("get all data KO", {
     ds <- get_all_data("DS_NEXISTEPAS")
   )
 })
+
+# 28/03/2025 tests ponctuels - désactivés car trop lourds
+# test_that("test suite a changement nom des CSV millesimes ou non", {
+#
+#   expect_no_error(
+#     ds_local_non_millesime <- get_all_data("DS_POPULATIONS_REFERENCE")
+#   )
+#
+#   expect_no_error(
+#     ds_hors_local <- get_all_data("DS_PRENOMS")
+#   )
+#
+#   expect_no_error(
+#     ds_millesime_avec <- get_all_data("DS_FLORES_PE")
+#   )
+#
+#   expect_no_error(
+#     ds_millesime_sans <- get_all_data("DS_FLORES_PE_2022")
+#   )
+# })
