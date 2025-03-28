@@ -30,8 +30,7 @@ devtools::check(
 )
 
 # Créée le site documentaire  --------------
-# TODO faire cette étape par CI et mettre docs dans gitignore
-# En attendant : juste lancer manuellement cette étape quand la doc est à compléter
+# cette étape est faite par github CI, lancer manuellement au besoin pour voir le resultat
 pkgdown::build_site()
 
 # Creer une fonction ------------------------------------------------------
