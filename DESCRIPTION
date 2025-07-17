@@ -1,6 +1,6 @@
 Package: melodi
 Title: Retrieve Data from the Insee Melodi APIs
-Version: 0.2.0
+Version: 0.3.0
 Authors@R: c(
     person("Cédric", "Bobinec", email = "cedric.bobinec@insee.fr", role = c("aut", "cre")),
     person(family = "Institut national de la statistique et des études économiques", role = "cph")
