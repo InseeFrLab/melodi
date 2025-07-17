@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_range_geo.R
 \name{get_range_geo}
 \alias{get_range_geo}
-\title{Get the dataset's geography codebook}
+\title{Get dataset's geography : codes and labels}
 \usage{
 get_range_geo(
   ds_name,
@@ -15,7 +15,7 @@ get_range_geo(
 
 \item{base_url_melodi}{API Melodi URL - default production URL}
 
-\item{lang}{french or english labels}
+\item{lang}{french or english labels - default french}
 }
 \value{
 A data frame with columns such as \code{GEO_REF}, \code{GEO_OBJECT}, \code{GEO}, \code{GEO_LABEL}
@@ -23,6 +23,9 @@ A data frame with columns such as \code{GEO_REF}, \code{GEO_OBJECT}, \code{GEO},
 \description{
 Retrieves the list of geo*** dimensions and all their possible values
 (codes and human-readable labels) for a given dataset.
+}
+\details{
+For other dimensions, refer to get_range()
 }
 \examples{
 get_range_geo("DS_POPULATIONS_REFERENCE")

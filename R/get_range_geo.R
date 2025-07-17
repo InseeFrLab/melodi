@@ -1,11 +1,13 @@
-#' Get the dataset's geography codebook
+#' Get dataset's geography : codes and labels
 #'
 #' Retrieves the list of geo*** dimensions and all their possible values
 #' (codes and human-readable labels) for a given dataset.
 #'
+#' For other dimensions, refer to get_range()
+#'
 #' @param ds_name dataset name
 #' @param base_url_melodi API Melodi URL - default production URL
-#' @param lang french or english labels
+#' @param lang french or english labels - default french
 #'
 #' @return A data frame with columns such as `GEO_REF`, `GEO_OBJECT`, `GEO`, `GEO_LABEL`
 #' @export

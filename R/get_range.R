@@ -1,27 +1,25 @@
-#' Get the dataset's codebook
+#' Get dataset range (codes and labels)
 #'
-#' Retrieves the list of dimensions (except GEO) and all their possible values
+#' Retrieves the list of dimensions and all their possible modalities values
 #' (codes and human-readable labels) for a given dataset.
-#' For GEO dimension, refer to get_range_geo()
+#' For GEO dimension, it is recommanded to used dedicated function : get_range_geo()
 #'
 #' @param ds_name dataset name
 #' @param base_url_melodi API Melodi URL - default production URL
-#' @param lang french or english labels
-#' @param dimension_time_period the TIME_PERIOD dimension can include many entries, ignoring it can simplify the results
+#' @param lang french or english labels - default french
+#' @param exclusions_list exclude some dimensions for a faster and light result - default : "GEO", "TIME_PERIOD"
 #'
-#' @return A data frame with columns such as `dimension`, `dimension_label`, `value`, `value_label`
+#' @return A data frame with dimensions and modalities codes and labels
 #' @export
 #'
 #' @examples
 #' get_range("DS_POPULATIONS_REFERENCE")
-#' get_range("DS_RP_EDUCATION",
-#' lang = "en",
-#' dimension_time_period = FALSE)
+#' get_range(ds_name = "DS_EC_DECES", lang = "en")
 get_range <- function(
     ds_name,
     base_url_melodi = "https://api.insee.fr/melodi",
     lang = "fr",
-    dimension_time_period = TRUE
+    exclusions_list = c("GEO", "TIME_PERIOD")
 ) {
   # check parameters
   if (!lang %in% c("fr", "en")) {
@@ -40,8 +38,7 @@ get_range <- function(
   # Keep or exclude TIME_PERIOD, exlude GEO
   range <- Filter(function(x) {
     concept_code <- x[["concept"]][["code"]]
-    concept_code != "GEO" &&
-      (concept_code != "TIME_PERIOD" || dimension_time_period)
+    !(concept_code %in% exclusions_list)
   }, range)
 
   # for null cases (English GEO labels...)
