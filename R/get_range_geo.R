@@ -76,9 +76,9 @@ get_range_geo <- function(
   codebook_df <- codebook_df |>
     dplyr::arrange(dimension, value) |>
     tidyr::separate(value_id, into = c("GEO_REF", "GEO_OBJECT", "GEO"), sep = "-") |>
-    mutate(GEO_LABEL = value_label) |>
-    select(GEO_REF, GEO_OBJECT, GEO, GEO_LABEL) |>
-    arrange(GEO_OBJECT, GEO)
+    dplyr::mutate(GEO_LABEL = value_label) |>
+    dplyr::select(GEO_REF, GEO_OBJECT, GEO, GEO_LABEL) |>
+    dplyr::arrange(GEO_OBJECT, GEO)
 
   return(codebook_df)
 }
