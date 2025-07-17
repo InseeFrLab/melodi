@@ -63,10 +63,10 @@ get_range <- function(
       value_label <- values[[j]][["label"]][[lang]] |> safe_extract()
 
       entry <- list(
-        dimension = dimension,
-        dimension_label = dimension_label,
-        value = value,
-        value_label = value_label
+        DIM = dimension,
+        DIM_LABEL = dimension_label,
+        MOD = value,
+        MOD_LABEL = value_label
       )
 
       # Ajouter l'entrée au codebook
