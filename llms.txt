@@ -1,0 +1,94 @@
+# melodi
+
+Package facilitant l’utilisation des données et métadonnées diffusé par
+l’Insee sur [le catalogue de données
+Melodi](https://catalogue-donnees.insee.fr)
+
+## Installation
+
+Installer la dernière version stable depuis github :
+
+``` r
+# install.packages("remotes")
+remotes::install_github("InseeFrLab/melodi", build_vignettes = TRUE)
+```
+
+(pour les agents Insee uniquement) installer la dernière version stable
+:
+
+``` r
+install.packages("melodi", repos = "https://nexus.insee.fr/repository/r-public/")
+```
+
+## Exemples
+
+Lister les jeux de données proposés par l’Insee via Melodi :
+
+``` r
+get_catalog()
+```
+
+Récupérer toutes les données d’un jeu de données par son identifiant :
+
+``` r
+data <- get_all_data("DS_POPULATIONS_REFERENCE")
+```
+
+## Configuration
+
+### Authentification et quota de requêtes
+
+Le package repose sur l’API Melodi, accessible sans authentification.
+
+Son usage est limité à **30 requêtes par minute** : au delà, un code
+réponse **429** est obtenu.
+
+### Proxy
+
+Dans le cas d’une utilisation du package depuis un réseau d’entreprise,
+il peut être utile de configurer le proxy d’accès internet de la manière
+suivante :
+
+``` r
+Sys.setenv(http_proxy = "my_proxy_server:port")
+Sys.setenv(https_proxy = "my_proxy_server:port"")
+# Désactiver le proxy sur certaines adresses
+#Sys.setenv(no_proxy = "exemple-url-interne.server.fr")
+```
+
+# Package index
+
+## All functions
+
+- [`get_all_data()`](https://InseeFrLab.github.io/melodi/reference/get_all_data.md)
+  : Get all data from a dataset
+- [`get_catalog()`](https://InseeFrLab.github.io/melodi/reference/get_catalog.md)
+  : Get list of available datasets
+- [`get_data()`](https://InseeFrLab.github.io/melodi/reference/get_data.md)
+  : Get Melodi data by URL. This URL can be copy/paste from explorer
+  https://catalogue-donnees.insee.fr
+- [`get_file()`](https://InseeFrLab.github.io/melodi/reference/get_file.md)
+  : Get file attached to a dataset : extract (XLSX), or full CSV file
+- [`get_local_data()`](https://InseeFrLab.github.io/melodi/reference/get_local_data.md)
+  : Get data on one territory
+- [`get_local_data_by_com()`](https://InseeFrLab.github.io/melodi/reference/get_local_data_by_com.md)
+  : Get data on every Commune of one territory
+- [`get_metadata()`](https://InseeFrLab.github.io/melodi/reference/get_metadata.md)
+  : Get dataset metadata
+- [`get_range()`](https://InseeFrLab.github.io/melodi/reference/get_range.md)
+  : Get dataset range (codes and labels)
+- [`get_range_geo()`](https://InseeFrLab.github.io/melodi/reference/get_range_geo.md)
+  : Get dataset's geography : codes and labels
+
+# Articles
+
+### All vignettes
+
+- [Filtrer à l'aide de
+  l’explorateur](https://InseeFrLab.github.io/melodi/articles/A-filtre-explorateur.md):
+- [Filtrer par critère
+  géographique](https://InseeFrLab.github.io/melodi/articles/B-donnees-locales.md):
+- [Autres usages
+  catalogue](https://InseeFrLab.github.io/melodi/articles/C-usage_backoffice.md):
+- [Prise en
+  main](https://InseeFrLab.github.io/melodi/articles/melodi.md):

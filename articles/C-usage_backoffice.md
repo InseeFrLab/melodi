@@ -1,0 +1,68 @@
+# Autres usages catalogue
+
+## Avoir une vue globale sur les jeux de données
+
+L’appel à `get_catalog` peut être utile pour avoir une vue d’ensemble
+des jeux de données et leur description.
+
+Le code suivant permet de constituer et ouvrir un fichier Excel
+récapitulatif des jeux de données en français et en anglais.
+
+``` r
+catalog_fr <- get_catalog("fr") |> 
+  mutate(lang = "fr")
+
+catalog_en <- get_catalog("en") |> 
+  mutate(lang = "en")
+
+catalog_all <- catalog_fr |> 
+  rbind(catalog_en) |> 
+  relocate(lang) |> 
+  arrange(identifier, desc(lang))
+
+temp_xlsx <- tempfile(fileext = ".xlsx")
+
+openxlsx::write.xlsx(
+  x = catalog_all,
+  file = temp_xlsx,
+  colWidths = "auto",
+  withFilter = TRUE
+)
+
+utils::browseURL(temp_xlsx)
+```
+
+## Télécharger un fichier Excel généré par Melodi
+
+L’ensemble des fichiers produits et publiés par Melodi sont accessibles
+via l’API et donc le package.
+
+La fonction `get_file` permet de récupérer et télécharger un fichier par
+son nom, et le renommer au besoin.
+
+``` r
+fic_xlsx1 <- get_file(
+  ds_name = "DS_EC_DECES",
+  file_name = "T1_DECES_JOUR_DEP_REG_FR",
+  download_file_name = "T1_DECES_JOUR_NAT_2024_10.xlsx",
+  download_directory = tempdir()
+)
+```
+
+## Travailler sur un autre environnement Melodi
+
+Toutes les fonctions disposent d’un paramètre facultatif
+`base_url_melodi` permettant de travailler dans un autre environnement
+que Melodi en production.
+
+Pour cela fournir l’URL de base de l’API de l’environnement à utiliser.
+S’il s’agit d’environnements internes, penser au besoin à désactiver le
+proxy pour l’URL en question.
+
+``` r
+Sys.setenv(no_proxy = "serveur.url.fr")
+
+get_catalog(
+  base_url_melodi = "https://serveur.url.fr/melodi"
+)
+```
