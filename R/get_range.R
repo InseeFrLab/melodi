@@ -6,7 +6,7 @@
 #'
 #' @param ds_name dataset name
 #' @param base_url_melodi API Melodi URL - default production URL
-#' @param lang french or english labels - default french
+#' @param lang french or english labels - default french ("fr")
 #' @param exclusions_list exclude some dimensions for a faster and light result - default : "GEO", "TIME_PERIOD"
 #'
 #' @return A data frame with dimensions and modalities codes and labels
@@ -19,7 +19,7 @@ get_range <- function(
     ds_name,
     base_url_melodi = "https://api.insee.fr/melodi",
     lang = "fr",
-    exclusions_list = c("GEO", "TIME_PERIOD")
+    exclusions_list = c("GEO")
 ) {
   # check parameters
   if (!lang %in% c("fr", "en")) {

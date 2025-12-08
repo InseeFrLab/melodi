@@ -15,13 +15,13 @@ get_range_geo(
 
 \item{base_url_melodi}{API Melodi URL - default production URL}
 
-\item{lang}{french or english labels - default french}
+\item{lang}{french or english labels - default french ("fr")}
 }
 \value{
-A data frame with columns such as \code{GEO_REF}, \code{GEO_OBJECT}, \code{GEO}, \code{GEO_LABEL}
+A data frame with columns \code{GEO_REF}, \code{GEO_OBJECT}, \code{GEO}, \code{GEO_LABEL}
 }
 \description{
-Retrieves the list of geo*** dimensions and all their possible values
+Retrieves the list of geo dimensions and all their possible values
 (codes and human-readable labels) for a given dataset.
 }
 \details{

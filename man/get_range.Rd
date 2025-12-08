@@ -8,7 +8,7 @@ get_range(
   ds_name,
   base_url_melodi = "https://api.insee.fr/melodi",
   lang = "fr",
-  exclusions_list = c("GEO", "TIME_PERIOD")
+  exclusions_list = c("GEO")
 )
 }
 \arguments{
@@ -16,7 +16,7 @@ get_range(
 
 \item{base_url_melodi}{API Melodi URL - default production URL}
 
-\item{lang}{french or english labels - default french}
+\item{lang}{french or english labels - default french ("fr")}
 
 \item{exclusions_list}{exclude some dimensions for a faster and light result - default : "GEO", "TIME_PERIOD"}
 }
