@@ -9,6 +9,8 @@ globalVariables(
     # get_all_data
     "COD_VAR", "LIB_VAR", "language", "accessURL", "filename",
     # get_data
-    "value", "GEO"
+    "value", "GEO",
+    # get_range_geo
+    "GEO_REF", "GEO_OBJECT", "GEO_LABEL"
   )
 )
