@@ -1,4 +1,3 @@
-lang: fr
 template:
   bootstrap: 5
 url: https://InseeFrLab.github.io/melodi/
@@ -9,5 +8,3 @@ home:
     href: https://catalogue-donnees.insee.fr
   - text: Documentation de l'API Melodi
     href: https://portail-api.insee.fr/catalog/api/a890b735-159c-4c91-90b7-35159c7c9126/doc
-  sidebar:
-    structure: [links]
