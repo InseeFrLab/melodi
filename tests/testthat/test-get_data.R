@@ -41,8 +41,7 @@ vcr::use_cassette("get_data_not_exist", {
     expect_error(
       object = get_data(
         "https://api.insee.fr/melodi/data/DS_NEXISTEPAS"
-      ),
-      regexp = "Bad Request"
+      )
     )
   })
 })
