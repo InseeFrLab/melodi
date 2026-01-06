@@ -14,7 +14,7 @@
 #'
 #' @examples
 #' get_range_geo("DS_POPULATIONS_REFERENCE")
-#' get_range("DS_TICM_PRATIQUES")
+#' get_range_geo("DS_TICM_PRATIQUES")
 get_range_geo <- function(
     ds_name,
     base_url_melodi = "https://api.insee.fr/melodi",
