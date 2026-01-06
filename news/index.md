@@ -1,5 +1,11 @@
 # Changelog
 
+## melodi 0.3.1
+
+- Correction d’exemples ne fonctionnant plus ou pas lisible dans la doc
+- Adaptation des tests à vcr 2 (suppression du helper, relance des
+  cassettes)
+
 ## melodi 0.3.0
 
 - \#5 : ajout de fonctions permettant de récupérer les libellés des

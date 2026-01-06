@@ -27,7 +27,7 @@ a data.frame containing list of available datasets
 ``` r
 get_catalog()
 #> Request all catalog : https://api.insee.fr/melodi/catalog/all
-#> # A tibble: 95 × 12
+#> # A tibble: 96 × 12
 #>    identifier                 title_content subtitle_content description_content
 #>    <chr>                      <chr>         <chr>            <chr>              
 #>  1 DD_CNA_AGREGATS            Produit Inté… Comptes nationa… "Le produit intéri…
@@ -40,13 +40,13 @@ get_catalog()
 #>  8 DD_CNA_PATRIMOINE_BRANCHES Comptes de p… Comptes nationa… "Le patrimoine nat…
 #>  9 DD_CNA_REBS                Ressources e… Comptes nationa… ""                 
 #> 10 DD_CNA_SUT                 Tableau des … Comptes nationa… "Le tableau des en…
-#> # ℹ 85 more rows
+#> # ℹ 86 more rows
 #> # ℹ 8 more variables: abstract_content <chr>, temporal_startPeriod <date>,
 #> #   temporal_endPeriod <date>, modified <date>, spatialResolution <chr>,
 #> #   spatialTemporal <int>, numObservations <int>, numSeries <int>
 get_catalog(lang = "en")
 #> Request all catalog : https://api.insee.fr/melodi/catalog/all
-#> # A tibble: 95 × 12
+#> # A tibble: 96 × 12
 #>    identifier                 title_content subtitle_content description_content
 #>    <chr>                      <chr>         <chr>            <chr>              
 #>  1 DD_CNA_AGREGATS            Gross domest… Base 2020 - Ann… "Gross domestic pr…
@@ -59,7 +59,7 @@ get_catalog(lang = "en")
 #>  8 DD_CNA_PATRIMOINE_BRANCHES Balance shee… National Accoun… "National wealth r…
 #>  9 DD_CNA_REBS                Goods and se… Base 2020 - Ann… ""                 
 #> 10 DD_CNA_SUT                 Supply and u… Base 2020 - Ann… "The input-output …
-#> # ℹ 85 more rows
+#> # ℹ 86 more rows
 #> # ℹ 8 more variables: abstract_content <chr>, temporal_startPeriod <date>,
 #> #   temporal_endPeriod <date>, modified <date>, spatialResolution <chr>,
 #> #   spatialTemporal <int>, numObservations <int>, numSeries <int>

@@ -26,9 +26,7 @@ get_data(
     "https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?POPREF_MEASURE=PMUN&GEO=FRANCE-F"
 )
 #> Total count request : https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?POPREF_MEASURE=PMUN&GEO=FRANCE-F&totalCount=TRUE&maxResult=0
-#> Number of lines : 3
+#> Number of lines : 1
 #>   GEO_REF GEO_OBJECT GEO FREQ TIME_PERIOD POPREF_MEASURE OBS_VALUE
-#> 1    2024     FRANCE   F    A        2022           PMUN  67760573
-#> 2    2024     FRANCE   F    A        2011           PMUN  64933400
-#> 3    2024     FRANCE   F    A        2016           PMUN  66361658
+#> 1    2025     FRANCE   F    A        2023           PMUN  68094280
 ```

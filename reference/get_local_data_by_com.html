@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">melodi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,31 +92,31 @@
 <span class="r-in"><span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Total count request : https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=DEP-44%2ACOM&amp;totalCount=TRUE&amp;maxResult=0</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Number of lines : 1 863</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Number of lines : 615</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   GEO_REF GEO_OBJECT   GEO FREQ TIME_PERIOD POPREF_MEASURE OBS_VALUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1    2024        COM 44130    A        2016           PCAP        96</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    2024        COM 44214    A        2016           PCAP        29</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3    2024        COM 44099    A        2016           PMUN      1960</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4    2024        COM 44214    A        2016           PTOT      2089</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5    2024        COM 44120    A        2016           PMUN      5050</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6    2024        COM 44044    A        2016           PCAP        16</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    2025        COM 44141    A        2023           PCAP        24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    2025        COM 44129    A        2023           PCAP       324</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    2025        COM 44007    A        2023           PTOT      2513</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4    2025        COM 44043    A        2023           PMUN      7452</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5    2025        COM 44136    A        2023           PMUN      1321</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6    2025        COM 44179    A        2023           PMUN      5523</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">get_local_data_by_com</span><span class="op">(</span></span></span>
-<span class="r-in"><span>  ds_name <span class="op">=</span> <span class="st">"DS_POPULATIONS_REFERENCE"</span>,</span></span>
+<span class="r-in"><span>  ds_name <span class="op">=</span> <span class="st">"DS_RP_POPULATION_PRINC"</span>,</span></span>
 <span class="r-in"><span>  geo <span class="op">=</span> <span class="st">"44"</span>,</span></span>
 <span class="r-in"><span>  geo_object <span class="op">=</span> <span class="st">"DEP"</span>,</span></span>
-<span class="r-in"><span>  filter <span class="op">=</span> <span class="st">"POPREF_MEASURE=PMUN&amp;TIME_PERIOD=2022"</span></span></span>
+<span class="r-in"><span>  filter <span class="op">=</span> <span class="st">"SEX=F&amp;AGE=Y20T64"</span></span></span>
 <span class="r-in"><span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Total count request : https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=DEP-44%2ACOM&amp;POPREF_MEASURE=PMUN&amp;TIME_PERIOD=2022&amp;totalCount=TRUE&amp;maxResult=0</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Number of lines : 207</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   GEO_REF GEO_OBJECT   GEO FREQ TIME_PERIOD POPREF_MEASURE OBS_VALUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1    2024        COM 44217    A        2022           PMUN      6633</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    2024        COM 44179    A        2022           PMUN      5435</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3    2024        COM 44086    A        2022           PMUN      1064</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4    2024        COM 44162    A        2022           PMUN     50561</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5    2024        COM 44055    A        2022           PMUN     16613</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6    2024        COM 44119    A        2022           PMUN      2042</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Total count request : https://api.insee.fr/melodi/data/DS_RP_POPULATION_PRINC?GEO=DEP-44%2ACOM&amp;SEX=F&amp;AGE=Y20T64&amp;totalCount=TRUE&amp;maxResult=0</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Number of lines : 615</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   GEO_REF GEO_OBJECT   GEO SEX TIME_PERIOD RP_MEASURE    AGE OBS_VALUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    2025        COM 44003   F        2022        POP Y20T64 3046.6872</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    2025        COM 44069   F        2022        POP Y20T64 4605.4263</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    2025        COM 44220   F        2022        POP Y20T64  514.5749</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4    2025        COM 44129   F        2022        POP Y20T64 3038.7726</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5    2025        COM 44188   F        2022        POP Y20T64 2603.6244</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6    2025        COM 44132   F        2022        POP Y20T64 3101.0829</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

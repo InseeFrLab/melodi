@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">melodi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,28 +91,24 @@
 <span class="r-in"><span>  geo_object <span class="op">=</span> <span class="st">"DEP"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Total count request : https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=DEP-69&amp;totalCount=TRUE&amp;maxResult=0</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Number of lines : 9</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Number of lines : 3</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   GEO_REF GEO_OBJECT GEO FREQ TIME_PERIOD POPREF_MEASURE OBS_VALUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1    2024        DEP  69    A        2022           PCAP     25178</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    2024        DEP  69    A        2022           PMUN   1907982</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3    2024        DEP  69    A        2022           PTOT   1933160</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4    2024        DEP  69    A        2011           PTOT   1775953</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5    2024        DEP  69    A        2011           PCAP     31717</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6    2024        DEP  69    A        2011           PMUN   1744236</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7    2024        DEP  69    A        2016           PTOT   1864962</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8    2024        DEP  69    A        2016           PCAP     29059</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9    2024        DEP  69    A        2016           PMUN   1835903</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    2025        DEP  69    A        2023           PMUN   1914667</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    2025        DEP  69    A        2023           PCAP     25348</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    2025        DEP  69    A        2023           PTOT   1940015</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">get_local_data</span><span class="op">(</span></span></span>
-<span class="r-in"><span>  ds_name <span class="op">=</span> <span class="st">"DS_POPULATIONS_REFERENCE"</span>,</span></span>
+<span class="r-in"><span>  ds_name <span class="op">=</span> <span class="st">"DS_RP_POPULATION_PRINC"</span>,</span></span>
 <span class="r-in"><span>  geo <span class="op">=</span> <span class="st">"69"</span>,</span></span>
 <span class="r-in"><span>  geo_object <span class="op">=</span> <span class="st">"DEP"</span>,</span></span>
-<span class="r-in"><span>  filter <span class="op">=</span> <span class="st">"POPREF_MEASURE=PMUN&amp;TIME_PERIOD=2022"</span></span></span>
+<span class="r-in"><span>  filter <span class="op">=</span> <span class="st">"SEX=F&amp;AGE=Y20T64"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Total count request : https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=DEP-69&amp;POPREF_MEASURE=PMUN&amp;TIME_PERIOD=2022&amp;totalCount=TRUE&amp;maxResult=0</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Number of lines : 1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   GEO_REF GEO_OBJECT GEO FREQ TIME_PERIOD POPREF_MEASURE OBS_VALUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1    2024        DEP  69    A        2022           PMUN   1907982</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Total count request : https://api.insee.fr/melodi/data/DS_RP_POPULATION_PRINC?GEO=DEP-69&amp;SEX=F&amp;AGE=Y20T64&amp;totalCount=TRUE&amp;maxResult=0</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Number of lines : 3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   GEO_REF GEO_OBJECT GEO SEX TIME_PERIOD RP_MEASURE    AGE OBS_VALUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    2025        DEP  69   F        2011        POP Y20T64  529046.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    2025        DEP  69   F        2022        POP Y20T64  562310.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    2025        DEP  69   F        2016        POP Y20T64  544085.5</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

@@ -50,29 +50,29 @@ get_local_data_by_com(
 ) |>
 head()
 #> Total count request : https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=DEP-44%2ACOM&totalCount=TRUE&maxResult=0
-#> Number of lines : 1 863
+#> Number of lines : 615
 #>   GEO_REF GEO_OBJECT   GEO FREQ TIME_PERIOD POPREF_MEASURE OBS_VALUE
-#> 1    2024        COM 44130    A        2016           PCAP        96
-#> 2    2024        COM 44214    A        2016           PCAP        29
-#> 3    2024        COM 44099    A        2016           PMUN      1960
-#> 4    2024        COM 44214    A        2016           PTOT      2089
-#> 5    2024        COM 44120    A        2016           PMUN      5050
-#> 6    2024        COM 44044    A        2016           PCAP        16
+#> 1    2025        COM 44141    A        2023           PCAP        24
+#> 2    2025        COM 44129    A        2023           PCAP       324
+#> 3    2025        COM 44007    A        2023           PTOT      2513
+#> 4    2025        COM 44043    A        2023           PMUN      7452
+#> 5    2025        COM 44136    A        2023           PMUN      1321
+#> 6    2025        COM 44179    A        2023           PMUN      5523
 
 get_local_data_by_com(
-  ds_name = "DS_POPULATIONS_REFERENCE",
+  ds_name = "DS_RP_POPULATION_PRINC",
   geo = "44",
   geo_object = "DEP",
-  filter = "POPREF_MEASURE=PMUN&TIME_PERIOD=2022"
+  filter = "SEX=F&AGE=Y20T64"
 ) |>
 head()
-#> Total count request : https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=DEP-44%2ACOM&POPREF_MEASURE=PMUN&TIME_PERIOD=2022&totalCount=TRUE&maxResult=0
-#> Number of lines : 207
-#>   GEO_REF GEO_OBJECT   GEO FREQ TIME_PERIOD POPREF_MEASURE OBS_VALUE
-#> 1    2024        COM 44217    A        2022           PMUN      6633
-#> 2    2024        COM 44179    A        2022           PMUN      5435
-#> 3    2024        COM 44086    A        2022           PMUN      1064
-#> 4    2024        COM 44162    A        2022           PMUN     50561
-#> 5    2024        COM 44055    A        2022           PMUN     16613
-#> 6    2024        COM 44119    A        2022           PMUN      2042
+#> Total count request : https://api.insee.fr/melodi/data/DS_RP_POPULATION_PRINC?GEO=DEP-44%2ACOM&SEX=F&AGE=Y20T64&totalCount=TRUE&maxResult=0
+#> Number of lines : 615
+#>   GEO_REF GEO_OBJECT   GEO SEX TIME_PERIOD RP_MEASURE    AGE OBS_VALUE
+#> 1    2025        COM 44003   F        2022        POP Y20T64 3046.6872
+#> 2    2025        COM 44069   F        2022        POP Y20T64 4605.4263
+#> 3    2025        COM 44220   F        2022        POP Y20T64  514.5749
+#> 4    2025        COM 44129   F        2022        POP Y20T64 3038.7726
+#> 5    2025        COM 44188   F        2022        POP Y20T64 2603.6244
+#> 6    2025        COM 44132   F        2022        POP Y20T64 3101.0829
 ```
