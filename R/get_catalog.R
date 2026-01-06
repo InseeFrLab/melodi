@@ -19,8 +19,9 @@ get_catalog <- function(
   }
   url <- glue::glue("{base_url_melodi}/catalog/all")
 
-  message("Request all catalog : ", url)
+  message("Request all catalog with user agent : ", url)
   all_dataset <- httr2::request(url) |>
+    httr2::req_user_agent("Rmelodi (https://github.com/InseeFrLab/melodi)") |>
     httr2::req_perform() |>
     httr2::resp_body_json(simplifyVector = TRUE)
 
