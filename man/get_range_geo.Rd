@@ -29,5 +29,5 @@ For other dimensions, refer to get_range()
 }
 \examples{
 get_range_geo("DS_POPULATIONS_REFERENCE")
-get_range("DS_TICM_PRATIQUES")
+get_range_geo("DS_TICM_PRATIQUES")
 }
