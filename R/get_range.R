@@ -7,14 +7,23 @@
 #' @param ds_name dataset name
 #' @param base_url_melodi API Melodi URL - default production URL
 #' @param lang french or english labels - default french ("fr")
-#' @param exclusions_list exclude some dimensions for a faster and light result - default : "GEO", "TIME_PERIOD"
+#' @param exclusions_list exclude some dimensions for a faster and light result - default : "GEO"
 #'
 #' @return A data frame with dimensions and modalities codes and labels
 #' @export
 #'
 #' @examples
 #' get_range("DS_POPULATIONS_REFERENCE")
-#' get_range(ds_name = "DS_EC_DECES", lang = "en")
+#'
+#' get_range(
+#'   ds_name = "DS_POPULATIONS_REFERENCE",
+#'   lang = "en"
+#' )
+#'
+#' get_range(
+#'   ds_name = "DS_EC_DECES",
+#'   exclusions_list = c("GEO", "TIME_PERIOD")
+#' )
 get_range <- function(
     ds_name,
     base_url_melodi = "https://api.insee.fr/melodi",

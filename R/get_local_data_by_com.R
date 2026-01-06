@@ -18,10 +18,10 @@
 #' head()
 #'
 #' get_local_data_by_com(
-#'   ds_name = "DS_POPULATIONS_REFERENCE",
+#'   ds_name = "DS_RP_POPULATION_PRINC",
 #'   geo = "44",
 #'   geo_object = "DEP",
-#'   filter = "POPREF_MEASURE=PMUN&TIME_PERIOD=2022"
+#'   filter = "SEX=F&AGE=Y20T64"
 #' ) |>
 #' head()
 get_local_data_by_com <- function(
