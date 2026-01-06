@@ -1,0 +1,58 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=EPCI-244400404%2ACOM&POPREF_MEASURE=PMUN&totalCount=TRUE&maxResult=0
+  response:
+    status: 200
+    headers:
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      content-type: application/json
+      date: Tue, 06 Jan 2026 11:33:01 GMT
+      expires: '0'
+      pragma: no-cache
+      set-cookie: INSEE=rd4o00000000000000000000ffff0ac3084ao8082; expires=Tue, 06-Jan-2026
+        11:53:01 GMT; path=/; Httponly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=100000; includeSubDomains
+      vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-gravitee-request-id: 93a55276-6738-4f43-a552-7667385f4311
+      x-gravitee-transaction-id: 93a55276-6738-4f43-a552-7667385f4311
+      x-xss-protection: '0'
+    body:
+      string: '{"identifier":"DS_POPULATIONS_REFERENCE","title":{"fr":"Populations
+        de référence","en":"Reference populations "},"publisher":{"id":"INSEE","label":[{"lang":"fr","content":"Institut
+        national de la statistique et des etudes economiques (INSEE)"},{"lang":"en","content":"National
+        Institute of Statistics and Economic Studies"}]},"observations":[],"paging":{"first":"https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=EPCI-244400404%2ACOM&POPREF_MEASURE=PMUN&totalCount=TRUE&maxResult=0&page=1","count":24}}'
+  recorded_at: 2026-01-06 11:33:02
+- request:
+    method: GET
+    uri: https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=EPCI-244400404%2ACOM&POPREF_MEASURE=PMUN&idTerritoire=TRUE&maxResult=10000
+  response:
+    status: 200
+    headers:
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      content-type: application/json
+      date: Tue, 06 Jan 2026 11:33:02 GMT
+      expires: '0'
+      pragma: no-cache
+      set-cookie: INSEE=rd4o00000000000000000000ffff0ac3084ao8082; expires=Tue, 06-Jan-2026
+        11:53:02 GMT; path=/; Httponly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=100000; includeSubDomains
+      vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-gravitee-request-id: d2661941-ceef-4276-a619-41ceefc27667
+      x-gravitee-transaction-id: d2661941-ceef-4276-a619-41ceefc27667
+      x-xss-protection: '0'
+    body:
+      string: '{"identifier":"DS_POPULATIONS_REFERENCE","title":{"fr":"Populations
+        de référence","en":"Reference populations "},"publisher":{"id":"INSEE","label":[{"lang":"fr","content":"Institut
+        national de la statistique et des etudes economiques (INSEE)"},{"lang":"en","content":"National
+        Institute of Statistics and Economic Studies"}]},"observations":[{"dimensions":{"GEO":"2025-COM-44215","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":26227.0}}},{"dimensions":{"GEO":"2025-COM-44166","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":6067.0}}},{"dimensions":{"GEO":"2025-COM-44024","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":2709.0}}},{"dimensions":{"GEO":"2025-COM-44162","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":50973.0}}},{"dimensions":{"GEO":"2025-COM-44018","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":8343.0}}},{"dimensions":{"GEO":"2025-COM-44109","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":327734.0}}},{"dimensions":{"GEO":"2025-COM-44194","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":8555.0}}},{"dimensions":{"GEO":"2025-COM-44101","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":6505.0}}},{"dimensions":{"GEO":"2025-COM-44035","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":20690.0}}},{"dimensions":{"GEO":"2025-COM-44204","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":11004.0}}},{"dimensions":{"GEO":"2025-COM-44026","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":20921.0}}},{"dimensions":{"GEO":"2025-COM-44009","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":9679.0}}},{"dimensions":{"GEO":"2025-COM-44171","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":2171.0}}},{"dimensions":{"GEO":"2025-COM-44120","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":5319.0}}},{"dimensions":{"GEO":"2025-COM-44020","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":20530.0}}},{"dimensions":{"GEO":"2025-COM-44198","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":9275.0}}},{"dimensions":{"GEO":"2025-COM-44094","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":3409.0}}},{"dimensions":{"GEO":"2025-COM-44190","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":28596.0}}},{"dimensions":{"GEO":"2025-COM-44172","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":16400.0}}},{"dimensions":{"GEO":"2025-COM-44047","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":24103.0}}},{"dimensions":{"GEO":"2025-COM-44143","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":43556.0}}},{"dimensions":{"GEO":"2025-COM-44114","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":28534.0}}},{"dimensions":{"GEO":"2025-COM-44150","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":3996.0}}},{"dimensions":{"GEO":"2025-COM-44074","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":4160.0}}}],"paging":{"first":"https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=EPCI-244400404%2ACOM&POPREF_MEASURE=PMUN&idTerritoire=TRUE&maxResult=10000&page=1"}}'
+  recorded_at: 2026-01-06 11:33:02
+recorded_with: VCR-vcr/2.1.0
