@@ -1,0 +1,35 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.insee.fr/melodi/catalog/all
+    body:
+      encoding: ''
+      string: ''
+    headers: []
+  response:
+    status:
+      status_code: 200
+      message: OK
+    headers:
+      Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+      Connection: keep-alive
+      Content-Type: application/json
+      Date: Wed, 19 Feb 2025 13:29:53 GMT
+      Expires: '0'
+      Pragma: no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=100000; includeSubDomains
+      transfer-encoding: chunked
+      Vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: DENY
+      X-Gravitee-Request-Id: 6d89febe-081d-4d94-89fe-be081d7d943d
+      X-Gravitee-Transaction-Id: 6d89febe-081d-4d94-89fe-be081d7d943d
+      X-XSS-Protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '[]'
+  recorded_at: 2025-02-19 13:29:54 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

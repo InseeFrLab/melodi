@@ -1,0 +1,58 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=DEP-69&POPREF_MEASURE=PMUN&totalCount=TRUE&maxResult=0
+  response:
+    status: 200
+    headers:
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      content-type: application/json
+      date: Tue, 06 Jan 2026 11:33:03 GMT
+      expires: '0'
+      pragma: no-cache
+      set-cookie: INSEE=rd4o00000000000000000000ffff0ac30849o8082; expires=Tue, 06-Jan-2026
+        11:53:03 GMT; path=/; Httponly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=100000; includeSubDomains
+      vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-gravitee-request-id: b738d9ed-4322-429c-b8d9-ed4322229c48
+      x-gravitee-transaction-id: b738d9ed-4322-429c-b8d9-ed4322229c48
+      x-xss-protection: '0'
+    body:
+      string: '{"identifier":"DS_POPULATIONS_REFERENCE","title":{"fr":"Populations
+        de référence","en":"Reference populations "},"publisher":{"id":"INSEE","label":[{"lang":"fr","content":"Institut
+        national de la statistique et des etudes economiques (INSEE)"},{"lang":"en","content":"National
+        Institute of Statistics and Economic Studies"}]},"observations":[],"paging":{"first":"https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=DEP-69&POPREF_MEASURE=PMUN&totalCount=TRUE&maxResult=0&page=1","count":1}}'
+  recorded_at: 2026-01-06 11:33:03
+- request:
+    method: GET
+    uri: https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=DEP-69&POPREF_MEASURE=PMUN&idTerritoire=TRUE&maxResult=10000
+  response:
+    status: 200
+    headers:
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      content-type: application/json
+      date: Tue, 06 Jan 2026 11:33:03 GMT
+      expires: '0'
+      pragma: no-cache
+      set-cookie: INSEE=rd4o00000000000000000000ffff0ac3084ao8082; expires=Tue, 06-Jan-2026
+        11:53:03 GMT; path=/; Httponly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=100000; includeSubDomains
+      vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-gravitee-request-id: f46397f0-70cb-46e7-a397-f070cb96e7a5
+      x-gravitee-transaction-id: f46397f0-70cb-46e7-a397-f070cb96e7a5
+      x-xss-protection: '0'
+    body:
+      string: '{"identifier":"DS_POPULATIONS_REFERENCE","title":{"fr":"Populations
+        de référence","en":"Reference populations "},"publisher":{"id":"INSEE","label":[{"lang":"fr","content":"Institut
+        national de la statistique et des etudes economiques (INSEE)"},{"lang":"en","content":"National
+        Institute of Statistics and Economic Studies"}]},"observations":[{"dimensions":{"GEO":"2025-DEP-69","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":1914667.0}}}],"paging":{"first":"https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=DEP-69&POPREF_MEASURE=PMUN&idTerritoire=TRUE&maxResult=10000&page=1"}}'
+  recorded_at: 2026-01-06 11:33:03
+recorded_with: VCR-vcr/2.1.0

@@ -117,4 +117,5 @@ pkgdown::build_favicons()
 
 # vcr ---------------------------------------------------------------------
 # https://docs.ropensci.org/vcr/
-vcr::use_vcr()
+# v2 : cette étape n'est plus nécessaire/dépréciée :
+#vcr::use_vcr()

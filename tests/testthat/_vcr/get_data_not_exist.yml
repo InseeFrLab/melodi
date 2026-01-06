@@ -1,0 +1,31 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.insee.fr/melodi/data/DS_NEXISTEPAS?totalCount=TRUE&maxResult=0
+  response:
+    status: 500
+    headers:
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      content-length: '46'
+      content-type: text/plain;charset=UTF-8
+      date: Tue, 06 Jan 2026 11:33:00 GMT
+      expires: '0'
+      pragma: no-cache
+      set-cookie: INSEE=rd4o00000000000000000000ffff0ac30849o8082; expires=Tue, 06-Jan-2026
+        11:53:00 GMT; path=/; Httponly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=100000; includeSubDomains
+      vary:
+      - Origin
+      - Access-Control-Request-Method
+      - Access-Control-Request-Headers
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-gravitee-request-id: cadc68da-747d-40f5-9c68-da747d60f503
+      x-gravitee-transaction-id: cadc68da-747d-40f5-9c68-da747d60f503
+      x-xss-protection: '0'
+    body:
+      string: Le serveur a rencontré une erreur inattendue.
+  recorded_at: 2026-01-06 11:33:00
+recorded_with: VCR-vcr/2.1.0
