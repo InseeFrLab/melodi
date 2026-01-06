@@ -18,7 +18,7 @@ get_range(
 
 \item{lang}{french or english labels - default french ("fr")}
 
-\item{exclusions_list}{exclude some dimensions for a faster and light result - default : "GEO", "TIME_PERIOD"}
+\item{exclusions_list}{exclude some dimensions for a faster and light result - default : "GEO"}
 }
 \value{
 A data frame with dimensions and modalities codes and labels
@@ -30,5 +30,14 @@ For GEO dimension, it is recommanded to used dedicated function : get_range_geo(
 }
 \examples{
 get_range("DS_POPULATIONS_REFERENCE")
-get_range(ds_name = "DS_EC_DECES", lang = "en")
+
+get_range(
+  ds_name = "DS_POPULATIONS_REFERENCE",
+  lang = "en"
+)
+
+get_range(
+  ds_name = "DS_EC_DECES",
+  exclusions_list = c("GEO", "TIME_PERIOD")
+)
 }

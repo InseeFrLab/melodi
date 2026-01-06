@@ -28,6 +28,6 @@ Retrieves the list of geo dimensions and all their possible values
 For other dimensions, refer to get_range()
 }
 \examples{
-get_range_geo("DS_POPULATIONS_REFERENCE")
-get_range_geo("DS_TICM_PRATIQUES")
+get_range_geo("DS_POPULATIONS_REFERENCE") |>
+head()
 }

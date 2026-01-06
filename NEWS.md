@@ -1,3 +1,6 @@
+# melodi 0.3.1
+- Correction d'exemples ne fonctionnant plus ou pas lisible dans la doc
+
 # melodi 0.3.0
 - #5 : ajout de fonctions permettant de récupérer les libellés des codes associés à un jeu de données : 
 `get_range_geo` (géographie) and `get_range` (toutes les autres dimensions)
