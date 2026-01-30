@@ -31,8 +31,8 @@ Get file attached to a dataset : extract (XLSX), or full CSV file
 }
 \examples{
 get_file(
-ds_name = "DS_EC_DECES",
-file_name = "T1_DECES_JOUR_NAT_FR",
-download_file_name = "T1_DECES_JOUR_NAT_FR.xlsx"
+  ds_name = "DS_EC_DECES",
+  file_name = "T1_DECES_JOUR_NAT_FR",
+  download_file_name = "T1_DECES_JOUR_NAT_FR.xlsx"
 )
 }

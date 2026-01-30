@@ -10,9 +10,9 @@
 #' get_catalog()
 #' get_catalog(lang = "en")
 get_catalog <- function(
-    lang = "fr",
-    base_url_melodi = "https://api.insee.fr/melodi"
-    ) {
+  lang = "fr",
+  base_url_melodi = "https://api.insee.fr/melodi"
+) {
   # check parameters
   if (!lang %in% c("fr", "en")) {
     stop("lang must be : fr or en")
@@ -26,21 +26,28 @@ get_catalog <- function(
 
   # extract only usefull informations
   all_dataset_extract <- all_dataset |>
-    dplyr::select(identifier,
-                  title, subtitle, description, abstract,
-                  temporal, modified, spatialResolution, spatialTemporal,
-                  numObservations, numSeries) |>
+    dplyr::select(
+      identifier,
+      title, subtitle, description, abstract,
+      temporal, modified, spatialResolution, spatialTemporal,
+      numObservations, numSeries
+    ) |>
     # spatialResolution is a dataframe into dataframe... extract only ids
-    dplyr::mutate(spatialResolution =
-                    lapply(
-                      spatialResolution,
-                      function(x) toString(x$id)
-                      )
-                  ) |>
+    dplyr::mutate(
+      spatialResolution =
+        lapply(
+          spatialResolution,
+          function(x) toString(x$id)
+        )
+    ) |>
     # unnest for variables with list into list
-    tidyr::unnest(cols = c(title, subtitle, description, abstract, temporal,
-                           spatialResolution),
-                  names_sep = "_") |>
+    tidyr::unnest(
+      cols = c(
+        title, subtitle, description, abstract, temporal,
+        spatialResolution
+      ),
+      names_sep = "_"
+    ) |>
     dplyr::arrange(identifier) |>
     # lines are duplicated (fr and en) : filter and delete lang parameter
     dplyr::filter(title_lang == {{ lang }}) |>
@@ -51,11 +58,11 @@ get_catalog <- function(
       temporal_endPeriod = as.Date(temporal_endPeriod),
       # reformat spatial temporal : only a year
       spatialTemporal = dplyr::if_else(
-                          is.na(spatialTemporal),
-                          NA,
-                          as.integer(substr(spatialTemporal, 0, 4))
+        is.na(spatialTemporal),
+        NA,
+        as.integer(substr(spatialTemporal, 0, 4))
       )
     )
 
-  return (all_dataset_extract)
+  return(all_dataset_extract)
 }

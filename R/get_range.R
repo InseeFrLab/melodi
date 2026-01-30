@@ -25,10 +25,10 @@
 #'   exclusions_list = c("GEO", "TIME_PERIOD")
 #' )
 get_range <- function(
-    ds_name,
-    base_url_melodi = "https://api.insee.fr/melodi",
-    lang = "fr",
-    exclusions_list = c("GEO")
+  ds_name,
+  base_url_melodi = "https://api.insee.fr/melodi",
+  lang = "fr",
+  exclusions_list = c("GEO")
 ) {
   # check parameters
   if (!lang %in% c("fr", "en")) {

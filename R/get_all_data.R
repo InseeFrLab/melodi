@@ -12,11 +12,11 @@
 #' @examples
 #' data <- get_all_data("DS_TICM_PRATIQUES")
 get_all_data <- function(
-    ds_name,
-    base_url_melodi = "https://api.insee.fr/melodi",
-    download_directory = tempdir(),
-    stringsAsFactors = FALSE,
-    remove_file = TRUE
+  ds_name,
+  base_url_melodi = "https://api.insee.fr/melodi",
+  download_directory = tempdir(),
+  stringsAsFactors = FALSE,
+  remove_file = TRUE
 ) {
   # lang parameter not exported yet (today most DS only have FR version)
   lang <- "FR"
@@ -30,15 +30,14 @@ get_all_data <- function(
   csv_list <- ds_products |>
     dplyr::filter(language == lang & format == "CSV")
 
-  if(nrow(csv_list) == 0) {
+  if (nrow(csv_list) == 0) {
     stop("No CSV found for ", ds_name)
-  }
-  else if(nrow(csv_list) > 1) {
+  } else if (nrow(csv_list) > 1) {
     stop("Error : more than 1 CSV found for ", ds_name)
   }
 
   # only one URL found : OK
-  zip_url <-  csv_list |>
+  zip_url <- csv_list |>
     dplyr::pull(accessURL)
 
   # Download file
@@ -52,15 +51,17 @@ get_all_data <- function(
   files_in_zip <- zip::zip_list(downloaded_zip_path)
 
   data_filename <- files_in_zip |>
-    dplyr::filter(grepl('_data.csv', filename)) |>
+    dplyr::filter(grepl("_data.csv", filename)) |>
     dplyr::pull(filename)
 
   metadata_filename <- files_in_zip |>
-    dplyr::filter(grepl('_metadata.csv', filename)) |>
+    dplyr::filter(grepl("_metadata.csv", filename)) |>
     dplyr::pull(filename)
 
-  zip::unzip(zipfile = downloaded_zip_path,
-             exdir = download_directory)
+  zip::unzip(
+    zipfile = downloaded_zip_path,
+    exdir = download_directory
+  )
 
   # Load data and metadata
   data_path <- file.path(download_directory, data_filename)
@@ -123,5 +124,5 @@ get_all_data <- function(
     )
   }
 
-  return (data)
+  return(data)
 }

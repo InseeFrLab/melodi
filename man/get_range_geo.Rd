@@ -29,5 +29,5 @@ For other dimensions, refer to get_range()
 }
 \examples{
 get_range_geo("DS_POPULATIONS_REFERENCE") |>
-head()
+  head()
 }

@@ -11,16 +11,16 @@
 #'
 #' @examples
 #' get_file(
-#' ds_name = "DS_EC_DECES",
-#' file_name = "T1_DECES_JOUR_NAT_FR",
-#' download_file_name = "T1_DECES_JOUR_NAT_FR.xlsx"
+#'   ds_name = "DS_EC_DECES",
+#'   file_name = "T1_DECES_JOUR_NAT_FR",
+#'   download_file_name = "T1_DECES_JOUR_NAT_FR.xlsx"
 #' )
 get_file <- function(
-    ds_name,
-    file_name,
-    download_file_name,
-    download_directory = tempdir(),
-    base_url_melodi = "https://api.insee.fr/melodi"
+  ds_name,
+  file_name,
+  download_file_name,
+  download_directory = tempdir(),
+  base_url_melodi = "https://api.insee.fr/melodi"
 ) {
   # Build useful parameters
   url <- glue::glue("{base_url_melodi}/file/{ds_name}/{file_name}")
@@ -34,5 +34,5 @@ get_file <- function(
     httr2::req_progress() |>
     httr2::req_perform(path = path)
 
-  return (path)
+  return(path)
 }

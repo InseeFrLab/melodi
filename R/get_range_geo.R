@@ -14,11 +14,11 @@
 #'
 #' @examples
 #' get_range_geo("DS_POPULATIONS_REFERENCE") |>
-#' head()
+#'   head()
 get_range_geo <- function(
-    ds_name,
-    base_url_melodi = "https://api.insee.fr/melodi",
-    lang = "fr"
+  ds_name,
+  base_url_melodi = "https://api.insee.fr/melodi",
+  lang = "fr"
 ) {
   # check parameters
   if (!lang %in% c("fr", "en")) {
@@ -63,12 +63,13 @@ get_range_geo <- function(
       value_id <- values[[j]][["id"]] |> safe_extract()
 
       # Créer la liste sans geo_object si dimension_geo est FALSE
-      codebook_list[[length(codebook_list) + 1]]  <- list(
+      codebook_list[[length(codebook_list) + 1]] <- list(
         dimension = dimension,
         dimension_label = dimension_label,
         value = value,
         value_label = value_label,
-        value_id = value_id)
+        value_id = value_id
+      )
     }
   }
 

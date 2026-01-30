@@ -9,8 +9,8 @@
 #' @examples
 #' get_metadata("DS_POPULATIONS_REFERENCE")
 get_metadata <- function(
-    ds_name,
-    base_url_melodi = "https://api.insee.fr/melodi"
+  ds_name,
+  base_url_melodi = "https://api.insee.fr/melodi"
 ) {
   url <- glue::glue("{base_url_melodi}/catalog/{ds_name}")
 
@@ -20,5 +20,5 @@ get_metadata <- function(
     httr2::req_perform() |>
     httr2::resp_body_json(simplifyVector = TRUE)
 
-  return (dataset)
+  return(dataset)
 }
