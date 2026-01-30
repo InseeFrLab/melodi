@@ -42,6 +42,7 @@ get_all_data <- function(
   downloaded_zip_path <- file.path(download_directory, glue::glue("{ds_name}.zip"))
 
   httr2::request(zip_url) |>
+    httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
     httr2::req_progress() |>
     httr2::req_perform(downloaded_zip_path)
 

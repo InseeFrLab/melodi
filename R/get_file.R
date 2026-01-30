@@ -29,6 +29,7 @@ get_file <- function(
   message("Downloaded path : ", path)
 
   httr2::request(url) |>
+    httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
     httr2::req_progress() |>
     httr2::req_perform(path = path)
 

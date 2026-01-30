@@ -27,6 +27,7 @@ get_range_geo <- function(
   message("Request dataset range : ", url)
 
   dataset <- httr2::request(url) |>
+    httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
     httr2::req_perform() |>
     httr2::resp_body_json(simplifyVector = FALSE)
 

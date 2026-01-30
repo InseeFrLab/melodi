@@ -25,6 +25,7 @@ get_data <- function(
   message("Total count request : ", request_count$url)
 
   data_count <- request_count |>
+    httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
     httr2::req_perform() |>
     httr2::resp_body_json(simplifyVector = TRUE)
 
@@ -51,6 +52,7 @@ get_data <- function(
     httr2::req_url_query(maxResult = maxResultAPI)
 
   result <- request |>
+    httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
     httr2::req_perform() |>
     httr2::resp_body_json(simplifyVector = TRUE)
 
