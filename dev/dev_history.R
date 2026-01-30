@@ -34,7 +34,7 @@ devtools::check(
 pkgdown::build_site()
 
 # Creer une fonction ------------------------------------------------------
-# Pour chaque fonction du package :
+#  Pour chaque fonction du package :
 usethis::use_r("get_local_data")
 usethis::use_test("get_local_data")
 # écrire le code de la fonction
@@ -60,7 +60,7 @@ usethis::use_version(push = FALSE)
 # mais il faut donc faire le commit/push après manuellement
 
 # Remplir les actus liées à cette nouvelle version
-file.edit('NEWS.md')
+file.edit("NEWS.md")
 
 # Livrer une version sur un repository ---------------------
 # Générer une archive des sources du package

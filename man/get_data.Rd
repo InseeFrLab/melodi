@@ -2,8 +2,7 @@
 % Please edit documentation in R/get_data.R
 \name{get_data}
 \alias{get_data}
-\title{Get Melodi data by URL.
-This URL can be copy/paste from explorer https://catalogue-donnees.insee.fr}
+\title{Get Melodi data by URL.}
 \usage{
 get_data(url)
 }
@@ -14,11 +13,10 @@ get_data(url)
 data.frame with data
 }
 \description{
-Get Melodi data by URL.
-This URL can be copy/paste from explorer https://catalogue-donnees.insee.fr
+URL parameter can be copied/pasted from explorer https://catalogue-donnees.insee.fr
 }
 \examples{
 get_data(
-    "https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?POPREF_MEASURE=PMUN&GEO=FRANCE-F"
+  "https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?POPREF_MEASURE=PMUN&GEO=FRANCE-F"
 )
 }

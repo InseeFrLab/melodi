@@ -1,3 +1,7 @@
+# melodi 1.0.0
+- Relèvement du seuil d'export filtré à 100 000 lignes (amélioration de l'API Melodi)
+
+
 # melodi 0.3.1
 - Correction d'exemples ne fonctionnant plus ou pas lisible dans la doc
 - Adaptation des tests à vcr 2 (suppression du helper, relance des cassettes)

@@ -1,6 +1,5 @@
 vcr::use_cassette("get_local_data_by_com_popref", {
   test_that("get local data OK", {
-
     expect_no_error(
       # Toutes les communes de Nantes Métropole
       local_data <- get_local_data_by_com(
@@ -22,7 +21,6 @@ vcr::use_cassette("get_local_data_by_com_popref", {
 
 vcr::use_cassette("get_local_data_filter_by_com_popref", {
   test_that("get local data with filter OK", {
-
     expect_no_error(
       # Toutes les communes de Nantes Métropole
       local_data <- get_local_data_by_com(
@@ -35,8 +33,8 @@ vcr::use_cassette("get_local_data_filter_by_com_popref", {
 
     lignes_incorrectes <- local_data |>
       dplyr::filter(substr(GEO, 1, 2) != "44" |
-                      GEO_OBJECT != "COM" |
-                      POPREF_MEASURE != "PMUN")
+        GEO_OBJECT != "COM" |
+        POPREF_MEASURE != "PMUN")
 
     expect_equal(
       object = nrow(lignes_incorrectes),

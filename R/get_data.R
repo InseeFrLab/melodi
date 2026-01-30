@@ -1,5 +1,6 @@
 #' Get Melodi data by URL.
-#' This URL can be copy/paste from explorer https://catalogue-donnees.insee.fr
+#'
+#' URL parameter can be copied/pasted from explorer https://catalogue-donnees.insee.fr
 #'
 #' @param url URL API data Melodi - Start by "https://api.insee.fr/melodi/data/..."
 #'
@@ -8,11 +9,16 @@
 #'
 #' @examples
 #' get_data(
-#'     "https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?POPREF_MEASURE=PMUN&GEO=FRANCE-F"
+#'   "https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?POPREF_MEASURE=PMUN&GEO=FRANCE-F"
 #' )
 get_data <- function(
-    url
+  url
 ) {
+  # Maximum number of allowed results
+  # Not an external parameter because it cannot be increased by the user
+  # under any circumstances
+  maxResultAPI <- 100000
+
   # 1 - Count numer of lines of request
   request_count <- httr2::request(url) |>
     # Add Melodi /data parameters to only count lines
@@ -30,10 +36,8 @@ get_data <- function(
 
   if (count == 0) {
     stop("No result for request ", url)
-  }
-
-  else if (count > 10000) {
-    stop("Request over 10 000 lines not supported yet,
+  } else if (count > maxResultAPI) {
+    stop("Request over ", maxResultAPI, " lines not supported yet,
          please filter your request or use get_all_data")
   }
 
@@ -42,7 +46,7 @@ get_data <- function(
     # TODO useless ? this is the default value now
     httr2::req_url_query(idTerritoire = TRUE) |>
     # maximum maxResult authorized by Melodi API
-    httr2::req_url_query(maxResult = 10000)
+    httr2::req_url_query(maxResult = maxResultAPI)
 
   result <- request |>
     httr2::req_perform() |>
@@ -52,9 +56,11 @@ get_data <- function(
   dimensions_obj <- result[["observations"]][["dimensions"]]
   measures_obj <- result[["observations"]][["measures"]][["OBS_VALUE_NIVEAU"]]
   attributes_obj <- result[["observations"]][["attributes"]]
-  data <- dplyr::bind_cols(dimensions_obj,
-                           attributes_obj,
-                           measures_obj)
+  data <- dplyr::bind_cols(
+    dimensions_obj,
+    attributes_obj,
+    measures_obj
+  )
 
   # 3 - rename variables to be in Melodi format
   if ("value" %in% colnames(data)) {
@@ -66,5 +72,5 @@ get_data <- function(
       tidyr::separate(GEO, into = c("GEO_REF", "GEO_OBJECT", "GEO"), sep = "-")
   }
 
-  return (data)
+  return(data)
 }
