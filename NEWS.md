@@ -4,7 +4,7 @@
 plutôt qu'en paramètre ou caché dans les fonctions
   - En tant qu'utilisateur, si besoin de changer un paramètre, 
   simplement lancer : `options(rmelodi.base_url_api = "https://...")`
-- Relectures diverses de code (styler)
+- Relectures diverses de documentation et du code (styler)
 
 # melodi 0.3.1
 - Correction d'exemples ne fonctionnant plus ou pas lisible dans la doc
