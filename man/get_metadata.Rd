@@ -4,12 +4,10 @@
 \alias{get_metadata}
 \title{Get dataset metadata}
 \usage{
-get_metadata(ds_name, base_url_melodi = "https://api.insee.fr/melodi")
+get_metadata(ds_name)
 }
 \arguments{
 \item{ds_name}{Dataset name}
-
-\item{base_url_melodi}{API Melodi URL - default production URL}
 }
 \value{
 list dataset metadata

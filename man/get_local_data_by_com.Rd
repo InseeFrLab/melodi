@@ -4,13 +4,7 @@
 \alias{get_local_data_by_com}
 \title{Get data on every Commune of one territory}
 \usage{
-get_local_data_by_com(
-  ds_name,
-  geo,
-  geo_object,
-  filter = "",
-  base_url_melodi = "https://api.insee.fr/melodi"
-)
+get_local_data_by_com(ds_name, geo, geo_object, filter = "")
 }
 \arguments{
 \item{ds_name}{Dataset name}
@@ -20,8 +14,6 @@ get_local_data_by_com(
 \item{geo_object}{Geo Level}
 
 \item{filter}{additionnal filter on request - default : ""}
-
-\item{base_url_melodi}{API Melodi URL - default production URL}
 }
 \value{
 data.frame with data

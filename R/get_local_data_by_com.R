@@ -4,7 +4,6 @@
 #' @param geo Code geo
 #' @param geo_object Geo Level
 #' @param filter additionnal filter on request - default : ""
-#' @param base_url_melodi API Melodi URL - default production URL
 #'
 #' @return data.frame with data
 #' @export
@@ -28,13 +27,12 @@ get_local_data_by_com <- function(
   ds_name,
   geo,
   geo_object,
-  filter = "",
-  base_url_melodi = "https://api.insee.fr/melodi"
+  filter = ""
 ) {
   if (filter != "") {
     filter <- glue::glue("&{filter}")
   }
-  url <- glue::glue("{base_url_melodi}/data/{ds_name}?GEO={geo_object}-{geo}*COM{filter}")
+  url <- glue::glue("{getOption('rmelodi.base_url_api')}/data/{ds_name}?GEO={geo_object}-{geo}*COM{filter}")
 
   return(get_data(url))
 }

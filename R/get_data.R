@@ -14,10 +14,7 @@
 get_data <- function(
   url
 ) {
-  # Maximum number of allowed results
-  # Not an external parameter because it cannot be increased by the user
-  # under any circumstances
-  maxResultAPI <- 100000
+  maxResultAPI <- getOption("rmelodi.max_result_api")
 
   # 1 - Count numer of lines of request
   request_count <- httr2::request(url) |>

@@ -4,12 +4,10 @@
 \alias{get_catalog}
 \title{Get list of available datasets}
 \usage{
-get_catalog(lang = "fr", base_url_melodi = "https://api.insee.fr/melodi")
+get_catalog(lang = "fr")
 }
 \arguments{
 \item{lang}{lang of metadata informations (default: fr)}
-
-\item{base_url_melodi}{API URL (default: https://api.insee.fr)}
 }
 \value{
 a data.frame containing list of available datasets

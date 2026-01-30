@@ -5,7 +5,6 @@
 #' For GEO dimension, it is recommanded to used dedicated function : get_range_geo()
 #'
 #' @param ds_name dataset name
-#' @param base_url_melodi API Melodi URL - default production URL
 #' @param lang french or english labels - default french ("fr")
 #' @param exclusions_list exclude some dimensions for a faster and light result - default : "GEO"
 #'
@@ -26,7 +25,6 @@
 #' )
 get_range <- function(
   ds_name,
-  base_url_melodi = "https://api.insee.fr/melodi",
   lang = "fr",
   exclusions_list = c("GEO")
 ) {
@@ -34,7 +32,7 @@ get_range <- function(
   if (!lang %in% c("fr", "en")) {
     stop("lang must be : fr or en")
   }
-  url <- paste0(base_url_melodi, "/range/", ds_name)
+  url <- paste0(getOption("rmelodi.base_url_api"), "/range/", ds_name)
 
   message("Request dataset range : ", url)
 

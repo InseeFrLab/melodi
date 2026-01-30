@@ -65,14 +65,14 @@ fic_xlsx1 <- get_file(
 
 # Travailler sur un autre environnement Melodi
 
-Toutes les fonctions disposent d'un paramètre facultatif `base_url_melodi` permettant de travailler dans un autre environnement que Melodi en production. 
+Le package dispose d'une option `rmelodi.base_url_api` permettant de travailler dans un autre environnement que Melodi en production. 
 
 Pour cela fournir l'URL de base de l'API de l'environnement à utiliser. S'il s'agit d'environnements internes, penser au besoin à désactiver le proxy pour l'URL en question.
 
 ```{r interne, eval = FALSE}
 Sys.setenv(no_proxy = "serveur.url.fr")
 
-get_catalog(
-  base_url_melodi = "https://serveur.url.fr/melodi"
-)
+options(rmelodi.base_url_api = "https://autre_url_api_melodi.fr")
+
+get_catalog()
 ```

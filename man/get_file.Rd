@@ -8,8 +8,7 @@ get_file(
   ds_name,
   file_name,
   download_file_name,
-  download_directory = tempdir(),
-  base_url_melodi = "https://api.insee.fr/melodi"
+  download_directory = tempdir()
 )
 }
 \arguments{
@@ -20,8 +19,6 @@ get_file(
 \item{download_file_name}{Filename on disk after download}
 
 \item{download_directory}{Download directory - default system tempdir}
-
-\item{base_url_melodi}{API Melodi URL - default production URL}
 }
 \value{
 downloaded file name on disk
