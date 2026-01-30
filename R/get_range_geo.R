@@ -22,7 +22,7 @@ get_range_geo <- function(
   if (!lang %in% c("fr", "en")) {
     stop("lang must be : fr or en")
   }
-  url <- paste0(getOption("rmelodi.base_url_api"), "/range/", ds_name)
+  url <- glue::glue("{getOption('rmelodi.base_url_api')}/range/{ds_name}")
 
   message("Request dataset range : ", url)
 
