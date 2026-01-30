@@ -1,0 +1,308 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.insee.fr/melodi/rmes/listeCode/CL_AGE
+  response:
+    status: 200
+    headers:
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      content-type: application/json
+      date: Fri, 30 Jan 2026 17:27:06 GMT
+      expires: '0'
+      pragma: no-cache
+      set-cookie: INSEE=rd4o00000000000000000000ffff0ac3084ao8082; expires=Fri, 30-Jan-2026
+        17:47:06 GMT; path=/; Httponly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=100000; includeSubDomains
+      vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-gravitee-request-id: 137c0644-17ad-498c-bc06-4417adf98cd3
+      x-gravitee-transaction-id: 137c0644-17ad-498c-bc06-4417adf98cd3
+      x-xss-protection: '0'
+    body:
+      string: '{"id":"CL_AGE","dateCreation":"2023-02-08T14:57:15","dateMiseAJour":"2026-01-29T18:08:23","label":[{"langue":"fr","contenu":"Age"},{"langue":"en","contenu":"Age"}],"codes":[{"code":"_Z","label":[{"langue":"fr","contenu":"Non
+        applicable"},{"langue":"en","contenu":"Not applicable"}]},{"code":"Y_GE1","label":[{"langue":"fr","contenu":"1
+        an ou plus"},{"langue":"en","contenu":"1 year or older"}]},{"code":"Y_GE100","label":[{"langue":"fr","contenu":"100
+        ans ou plus"},{"langue":"en","contenu":"100 years old or older"}]},{"code":"Y_GE14","label":[{"langue":"fr","contenu":"14
+        ans ou plus"},{"langue":"en","contenu":"14 years old or older"}]},{"code":"Y_GE15","label":[{"langue":"fr","contenu":"15
+        ans ou plus"},{"langue":"en","contenu":"15 years old or older"}]},{"code":"Y_GE16","label":[{"langue":"fr","contenu":"16
+        ans ou plus"},{"langue":"en","contenu":"16 years old or older"}]},{"code":"Y_GE18","label":[{"langue":"fr","contenu":"Plus
+        de 18 ans"},{"langue":"en","contenu":"More than 18 years old"}]},{"code":"Y_GE2","label":[{"langue":"fr","contenu":"2
+        ans ou plus"},{"langue":"en","contenu":"2 years old or older"}]},{"code":"Y_GE25","label":[{"langue":"fr","contenu":"25
+        ans ou plus"},{"langue":"en","contenu":"25 years old or older"}]},{"code":"Y_GE30","label":[{"langue":"fr","contenu":"30
+        ans ou plus"},{"langue":"en","contenu":"30 years old or older"}]},{"code":"Y_GE50","label":[{"langue":"fr","contenu":"50
+        ans ou plus "},{"langue":"en","contenu":"50 years old or older"}]},{"code":"Y_GE55","label":[{"langue":"fr","contenu":"55
+        ans ou plus"},{"langue":"en","contenu":"55 years old or older"}]},{"code":"Y_GE60","label":[{"langue":"fr","contenu":"60
+        ans ou plus"},{"langue":"en","contenu":"60 years old or older"}]},{"code":"Y_GE65","label":[{"langue":"fr","contenu":"65
+        ans ou plus"},{"langue":"en","contenu":"65 years old or older"}]},{"code":"Y_GE70","label":[{"langue":"fr","contenu":"70
+        ans ou plus"},{"langue":"en","contenu":"70 years old or older"}]},{"code":"Y_GE75","label":[{"langue":"fr","contenu":"75
+        ans ou plus"},{"langue":"en","contenu":"75 years old or older"}]},{"code":"Y_GE80","label":[{"langue":"fr","contenu":"80
+        ans ou plus"},{"langue":"en","contenu":"80 years old or older"}]},{"code":"Y_GE85","label":[{"langue":"fr","contenu":"85
+        ans ou plus "},{"langue":"en","contenu":"85 years old or older"}]},{"code":"Y_GE90","label":[{"langue":"fr","contenu":"90
+        ans ou plus"},{"langue":"en","contenu":"90 years old or older"}]},{"code":"Y_GE95","label":[{"langue":"fr","contenu":"95
+        ans ou plus"},{"langue":"en","contenu":"95 years old or older"}]},{"code":"Y_GT60","label":[{"langue":"fr","contenu":"Plus
+        de 60 ans"},{"langue":"en","contenu":"More than 60 years"}]},{"code":"Y_LE15","label":[{"langue":"fr","contenu":"15
+        ans ou moins"},{"langue":"en","contenu":" 15 years and under"}]},{"code":"Y_LT10","label":[{"langue":"fr","contenu":"Moins
+        de 10 ans"},{"langue":"en","contenu":"Under 10 years"}]},{"code":"Y_LT15","label":[{"langue":"fr","contenu":"Moins
+        de 15 ans"},{"langue":"en","contenu":"Under 15 years old"}]},{"code":"Y_LT16","label":[{"langue":"fr","contenu":"Moins
+        de 16 ans"},{"langue":"en","contenu":"Under 16 years old"}]},{"code":"Y_LT18","label":[{"langue":"fr","contenu":"Moins
+        de 18 ans"},{"langue":"en","contenu":"Less than 18 years"}]},{"code":"Y_LT2","label":[{"langue":"fr","contenu":"Moins
+        de 2 ans"},{"langue":"en","contenu":"Under 2 years"}]},{"code":"Y_LT20","label":[{"langue":"fr","contenu":"Moins
+        de 20 ans"},{"langue":"en","contenu":"Under 20 years old"}]},{"code":"Y_LT25","label":[{"langue":"fr","contenu":"Moins
+        de 25 ans"},{"langue":"en","contenu":"Less than 25 years"}]},{"code":"Y_LT26","label":[{"langue":"fr","contenu":"Moins
+        de 26 ans"},{"langue":"en","contenu":"Less than 26 years"}]},{"code":"Y_LT3","label":[{"langue":"fr","contenu":"Moins
+        de 3 ans"},{"langue":"en","contenu":"Under 3 years old"}]},{"code":"Y_LT30","label":[{"langue":"fr","contenu":"Moins
+        de 30 ans"},{"langue":"en","contenu":"Under 30 years old"}]},{"code":"Y_LT5","label":[{"langue":"fr","contenu":"Moins
+        de 5 ans"},{"langue":"en","contenu":"Under 5 years old"}]},{"code":"Y_LT6","label":[{"langue":"fr","contenu":"Moins
+        de 6 ans"},{"langue":"en","contenu":"Under 6 years old"}]},{"code":"Y_LT65","label":[{"langue":"fr","contenu":"Moins
+        de 65 ans"},{"langue":"en","contenu":"Less than 65 years"}]},{"code":"Y_UNK","label":[{"langue":"fr","contenu":"Âge
+        non connu"},{"langue":"en","contenu":"Year Unknown"}]},{"code":"Y0","label":[{"langue":"fr","contenu":"0
+        an"},{"langue":"en","contenu":"0 year"}]},{"code":"Y0T4","label":[{"langue":"fr","contenu":"De
+        0 à 4 ans"},{"langue":"en","contenu":"From 0 to 4 years"}]},{"code":"Y1","label":[{"langue":"fr","contenu":"1
+        an"},{"langue":"en","contenu":"1 year"}]},{"code":"Y10","label":[{"langue":"fr","contenu":"10
+        ans"},{"langue":"en","contenu":"10 years"}]},{"code":"Y100","label":[{"langue":"fr","contenu":"100
+        ans"},{"langue":"en","contenu":"100 years"}]},{"code":"Y100T104","label":[{"langue":"fr","contenu":"De
+        100 à 104 ans"},{"langue":"en","contenu":"From 100 to 104 years"}]},{"code":"Y101","label":[{"langue":"fr","contenu":"101
+        ans"},{"langue":"en","contenu":"101 years"}]},{"code":"Y101T105","label":[{"langue":"fr","contenu":"De
+        101 à 105 ans"},{"langue":"en","contenu":"From 101 to 105 years"}]},{"code":"Y102","label":[{"langue":"fr","contenu":"102
+        ans"},{"langue":"en","contenu":"102 years"}]},{"code":"Y103","label":[{"langue":"fr","contenu":"103
+        ans"},{"langue":"en","contenu":"103 years"}]},{"code":"Y104","label":[{"langue":"fr","contenu":"104
+        ans"},{"langue":"en","contenu":"104 years"}]},{"code":"Y105","label":[{"langue":"fr","contenu":"105
+        ans"},{"langue":"en","contenu":"105 years"}]},{"code":"Y105T109","label":[{"langue":"fr","contenu":"De
+        105 à 109 ans"},{"langue":"en","contenu":"From 105 to 109 years"}]},{"code":"Y106","label":[{"langue":"fr","contenu":"106
+        ans"},{"langue":"en","contenu":"106 years"}]},{"code":"Y106T110","label":[{"langue":"fr","contenu":"De
+        106 à 110 ans"},{"langue":"en","contenu":"From 106 to 110 years"}]},{"code":"Y107","label":[{"langue":"fr","contenu":"107
+        ans"},{"langue":"en","contenu":"107 years"}]},{"code":"Y108","label":[{"langue":"fr","contenu":"108
+        ans"},{"langue":"en","contenu":"108 years"}]},{"code":"Y109","label":[{"langue":"fr","contenu":"109
+        ans"},{"langue":"en","contenu":"109 years"}]},{"code":"Y10T14","label":[{"langue":"fr","contenu":"De
+        10 à 14 ans"},{"langue":"en","contenu":"From 10 to 14 years"}]},{"code":"Y10T17","label":[{"langue":"fr","contenu":"De
+        10 à 17 ans"},{"langue":"en","contenu":"From 10 to 17 years"}]},{"code":"Y11","label":[{"langue":"fr","contenu":"11
+        ans"},{"langue":"en","contenu":"11 years"}]},{"code":"Y110","label":[{"langue":"fr","contenu":"110
+        ans"},{"langue":"en","contenu":"110 years"}]},{"code":"Y111","label":[{"langue":"fr","contenu":"111
+        ans"},{"langue":"en","contenu":"111 years"}]},{"code":"Y112","label":[{"langue":"fr","contenu":"112
+        ans"},{"langue":"en","contenu":"112 years"}]},{"code":"Y113","label":[{"langue":"fr","contenu":"113
+        ans"},{"langue":"en","contenu":"113 years"}]},{"code":"Y114","label":[{"langue":"fr","contenu":"114
+        ans"},{"langue":"en","contenu":"114 years"}]},{"code":"Y115","label":[{"langue":"fr","contenu":"115
+        ans"},{"langue":"en","contenu":"115 years"}]},{"code":"Y116","label":[{"langue":"fr","contenu":"116
+        ans"},{"langue":"en","contenu":"116 years"}]},{"code":"Y117","label":[{"langue":"fr","contenu":"117
+        ans"},{"langue":"en","contenu":"117 years"}]},{"code":"Y118","label":[{"langue":"fr","contenu":"118
+        ans"},{"langue":"en","contenu":"118 years"}]},{"code":"Y119","label":[{"langue":"fr","contenu":"119
+        ans"},{"langue":"en","contenu":"119 years"}]},{"code":"Y11T14","label":[{"langue":"fr","contenu":"De
+        11 à 14 ans"},{"langue":"en","contenu":"From 11 to 14 years"}]},{"code":"Y11T15","label":[{"langue":"fr","contenu":"De
+        11 à 15 ans "},{"langue":"en","contenu":"From 11 to 15 years"}]},{"code":"Y11T17","label":[{"langue":"fr","contenu":"De
+        11 à 17 ans"},{"langue":"en","contenu":"From 11 to 17 years"}]},{"code":"Y12","label":[{"langue":"fr","contenu":"12
+        ans"},{"langue":"en","contenu":"12 years"}]},{"code":"Y120","label":[{"langue":"fr","contenu":"120
+        ans"},{"langue":"en","contenu":"120 years"}]},{"code":"Y13","label":[{"langue":"fr","contenu":"13
+        ans"},{"langue":"en","contenu":"13 years"}]},{"code":"Y14","label":[{"langue":"fr","contenu":"14
+        ans"},{"langue":"en","contenu":"14 years"}]},{"code":"Y14T29","label":[{"langue":"fr","contenu":"De
+        14 à 29 ans"},{"langue":"en","contenu":"From 14 to 29 years"}]},{"code":"Y15","label":[{"langue":"fr","contenu":"15
+        ans"},{"langue":"en","contenu":"15 years"}]},{"code":"Y15T17","label":[{"langue":"fr","contenu":"De
+        15 à 17 ans"},{"langue":"en","contenu":"From 15 to 17 years"}]},{"code":"Y15T19","label":[{"langue":"fr","contenu":"De
+        15 à 19 ans"},{"langue":"en","contenu":"From 15 to 19 years"}]},{"code":"Y15T24","label":[{"langue":"fr","contenu":"De
+        15 à 24 ans "},{"langue":"en","contenu":"From 15 to 24 years"}]},{"code":"Y15T29","label":[{"langue":"fr","contenu":"De
+        15 à 29 ans"},{"langue":"en","contenu":"From 15 to 29 years"}]},{"code":"Y15T44","label":[{"langue":"fr","contenu":"De
+        15 à 44 ans"},{"langue":"en","contenu":"From 15 to 44 years"}]},{"code":"Y15T64","label":[{"langue":"fr","contenu":"De
+        15 à 64 ans"},{"langue":"en","contenu":"From 15 to 64 years"}]},{"code":"Y15T74","label":[{"langue":"fr","contenu":"De
+        15 à 74 ans "},{"langue":"en","contenu":"From 15 to 74 years"}]},{"code":"Y15T89","label":[{"langue":"fr","contenu":"De
+        15 à 89 ans"},{"langue":"en","contenu":"From 15 to 89 years"}]},{"code":"Y16","label":[{"langue":"fr","contenu":"16
+        ans"},{"langue":"en","contenu":"16 years"}]},{"code":"Y16T20","label":[{"langue":"fr","contenu":"De
+        16 à 20 ans"},{"langue":"en","contenu":"From 16 to 20 years"}]},{"code":"Y16T24","label":[{"langue":"fr","contenu":"De
+        16 à 24 ans"},{"langue":"en","contenu":"From 16 to 24 years"}]},{"code":"Y16T29","label":[{"langue":"fr","contenu":"De
+        16 à 29 ans"},{"langue":"en","contenu":"From 16 to 29 years"}]},{"code":"Y17","label":[{"langue":"fr","contenu":"17
+        ans"},{"langue":"en","contenu":"17 years"}]},{"code":"Y18","label":[{"langue":"fr","contenu":"18
+        ans"},{"langue":"en","contenu":"18 years"}]},{"code":"Y18T24","label":[{"langue":"fr","contenu":"De
+        18 à 24 ans"},{"langue":"en","contenu":"From 18 to 24 years"}]},{"code":"Y18T29","label":[{"langue":"fr","contenu":"De
+        18 à 29 ans "},{"langue":"en","contenu":"From 18 to 29 years "}]},{"code":"Y18T39","label":[{"langue":"fr","contenu":"De
+        18 à 39 ans"},{"langue":"en","contenu":"From 18 to 39 years"}]},{"code":"Y18T64","label":[{"langue":"fr","contenu":"De
+        18 à 64 ans"},{"langue":"en","contenu":"From 18 to 64 years"}]},{"code":"Y18T75","label":[{"langue":"fr","contenu":"De
+        18 à 75 ans"},{"langue":"en","contenu":"From 18 to 75 years"}]},{"code":"Y19","label":[{"langue":"fr","contenu":"19
+        ans"},{"langue":"en","contenu":"19 years"}]},{"code":"Y1T14","label":[{"langue":"fr","contenu":"De
+        1 à 14 ans"},{"langue":"en","contenu":"From 1 to 14 years"}]},{"code":"Y1T19","label":[{"langue":"fr","contenu":"De
+        1 à 19 ans"},{"langue":"en","contenu":"From 1 to 19 years"}]},{"code":"Y1T5","label":[{"langue":"fr","contenu":"De
+        1 à 5 ans"},{"langue":"en","contenu":"From 1 to 5 years"}]},{"code":"Y2","label":[{"langue":"fr","contenu":"2
+        ans"},{"langue":"en","contenu":"2 years"}]},{"code":"Y20","label":[{"langue":"fr","contenu":"20
+        ans"},{"langue":"en","contenu":"20 years"}]},{"code":"Y20T24","label":[{"langue":"fr","contenu":"De
+        20 à 24 ans"},{"langue":"en","contenu":"From 20 to 24 years"}]},{"code":"Y20T29","label":[{"langue":"fr","contenu":"De
+        20 à 29 ans"},{"langue":"en","contenu":"20 to 29 years old"}]},{"code":"Y20T64","label":[{"langue":"fr","contenu":"De
+        20 à 64 ans"},{"langue":"en","contenu":"From 20 to 64 years"}]},{"code":"Y21","label":[{"langue":"fr","contenu":"21
+        ans"},{"langue":"en","contenu":"21 years"}]},{"code":"Y21T25","label":[{"langue":"fr","contenu":"De
+        21 à 25 ans"},{"langue":"en","contenu":"From 21 to 25 years"}]},{"code":"Y22","label":[{"langue":"fr","contenu":"22
+        ans"},{"langue":"en","contenu":"22 years"}]},{"code":"Y23","label":[{"langue":"fr","contenu":"23
+        ans"},{"langue":"en","contenu":"23 years"}]},{"code":"Y24","label":[{"langue":"fr","contenu":"24
+        ans"},{"langue":"en","contenu":"24 years"}]},{"code":"Y25","label":[{"langue":"fr","contenu":"25
+        ans"},{"langue":"en","contenu":"25 years"}]},{"code":"Y25T29","label":[{"langue":"fr","contenu":"De
+        25 à 29 ans"},{"langue":"en","contenu":"From 25 to 29 years"}]},{"code":"Y25T34","label":[{"langue":"fr","contenu":"De
+        25 à 34 ans "},{"langue":"en","contenu":"From 25 to 34 years"}]},{"code":"Y25T39","label":[{"langue":"fr","contenu":"De
+        25 à 39 ans"},{"langue":"en","contenu":"From 25 to 39 years"}]},{"code":"Y25T49","label":[{"langue":"fr","contenu":"De
+        25 à 49 ans"},{"langue":"en","contenu":"From 25 to 49 years"}]},{"code":"Y25T54","label":[{"langue":"fr","contenu":"De
+        25 à 54 ans"},{"langue":"en","contenu":"From 25 to 54 years"}]},{"code":"Y26","label":[{"langue":"fr","contenu":"26
+        ans"},{"langue":"en","contenu":"26 years"}]},{"code":"Y26T30","label":[{"langue":"fr","contenu":"De
+        26 à 30 ans"},{"langue":"en","contenu":"From 26 to 30 years"}]},{"code":"Y27","label":[{"langue":"fr","contenu":"27
+        ans"},{"langue":"en","contenu":"27 years"}]},{"code":"Y28","label":[{"langue":"fr","contenu":"28
+        ans"},{"langue":"en","contenu":"28 years"}]},{"code":"Y29","label":[{"langue":"fr","contenu":"29
+        ans"},{"langue":"en","contenu":"29 years"}]},{"code":"Y2T5","label":[{"langue":"fr","contenu":"De
+        2 à 5 ans"},{"langue":"en","contenu":"From 2 to 5 years"}]},{"code":"Y3","label":[{"langue":"fr","contenu":"3
+        ans"},{"langue":"en","contenu":"3 years"}]},{"code":"Y30","label":[{"langue":"fr","contenu":"30
+        ans"},{"langue":"en","contenu":"30 years"}]},{"code":"Y30T34","label":[{"langue":"fr","contenu":"De
+        30 à 34 ans"},{"langue":"en","contenu":"From 30 to 34 years"}]},{"code":"Y30T39","label":[{"langue":"fr","contenu":"De
+        30 à 39 ans"},{"langue":"en","contenu":"30 to 39 years old"}]},{"code":"Y30T44","label":[{"langue":"fr","contenu":"De
+        30 à 44 ans"},{"langue":"en","contenu":"From 30 to 44 years"}]},{"code":"Y31","label":[{"langue":"fr","contenu":"31
+        ans"},{"langue":"en","contenu":"31 years"}]},{"code":"Y31T35","label":[{"langue":"fr","contenu":"De
+        31 à 35 ans"},{"langue":"en","contenu":"From 31 to 35 years"}]},{"code":"Y31T40","label":[{"langue":"fr","contenu":"De
+        31 à 40 ans"},{"langue":"en","contenu":"From 31 to 40 years"}]},{"code":"Y32","label":[{"langue":"fr","contenu":"32
+        ans"},{"langue":"en","contenu":"32 years"}]},{"code":"Y33","label":[{"langue":"fr","contenu":"33
+        ans"},{"langue":"en","contenu":"33 years"}]},{"code":"Y34","label":[{"langue":"fr","contenu":"34
+        ans"},{"langue":"en","contenu":"34 years"}]},{"code":"Y35","label":[{"langue":"fr","contenu":"35
+        ans"},{"langue":"en","contenu":"35 years"}]},{"code":"Y35T39","label":[{"langue":"fr","contenu":"De
+        35 à 39 ans"},{"langue":"en","contenu":"From 35 to 39 years"}]},{"code":"Y35T44","label":[{"langue":"fr","contenu":"De
+        35 à 44 ans "},{"langue":"en","contenu":"From 35 to 44 years"}]},{"code":"Y35T48","label":[{"langue":"fr","contenu":"De
+        35 à 48 ans "},{"langue":"en","contenu":"From 35 to 48 years"}]},{"code":"Y35T49","label":[{"langue":"fr","contenu":"De
+        35 à 49 ans "},{"langue":"en","contenu":"From 35 to 49 years"}]},{"code":"Y36","label":[{"langue":"fr","contenu":"36
+        ans"},{"langue":"en","contenu":"36 years"}]},{"code":"Y36T40","label":[{"langue":"fr","contenu":"De
+        36 à 40 ans"},{"langue":"en","contenu":"From 36 to 40 years"}]},{"code":"Y37","label":[{"langue":"fr","contenu":"37
+        ans"},{"langue":"en","contenu":"37 years"}]},{"code":"Y38","label":[{"langue":"fr","contenu":"38
+        ans"},{"langue":"en","contenu":"38 years"}]},{"code":"Y39","label":[{"langue":"fr","contenu":"39
+        ans"},{"langue":"en","contenu":"39 years"}]},{"code":"Y3T5","label":[{"langue":"fr","contenu":"De
+        3 à 5 ans"},{"langue":"en","contenu":"From 3 to 5 years"}]},{"code":"Y4","label":[{"langue":"fr","contenu":"4
+        ans"},{"langue":"en","contenu":"4 years"}]},{"code":"Y40","label":[{"langue":"fr","contenu":"40
+        ans"},{"langue":"en","contenu":"40 years"}]},{"code":"Y40T44","label":[{"langue":"fr","contenu":"De
+        40 à 44 ans"},{"langue":"en","contenu":"From 40 to 44 years"}]},{"code":"Y40T49","label":[{"langue":"fr","contenu":"De
+        40 à 49 ans"},{"langue":"en","contenu":"From 40 to 49 years"}]},{"code":"Y40T50","label":[{"langue":"fr","contenu":"De
+        40 à 50 ans "},{"langue":"en","contenu":"From 40 to 50 years"}]},{"code":"Y40T54","label":[{"langue":"fr","contenu":"De
+        40 à 54 ans"},{"langue":"en","contenu":"From 40 to 54 years"}]},{"code":"Y40T75","label":[{"langue":"fr","contenu":"De
+        40 à 75 ans"},{"langue":"en","contenu":"From 40 to 75 years"}]},{"code":"Y41","label":[{"langue":"fr","contenu":"41
+        ans"},{"langue":"en","contenu":"41 years"}]},{"code":"Y41T45","label":[{"langue":"fr","contenu":"De
+        41 à 45 ans"},{"langue":"en","contenu":"From 41 to 45 years"}]},{"code":"Y41T50","label":[{"langue":"fr","contenu":"De
+        41 à 50 ans"},{"langue":"en","contenu":"From 31 to 40 years"}]},{"code":"Y42","label":[{"langue":"fr","contenu":"42
+        ans"},{"langue":"en","contenu":"42 years"}]},{"code":"Y43","label":[{"langue":"fr","contenu":"43
+        ans"},{"langue":"en","contenu":"43 years"}]},{"code":"Y44","label":[{"langue":"fr","contenu":"44
+        ans"},{"langue":"en","contenu":"44 years"}]},{"code":"Y45","label":[{"langue":"fr","contenu":"45
+        ans"},{"langue":"en","contenu":"45 years"}]},{"code":"Y45T49","label":[{"langue":"fr","contenu":"De
+        45 à 49 ans"},{"langue":"en","contenu":"From 45 to 49 years"}]},{"code":"Y45T54","label":[{"langue":"fr","contenu":"De
+        45 à 54 ans "},{"langue":"en","contenu":"From 45 to 54 years"}]},{"code":"Y45T59","label":[{"langue":"fr","contenu":"De
+        45 à 59 ans "},{"langue":"en","contenu":"From 45 to 59 years"}]},{"code":"Y46","label":[{"langue":"fr","contenu":"46
+        ans"},{"langue":"en","contenu":"46 years"}]},{"code":"Y46T50","label":[{"langue":"fr","contenu":"De
+        46 à 50 ans"},{"langue":"en","contenu":"From 46 to 50 years"}]},{"code":"Y47","label":[{"langue":"fr","contenu":"47
+        ans"},{"langue":"en","contenu":"47 years"}]},{"code":"Y48","label":[{"langue":"fr","contenu":"48
+        ans"},{"langue":"en","contenu":"48 years"}]},{"code":"Y49","label":[{"langue":"fr","contenu":"49
+        ans"},{"langue":"en","contenu":"49 years"}]},{"code":"Y5","label":[{"langue":"fr","contenu":"5
+        ans"},{"langue":"en","contenu":"5 years"}]},{"code":"Y50","label":[{"langue":"fr","contenu":"50
+        ans"},{"langue":"en","contenu":"50 years"}]},{"code":"Y50T54","label":[{"langue":"fr","contenu":"De
+        50 à 54 ans"},{"langue":"en","contenu":"From 50 to 54 years"}]},{"code":"Y50T59","label":[{"langue":"fr","contenu":"De
+        50 à 59 ans"},{"langue":"en","contenu":"From 50 to 59 years"}]},{"code":"Y50T64","label":[{"langue":"fr","contenu":"De
+        50 à 64 ans "},{"langue":"en","contenu":"From 50 to 64 years"}]},{"code":"Y51","label":[{"langue":"fr","contenu":"51
+        ans"},{"langue":"en","contenu":"51 years"}]},{"code":"Y51T55","label":[{"langue":"fr","contenu":"De
+        51 à 55 ans"},{"langue":"en","contenu":"From 51 to 55 years"}]},{"code":"Y51T60","label":[{"langue":"fr","contenu":"De
+        51 à 60 ans"},{"langue":"en","contenu":"From 51 to 60 years"}]},{"code":"Y52","label":[{"langue":"fr","contenu":"52
+        ans"},{"langue":"en","contenu":"52 years"}]},{"code":"Y53","label":[{"langue":"fr","contenu":"53
+        ans"},{"langue":"en","contenu":"53 years"}]},{"code":"Y54","label":[{"langue":"fr","contenu":"54
+        ans"},{"langue":"en","contenu":"54 years"}]},{"code":"Y55","label":[{"langue":"fr","contenu":"55
+        ans"},{"langue":"en","contenu":"55 years"}]},{"code":"Y55T59","label":[{"langue":"fr","contenu":"De
+        55 à 59 ans"},{"langue":"en","contenu":"From 55 to 59 years"}]},{"code":"Y55T64","label":[{"langue":"fr","contenu":"De
+        55 à 64 ans"},{"langue":"en","contenu":"From 55 to 64 years"}]},{"code":"Y56","label":[{"langue":"fr","contenu":"56
+        ans"},{"langue":"en","contenu":"56 years"}]},{"code":"Y56T60","label":[{"langue":"fr","contenu":"De
+        56 à 60 ans"},{"langue":"en","contenu":"From 56 to 60 years"}]},{"code":"Y57","label":[{"langue":"fr","contenu":"57
+        ans"},{"langue":"en","contenu":"57 years"}]},{"code":"Y58","label":[{"langue":"fr","contenu":"58
+        ans"},{"langue":"en","contenu":"58 years"}]},{"code":"Y59","label":[{"langue":"fr","contenu":"59
+        ans"},{"langue":"en","contenu":"59 years"}]},{"code":"Y5T9","label":[{"langue":"fr","contenu":"De
+        5 à 9 ans"},{"langue":"en","contenu":"From 5 to 9 years"}]},{"code":"Y6","label":[{"langue":"fr","contenu":"6
+        ans"},{"langue":"en","contenu":"6 years"}]},{"code":"Y60","label":[{"langue":"fr","contenu":"60
+        ans"},{"langue":"en","contenu":"60 years"}]},{"code":"Y60T64","label":[{"langue":"fr","contenu":"De
+        60 à 64 ans"},{"langue":"en","contenu":"From 60 to 64 years"}]},{"code":"Y60T65","label":[{"langue":"fr","contenu":"De
+        60 à 65 ans"},{"langue":"en","contenu":"60 to 65 years old"}]},{"code":"Y60T69","label":[{"langue":"fr","contenu":"De
+        60 à 69 ans"},{"langue":"en","contenu":"From 60 to 69 years"}]},{"code":"Y60T74","label":[{"langue":"fr","contenu":"De
+        60 à 74 ans"},{"langue":"en","contenu":"From 60 to 74 years"}]},{"code":"Y61","label":[{"langue":"fr","contenu":"61
+        ans"},{"langue":"en","contenu":"61 years"}]},{"code":"Y61T65","label":[{"langue":"fr","contenu":"De
+        61 à 65 ans"},{"langue":"en","contenu":"From 61 to 65 years"}]},{"code":"Y62","label":[{"langue":"fr","contenu":"62
+        ans"},{"langue":"en","contenu":"62 years"}]},{"code":"Y63","label":[{"langue":"fr","contenu":"63
+        ans"},{"langue":"en","contenu":"63 years"}]},{"code":"Y64","label":[{"langue":"fr","contenu":"64
+        ans"},{"langue":"en","contenu":"64 years"}]},{"code":"Y65","label":[{"langue":"fr","contenu":"65
+        ans"},{"langue":"en","contenu":"65 years"}]},{"code":"Y65T69","label":[{"langue":"fr","contenu":"De
+        65 à 69 ans"},{"langue":"en","contenu":"From 65 to 69 years"}]},{"code":"Y65T74","label":[{"langue":"fr","contenu":"De
+        65 à 74 ans"},{"langue":"en","contenu":"From 65 to 74 years"}]},{"code":"Y65T79","label":[{"langue":"fr","contenu":"De
+        65 à 79 ans"},{"langue":"en","contenu":"From 65 to 79 years"}]},{"code":"Y65T89","label":[{"langue":"fr","contenu":"De
+        65 à 89 ans "},{"langue":"en","contenu":"From 65 to 89 years"}]},{"code":"Y66","label":[{"langue":"fr","contenu":"66
+        ans"},{"langue":"en","contenu":"66 years"}]},{"code":"Y66T70","label":[{"langue":"fr","contenu":"De
+        66 à 70 ans"},{"langue":"en","contenu":"From 66 to 70 years"}]},{"code":"Y67","label":[{"langue":"fr","contenu":"67
+        ans"},{"langue":"en","contenu":"67 years"}]},{"code":"Y68","label":[{"langue":"fr","contenu":"68
+        ans"},{"langue":"en","contenu":"68 years"}]},{"code":"Y69","label":[{"langue":"fr","contenu":"69
+        ans"},{"langue":"en","contenu":"69 years"}]},{"code":"Y6T10","label":[{"langue":"fr","contenu":"De
+        6 à 10 ans"},{"langue":"en","contenu":"From 6 to 10 years"}]},{"code":"Y7","label":[{"langue":"fr","contenu":"7
+        ans"},{"langue":"en","contenu":"7 years"}]},{"code":"Y70","label":[{"langue":"fr","contenu":"70
+        ans"},{"langue":"en","contenu":"70 years"}]},{"code":"Y70T74","label":[{"langue":"fr","contenu":"De
+        70 à 74 ans"},{"langue":"en","contenu":"From 70 to 74 years"}]},{"code":"Y71","label":[{"langue":"fr","contenu":"71
+        ans"},{"langue":"en","contenu":"71 years"}]},{"code":"Y71T75","label":[{"langue":"fr","contenu":"De
+        71 à 75 ans"},{"langue":"en","contenu":"From 71 to 75 years"}]},{"code":"Y72","label":[{"langue":"fr","contenu":"72
+        ans"},{"langue":"en","contenu":"72 years"}]},{"code":"Y73","label":[{"langue":"fr","contenu":"73
+        ans"},{"langue":"en","contenu":"73 years"}]},{"code":"Y74","label":[{"langue":"fr","contenu":"74
+        ans"},{"langue":"en","contenu":"74 years"}]},{"code":"Y75","label":[{"langue":"fr","contenu":"75
+        ans"},{"langue":"en","contenu":"75 years"}]},{"code":"Y75T79","label":[{"langue":"fr","contenu":"De
+        75 à 79 ans"},{"langue":"en","contenu":"From 75 to 79 years"}]},{"code":"Y75T84","label":[{"langue":"fr","contenu":"De
+        75 à 84 ans"},{"langue":"en","contenu":"From 75 to 84 years"}]},{"code":"Y75T89","label":[{"langue":"fr","contenu":"De
+        75 à 89 ans"},{"langue":"en","contenu":"From 75 to 89 years"}]},{"code":"Y76","label":[{"langue":"fr","contenu":"76
+        ans"},{"langue":"en","contenu":"76 years"}]},{"code":"Y76T80","label":[{"langue":"fr","contenu":"De
+        76 à 80 ans"},{"langue":"en","contenu":"From 76 to 80 years"}]},{"code":"Y77","label":[{"langue":"fr","contenu":"77
+        ans"},{"langue":"en","contenu":"77 years"}]},{"code":"Y78","label":[{"langue":"fr","contenu":"78
+        ans"},{"langue":"en","contenu":"78 years"}]},{"code":"Y79","label":[{"langue":"fr","contenu":"79
+        ans"},{"langue":"en","contenu":"79 years"}]},{"code":"Y8","label":[{"langue":"fr","contenu":"8
+        ans"},{"langue":"en","contenu":"8 years"}]},{"code":"Y80","label":[{"langue":"fr","contenu":"80
+        ans"},{"langue":"en","contenu":"80 years"}]},{"code":"Y80T84","label":[{"langue":"fr","contenu":"De
+        80 à 84 ans"},{"langue":"en","contenu":"From 80 to 84 years"}]},{"code":"Y81","label":[{"langue":"fr","contenu":"81
+        ans"},{"langue":"en","contenu":"81 years"}]},{"code":"Y81T85","label":[{"langue":"fr","contenu":"De
+        81 à 85 ans "},{"langue":"en","contenu":"From 81 to 85 years"}]},{"code":"Y82","label":[{"langue":"fr","contenu":"82
+        ans"},{"langue":"en","contenu":"82 years"}]},{"code":"Y83","label":[{"langue":"fr","contenu":"83
+        ans"},{"langue":"en","contenu":"83 years"}]},{"code":"Y84","label":[{"langue":"fr","contenu":"84
+        ans"},{"langue":"en","contenu":"84 years"}]},{"code":"Y85","label":[{"langue":"fr","contenu":"85
+        ans"},{"langue":"en","contenu":"85 years"}]},{"code":"Y85T89","label":[{"langue":"fr","contenu":"De
+        85 à 89 ans"},{"langue":"en","contenu":"From 85 to 89 years"}]},{"code":"Y86","label":[{"langue":"fr","contenu":"86
+        ans"},{"langue":"en","contenu":"86 years"}]},{"code":"Y86T90","label":[{"langue":"fr","contenu":"De
+        86 à 90 ans"},{"langue":"en","contenu":"From 86 to 90 years"}]},{"code":"Y87","label":[{"langue":"fr","contenu":"87
+        ans"},{"langue":"en","contenu":"87 years"}]},{"code":"Y88","label":[{"langue":"fr","contenu":"88
+        ans"},{"langue":"en","contenu":"88 years"}]},{"code":"Y89","label":[{"langue":"fr","contenu":"89
+        ans"},{"langue":"en","contenu":"89 years"}]},{"code":"Y9","label":[{"langue":"fr","contenu":"9
+        ans"},{"langue":"en","contenu":"9 years"}]},{"code":"Y90","label":[{"langue":"fr","contenu":"90
+        ans"},{"langue":"en","contenu":"90 years"}]},{"code":"Y90T94","label":[{"langue":"fr","contenu":"De
+        90 à 94 ans"},{"langue":"en","contenu":"From 90 to 94 years"}]},{"code":"Y91","label":[{"langue":"fr","contenu":"91
+        ans"},{"langue":"en","contenu":"91 years"}]},{"code":"Y91T95","label":[{"langue":"fr","contenu":"De
+        91 à 95 ans"},{"langue":"en","contenu":"From 91 to 95 years"}]},{"code":"Y92","label":[{"langue":"fr","contenu":"92
+        ans"},{"langue":"en","contenu":"92 years"}]},{"code":"Y93","label":[{"langue":"fr","contenu":"93
+        ans"},{"langue":"en","contenu":"93 years"}]},{"code":"Y94","label":[{"langue":"fr","contenu":"94
+        ans"},{"langue":"en","contenu":"94 years"}]},{"code":"Y95","label":[{"langue":"fr","contenu":"95
+        ans"},{"langue":"en","contenu":"95 years"}]},{"code":"Y95T99","label":[{"langue":"fr","contenu":"De
+        95 à 99 ans"},{"langue":"en","contenu":"From 95 to 99 years"}]},{"code":"Y96","label":[{"langue":"fr","contenu":"96
+        ans"},{"langue":"en","contenu":"96 years"}]},{"code":"Y96T100","label":[{"langue":"fr","contenu":"De
+        96 à 100 ans"},{"langue":"en","contenu":"From 96 to 100 years"}]},{"code":"Y97","label":[{"langue":"fr","contenu":"97
+        ans"},{"langue":"en","contenu":"97 years"}]},{"code":"Y98","label":[{"langue":"fr","contenu":"98
+        ans"},{"langue":"en","contenu":"98 years"}]},{"code":"Y99","label":[{"langue":"fr","contenu":"99
+        ans"},{"langue":"en","contenu":"99 years"}]},{"code":"Y25T44","label":[{"langue":"fr","contenu":"De
+        25 à 44 ans"},{"langue":"en","contenu":"From 25 to 44 years"}]},{"code":"Y_LT14","label":[{"langue":"fr","contenu":"Moins
+        de 14 ans"},{"langue":"en","contenu":"Under 14 years old"}]},{"code":"Y14T17","label":[{"langue":"fr","contenu":"De
+        14  à 17 ans"},{"langue":"en","contenu":"From 14 to 17 years"}]},{"code":"Y45T64","label":[{"langue":"fr","contenu":"De
+        45 à 64 ans"},{"langue":"en","contenu":"From 45 to 64 years"}]},{"code":"Y16T74","label":[{"langue":"fr","contenu":"De
+        16 à 74 ans"},{"langue":"en","contenu":"From 16 to 74 years"}]},{"code":"Y65T75","label":[{"langue":"fr","contenu":"De
+        65 à 75 ans"},{"langue":"en","contenu":"From 65 to 75 years"}]},{"code":"Y61T64","label":[{"langue":"fr","contenu":"De
+        61 à 64 ans"},{"langue":"en","contenu":"61 to 64 years old"}]},{"code":"Y_GE61","label":[{"langue":"fr","contenu":"61
+        ans ou plus"},{"langue":"en","contenu":"61 years old or older"}]},{"code":"Y20T39","label":[{"langue":"fr","contenu":"De
+        20 à 39 ans"},{"langue":"en","contenu":"From 20 to 39 years"}]},{"code":"Y40T59","label":[{"langue":"fr","contenu":"De
+        40 à 59 ans"},{"langue":"en","contenu":"From 40 to 59 years"}]},{"code":"Y_LT1","label":[{"langue":"fr","contenu":"Moins
+        de 1 an"},{"langue":"en","contenu":"Under 1 years old"}]},{"code":"Y1T4","label":[{"langue":"fr","contenu":"De
+        1 à 4 ans"},{"langue":"en","contenu":"From 1 to 4 years"}]},{"code":"Y70T79","label":[{"langue":"fr","contenu":"De
+        70 à 79 ans"},{"langue":"en","contenu":"From 70 to 79 years"}]},{"code":"Y80T89","label":[{"langue":"fr","contenu":"De
+        80 à 89 ans"},{"langue":"en","contenu":"From 80 to 89 years"}]},{"code":"Y16T25","label":[{"langue":"fr","contenu":"De
+        16 à 25 ans"},{"langue":"en","contenu":"From 16 to 25 years"}]},{"code":"Y55T69","label":[{"langue":"fr","contenu":"De
+        55 à 69 ans"},{"langue":"en","contenu":"From 55 to 69 years"}]},{"code":"Y15T69","label":[{"langue":"fr","contenu":"De
+        15 à 69 ans"},{"langue":"en","contenu":"From 15 to 69 years"}]},{"code":"Y_LT50","label":[{"langue":"fr","contenu":"Moins
+        de 50 ans"},{"langue":"en","contenu":"Under 50 years old"}]},{"code":"Y_LT60","label":[{"langue":"fr","contenu":"Moins
+        de 60 ans"},{"langue":"en","contenu":"Under 60 years old"}]},{"code":"Y18T25","label":[{"langue":"fr","contenu":"De
+        18 à 25 ans "},{"langue":"en","contenu":"From 18 to 25 years"}]},{"code":"Y26T50","label":[{"langue":"fr","contenu":"De
+        26 à 49 ans "},{"langue":"en","contenu":"From 26 to 49 years"}]},{"code":"Y_GE51","label":[{"langue":"fr","contenu":"51
+        ans ou plus"},{"langue":"en","contenu":"51 years old or older"}]},{"code":"Y15T49","label":[{"langue":"fr","contenu":"De
+        15 à 49 ans"},{"langue":"en","contenu":"From 15 to 49 years"}]},{"code":"Y20T59","label":[{"langue":"fr","contenu":"De
+        20 à 59 ans"},{"langue":"en","contenu":"From 20 to 59 years"}]},{"code":"Y25T59","label":[{"langue":"fr","contenu":"De
+        25 à 59 ans"},{"langue":"en","contenu":"From 25 to 59 years"}]},{"code":"Y_LE24","label":[{"langue":"fr","contenu":"24
+        ans ou moins"},{"langue":"en","contenu":"24 years and under"}]},{"code":"Y26T49","label":[{"langue":"fr","contenu":"De
+        26 à 49 ans"},{"langue":"en","contenu":"From 26 to 49 years"}]}],"niveaux":[]}'
+  recorded_at: 2026-01-30 17:27:06
+recorded_with: VCR-vcr/2.1.0

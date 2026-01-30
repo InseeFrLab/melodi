@@ -1,0 +1,27 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.insee.fr/melodi/rmes/listeCode/CL_DOESNOTEXIST
+  response:
+    status: 200
+    headers:
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      content-type: application/json
+      date: Fri, 30 Jan 2026 17:27:06 GMT
+      expires: '0'
+      pragma: no-cache
+      set-cookie: INSEE=rd4o00000000000000000000ffff0ac30849o8082; expires=Fri, 30-Jan-2026
+        17:47:06 GMT; path=/; Httponly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=100000; includeSubDomains
+      vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-gravitee-request-id: 48bf7d03-9449-414c-bf7d-039449714cd8
+      x-gravitee-transaction-id: 48bf7d03-9449-414c-bf7d-039449714cd8
+      x-xss-protection: '0'
+    body:
+      string: '{"codes":[],"niveaux":[]}'
+  recorded_at: 2026-01-30 17:27:06
+recorded_with: VCR-vcr/2.1.0
