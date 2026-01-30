@@ -32,13 +32,18 @@ get_data <- function(
     httr2::resp_body_json(simplifyVector = TRUE)
 
   count <- data_count[["paging"]][["count"]]
-  message("Number of lines : ", format(count, big.mark = " "))
+  message(
+    "Number of lines : ",
+    format(count, big.mark = " ", scientific = FALSE)
+  )
 
   if (count == 0) {
     stop("No result for request ", url)
   } else if (count > maxResultAPI) {
-    stop("Request over ", maxResultAPI, " lines not supported yet,
-         please filter your request or use get_all_data")
+    stop(
+      "Request over ", format(maxResultAPI, big.mark = " ", scientific = FALSE),
+      " lines not supported yet, please filter your request or use get_all_data"
+    )
   }
 
   # 2 - request is OK, get results
