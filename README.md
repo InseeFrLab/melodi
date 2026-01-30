@@ -1,4 +1,4 @@
-# Rmelodi <a href="https://InseeFrLab.github.io/melodi/"><img src="man/figures/logo.png" align="right" height="139" alt="melodi website" /></a>
+# Insee/melodi R package <a href="https://InseeFrLab.github.io/melodi/"><img src="man/figures/logo.png" align="right" height="139" alt="melodi website" /></a>
 
 <!-- badges: start -->
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
@@ -6,7 +6,8 @@
 [![CRAN status](https://www.r-pkg.org/badges/version/melodi)](https://cran.r-project.org/package=melodi)
 <!-- badges: end -->
 
-Package facilitant l'utilisation des données et métadonnées diffusé par l'Insee sur [le catalogue de données Melodi](https://catalogue-donnees.insee.fr)
+Package facilitant l'utilisation des données et métadonnées diffusées par l'Insee 
+sur [le catalogue de données de l'Insee (melodi)](https://catalogue-donnees.insee.fr)
 
 ## Installation
 
@@ -14,6 +15,11 @@ Installer la dernière version stable depuis github :
 ```R
 # install.packages("remotes")
 remotes::install_github("InseeFrLab/melodi", build_vignettes = TRUE)
+```
+
+(en environnement sans accès à github.com) télécharger la dernière "Release" disponible puis :
+```R
+install.packages("~/Downloads/melodi-1.0.0.tar.gz")
 ```
 
 (pour les agents Insee uniquement) installer la dernière version stable :
