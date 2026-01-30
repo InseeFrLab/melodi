@@ -4,17 +4,10 @@
 \alias{get_range}
 \title{Get dataset range (codes and labels)}
 \usage{
-get_range(
-  ds_name,
-  base_url_melodi = "https://api.insee.fr/melodi",
-  lang = "fr",
-  exclusions_list = c("GEO")
-)
+get_range(ds_name, lang = "fr", exclusions_list = c("GEO"))
 }
 \arguments{
 \item{ds_name}{dataset name}
-
-\item{base_url_melodi}{API Melodi URL - default production URL}
 
 \item{lang}{french or english labels - default french ("fr")}
 

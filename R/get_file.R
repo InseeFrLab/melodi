@@ -4,7 +4,6 @@
 #' @param file_name File name
 #' @param download_file_name Filename on disk after download
 #' @param download_directory Download directory - default system tempdir
-#' @param base_url_melodi API Melodi URL - default production URL
 #'
 #' @return downloaded file name on disk
 #' @export
@@ -19,11 +18,10 @@ get_file <- function(
   ds_name,
   file_name,
   download_file_name,
-  download_directory = tempdir(),
-  base_url_melodi = "https://api.insee.fr/melodi"
+  download_directory = tempdir()
 ) {
   # Build useful parameters
-  url <- glue::glue("{base_url_melodi}/file/{ds_name}/{file_name}")
+  url <- glue::glue("{getOption('rmelodi.base_url_api')}/file/{ds_name}/{file_name}")
   path <- file.path(download_directory, download_file_name)
 
   # Download file

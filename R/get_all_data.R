@@ -1,7 +1,6 @@
 #' Get all data from a dataset
 #'
 #' @param ds_name Dataset name - use get_ds_list to find a dataset identifier
-#' @param base_url_melodi API Melodi URL - default production URL
 #' @param stringsAsFactors if TRUE, strings variables in data.frame are converted to factors - Default FALSE
 #' @param download_directory Download directory - default system tempdir
 #' @param remove_file Remove downloaded data file after loading data - Default TRUE
@@ -13,7 +12,6 @@
 #' data <- get_all_data("DS_TICM_PRATIQUES")
 get_all_data <- function(
   ds_name,
-  base_url_melodi = "https://api.insee.fr/melodi",
   download_directory = tempdir(),
   stringsAsFactors = FALSE,
   remove_file = TRUE
@@ -23,8 +21,7 @@ get_all_data <- function(
 
   # get product url from DS metadata
   ds_products <- get_metadata(
-    ds_name = ds_name,
-    base_url_melodi = base_url_melodi
+    ds_name = ds_name
   )$product
 
   csv_list <- ds_products |>

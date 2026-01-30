@@ -1,7 +1,6 @@
 #' Get list of available datasets
 #'
 #' @param lang lang of metadata informations (default: fr)
-#' @param base_url_melodi API URL (default: https://api.insee.fr)
 #'
 #' @return a data.frame containing list of available datasets
 #' @export
@@ -10,17 +9,17 @@
 #' get_catalog()
 #' get_catalog(lang = "en")
 get_catalog <- function(
-  lang = "fr",
-  base_url_melodi = "https://api.insee.fr/melodi"
+  lang = "fr"
 ) {
   # check parameters
   if (!lang %in% c("fr", "en")) {
     stop("lang must be : fr or en")
   }
-  url <- glue::glue("{base_url_melodi}/catalog/all")
+  url <- glue::glue("{getOption('rmelodi.base_url_api')}/catalog/all")
 
   message("Request all catalog : ", url)
   all_dataset <- httr2::request(url) |>
+    httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
     httr2::req_perform() |>
     httr2::resp_body_json(simplifyVector = TRUE)
 

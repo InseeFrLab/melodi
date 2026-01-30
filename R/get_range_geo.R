@@ -6,7 +6,6 @@
 #' For other dimensions, refer to get_range()
 #'
 #' @param ds_name dataset name
-#' @param base_url_melodi API Melodi URL - default production URL
 #' @param lang french or english labels - default french ("fr")
 #'
 #' @return A data frame with columns `GEO_REF`, `GEO_OBJECT`, `GEO`, `GEO_LABEL`
@@ -17,14 +16,13 @@
 #'   head()
 get_range_geo <- function(
   ds_name,
-  base_url_melodi = "https://api.insee.fr/melodi",
   lang = "fr"
 ) {
   # check parameters
   if (!lang %in% c("fr", "en")) {
     stop("lang must be : fr or en")
   }
-  url <- paste0(base_url_melodi, "/range/", ds_name)
+  url <- paste0(getOption("rmelodi.base_url_api"), "/range/", ds_name)
 
   message("Request dataset range : ", url)
 

@@ -4,16 +4,10 @@
 \alias{get_range_geo}
 \title{Get dataset's geography : codes and labels}
 \usage{
-get_range_geo(
-  ds_name,
-  base_url_melodi = "https://api.insee.fr/melodi",
-  lang = "fr"
-)
+get_range_geo(ds_name, lang = "fr")
 }
 \arguments{
 \item{ds_name}{dataset name}
-
-\item{base_url_melodi}{API Melodi URL - default production URL}
 
 \item{lang}{french or english labels - default french ("fr")}
 }

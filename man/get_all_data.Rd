@@ -6,7 +6,6 @@
 \usage{
 get_all_data(
   ds_name,
-  base_url_melodi = "https://api.insee.fr/melodi",
   download_directory = tempdir(),
   stringsAsFactors = FALSE,
   remove_file = TRUE
@@ -14,8 +13,6 @@ get_all_data(
 }
 \arguments{
 \item{ds_name}{Dataset name - use get_ds_list to find a dataset identifier}
-
-\item{base_url_melodi}{API Melodi URL - default production URL}
 
 \item{download_directory}{Download directory - default system tempdir}
 
