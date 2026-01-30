@@ -35,7 +35,7 @@ get_local_data_by_com(
   geo = "44",
   geo_object = "DEP"
 ) |>
-head()
+  head()
 
 get_local_data_by_com(
   ds_name = "DS_RP_POPULATION_PRINC",
@@ -43,5 +43,5 @@ get_local_data_by_com(
   geo_object = "DEP",
   filter = "SEX=F&AGE=Y20T64"
 ) |>
-head()
+  head()
 }

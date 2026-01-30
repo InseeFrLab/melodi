@@ -23,16 +23,16 @@
 #'   filter = "SEX=F&AGE=Y20T64"
 #' )
 get_local_data <- function(
-    ds_name,
-    geo,
-    geo_object,
-    filter= "",
-    base_url_melodi = "https://api.insee.fr/melodi"
+  ds_name,
+  geo,
+  geo_object,
+  filter = "",
+  base_url_melodi = "https://api.insee.fr/melodi"
 ) {
   if (filter != "") {
     filter <- glue::glue("&{filter}")
   }
-  url <-glue::glue("{base_url_melodi}/data/{ds_name}?GEO={geo_object}-{geo}{filter}")
+  url <- glue::glue("{base_url_melodi}/data/{ds_name}?GEO={geo_object}-{geo}{filter}")
 
-  return (get_data(url))
+  return(get_data(url))
 }

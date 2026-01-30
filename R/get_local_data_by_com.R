@@ -15,7 +15,7 @@
 #'   geo = "44",
 #'   geo_object = "DEP"
 #' ) |>
-#' head()
+#'   head()
 #'
 #' get_local_data_by_com(
 #'   ds_name = "DS_RP_POPULATION_PRINC",
@@ -23,18 +23,18 @@
 #'   geo_object = "DEP",
 #'   filter = "SEX=F&AGE=Y20T64"
 #' ) |>
-#' head()
+#'   head()
 get_local_data_by_com <- function(
-    ds_name,
-    geo,
-    geo_object,
-    filter= "",
-    base_url_melodi = "https://api.insee.fr/melodi"
+  ds_name,
+  geo,
+  geo_object,
+  filter = "",
+  base_url_melodi = "https://api.insee.fr/melodi"
 ) {
   if (filter != "") {
     filter <- glue::glue("&{filter}")
   }
-  url <-glue::glue("{base_url_melodi}/data/{ds_name}?GEO={geo_object}-{geo}*COM{filter}")
+  url <- glue::glue("{base_url_melodi}/data/{ds_name}?GEO={geo_object}-{geo}*COM{filter}")
 
-  return (get_data(url))
+  return(get_data(url))
 }
