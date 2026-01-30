@@ -7,52 +7,52 @@ http_interactions:
     headers:
       cache-control: no-cache, no-store, max-age=0, must-revalidate
       content-type: application/json
-      date: Tue, 06 Jan 2026 11:33:00 GMT
+      date: Fri, 30 Jan 2026 14:13:29 GMT
       expires: '0'
       pragma: no-cache
-      set-cookie: INSEE=rd4o00000000000000000000ffff0ac30849o8082; expires=Tue, 06-Jan-2026
-        11:53:00 GMT; path=/; Httponly; Secure
+      set-cookie: INSEE=rd4o00000000000000000000ffff0ac3084ao8082; expires=Fri, 30-Jan-2026
+        14:33:29 GMT; path=/; Httponly; Secure
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
       - max-age=100000; includeSubDomains
       vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
       x-content-type-options: nosniff
       x-frame-options: DENY
-      x-gravitee-request-id: c457eae7-c678-440d-97ea-e7c678d40dc4
-      x-gravitee-transaction-id: c457eae7-c678-440d-97ea-e7c678d40dc4
+      x-gravitee-request-id: 6b644356-ea8c-4016-a443-56ea8c901616
+      x-gravitee-transaction-id: 6b644356-ea8c-4016-a443-56ea8c901616
       x-xss-protection: '0'
     body:
       string: '{"identifier":"DS_POPULATIONS_REFERENCE","title":{"fr":"Populations
         de référence","en":"Reference populations "},"publisher":{"id":"INSEE","label":[{"lang":"fr","content":"Institut
         national de la statistique et des etudes economiques (INSEE)"},{"lang":"en","content":"National
         Institute of Statistics and Economic Studies"}]},"observations":[],"paging":{"first":"https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?FREQ=A&GEO=COM-44109&totalCount=TRUE&maxResult=0&page=1","count":3}}'
-  recorded_at: 2026-01-06 11:33:00
+  recorded_at: 2026-01-30 14:13:29
 - request:
     method: GET
-    uri: https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?FREQ=A&GEO=COM-44109&idTerritoire=TRUE&maxResult=10000
+    uri: https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?FREQ=A&GEO=COM-44109&idTerritoire=TRUE&maxResult=100000
   response:
     status: 200
     headers:
       cache-control: no-cache, no-store, max-age=0, must-revalidate
       content-type: application/json
-      date: Tue, 06 Jan 2026 11:33:00 GMT
+      date: Fri, 30 Jan 2026 14:13:29 GMT
       expires: '0'
       pragma: no-cache
-      set-cookie: INSEE=rd4o00000000000000000000ffff0ac30849o8082; expires=Tue, 06-Jan-2026
-        11:53:00 GMT; path=/; Httponly; Secure
+      set-cookie: INSEE=rd4o00000000000000000000ffff0ac30849o8082; expires=Fri, 30-Jan-2026
+        14:33:29 GMT; path=/; Httponly; Secure
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
       - max-age=100000; includeSubDomains
       vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
       x-content-type-options: nosniff
       x-frame-options: DENY
-      x-gravitee-request-id: d23b7e6a-efbb-4e32-bb7e-6aefbbce3216
-      x-gravitee-transaction-id: d23b7e6a-efbb-4e32-bb7e-6aefbbce3216
+      x-gravitee-request-id: 4b7dffaa-c0d7-43b3-bdff-aac0d793b314
+      x-gravitee-transaction-id: 4b7dffaa-c0d7-43b3-bdff-aac0d793b314
       x-xss-protection: '0'
     body:
       string: '{"identifier":"DS_POPULATIONS_REFERENCE","title":{"fr":"Populations
         de référence","en":"Reference populations "},"publisher":{"id":"INSEE","label":[{"lang":"fr","content":"Institut
         national de la statistique et des etudes economiques (INSEE)"},{"lang":"en","content":"National
-        Institute of Statistics and Economic Studies"}]},"observations":[{"dimensions":{"GEO":"2025-COM-44109","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":327734.0}}},{"dimensions":{"GEO":"2025-COM-44109","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PTOT"},"measures":{"OBS_VALUE_NIVEAU":{"value":332515.0}}},{"dimensions":{"GEO":"2025-COM-44109","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PCAP"},"measures":{"OBS_VALUE_NIVEAU":{"value":4781.0}}}],"paging":{"first":"https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?FREQ=A&GEO=COM-44109&idTerritoire=TRUE&maxResult=10000&page=1"}}'
-  recorded_at: 2026-01-06 11:33:00
+        Institute of Statistics and Economic Studies"}]},"observations":[{"dimensions":{"GEO":"2025-COM-44109","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PMUN"},"measures":{"OBS_VALUE_NIVEAU":{"value":327734.0}}},{"dimensions":{"GEO":"2025-COM-44109","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PTOT"},"measures":{"OBS_VALUE_NIVEAU":{"value":332515.0}}},{"dimensions":{"GEO":"2025-COM-44109","FREQ":"A","TIME_PERIOD":"2023","POPREF_MEASURE":"PCAP"},"measures":{"OBS_VALUE_NIVEAU":{"value":4781.0}}}],"paging":{"first":"https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?FREQ=A&GEO=COM-44109&idTerritoire=TRUE&maxResult=100000&page=1"}}'
+  recorded_at: 2026-01-30 14:13:29
 recorded_with: VCR-vcr/2.1.0
