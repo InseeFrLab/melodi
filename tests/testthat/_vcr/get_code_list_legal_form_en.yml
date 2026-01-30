@@ -1,0 +1,563 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.insee.fr/melodi/rmes/listeCode/CL_LEGAL_FORM
+  response:
+    status: 200
+    headers:
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      content-type: application/json
+      date: Fri, 30 Jan 2026 17:32:41 GMT
+      expires: '0'
+      pragma: no-cache
+      set-cookie: INSEE=rd4o00000000000000000000ffff0ac3084ao8082; expires=Fri, 30-Jan-2026
+        17:52:41 GMT; path=/; Httponly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=100000; includeSubDomains
+      vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-gravitee-request-id: c6d8fb32-6dee-48c4-98fb-326dee98c47c
+      x-gravitee-transaction-id: c6d8fb32-6dee-48c4-98fb-326dee98c47c
+      x-xss-protection: '0'
+    body:
+      string: '{"id":"CL_LEGAL_FORM","dateCreation":"2023-02-08T14:57:15","dateMiseAJour":"2025-03-26T18:20:55","label":[{"langue":"fr","contenu":"Forme
+        légale"},{"langue":"en","contenu":"Legal form"}],"codes":[{"code":"0","label":[{"langue":"fr","contenu":"Organisme
+        de placement collectif en valeurs mobilières sans personnalité morale"},{"langue":"en","contenu":"Organisme
+        de placement collectif en valeurs mobilières sans personnalité morale"}]},{"code":"1","label":[{"langue":"fr","contenu":"Entrepreneur
+        individuel"},{"langue":"en","contenu":"Entrepreneur individuel"}]},{"code":"2","label":[{"langue":"fr","contenu":"Groupement
+        de droit privé non doté de la personnalité morale"},{"langue":"en","contenu":"Groupement
+        de droit privé non doté de la personnalité morale"}]},{"code":"3","label":[{"langue":"fr","contenu":"Personne
+        morale de droit étranger"},{"langue":"en","contenu":"Personne morale de droit
+        étranger"}]},{"code":"4","label":[{"langue":"fr","contenu":"Personne morale
+        de droit public soumise au droit commercial"},{"langue":"en","contenu":"Personne
+        morale de droit public soumise au droit commercial"}]},{"code":"5","label":[{"langue":"fr","contenu":"Société
+        commerciale"},{"langue":"en","contenu":"Société commerciale"}]},{"code":"6","label":[{"langue":"fr","contenu":"Autre
+        personne morale immatriculée au RCS"},{"langue":"en","contenu":"Autre personne
+        morale immatriculée au RCS"}]},{"code":"7","label":[{"langue":"fr","contenu":"Personne
+        morale et organisme soumis au droit administratif"},{"langue":"en","contenu":"Personne
+        morale et organisme soumis au droit administratif"}]},{"code":"8","label":[{"langue":"fr","contenu":"Organisme
+        privé spécialisé"},{"langue":"en","contenu":"Organisme privé spécialisé"}]},{"code":"9","label":[{"langue":"fr","contenu":"Groupement
+        de droit privé"},{"langue":"en","contenu":"Groupement de droit privé"}]},{"code":"10","label":[{"langue":"fr","contenu":"Entrepreneur
+        individuel"},{"langue":"en","contenu":"Entrepreneur individuel"}]},{"code":"21","label":[{"langue":"fr","contenu":"Indivision"},{"langue":"en","contenu":"Indivision"}]},{"code":"22","label":[{"langue":"fr","contenu":"Société
+        créée de fait"},{"langue":"en","contenu":"Société créée de fait"}]},{"code":"23","label":[{"langue":"fr","contenu":"Société
+        en participation"},{"langue":"en","contenu":"Société en participation"}]},{"code":"24","label":[{"langue":"fr","contenu":"Fiducie
+        "},{"langue":"en","contenu":"Fiducie "}]},{"code":"27","label":[{"langue":"fr","contenu":"Paroisse
+        hors zone concordataire"},{"langue":"en","contenu":"Paroisse hors zone concordataire"}]},{"code":"28","label":[{"langue":"fr","contenu":"Assujetti
+        unique à la TVA"},{"langue":"en","contenu":"Assujetti unique à la TVA"}]},{"code":"29","label":[{"langue":"fr","contenu":"Autre
+        groupement de droit privé non doté de la personnalité morale"},{"langue":"en","contenu":"Autre
+        groupement de droit privé non doté de la personnalité morale"}]},{"code":"31","label":[{"langue":"fr","contenu":"Personne
+        morale de droit étranger, immatriculée au RCS (registre du commerce et des
+        sociétés)"},{"langue":"en","contenu":"Personne morale de droit étranger, immatriculée
+        au RCS (registre du commerce et des sociétés)"}]},{"code":"32","label":[{"langue":"fr","contenu":"Personne
+        morale de droit étranger, non immatriculée au RCS"},{"langue":"en","contenu":"Personne
+        morale de droit étranger, non immatriculée au RCS"}]},{"code":"41","label":[{"langue":"fr","contenu":"Etablissement
+        public ou régie à caractère industriel ou commercial"},{"langue":"en","contenu":"Etablissement
+        public ou régie à caractère industriel ou commercial"}]},{"code":"51","label":[{"langue":"fr","contenu":"Société
+        coopérative commerciale particulière"},{"langue":"en","contenu":"Société coopérative
+        commerciale particulière"}]},{"code":"52","label":[{"langue":"fr","contenu":"Société
+        en nom collectif"},{"langue":"en","contenu":"Société en nom collectif"}]},{"code":"53","label":[{"langue":"fr","contenu":"Société
+        en commandite"},{"langue":"en","contenu":"Société en commandite"}]},{"code":"54","label":[{"langue":"fr","contenu":"Société
+        à responsabilité limitée (SARL)"},{"langue":"en","contenu":"Société à responsabilité
+        limitée (SARL)"}]},{"code":"55","label":[{"langue":"fr","contenu":"Société
+        anonyme à conseil d''administration"},{"langue":"en","contenu":"Société anonyme
+        à conseil d''administration"}]},{"code":"56","label":[{"langue":"fr","contenu":"Société
+        anonyme à directoire"},{"langue":"en","contenu":"Société anonyme à directoire"}]},{"code":"57","label":[{"langue":"fr","contenu":"Société
+        par actions simplifiée"},{"langue":"en","contenu":"Société par actions simplifiée"}]},{"code":"58","label":[{"langue":"fr","contenu":"Société
+        européenne "},{"langue":"en","contenu":"Société européenne "}]},{"code":"61","label":[{"langue":"fr","contenu":"Caisse
+        d''épargne et de prévoyance"},{"langue":"en","contenu":"Caisse d''épargne
+        et de prévoyance"}]},{"code":"62","label":[{"langue":"fr","contenu":"Groupement
+        d''intérêt économique"},{"langue":"en","contenu":"Groupement d''intérêt économique"}]},{"code":"63","label":[{"langue":"fr","contenu":"Société
+        coopérative agricole"},{"langue":"en","contenu":"Société coopérative agricole"}]},{"code":"64","label":[{"langue":"fr","contenu":"Société
+        d''assurance mutuelle"},{"langue":"en","contenu":"Société d''assurance mutuelle"}]},{"code":"65","label":[{"langue":"fr","contenu":"Société
+        civile"},{"langue":"en","contenu":"Société civile"}]},{"code":"69","label":[{"langue":"fr","contenu":"Autre
+        personne morale de droit privé inscrite au registre du commerce et des sociétés"},{"langue":"en","contenu":"Autre
+        personne morale de droit privé inscrite au registre du commerce et des sociétés"}]},{"code":"71","label":[{"langue":"fr","contenu":"Administration
+        de l''état"},{"langue":"en","contenu":"Administration de l''état"}]},{"code":"72","label":[{"langue":"fr","contenu":"Collectivité
+        territoriale"},{"langue":"en","contenu":"Collectivité territoriale"}]},{"code":"73","label":[{"langue":"fr","contenu":"Etablissement
+        public administratif"},{"langue":"en","contenu":"Etablissement public administratif"}]},{"code":"74","label":[{"langue":"fr","contenu":"Autre
+        personne morale de droit public administratif"},{"langue":"en","contenu":"Autre
+        personne morale de droit public administratif"}]},{"code":"81","label":[{"langue":"fr","contenu":"Organisme
+        gérant un régime de protection sociale à adhésion obligatoire"},{"langue":"en","contenu":"Organisme
+        gérant un régime de protection sociale à adhésion obligatoire"}]},{"code":"82","label":[{"langue":"fr","contenu":"Organisme
+        mutualiste"},{"langue":"en","contenu":"Organisme mutualiste"}]},{"code":"83","label":[{"langue":"fr","contenu":"Comité
+        d''entreprise"},{"langue":"en","contenu":"Comité d''entreprise"}]},{"code":"84","label":[{"langue":"fr","contenu":"Organisme
+        professionnel"},{"langue":"en","contenu":"Organisme professionnel"}]},{"code":"85","label":[{"langue":"fr","contenu":"Organisme
+        de retraite à adhésion non obligatoire"},{"langue":"en","contenu":"Organisme
+        de retraite à adhésion non obligatoire"}]},{"code":"91","label":[{"langue":"fr","contenu":"Syndicat
+        de propriétaires"},{"langue":"en","contenu":"Syndicat de propriétaires"}]},{"code":"92","label":[{"langue":"fr","contenu":"Association
+        loi 1901 ou assimilé"},{"langue":"en","contenu":"Association loi 1901 ou assimilé"}]},{"code":"93","label":[{"langue":"fr","contenu":"Fondation"},{"langue":"en","contenu":"Fondation"}]},{"code":"99","label":[{"langue":"fr","contenu":"Autre
+        personne morale de droit privé"},{"langue":"en","contenu":"Autre personne
+        morale de droit privé"}]},{"code":"1000","label":[{"langue":"fr","contenu":"Entrepreneur
+        individuel"},{"langue":"en","contenu":"Entrepreneur individuel"}]},{"code":"2110","label":[{"langue":"fr","contenu":"Indivision
+        entre personnes physiques "},{"langue":"en","contenu":"Indivision entre personnes
+        physiques "}]},{"code":"2120","label":[{"langue":"fr","contenu":"Indivision
+        avec personne morale "},{"langue":"en","contenu":"Indivision avec personne
+        morale "}]},{"code":"2210","label":[{"langue":"fr","contenu":"Société créée
+        de fait entre personnes physiques "},{"langue":"en","contenu":"Société créée
+        de fait entre personnes physiques "}]},{"code":"2220","label":[{"langue":"fr","contenu":"Société
+        créée de fait avec personne morale "},{"langue":"en","contenu":"Société créée
+        de fait avec personne morale "}]},{"code":"2310","label":[{"langue":"fr","contenu":"Société
+        en participation entre personnes physiques "},{"langue":"en","contenu":"Société
+        en participation entre personnes physiques "}]},{"code":"2320","label":[{"langue":"fr","contenu":"Société
+        en participation avec personne morale "},{"langue":"en","contenu":"Société
+        en participation avec personne morale "}]},{"code":"2385","label":[{"langue":"fr","contenu":"Société
+        en participation de professions libérales "},{"langue":"en","contenu":"Société
+        en participation de professions libérales "}]},{"code":"2400","label":[{"langue":"fr","contenu":"Fiducie
+        "},{"langue":"en","contenu":"Fiducie "}]},{"code":"2700","label":[{"langue":"fr","contenu":"Paroisse
+        hors zone concordataire "},{"langue":"en","contenu":"Paroisse hors zone concordataire
+        "}]},{"code":"2800","label":[{"langue":"fr","contenu":"Assujetti unique à
+        la TVA"},{"langue":"en","contenu":"Assujetti unique à la TVA"}]},{"code":"2900","label":[{"langue":"fr","contenu":"Autre
+        groupement de droit privé non doté de la personnalité morale "},{"langue":"en","contenu":"Autre
+        groupement de droit privé non doté de la personnalité morale "}]},{"code":"3110","label":[{"langue":"fr","contenu":"Représentation
+        ou agence commerciale d''état ou organisme public étranger immatriculé au
+        RCS "},{"langue":"en","contenu":"Représentation ou agence commerciale d''état
+        ou organisme public étranger immatriculé au RCS "}]},{"code":"3120","label":[{"langue":"fr","contenu":"Société
+        commerciale étrangère immatriculée au RCS"},{"langue":"en","contenu":"Société
+        commerciale étrangère immatriculée au RCS"}]},{"code":"3205","label":[{"langue":"fr","contenu":"Organisation
+        internationale "},{"langue":"en","contenu":"Organisation internationale "}]},{"code":"3210","label":[{"langue":"fr","contenu":"État,
+        collectivité ou établissement public étranger"},{"langue":"en","contenu":"État,
+        collectivité ou établissement public étranger"}]},{"code":"3220","label":[{"langue":"fr","contenu":"Société
+        étrangère non immatriculée au RCS "},{"langue":"en","contenu":"Société étrangère
+        non immatriculée au RCS "}]},{"code":"3290","label":[{"langue":"fr","contenu":"Autre
+        personne morale de droit étranger "},{"langue":"en","contenu":"Autre personne
+        morale de droit étranger "}]},{"code":"4110","label":[{"langue":"fr","contenu":"Établissement
+        public national à caractère industriel ou commercial doté d''un comptable
+        public "},{"langue":"en","contenu":"Établissement public national à caractère
+        industriel ou commercial doté d''un comptable public "}]},{"code":"4120","label":[{"langue":"fr","contenu":"Établissement
+        public national à caractère industriel ou commercial non doté d''un comptable
+        public "},{"langue":"en","contenu":"Établissement public national à caractère
+        industriel ou commercial non doté d''un comptable public "}]},{"code":"4130","label":[{"langue":"fr","contenu":"Exploitant
+        public "},{"langue":"en","contenu":"Exploitant public "}]},{"code":"4140","label":[{"langue":"fr","contenu":"Établissement
+        public local à caractère industriel ou commercial "},{"langue":"en","contenu":"Établissement
+        public local à caractère industriel ou commercial "}]},{"code":"4150","label":[{"langue":"fr","contenu":"Régie
+        d''une collectivité locale à caractère industriel ou commercial "},{"langue":"en","contenu":"Régie
+        d''une collectivité locale à caractère industriel ou commercial "}]},{"code":"4160","label":[{"langue":"fr","contenu":"Institution
+        Banque de France "},{"langue":"en","contenu":"Institution Banque de France
+        "}]},{"code":"5191","label":[{"langue":"fr","contenu":"Société de caution
+        mutuelle "},{"langue":"en","contenu":"Société de caution mutuelle "}]},{"code":"5192","label":[{"langue":"fr","contenu":"Société
+        coopérative de banque populaire "},{"langue":"en","contenu":"Société coopérative
+        de banque populaire "}]},{"code":"5193","label":[{"langue":"fr","contenu":"Caisse
+        de crédit maritime mutuel "},{"langue":"en","contenu":"Caisse de crédit maritime
+        mutuel "}]},{"code":"5194","label":[{"langue":"fr","contenu":"Caisse (fédérale)
+        de crédit mutuel "},{"langue":"en","contenu":"Caisse (fédérale) de crédit
+        mutuel "}]},{"code":"5195","label":[{"langue":"fr","contenu":"Association
+        coopérative inscrite (droit local Alsace Moselle) "},{"langue":"en","contenu":"Association
+        coopérative inscrite (droit local Alsace Moselle) "}]},{"code":"5196","label":[{"langue":"fr","contenu":"Caisse
+        d''épargne et de prévoyance à forme coopérative "},{"langue":"en","contenu":"Caisse
+        d''épargne et de prévoyance à forme coopérative "}]},{"code":"5202","label":[{"langue":"fr","contenu":"Société
+        en nom collectif "},{"langue":"en","contenu":"Société en nom collectif "}]},{"code":"5203","label":[{"langue":"fr","contenu":"Société
+        en nom collectif coopérative "},{"langue":"en","contenu":"Société en nom collectif
+        coopérative "}]},{"code":"5306","label":[{"langue":"fr","contenu":"Société
+        en commandite simple "},{"langue":"en","contenu":"Société en commandite simple
+        "}]},{"code":"5307","label":[{"langue":"fr","contenu":"Société en commandite
+        simple coopérative "},{"langue":"en","contenu":"Société en commandite simple
+        coopérative "}]},{"code":"5308","label":[{"langue":"fr","contenu":"Société
+        en commandite par actions "},{"langue":"en","contenu":"Société en commandite
+        par actions "}]},{"code":"5309","label":[{"langue":"fr","contenu":"Société
+        en commandite par actions coopérative "},{"langue":"en","contenu":"Société
+        en commandite par actions coopérative "}]},{"code":"5310","label":[{"langue":"fr","contenu":"Société
+        en libre partenariat (SLP)"},{"langue":"en","contenu":"Société en libre partenariat
+        (SLP)"}]},{"code":"5370","label":[{"langue":"fr","contenu":"Société de Participations
+        Financières de Profession Libérale Société en commandite par actions (SPFPL
+        SCA)"},{"langue":"en","contenu":"Société de Participations Financières de
+        Profession Libérale Société en commandite par actions (SPFPL SCA)"}]},{"code":"5385","label":[{"langue":"fr","contenu":"Société
+        d''exercice libéral en commandite par actions "},{"langue":"en","contenu":"Société
+        d''exercice libéral en commandite par actions "}]},{"code":"5410","label":[{"langue":"fr","contenu":"SARL
+        nationale "},{"langue":"en","contenu":"SARL nationale "}]},{"code":"5415","label":[{"langue":"fr","contenu":"SARL
+        d''économie mixte "},{"langue":"en","contenu":"SARL d''économie mixte "}]},{"code":"5422","label":[{"langue":"fr","contenu":"SARL
+        immobilière pour le commerce et l''industrie (SICOMI) "},{"langue":"en","contenu":"SARL
+        immobilière pour le commerce et l''industrie (SICOMI) "}]},{"code":"5426","label":[{"langue":"fr","contenu":"SARL
+        immobilière de gestion"},{"langue":"en","contenu":"SARL immobilière de gestion"}]},{"code":"5430","label":[{"langue":"fr","contenu":"SARL
+        d''aménagement foncier et d''équipement rural (SAFER)"},{"langue":"en","contenu":"SARL
+        d''aménagement foncier et d''équipement rural (SAFER)"}]},{"code":"5431","label":[{"langue":"fr","contenu":"SARL
+        mixte d''intérêt agricole (SMIA) "},{"langue":"en","contenu":"SARL mixte d''intérêt
+        agricole (SMIA) "}]},{"code":"5432","label":[{"langue":"fr","contenu":"SARL
+        d''intérêt collectif agricole (SICA) "},{"langue":"en","contenu":"SARL d''intérêt
+        collectif agricole (SICA) "}]},{"code":"5442","label":[{"langue":"fr","contenu":"SARL
+        d''attribution "},{"langue":"en","contenu":"SARL d''attribution "}]},{"code":"5443","label":[{"langue":"fr","contenu":"SARL
+        coopérative de construction "},{"langue":"en","contenu":"SARL coopérative
+        de construction "}]},{"code":"5451","label":[{"langue":"fr","contenu":"SARL
+        coopérative de consommation "},{"langue":"en","contenu":"SARL coopérative
+        de consommation "}]},{"code":"5453","label":[{"langue":"fr","contenu":"SARL
+        coopérative artisanale "},{"langue":"en","contenu":"SARL coopérative artisanale
+        "}]},{"code":"5454","label":[{"langue":"fr","contenu":"SARL coopérative d''intérêt
+        maritime "},{"langue":"en","contenu":"SARL coopérative d''intérêt maritime
+        "}]},{"code":"5455","label":[{"langue":"fr","contenu":"SARL coopérative de
+        transport"},{"langue":"en","contenu":"SARL coopérative de transport"}]},{"code":"5458","label":[{"langue":"fr","contenu":"SARL
+        coopérative de production (SCOP)"},{"langue":"en","contenu":"SARL coopérative
+        de production (SCOP)"}]},{"code":"5459","label":[{"langue":"fr","contenu":"SARL
+        union de sociétés coopératives "},{"langue":"en","contenu":"SARL union de
+        sociétés coopératives "}]},{"code":"5460","label":[{"langue":"fr","contenu":"Autre
+        SARL coopérative "},{"langue":"en","contenu":"Autre SARL coopérative "}]},{"code":"5470","label":[{"langue":"fr","contenu":"Société
+        de Participations Financières de Profession Libérale Société à responsabilité
+        limitée (SPFPL SARL)"},{"langue":"en","contenu":"Société de Participations
+        Financières de Profession Libérale Société à responsabilité limitée (SPFPL
+        SARL)"}]},{"code":"5485","label":[{"langue":"fr","contenu":"Société d''exercice
+        libéral à responsabilité limitée "},{"langue":"en","contenu":"Société d''exercice
+        libéral à responsabilité limitée "}]},{"code":"5499","label":[{"langue":"fr","contenu":"Société
+        à responsabilité limitée (sans autre indication)"},{"langue":"en","contenu":"Société
+        à responsabilité limitée (sans autre indication)"}]},{"code":"5505","label":[{"langue":"fr","contenu":"SA
+        à participation ouvrière à conseil d''administration "},{"langue":"en","contenu":"SA
+        à participation ouvrière à conseil d''administration "}]},{"code":"5510","label":[{"langue":"fr","contenu":"SA
+        nationale à conseil d''administration "},{"langue":"en","contenu":"SA nationale
+        à conseil d''administration "}]},{"code":"5515","label":[{"langue":"fr","contenu":"SA
+        d''économie mixte à conseil d''administration "},{"langue":"en","contenu":"SA
+        d''économie mixte à conseil d''administration "}]},{"code":"5520","label":[{"langue":"fr","contenu":"Fonds
+        à forme sociétale à conseil d''administration"},{"langue":"en","contenu":"Fonds
+        à forme sociétale à conseil d''administration"}]},{"code":"5522","label":[{"langue":"fr","contenu":"SA
+        immobilière pour le commerce et l''industrie (SICOMI) à conseil d''administration"},{"langue":"en","contenu":"SA
+        immobilière pour le commerce et l''industrie (SICOMI) à conseil d''administration"}]},{"code":"5525","label":[{"langue":"fr","contenu":"SA
+        immobilière d''investissement à conseil d''administration"},{"langue":"en","contenu":"SA
+        immobilière d''investissement à conseil d''administration"}]},{"code":"5530","label":[{"langue":"fr","contenu":"SA
+        d''aménagement foncier et d''équipement rural (SAFER) à conseil d''administration"},{"langue":"en","contenu":"SA
+        d''aménagement foncier et d''équipement rural (SAFER) à conseil d''administration"}]},{"code":"5531","label":[{"langue":"fr","contenu":"Société
+        anonyme mixte d''intérêt agricole (SMIA) à conseil d''administration "},{"langue":"en","contenu":"Société
+        anonyme mixte d''intérêt agricole (SMIA) à conseil d''administration "}]},{"code":"5532","label":[{"langue":"fr","contenu":"SA
+        d''intérêt collectif agricole (SICA) à conseil d''administration"},{"langue":"en","contenu":"SA
+        d''intérêt collectif agricole (SICA) à conseil d''administration"}]},{"code":"5542","label":[{"langue":"fr","contenu":"SA
+        d''attribution à conseil d''administration"},{"langue":"en","contenu":"SA
+        d''attribution à conseil d''administration"}]},{"code":"5543","label":[{"langue":"fr","contenu":"SA
+        coopérative de construction à conseil d''administration"},{"langue":"en","contenu":"SA
+        coopérative de construction à conseil d''administration"}]},{"code":"5546","label":[{"langue":"fr","contenu":"SA
+        de HLM à conseil d''administration "},{"langue":"en","contenu":"SA de HLM
+        à conseil d''administration "}]},{"code":"5547","label":[{"langue":"fr","contenu":"SA
+        coopérative de production de HLM à conseil d''administration "},{"langue":"en","contenu":"SA
+        coopérative de production de HLM à conseil d''administration "}]},{"code":"5548","label":[{"langue":"fr","contenu":"SA
+        de crédit immobilier à conseil d''administration "},{"langue":"en","contenu":"SA
+        de crédit immobilier à conseil d''administration "}]},{"code":"5551","label":[{"langue":"fr","contenu":"SA
+        coopérative de consommation à conseil d''administration "},{"langue":"en","contenu":"SA
+        coopérative de consommation à conseil d''administration "}]},{"code":"5552","label":[{"langue":"fr","contenu":"SA
+        coopérative de commerçants-détaillants à conseil d''administration"},{"langue":"en","contenu":"SA
+        coopérative de commerçants-détaillants à conseil d''administration"}]},{"code":"5553","label":[{"langue":"fr","contenu":"SA
+        coopérative artisanale à conseil d''administration "},{"langue":"en","contenu":"SA
+        coopérative artisanale à conseil d''administration "}]},{"code":"5554","label":[{"langue":"fr","contenu":"SA
+        coopérative (d''intérêt) maritime à conseil d''administration "},{"langue":"en","contenu":"SA
+        coopérative (d''intérêt) maritime à conseil d''administration "}]},{"code":"5555","label":[{"langue":"fr","contenu":"SA
+        coopérative de transport à conseil d''administration"},{"langue":"en","contenu":"SA
+        coopérative de transport à conseil d''administration"}]},{"code":"5558","label":[{"langue":"fr","contenu":"SA
+        coopérative de production  (SCOP) à conseil d''administration"},{"langue":"en","contenu":"SA
+        coopérative de production  (SCOP) à conseil d''administration"}]},{"code":"5559","label":[{"langue":"fr","contenu":"SA
+        union de sociétés coopératives à conseil d''administration "},{"langue":"en","contenu":"SA
+        union de sociétés coopératives à conseil d''administration "}]},{"code":"5560","label":[{"langue":"fr","contenu":"Autre
+        SA coopérative à conseil d''administration "},{"langue":"en","contenu":"Autre
+        SA coopérative à conseil d''administration "}]},{"code":"5570","label":[{"langue":"fr","contenu":"Société
+        de Participations Financières de Profession Libérale Société anonyme à conseil
+        d''administration (SPFPL SA à conseil d''administration)"},{"langue":"en","contenu":"Société
+        de Participations Financières de Profession Libérale Société anonyme à conseil
+        d''administration (SPFPL SA à conseil d''administration)"}]},{"code":"5585","label":[{"langue":"fr","contenu":"Société
+        d''exercice libéral à forme anonyme à conseil d''administration "},{"langue":"en","contenu":"Société
+        d''exercice libéral à forme anonyme à conseil d''administration "}]},{"code":"5599","label":[{"langue":"fr","contenu":"SA
+        à conseil d''administration (s.a.i.)"},{"langue":"en","contenu":"SA à conseil
+        d''administration (s.a.i.)"}]},{"code":"5605","label":[{"langue":"fr","contenu":"SA
+        à participation ouvrière à directoire "},{"langue":"en","contenu":"SA à participation
+        ouvrière à directoire "}]},{"code":"5610","label":[{"langue":"fr","contenu":"SA
+        nationale à directoire "},{"langue":"en","contenu":"SA nationale à directoire
+        "}]},{"code":"5615","label":[{"langue":"fr","contenu":"SA d''économie mixte
+        à directoire "},{"langue":"en","contenu":"SA d''économie mixte à directoire
+        "}]},{"code":"5620","label":[{"langue":"fr","contenu":"Fonds à forme sociétale à
+        directoire"},{"langue":"en","contenu":"Fonds à forme sociétale à directoire"}]},{"code":"5622","label":[{"langue":"fr","contenu":"SA
+        immobilière pour le commerce et l''industrie (SICOMI) à directoire"},{"langue":"en","contenu":"SA
+        immobilière pour le commerce et l''industrie (SICOMI) à directoire"}]},{"code":"5625","label":[{"langue":"fr","contenu":"SA
+        immobilière d''investissement à directoire "},{"langue":"en","contenu":"SA
+        immobilière d''investissement à directoire "}]},{"code":"5630","label":[{"langue":"fr","contenu":"Safer
+        anonyme à directoire "},{"langue":"en","contenu":"Safer anonyme à directoire
+        "}]},{"code":"5631","label":[{"langue":"fr","contenu":"SA mixte d''intérêt
+        agricole (SMIA)"},{"langue":"en","contenu":"SA mixte d''intérêt agricole (SMIA)"}]},{"code":"5632","label":[{"langue":"fr","contenu":"SA
+        d''intérêt collectif agricole (SICA)"},{"langue":"en","contenu":"SA d''intérêt
+        collectif agricole (SICA)"}]},{"code":"5642","label":[{"langue":"fr","contenu":"SA
+        d''attribution à directoire"},{"langue":"en","contenu":"SA d''attribution
+        à directoire"}]},{"code":"5643","label":[{"langue":"fr","contenu":"SA coopérative
+        de construction à directoire"},{"langue":"en","contenu":"SA coopérative de
+        construction à directoire"}]},{"code":"5646","label":[{"langue":"fr","contenu":"SA
+        de HLM à directoire"},{"langue":"en","contenu":"SA de HLM à directoire"}]},{"code":"5647","label":[{"langue":"fr","contenu":"Société
+        coopérative de production de HLM anonyme à directoire "},{"langue":"en","contenu":"Société
+        coopérative de production de HLM anonyme à directoire "}]},{"code":"5648","label":[{"langue":"fr","contenu":"SA
+        de crédit immobilier à directoire "},{"langue":"en","contenu":"SA de crédit
+        immobilier à directoire "}]},{"code":"5651","label":[{"langue":"fr","contenu":"SA
+        coopérative de consommation à directoire "},{"langue":"en","contenu":"SA coopérative
+        de consommation à directoire "}]},{"code":"5652","label":[{"langue":"fr","contenu":"SA
+        coopérative de commerçants-détaillants à directoire"},{"langue":"en","contenu":"SA
+        coopérative de commerçants-détaillants à directoire"}]},{"code":"5653","label":[{"langue":"fr","contenu":"SA
+        coopérative artisanale à directoire "},{"langue":"en","contenu":"SA coopérative
+        artisanale à directoire "}]},{"code":"5654","label":[{"langue":"fr","contenu":"SA
+        coopérative d''intérêt maritime à directoire "},{"langue":"en","contenu":"SA
+        coopérative d''intérêt maritime à directoire "}]},{"code":"5655","label":[{"langue":"fr","contenu":"SA
+        coopérative de transport à directoire "},{"langue":"en","contenu":"SA coopérative
+        de transport à directoire "}]},{"code":"5658","label":[{"langue":"fr","contenu":"SA
+        coopérative de production (SCOP) à directoire"},{"langue":"en","contenu":"SA
+        coopérative de production (SCOP) à directoire"}]},{"code":"5659","label":[{"langue":"fr","contenu":"SA
+        union de sociétés coopératives à directoire "},{"langue":"en","contenu":"SA
+        union de sociétés coopératives à directoire "}]},{"code":"5660","label":[{"langue":"fr","contenu":"Autre
+        SA coopérative à directoire"},{"langue":"en","contenu":"Autre SA coopérative
+        à directoire"}]},{"code":"5670","label":[{"langue":"fr","contenu":"Société
+        de Participations Financières de Profession Libérale Société anonyme à Directoire
+        (SPFPL SA à directoire)"},{"langue":"en","contenu":"Société de Participations
+        Financières de Profession Libérale Société anonyme à Directoire (SPFPL SA
+        à directoire)"}]},{"code":"5685","label":[{"langue":"fr","contenu":"Société
+        d''exercice libéral à forme anonyme à directoire "},{"langue":"en","contenu":"Société
+        d''exercice libéral à forme anonyme à directoire "}]},{"code":"5699","label":[{"langue":"fr","contenu":"SA
+        à directoire (s.a.i.)"},{"langue":"en","contenu":"SA à directoire (s.a.i.)"}]},{"code":"5710","label":[{"langue":"fr","contenu":"SAS,
+        société par actions simplifiée"},{"langue":"en","contenu":"SAS, société par
+        actions simplifiée"}]},{"code":"5770","label":[{"langue":"fr","contenu":"Société
+        de Participations Financières de Profession Libérale Société par actions simplifiée
+        (SPFPL SAS)"},{"langue":"en","contenu":"Société de Participations Financières
+        de Profession Libérale Société par actions simplifiée (SPFPL SAS)"}]},{"code":"5785","label":[{"langue":"fr","contenu":"Société
+        d''exercice libéral par action simplifiée "},{"langue":"en","contenu":"Société
+        d''exercice libéral par action simplifiée "}]},{"code":"5800","label":[{"langue":"fr","contenu":"Société
+        européenne "},{"langue":"en","contenu":"Société européenne "}]},{"code":"6100","label":[{"langue":"fr","contenu":"Caisse
+        d''Épargne et de Prévoyance "},{"langue":"en","contenu":"Caisse d''Épargne
+        et de Prévoyance "}]},{"code":"6210","label":[{"langue":"fr","contenu":"Groupement
+        européen d''intérêt économique (GEIE) "},{"langue":"en","contenu":"Groupement
+        européen d''intérêt économique (GEIE) "}]},{"code":"6220","label":[{"langue":"fr","contenu":"Groupement
+        d''intérêt économique (GIE) "},{"langue":"en","contenu":"Groupement d''intérêt
+        économique (GIE) "}]},{"code":"6316","label":[{"langue":"fr","contenu":"Coopérative
+        d''utilisation de matériel agricole en commun (CUMA) "},{"langue":"en","contenu":"Coopérative
+        d''utilisation de matériel agricole en commun (CUMA) "}]},{"code":"6317","label":[{"langue":"fr","contenu":"Société
+        coopérative agricole "},{"langue":"en","contenu":"Société coopérative agricole
+        "}]},{"code":"6318","label":[{"langue":"fr","contenu":"Union de sociétés coopératives
+        agricoles "},{"langue":"en","contenu":"Union de sociétés coopératives agricoles
+        "}]},{"code":"6411","label":[{"langue":"fr","contenu":"Société d''assurance
+        à forme mutuelle"},{"langue":"en","contenu":"Société d''assurance à forme
+        mutuelle"}]},{"code":"6511","label":[{"langue":"fr","contenu":"Sociétés Interprofessionnelles
+        de Soins Ambulatoires "},{"langue":"en","contenu":"Sociétés Interprofessionnelles
+        de Soins Ambulatoires "}]},{"code":"6521","label":[{"langue":"fr","contenu":"Société
+        civile de placement collectif immobilier (SCPI) "},{"langue":"en","contenu":"Société
+        civile de placement collectif immobilier (SCPI) "}]},{"code":"6532","label":[{"langue":"fr","contenu":"Société
+        civile d''intérêt collectif agricole (SICA) "},{"langue":"en","contenu":"Société
+        civile d''intérêt collectif agricole (SICA) "}]},{"code":"6533","label":[{"langue":"fr","contenu":"Groupement
+        agricole d''exploitation en commun (GAEC) "},{"langue":"en","contenu":"Groupement
+        agricole d''exploitation en commun (GAEC) "}]},{"code":"6534","label":[{"langue":"fr","contenu":"Groupement
+        foncier agricole "},{"langue":"en","contenu":"Groupement foncier agricole
+        "}]},{"code":"6535","label":[{"langue":"fr","contenu":"Groupement agricole
+        foncier "},{"langue":"en","contenu":"Groupement agricole foncier "}]},{"code":"6536","label":[{"langue":"fr","contenu":"Groupement
+        forestier "},{"langue":"en","contenu":"Groupement forestier "}]},{"code":"6537","label":[{"langue":"fr","contenu":"Groupement
+        pastoral "},{"langue":"en","contenu":"Groupement pastoral "}]},{"code":"6538","label":[{"langue":"fr","contenu":"Groupement
+        foncier et rural"},{"langue":"en","contenu":"Groupement foncier et rural"}]},{"code":"6539","label":[{"langue":"fr","contenu":"Société
+        civile foncière "},{"langue":"en","contenu":"Société civile foncière "}]},{"code":"6540","label":[{"langue":"fr","contenu":"Société
+        civile immobilière "},{"langue":"en","contenu":"Société civile immobilière
+        "}]},{"code":"6541","label":[{"langue":"fr","contenu":"Société civile immobilière
+        de construction-vente"},{"langue":"en","contenu":"Société civile immobilière
+        de construction-vente"}]},{"code":"6542","label":[{"langue":"fr","contenu":"Société
+        civile d''attribution "},{"langue":"en","contenu":"Société civile d''attribution
+        "}]},{"code":"6543","label":[{"langue":"fr","contenu":"Société civile coopérative
+        de construction "},{"langue":"en","contenu":"Société civile coopérative de
+        construction "}]},{"code":"6544","label":[{"langue":"fr","contenu":"Société
+        civile immobilière d'' accession progressive à la propriété"},{"langue":"en","contenu":"Société
+        civile immobilière d'' accession progressive à la propriété"}]},{"code":"6551","label":[{"langue":"fr","contenu":"Société
+        civile coopérative de consommation "},{"langue":"en","contenu":"Société civile
+        coopérative de consommation "}]},{"code":"6554","label":[{"langue":"fr","contenu":"Société
+        civile coopérative d''intérêt maritime "},{"langue":"en","contenu":"Société
+        civile coopérative d''intérêt maritime "}]},{"code":"6558","label":[{"langue":"fr","contenu":"Société
+        civile coopérative entre médecins "},{"langue":"en","contenu":"Société civile
+        coopérative entre médecins "}]},{"code":"6560","label":[{"langue":"fr","contenu":"Autre
+        société civile coopérative "},{"langue":"en","contenu":"Autre société civile
+        coopérative "}]},{"code":"6561","label":[{"langue":"fr","contenu":"SCP d''avocats
+        "},{"langue":"en","contenu":"SCP d''avocats "}]},{"code":"6562","label":[{"langue":"fr","contenu":"SCP
+        d''avocats aux conseils "},{"langue":"en","contenu":"SCP d''avocats aux conseils
+        "}]},{"code":"6563","label":[{"langue":"fr","contenu":"SCP d''avoués d''appel
+        "},{"langue":"en","contenu":"SCP d''avoués d''appel "}]},{"code":"6564","label":[{"langue":"fr","contenu":"SCP
+        d''huissiers "},{"langue":"en","contenu":"SCP d''huissiers "}]},{"code":"6565","label":[{"langue":"fr","contenu":"SCP
+        de notaires "},{"langue":"en","contenu":"SCP de notaires "}]},{"code":"6566","label":[{"langue":"fr","contenu":"SCP
+        de commissaires-priseurs "},{"langue":"en","contenu":"SCP de commissaires-priseurs
+        "}]},{"code":"6567","label":[{"langue":"fr","contenu":"SCP de greffiers de
+        tribunal de commerce "},{"langue":"en","contenu":"SCP de greffiers de tribunal
+        de commerce "}]},{"code":"6568","label":[{"langue":"fr","contenu":"SCP de
+        conseils juridiques "},{"langue":"en","contenu":"SCP de conseils juridiques
+        "}]},{"code":"6569","label":[{"langue":"fr","contenu":"SCP de commissaires
+        aux comptes "},{"langue":"en","contenu":"SCP de commissaires aux comptes "}]},{"code":"6571","label":[{"langue":"fr","contenu":"SCP
+        de médecins "},{"langue":"en","contenu":"SCP de médecins "}]},{"code":"6572","label":[{"langue":"fr","contenu":"SCP
+        de dentistes "},{"langue":"en","contenu":"SCP de dentistes "}]},{"code":"6573","label":[{"langue":"fr","contenu":"SCP
+        d''infirmiers "},{"langue":"en","contenu":"SCP d''infirmiers "}]},{"code":"6574","label":[{"langue":"fr","contenu":"SCP
+        de masseurs-kinésithérapeutes"},{"langue":"en","contenu":"SCP de masseurs-kinésithérapeutes"}]},{"code":"6575","label":[{"langue":"fr","contenu":"SCP
+        de directeurs de laboratoire d''analyse médicale "},{"langue":"en","contenu":"SCP
+        de directeurs de laboratoire d''analyse médicale "}]},{"code":"6576","label":[{"langue":"fr","contenu":"SCP
+        de vétérinaires "},{"langue":"en","contenu":"SCP de vétérinaires "}]},{"code":"6577","label":[{"langue":"fr","contenu":"SCP
+        de géomètres experts"},{"langue":"en","contenu":"SCP de géomètres experts"}]},{"code":"6578","label":[{"langue":"fr","contenu":"SCP
+        d''architectes "},{"langue":"en","contenu":"SCP d''architectes "}]},{"code":"6585","label":[{"langue":"fr","contenu":"Autre
+        société civile professionnelle"},{"langue":"en","contenu":"Autre société civile
+        professionnelle"}]},{"code":"6589","label":[{"langue":"fr","contenu":"Société
+        civile de moyens "},{"langue":"en","contenu":"Société civile de moyens "}]},{"code":"6595","label":[{"langue":"fr","contenu":"Caisse
+        locale de crédit mutuel "},{"langue":"en","contenu":"Caisse locale de crédit
+        mutuel "}]},{"code":"6596","label":[{"langue":"fr","contenu":"Caisse de crédit
+        agricole mutuel "},{"langue":"en","contenu":"Caisse de crédit agricole mutuel
+        "}]},{"code":"6597","label":[{"langue":"fr","contenu":"Société civile d''exploitation
+        agricole "},{"langue":"en","contenu":"Société civile d''exploitation agricole
+        "}]},{"code":"6598","label":[{"langue":"fr","contenu":"Exploitation agricole
+        à responsabilité limitée "},{"langue":"en","contenu":"Exploitation agricole
+        à responsabilité limitée "}]},{"code":"6599","label":[{"langue":"fr","contenu":"Autre
+        société civile "},{"langue":"en","contenu":"Autre société civile "}]},{"code":"6901","label":[{"langue":"fr","contenu":"Autre
+        personne de droit privé inscrite au registre du commerce et des sociétés"},{"langue":"en","contenu":"Autre
+        personne de droit privé inscrite au registre du commerce et des sociétés"}]},{"code":"7111","label":[{"langue":"fr","contenu":"Autorité
+        constitutionnelle "},{"langue":"en","contenu":"Autorité constitutionnelle
+        "}]},{"code":"7112","label":[{"langue":"fr","contenu":"Autorité administrative
+        ou publique indépendante"},{"langue":"en","contenu":"Autorité administrative
+        ou publique indépendante"}]},{"code":"7113","label":[{"langue":"fr","contenu":"Ministère
+        "},{"langue":"en","contenu":"Ministère "}]},{"code":"7120","label":[{"langue":"fr","contenu":"Service
+        central d''un ministère "},{"langue":"en","contenu":"Service central d''un
+        ministère "}]},{"code":"7150","label":[{"langue":"fr","contenu":"Service du
+        ministère de la Défense "},{"langue":"en","contenu":"Service du ministère
+        de la Défense "}]},{"code":"7160","label":[{"langue":"fr","contenu":"Service
+        déconcentré à compétence nationale d''un ministère (hors Défense)"},{"langue":"en","contenu":"Service
+        déconcentré à compétence nationale d''un ministère (hors Défense)"}]},{"code":"7171","label":[{"langue":"fr","contenu":"Service
+        déconcentré de l''État à compétence (inter) régionale "},{"langue":"en","contenu":"Service
+        déconcentré de l''État à compétence (inter) régionale "}]},{"code":"7172","label":[{"langue":"fr","contenu":"Service
+        déconcentré de l''État à compétence (inter) départementale "},{"langue":"en","contenu":"Service
+        déconcentré de l''État à compétence (inter) départementale "}]},{"code":"7179","label":[{"langue":"fr","contenu":"(Autre)
+        Service déconcentré de l''État à compétence territoriale "},{"langue":"en","contenu":"(Autre)
+        Service déconcentré de l''État à compétence territoriale "}]},{"code":"7190","label":[{"langue":"fr","contenu":"Ecole
+        nationale non dotée de la personnalité morale "},{"langue":"en","contenu":"Ecole
+        nationale non dotée de la personnalité morale "}]},{"code":"7210","label":[{"langue":"fr","contenu":"Commune
+        et commune nouvelle "},{"langue":"en","contenu":"Commune et commune nouvelle
+        "}]},{"code":"7220","label":[{"langue":"fr","contenu":"Département "},{"langue":"en","contenu":"Département
+        "}]},{"code":"7225","label":[{"langue":"fr","contenu":"Collectivité et territoire
+        d''Outre Mer"},{"langue":"en","contenu":"Collectivité et territoire d''Outre
+        Mer"}]},{"code":"7229","label":[{"langue":"fr","contenu":"(Autre) Collectivité
+        territoriale "},{"langue":"en","contenu":"(Autre) Collectivité territoriale
+        "}]},{"code":"7230","label":[{"langue":"fr","contenu":"Région "},{"langue":"en","contenu":"Région
+        "}]},{"code":"7312","label":[{"langue":"fr","contenu":"Commune associée et
+        commune déléguée "},{"langue":"en","contenu":"Commune associée et commune
+        déléguée "}]},{"code":"7313","label":[{"langue":"fr","contenu":"Section de
+        commune "},{"langue":"en","contenu":"Section de commune "}]},{"code":"7314","label":[{"langue":"fr","contenu":"Ensemble
+        urbain "},{"langue":"en","contenu":"Ensemble urbain "}]},{"code":"7321","label":[{"langue":"fr","contenu":"Association
+        syndicale autorisée "},{"langue":"en","contenu":"Association syndicale autorisée
+        "}]},{"code":"7322","label":[{"langue":"fr","contenu":"Association foncière
+        urbaine "},{"langue":"en","contenu":"Association foncière urbaine "}]},{"code":"7323","label":[{"langue":"fr","contenu":"Association
+        foncière de remembrement "},{"langue":"en","contenu":"Association foncière
+        de remembrement "}]},{"code":"7331","label":[{"langue":"fr","contenu":"Établissement
+        public local d''enseignement "},{"langue":"en","contenu":"Établissement public
+        local d''enseignement "}]},{"code":"7340","label":[{"langue":"fr","contenu":"Pôle
+        métropolitain"},{"langue":"en","contenu":"Pôle métropolitain"}]},{"code":"7341","label":[{"langue":"fr","contenu":"Secteur
+        de commune "},{"langue":"en","contenu":"Secteur de commune "}]},{"code":"7342","label":[{"langue":"fr","contenu":"District
+        urbain "},{"langue":"en","contenu":"District urbain "}]},{"code":"7343","label":[{"langue":"fr","contenu":"Communauté
+        urbaine "},{"langue":"en","contenu":"Communauté urbaine "}]},{"code":"7344","label":[{"langue":"fr","contenu":"Métropole"},{"langue":"en","contenu":"Métropole"}]},{"code":"7345","label":[{"langue":"fr","contenu":"Syndicat
+        intercommunal à vocation multiple (SIVOM) "},{"langue":"en","contenu":"Syndicat
+        intercommunal à vocation multiple (SIVOM) "}]},{"code":"7346","label":[{"langue":"fr","contenu":"Communauté
+        de communes "},{"langue":"en","contenu":"Communauté de communes "}]},{"code":"7347","label":[{"langue":"fr","contenu":"Communauté
+        de villes "},{"langue":"en","contenu":"Communauté de villes "}]},{"code":"7348","label":[{"langue":"fr","contenu":"Communauté
+        d''agglomération "},{"langue":"en","contenu":"Communauté d''agglomération
+        "}]},{"code":"7349","label":[{"langue":"fr","contenu":"Autre établissement
+        public local de coopération non spécialisé ou entente "},{"langue":"en","contenu":"Autre
+        établissement public local de coopération non spécialisé ou entente "}]},{"code":"7351","label":[{"langue":"fr","contenu":"Institution
+        interdépartementale ou entente"},{"langue":"en","contenu":"Institution interdépartementale
+        ou entente"}]},{"code":"7352","label":[{"langue":"fr","contenu":"Institution
+        interrégionale ou entente "},{"langue":"en","contenu":"Institution interrégionale
+        ou entente "}]},{"code":"7353","label":[{"langue":"fr","contenu":"Syndicat
+        intercommunal à vocation unique (SIVU) "},{"langue":"en","contenu":"Syndicat
+        intercommunal à vocation unique (SIVU) "}]},{"code":"7354","label":[{"langue":"fr","contenu":"Syndicat
+        mixte fermé "},{"langue":"en","contenu":"Syndicat mixte fermé "}]},{"code":"7355","label":[{"langue":"fr","contenu":"Syndicat
+        mixte ouvert"},{"langue":"en","contenu":"Syndicat mixte ouvert"}]},{"code":"7356","label":[{"langue":"fr","contenu":"Commission
+        syndicale pour la gestion des biens indivis des communes "},{"langue":"en","contenu":"Commission
+        syndicale pour la gestion des biens indivis des communes "}]},{"code":"7357","label":[{"langue":"fr","contenu":"Pôle
+        d''équilibre territorial et rural (PETR)"},{"langue":"en","contenu":"Pôle
+        d''équilibre territorial et rural (PETR)"}]},{"code":"7361","label":[{"langue":"fr","contenu":"Centre
+        communal d''action sociale "},{"langue":"en","contenu":"Centre communal d''action
+        sociale "}]},{"code":"7362","label":[{"langue":"fr","contenu":"Caisse des
+        écoles "},{"langue":"en","contenu":"Caisse des écoles "}]},{"code":"7363","label":[{"langue":"fr","contenu":"Caisse
+        de crédit municipal "},{"langue":"en","contenu":"Caisse de crédit municipal
+        "}]},{"code":"7364","label":[{"langue":"fr","contenu":"Établissement d''hospitalisation
+        "},{"langue":"en","contenu":"Établissement d''hospitalisation "}]},{"code":"7365","label":[{"langue":"fr","contenu":"Syndicat
+        inter hospitalier "},{"langue":"en","contenu":"Syndicat inter hospitalier
+        "}]},{"code":"7366","label":[{"langue":"fr","contenu":"Établissement public
+        local social et médico-social "},{"langue":"en","contenu":"Établissement public
+        local social et médico-social "}]},{"code":"7367","label":[{"langue":"fr","contenu":"Centre
+        Intercommunal d''action sociale (CIAS)"},{"langue":"en","contenu":"Centre
+        Intercommunal d''action sociale (CIAS)"}]},{"code":"7371","label":[{"langue":"fr","contenu":"Office
+        public d''habitation à loyer modéré (OPHLM) "},{"langue":"en","contenu":"Office
+        public d''habitation à loyer modéré (OPHLM) "}]},{"code":"7372","label":[{"langue":"fr","contenu":"Service
+        départemental d''incendie et de secours (SDIS)"},{"langue":"en","contenu":"Service
+        départemental d''incendie et de secours (SDIS)"}]},{"code":"7373","label":[{"langue":"fr","contenu":"Établissement
+        public local culturel "},{"langue":"en","contenu":"Établissement public local
+        culturel "}]},{"code":"7378","label":[{"langue":"fr","contenu":"Régie d''une
+        collectivité locale à caractère administratif "},{"langue":"en","contenu":"Régie
+        d''une collectivité locale à caractère administratif "}]},{"code":"7379","label":[{"langue":"fr","contenu":"(Autre)
+        Établissement public administratif local "},{"langue":"en","contenu":"(Autre)
+        Établissement public administratif local "}]},{"code":"7381","label":[{"langue":"fr","contenu":"Organisme
+        consulaire "},{"langue":"en","contenu":"Organisme consulaire "}]},{"code":"7382","label":[{"langue":"fr","contenu":"Établissement
+        public national ayant fonction d''administration centrale "},{"langue":"en","contenu":"Établissement
+        public national ayant fonction d''administration centrale "}]},{"code":"7383","label":[{"langue":"fr","contenu":"Établissement
+        public national à caractère scientifique culturel et professionnel "},{"langue":"en","contenu":"Établissement
+        public national à caractère scientifique culturel et professionnel "}]},{"code":"7384","label":[{"langue":"fr","contenu":"Autre
+        établissement public national d''enseignement "},{"langue":"en","contenu":"Autre
+        établissement public national d''enseignement "}]},{"code":"7385","label":[{"langue":"fr","contenu":"Autre
+        établissement public national administratif à compétence territoriale limitée
+        "},{"langue":"en","contenu":"Autre établissement public national administratif
+        à compétence territoriale limitée "}]},{"code":"7389","label":[{"langue":"fr","contenu":"Établissement
+        public national à caractère administratif "},{"langue":"en","contenu":"Établissement
+        public national à caractère administratif "}]},{"code":"7410","label":[{"langue":"fr","contenu":"Groupement
+        d''intérêt public (GIP) "},{"langue":"en","contenu":"Groupement d''intérêt
+        public (GIP) "}]},{"code":"7430","label":[{"langue":"fr","contenu":"Établissement
+        public des cultes d''Alsace-Lorraine "},{"langue":"en","contenu":"Établissement
+        public des cultes d''Alsace-Lorraine "}]},{"code":"7450","label":[{"langue":"fr","contenu":"Etablissement
+        public administratif, cercle et foyer dans les armées "},{"langue":"en","contenu":"Etablissement
+        public administratif, cercle et foyer dans les armées "}]},{"code":"7470","label":[{"langue":"fr","contenu":"Groupement
+        de coopération sanitaire à gestion publique "},{"langue":"en","contenu":"Groupement
+        de coopération sanitaire à gestion publique "}]},{"code":"7490","label":[{"langue":"fr","contenu":"Autre
+        personne morale de droit administratif "},{"langue":"en","contenu":"Autre
+        personne morale de droit administratif "}]},{"code":"8110","label":[{"langue":"fr","contenu":"Régime
+        général de la Sécurité Sociale"},{"langue":"en","contenu":"Régime général
+        de la Sécurité Sociale"}]},{"code":"8120","label":[{"langue":"fr","contenu":"Régime
+        spécial de Sécurité Sociale"},{"langue":"en","contenu":"Régime spécial de
+        Sécurité Sociale"}]},{"code":"8130","label":[{"langue":"fr","contenu":"Institution
+        de retraite complémentaire "},{"langue":"en","contenu":"Institution de retraite
+        complémentaire "}]},{"code":"8140","label":[{"langue":"fr","contenu":"Mutualité
+        sociale agricole "},{"langue":"en","contenu":"Mutualité sociale agricole "}]},{"code":"8150","label":[{"langue":"fr","contenu":"Régime
+        maladie des non-salariés non agricoles "},{"langue":"en","contenu":"Régime
+        maladie des non-salariés non agricoles "}]},{"code":"8160","label":[{"langue":"fr","contenu":"Régime
+        vieillesse ne dépendant pas du régime général de la Sécurité Sociale"},{"langue":"en","contenu":"Régime
+        vieillesse ne dépendant pas du régime général de la Sécurité Sociale"}]},{"code":"8170","label":[{"langue":"fr","contenu":"Régime
+        d''assurance chômage "},{"langue":"en","contenu":"Régime d''assurance chômage
+        "}]},{"code":"8190","label":[{"langue":"fr","contenu":"Autre régime de prévoyance
+        sociale "},{"langue":"en","contenu":"Autre régime de prévoyance sociale "}]},{"code":"8210","label":[{"langue":"fr","contenu":"Mutuelle
+        "},{"langue":"en","contenu":"Mutuelle "}]},{"code":"8250","label":[{"langue":"fr","contenu":"Assurance
+        mutuelle agricole "},{"langue":"en","contenu":"Assurance mutuelle agricole
+        "}]},{"code":"8290","label":[{"langue":"fr","contenu":"Autre organisme mutualiste
+        "},{"langue":"en","contenu":"Autre organisme mutualiste "}]},{"code":"8310","label":[{"langue":"fr","contenu":"Comité
+        social économique d’entreprise"},{"langue":"en","contenu":"Comité social économique
+        d’entreprise"}]},{"code":"8311","label":[{"langue":"fr","contenu":"Comité
+        social économique d''établissement "},{"langue":"en","contenu":"Comité social
+        économique d''établissement "}]},{"code":"8410","label":[{"langue":"fr","contenu":"Syndicat
+        de salariés "},{"langue":"en","contenu":"Syndicat de salariés "}]},{"code":"8420","label":[{"langue":"fr","contenu":"Syndicat
+        patronal "},{"langue":"en","contenu":"Syndicat patronal "}]},{"code":"8450","label":[{"langue":"fr","contenu":"Ordre
+        professionnel ou assimilé "},{"langue":"en","contenu":"Ordre professionnel
+        ou assimilé "}]},{"code":"8470","label":[{"langue":"fr","contenu":"Centre
+        technique industriel ou comité professionnel du développement économique "},{"langue":"en","contenu":"Centre
+        technique industriel ou comité professionnel du développement économique "}]},{"code":"8490","label":[{"langue":"fr","contenu":"Autre
+        organisme professionnel "},{"langue":"en","contenu":"Autre organisme professionnel
+        "}]},{"code":"8510","label":[{"langue":"fr","contenu":"Institution de prévoyance
+        "},{"langue":"en","contenu":"Institution de prévoyance "}]},{"code":"8520","label":[{"langue":"fr","contenu":"Institution
+        de retraite supplémentaire "},{"langue":"en","contenu":"Institution de retraite
+        supplémentaire "}]},{"code":"9110","label":[{"langue":"fr","contenu":"Syndicat
+        de copropriété "},{"langue":"en","contenu":"Syndicat de copropriété "}]},{"code":"9150","label":[{"langue":"fr","contenu":"Association
+        syndicale libre "},{"langue":"en","contenu":"Association syndicale libre "}]},{"code":"9210","label":[{"langue":"fr","contenu":"Association
+        non déclarée "},{"langue":"en","contenu":"Association non déclarée "}]},{"code":"9220","label":[{"langue":"fr","contenu":"Association
+        déclarée "},{"langue":"en","contenu":"Association déclarée "}]},{"code":"9221","label":[{"langue":"fr","contenu":"Association
+        déclarée d''insertion par l''économique"},{"langue":"en","contenu":"Association
+        déclarée d''insertion par l''économique"}]},{"code":"9222","label":[{"langue":"fr","contenu":"Association
+        intermédiaire "},{"langue":"en","contenu":"Association intermédiaire "}]},{"code":"9223","label":[{"langue":"fr","contenu":"Groupement
+        d''employeurs "},{"langue":"en","contenu":"Groupement d''employeurs "}]},{"code":"9224","label":[{"langue":"fr","contenu":"Association
+        d''avocats à responsabilité professionnelle individuelle"},{"langue":"en","contenu":"Association
+        d''avocats à responsabilité professionnelle individuelle"}]},{"code":"9230","label":[{"langue":"fr","contenu":"Association
+        déclarée, reconnue d''utilité publique"},{"langue":"en","contenu":"Association
+        déclarée, reconnue d''utilité publique"}]},{"code":"9240","label":[{"langue":"fr","contenu":"Congrégation
+        "},{"langue":"en","contenu":"Congrégation "}]},{"code":"9260","label":[{"langue":"fr","contenu":"Association
+        de droit local (Bas-Rhin, Haut-Rhin et Moselle)"},{"langue":"en","contenu":"Association
+        de droit local (Bas-Rhin, Haut-Rhin et Moselle)"}]},{"code":"9300","label":[{"langue":"fr","contenu":"Fondation
+        "},{"langue":"en","contenu":"Fondation "}]},{"code":"9900","label":[{"langue":"fr","contenu":"Autre
+        personne morale de droit privé "},{"langue":"en","contenu":"Autre personne
+        morale de droit privé "}]},{"code":"9970","label":[{"langue":"fr","contenu":"Groupement
+        de coopération sanitaire à gestion privée "},{"langue":"en","contenu":"Groupement
+        de coopération sanitaire à gestion privée "}]},{"code":"0_2T9","label":[{"langue":"fr","contenu":"Entreprise
+        hors entrepreneur individuel"},{"langue":"en","contenu":"Entreprise hors entrepreneur
+        individuel"}]},{"code":"MICRO","label":[{"langue":"fr","contenu":"Micro-entrepreneurs"},{"langue":"en","contenu":"Micro-entrepreneurs"}]},{"code":"X_MICRO","label":[{"langue":"fr","contenu":"Hors
+        micro-entrepreneurs"},{"langue":"en","contenu":"Exlcuding micro-entrepreneurs"}]},{"code":"SOC","label":[{"langue":"fr","contenu":"Sociétés"},{"langue":"en","contenu":"Companies"}]},{"code":"ENTIND","label":[{"langue":"fr","contenu":"Entreprises
+        individuelles y compris micro-entrepreneurs"},{"langue":"en","contenu":"Individual
+        entrepreneurs including micro-entrepreneurs"}]},{"code":"ENTIND_X_MICRO","label":[{"langue":"fr","contenu":"Entreprises
+        individuelles hors micro-entrepreneurs"},{"langue":"en","contenu":"Individual
+        entrepreneurs excluding micro-entrepreneurs"}]},{"code":"PRIV","label":[{"langue":"fr","contenu":"Privé"},{"langue":"en","contenu":"Private
+        sector"}]},{"code":"PUBL","label":[{"langue":"fr","contenu":"Fonction publique"},{"langue":"en","contenu":"Public
+        service"}]},{"code":"OTH_SIDE","label":[{"langue":"fr","contenu":"Autres sociétés"},{"langue":"en","contenu":"Other
+        Enterprise"}]}],"niveaux":[]}'
+  recorded_at: 2026-01-30 17:32:41
+recorded_with: VCR-vcr/2.1.0
