@@ -17,14 +17,14 @@ Installer la dernière version stable depuis github :
 remotes::install_github("InseeFrLab/melodi", build_vignettes = TRUE)
 ```
 
-(en environnement sans accès à github.com) télécharger la dernière "Release" disponible puis :
-```R
-install.packages("~/Downloads/melodi-1.0.0.tar.gz")
-```
-
 (pour les agents Insee uniquement) installer la dernière version stable :
 ```R
 install.packages("melodi", repos = "https://nexus.insee.fr/repository/r-public/")
+```
+
+(en environnement sans accès à github.com) télécharger la dernière "Release" disponible puis :
+```R
+install.packages("~/Downloads/melodi-1.0.0.tar.gz")
 ```
 
 ## Exemples

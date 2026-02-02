@@ -3,7 +3,7 @@ Title: Retrieve Data from the Insee Melodi APIs
 Version: 1.0.0
 Authors@R: c(
     person("Cédric", "Bobinec", email = "cedric.bobinec@insee.fr", role = c("aut", "cre")),
-    person("Christophe", "Goudeau", role = "ctb", email = "christophe.goudeau@insee.fr"),
+    person("Christophe", "Goudeau", role = "aut", email = "christophe.goudeau@insee.fr"),
     person(family = "Institut national de la statistique et des études économiques", role = "cph")
   )
 Description: A wrapper for the Insee Melodi APIs that returns data frames and metadata.

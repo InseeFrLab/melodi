@@ -11,8 +11,6 @@ globalVariables(
     # get_data
     "value", "GEO",
     # get_range_geo
-    "GEO_REF", "GEO_OBJECT", "GEO_LABEL",
-    # get_code_list
-    "label", "code", "label_langue"
+    "GEO_REF", "GEO_OBJECT", "GEO_LABEL"
   )
 )
