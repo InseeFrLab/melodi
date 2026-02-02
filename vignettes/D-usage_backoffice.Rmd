@@ -1,8 +1,8 @@
 ---
-title: "Usages internes Insee"
+title: "Autres usages"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Autres usages catalogue}
+  %\VignetteIndexEntry{Autres usages}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -65,9 +65,8 @@ fic_xlsx1 <- get_file(
 
 # Travailler sur un autre environnement Melodi
 
-Le package dispose d'une *option* `rmelodi.base_url_api` permettant de travailler dans un autre environnement que Melodi en production, en spécifiant l'adresse de l'API Melodi à utiliser.
+Le package dispose d'une *option* `rmelodi.base_url_api` permettant de travailler dans un autre environnement que Melodi en production : surcharger sa valeur permet de travailler dans un autre environnement que la production, en fournissant l'URL de l'API à utiliser. Tous les appels de fonction du package se feront alors sur cet autre environnement.
 
-Pour cela fournir l'URL de base de l'API de l'environnement à utiliser. 
 S'il s'agit d'environnements internes, penser au besoin à désactiver le proxy pour l'URL en question.
 
 ```{r interne, eval = FALSE}
@@ -75,5 +74,5 @@ Sys.setenv(no_proxy = "autre_url_api_melodi.fr")
 
 options(rmelodi.base_url_api = "https://autre_url_api_melodi.fr")
 
-get_catalog()
+get_catalog() # <- La fonction appelle https://autre_url_api_melodi.fr/catalog/all
 ```

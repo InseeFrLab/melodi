@@ -34,7 +34,7 @@ devtools::check(
 pkgdown::build_site()
 
 # Creer une fonction ------------------------------------------------------
-#  Pour chaque fonction du package :
+# Pour chaque fonction du package :
 usethis::use_r("get_local_data")
 usethis::use_test("get_local_data")
 # écrire le code de la fonction

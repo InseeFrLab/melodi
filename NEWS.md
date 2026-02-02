@@ -1,8 +1,6 @@
 # melodi 1.0.0
 - Relèvement du seuil de `get_data` à **100 000** lignes (amélioration de l'API Melodi)
-- Nouvelle fonction `get_code_list` permettant de récupérer simplement codes et libellés d'une liste de codes
-- Centralisation en **options** des paramètres techniques d'appel à l'API, 
-plutôt qu'en paramètre ou caché dans les fonctions
+- Centralisation en **options** des paramètres techniques d'appel à l'API, plutôt qu'en paramètre (ou caché) dans les fonctions
   - En tant qu'utilisateur, si besoin de changer un paramètre, 
   simplement lancer : `options(rmelodi.base_url_api = "https://...")`
 - Relectures diverses de documentation et du code (styler)

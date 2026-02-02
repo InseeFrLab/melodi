@@ -3,7 +3,6 @@
 export("%>%")
 export(get_all_data)
 export(get_catalog)
-export(get_code_list)
 export(get_data)
 export(get_file)
 export(get_local_data)
