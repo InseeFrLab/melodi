@@ -1,5 +1,5 @@
 ---
-title: "Autres usages catalogue"
+title: "Usages internes Insee"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Autres usages catalogue}
