@@ -1,6 +1,6 @@
-# Get Melodi data by URL. This URL can be copy/paste from explorer https://catalogue-donnees.insee.fr
+# Get Melodi data by URL.
 
-Get Melodi data by URL. This URL can be copy/paste from explorer
+URL parameter can be copied/pasted from explorer
 https://catalogue-donnees.insee.fr
 
 ## Usage
@@ -23,7 +23,7 @@ data.frame with data
 
 ``` r
 get_data(
-    "https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?POPREF_MEASURE=PMUN&GEO=FRANCE-F"
+  "https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?POPREF_MEASURE=PMUN&GEO=FRANCE-F"
 )
 #> Total count request : https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?POPREF_MEASURE=PMUN&GEO=FRANCE-F&totalCount=TRUE&maxResult=0
 #> Number of lines : 1

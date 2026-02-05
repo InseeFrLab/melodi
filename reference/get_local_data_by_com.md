@@ -5,13 +5,7 @@ Get data on every Commune of one territory
 ## Usage
 
 ``` r
-get_local_data_by_com(
-  ds_name,
-  geo,
-  geo_object,
-  filter = "",
-  base_url_melodi = "https://api.insee.fr/melodi"
-)
+get_local_data_by_com(ds_name, geo, geo_object, filter = "")
 ```
 
 ## Arguments
@@ -32,10 +26,6 @@ get_local_data_by_com(
 
   additionnal filter on request - default : ""
 
-- base_url_melodi:
-
-  API Melodi URL - default production URL
-
 ## Value
 
 data.frame with data
@@ -48,7 +38,7 @@ get_local_data_by_com(
   geo = "44",
   geo_object = "DEP"
 ) |>
-head()
+  head()
 #> Total count request : https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=DEP-44%2ACOM&totalCount=TRUE&maxResult=0
 #> Number of lines : 615
 #>   GEO_REF GEO_OBJECT   GEO FREQ TIME_PERIOD POPREF_MEASURE OBS_VALUE
@@ -65,7 +55,7 @@ get_local_data_by_com(
   geo_object = "DEP",
   filter = "SEX=F&AGE=Y20T64"
 ) |>
-head()
+  head()
 #> Total count request : https://api.insee.fr/melodi/data/DS_RP_POPULATION_PRINC?GEO=DEP-44%2ACOM&SEX=F&AGE=Y20T64&totalCount=TRUE&maxResult=0
 #> Number of lines : 615
 #>   GEO_REF GEO_OBJECT   GEO SEX TIME_PERIOD RP_MEASURE    AGE OBS_VALUE

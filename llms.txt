@@ -1,8 +1,8 @@
-# melodi
+# Insee/melodi R package
 
-Package facilitant l’utilisation des données et métadonnées diffusé par
-l’Insee sur [le catalogue de données
-Melodi](https://catalogue-donnees.insee.fr)
+Package facilitant l’utilisation des données et métadonnées diffusées
+par l’Insee sur [le catalogue de données de l’Insee
+(melodi)](https://catalogue-donnees.insee.fr)
 
 ## Installation
 
@@ -18,6 +18,13 @@ remotes::install_github("InseeFrLab/melodi", build_vignettes = TRUE)
 
 ``` r
 install.packages("melodi", repos = "https://nexus.insee.fr/repository/r-public/")
+```
+
+(en environnement sans accès à github.com) télécharger la dernière
+“Release” disponible puis :
+
+``` r
+install.packages("~/Downloads/melodi-1.0.0.tar.gz")
 ```
 
 ## Exemples
@@ -65,8 +72,7 @@ Sys.setenv(https_proxy = "my_proxy_server:port"")
 - [`get_catalog()`](https://InseeFrLab.github.io/melodi/reference/get_catalog.md)
   : Get list of available datasets
 - [`get_data()`](https://InseeFrLab.github.io/melodi/reference/get_data.md)
-  : Get Melodi data by URL. This URL can be copy/paste from explorer
-  https://catalogue-donnees.insee.fr
+  : Get Melodi data by URL.
 - [`get_file()`](https://InseeFrLab.github.io/melodi/reference/get_file.md)
   : Get file attached to a dataset : extract (XLSX), or full CSV file
 - [`get_local_data()`](https://InseeFrLab.github.io/melodi/reference/get_local_data.md)
@@ -88,7 +94,9 @@ Sys.setenv(https_proxy = "my_proxy_server:port"")
   l’explorateur](https://InseeFrLab.github.io/melodi/articles/A-filtre-explorateur.md):
 - [Filtrer par critère
   géographique](https://InseeFrLab.github.io/melodi/articles/B-donnees-locales.md):
-- [Autres usages
-  catalogue](https://InseeFrLab.github.io/melodi/articles/C-usage_backoffice.md):
+- [Travailler avec les libellés
+  (range)](https://InseeFrLab.github.io/melodi/articles/C-range.md):
+- [Autres
+  usages](https://InseeFrLab.github.io/melodi/articles/D-usage_backoffice.md):
 - [Prise en
   main](https://InseeFrLab.github.io/melodi/articles/melodi.md):

@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">melodi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +21,8 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/A-filtre-explorateur.html">Filtrer à l'aide de l’explorateur</a></li>
     <li><a class="dropdown-item" href="../articles/B-donnees-locales.html">Filtrer par critère géographique</a></li>
-    <li><a class="dropdown-item" href="../articles/C-usage_backoffice.html">Autres usages catalogue</a></li>
+    <li><a class="dropdown-item" href="../articles/C-range.html">Travailler avec les libellés (range)</a></li>
+    <li><a class="dropdown-item" href="../articles/D-usage_backoffice.html">Autres usages</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
@@ -45,13 +46,7 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">get_local_data_by_com</span><span class="op">(</span></span>
-<span>  <span class="va">ds_name</span>,</span>
-<span>  <span class="va">geo</span>,</span>
-<span>  <span class="va">geo_object</span>,</span>
-<span>  filter <span class="op">=</span> <span class="st">""</span>,</span>
-<span>  base_url_melodi <span class="op">=</span> <span class="st">"https://api.insee.fr/melodi"</span></span>
-<span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">get_local_data_by_com</span><span class="op">(</span><span class="va">ds_name</span>, <span class="va">geo</span>, <span class="va">geo_object</span>, filter <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -73,10 +68,6 @@
 <dt id="arg-filter">filter<a class="anchor" aria-label="anchor" href="#arg-filter"></a></dt>
 <dd><p>additionnal filter on request - default : ""</p></dd>
 
-
-<dt id="arg-base-url-melodi">base_url_melodi<a class="anchor" aria-label="anchor" href="#arg-base-url-melodi"></a></dt>
-<dd><p>API Melodi URL - default production URL</p></dd>
-
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -90,7 +81,7 @@
 <span class="r-in"><span>  geo <span class="op">=</span> <span class="st">"44"</span>,</span></span>
 <span class="r-in"><span>  geo_object <span class="op">=</span> <span class="st">"DEP"</span></span></span>
 <span class="r-in"><span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Total count request : https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=DEP-44%2ACOM&amp;totalCount=TRUE&amp;maxResult=0</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Number of lines : 615</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   GEO_REF GEO_OBJECT   GEO FREQ TIME_PERIOD POPREF_MEASURE OBS_VALUE</span>
@@ -107,7 +98,7 @@
 <span class="r-in"><span>  geo_object <span class="op">=</span> <span class="st">"DEP"</span>,</span></span>
 <span class="r-in"><span>  filter <span class="op">=</span> <span class="st">"SEX=F&amp;AGE=Y20T64"</span></span></span>
 <span class="r-in"><span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Total count request : https://api.insee.fr/melodi/data/DS_RP_POPULATION_PRINC?GEO=DEP-44%2ACOM&amp;SEX=F&amp;AGE=Y20T64&amp;totalCount=TRUE&amp;maxResult=0</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Number of lines : 615</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   GEO_REF GEO_OBJECT   GEO SEX TIME_PERIOD RP_MEASURE    AGE OBS_VALUE</span>
@@ -124,7 +115,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Cédric Bobinec.</p>
+  <p>Developed by Cédric Bobinec, Christophe Goudeau.</p>
 </div>
 
 <div class="pkgdown-footer-right">

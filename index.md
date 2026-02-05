@@ -1,8 +1,8 @@
-# melodi
+# Insee/melodi R package
 
-Package facilitant l’utilisation des données et métadonnées diffusé par
-l’Insee sur [le catalogue de données
-Melodi](https://catalogue-donnees.insee.fr)
+Package facilitant l’utilisation des données et métadonnées diffusées
+par l’Insee sur [le catalogue de données de l’Insee
+(melodi)](https://catalogue-donnees.insee.fr)
 
 ## Installation
 
@@ -18,6 +18,13 @@ remotes::install_github("InseeFrLab/melodi", build_vignettes = TRUE)
 
 ``` r
 install.packages("melodi", repos = "https://nexus.insee.fr/repository/r-public/")
+```
+
+(en environnement sans accès à github.com) télécharger la dernière
+“Release” disponible puis :
+
+``` r
+install.packages("~/Downloads/melodi-1.0.0.tar.gz")
 ```
 
 ## Exemples

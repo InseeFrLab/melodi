@@ -4,9 +4,10 @@ pkgdown_sha: ~
 articles:
   A-filtre-explorateur: A-filtre-explorateur.html
   B-donnees-locales: B-donnees-locales.html
-  C-usage_backoffice: C-usage_backoffice.html
+  C-range: C-range.html
+  D-usage_backoffice: D-usage_backoffice.html
   melodi: melodi.html
-last_built: 2026-01-06T16:41Z
+last_built: 2026-02-05T16:46Z
 urls:
   reference: https://InseeFrLab.github.io/melodi/reference
   article: https://InseeFrLab.github.io/melodi/articles

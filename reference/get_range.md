@@ -8,12 +8,7 @@ get_range_geo()
 ## Usage
 
 ``` r
-get_range(
-  ds_name,
-  base_url_melodi = "https://api.insee.fr/melodi",
-  lang = "fr",
-  exclusions_list = c("GEO")
-)
+get_range(ds_name, lang = "fr", exclusions_list = c("GEO"))
 ```
 
 ## Arguments
@@ -21,10 +16,6 @@ get_range(
 - ds_name:
 
   dataset name
-
-- base_url_melodi:
-
-  API Melodi URL - default production URL
 
 - lang:
 
@@ -81,18 +72,18 @@ get_range(
 #> 8           FREQ         Fréquence                A
 #> 9           FREQ         Fréquence                M
 #> 10          FREQ         Fréquence                D
-#> 11     DTH_PLACE     Lieu du décès                4
-#> 12     DTH_PLACE     Lieu du décès                5
-#> 13     DTH_PLACE     Lieu du décès                1
-#> 14     DTH_PLACE     Lieu du décès                2
-#> 15     DTH_PLACE     Lieu du décès                3
+#> 11     DTH_PLACE     Lieu du décès                2
+#> 12     DTH_PLACE     Lieu du décès                3
+#> 13     DTH_PLACE     Lieu du décès                4
+#> 14     DTH_PLACE     Lieu du décès                5
+#> 15     DTH_PLACE     Lieu du décès                1
 #> 16     DTH_PLACE     Lieu du décès               _T
-#> 17           AGE               Âge           Y_GE85
-#> 18           AGE               Âge           Y_LT25
-#> 19           AGE               Âge           Y25T49
-#> 20           AGE               Âge           Y50T64
-#> 21           AGE               Âge           Y65T74
-#> 22           AGE               Âge           Y75T84
+#> 17           AGE               Âge           Y25T49
+#> 18           AGE               Âge           Y50T64
+#> 19           AGE               Âge           Y65T74
+#> 20           AGE               Âge           Y75T84
+#> 21           AGE               Âge           Y_GE85
+#> 22           AGE               Âge           Y_LT25
 #> 23           AGE               Âge               _T
 #> 24       MEASURE            Mesure OBS_VALUE_NIVEAU
 #> 25 OBS_STATUS_FR           Version                D
@@ -108,18 +99,18 @@ get_range(
 #> 8                                                        Annuel
 #> 9                                                       Mensuel
 #> 10                                                    Quotidien
-#> 11                                          Voie ou lieu public
-#> 12                                   Autre lieu ou lieu inconnu
-#> 13                                                     Domicile
-#> 14                                       Établissement de santé
-#> 15                                    Ephad, maison de retraite
+#> 11                                       Établissement de santé
+#> 12                                    Ephad, maison de retraite
+#> 13                                          Voie ou lieu public
+#> 14                                   Autre lieu ou lieu inconnu
+#> 15                                                     Domicile
 #> 16                                                        Total
-#> 17                                              85 ans ou plus 
-#> 18                                              Moins de 25 ans
-#> 19                                               De 25 à 49 ans
-#> 20                                              De 50 à 64 ans 
-#> 21                                               De 65 à 74 ans
-#> 22                                               De 75 à 84 ans
+#> 17                                               De 25 à 49 ans
+#> 18                                              De 50 à 64 ans 
+#> 19                                               De 65 à 74 ans
+#> 20                                               De 75 à 84 ans
+#> 21                                              85 ans ou plus 
+#> 22                                              Moins de 25 ans
 #> 23                                                        Total
 #> 24                                                       Valeur
 #> 25                                                    Définitif

@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Filtrer par critère géographique • melodi</title>
+<title>Travailler avec les libellés (range) • melodi</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
 <link rel="icon" type="”image/svg+xml”" href="../favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
@@ -15,7 +15,7 @@
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Filtrer par critère géographique">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Travailler avec les libellés (range)">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -64,53 +64,53 @@
 
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="../logo.png" class="logo" alt=""><h1>Filtrer par critère géographique</h1>
+      <img src="../logo.png" class="logo" alt=""><h1>Travailler avec les libellés (range)</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/InseeFrLab/melodi/blob/main/vignettes/B-donnees-locales.Rmd" class="external-link"><code>vignettes/B-donnees-locales.Rmd</code></a></small>
-      <div class="d-none name"><code>B-donnees-locales.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/InseeFrLab/melodi/blob/main/vignettes/C-range.Rmd" class="external-link"><code>vignettes/C-range.Rmd</code></a></small>
+      <div class="d-none name"><code>C-range.Rmd</code></div>
     </div>
 
     
     
 <div class="section level2">
-<h2 id="filtrer-sur-le-territoire-de-mon-choix">Filtrer sur le territoire de mon choix<a class="anchor" aria-label="anchor" href="#filtrer-sur-le-territoire-de-mon-choix"></a>
+<h2 id="travailler-avec-les-libellés-la-range">Travailler avec les libellés : la range<a class="anchor" aria-label="anchor" href="#travailler-avec-les-libell%C3%A9s-la-range"></a>
 </h2>
-<p>Pour les jeux de données proposant plusieurs niveaux géographique de
-diffusion, la fonction <code>get_local_data</code> facilite le filtrage
-de données par critère géographique.</p>
-<p>Pour cela, il est nécessaire de passer en paramètre le code
-géographique (<code>GEO</code>) et le niveau géographique
-(<code>GEO_OBJECT</code>).</p>
-<p><strong>Exemple :</strong> je souhaite filtrer le jeu de données sur
-les capacités en hébergement touristique (identifiant
-<code>DS_TOUR_CAP</code>) pour le département de Loire-Atlantique
-uniquement (<code>GEO=44</code> et <code>GEO_OBJECT=DEP</code>)</p>
+<div class="section level3">
+<h3 id="cas-général-get_range">Cas général : get_range<a class="anchor" aria-label="anchor" href="#cas-g%C3%A9n%C3%A9ral-get_range"></a>
+</h3>
+<p>A chaque jeu de données est associée une “range”, c’est à dire
+l’ensemble des codes et libellés présents dans le jeu de données. Ainsi,
+récupérer la range d’un jeu de données permet de récupérer les libellés
+associés aux codes du jeu de données.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_local_data.html">get_local_data</a></span><span class="op">(</span></span>
-<span>  ds_name <span class="op">=</span> <span class="st">"DS_POPULATIONS_REFERENCE"</span>,</span>
-<span>  geo <span class="op">=</span> <span class="st">"44"</span>,</span>
-<span>  geo_object <span class="op">=</span> <span class="st">"DEP"</span></span>
-<span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html" class="external-link">arrange</a></span><span class="op">(</span><span class="va">POPREF_MEASURE</span>, <span class="va">TIME_PERIOD</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_all_data.html">get_all_data</a></span><span class="op">(</span><span class="st">"DS_POPULATIONS_REFERENCE"</span><span class="op">)</span></span>
+<span><span class="va">range</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_range.html">get_range</a></span><span class="op">(</span><span class="st">"DS_POPULATIONS_REFERENCE"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Récupérons par exemples les libellés des codes de "POPREF_MEASURE" : </span></span>
+<span><span class="co"># "Population municipale", "Population totale", etc. </span></span>
+<span><span class="va">data</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">left_join</span><span class="op">(</span></span>
+<span>    y <span class="op">=</span> <span class="va">range</span>,</span>
+<span>    by <span class="op">=</span> <span class="fu">join_by</span><span class="op">(</span><span class="va">POPREF_MEASURE</span> <span class="op">==</span> <span class="va">MOD</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="co"># la variable supplémentaire MOD_LABEL contient ainsi le libellé de la mesure</span></span></code></pre></div>
 </div>
-<div class="section level2">
-<h2 id="filtrer-sur-toutes-les-communes-du-territoire-de-mon-choix">Filtrer sur toutes les communes du territoire de mon choix<a class="anchor" aria-label="anchor" href="#filtrer-sur-toutes-les-communes-du-territoire-de-mon-choix"></a>
-</h2>
-<p>Pour les jeux de données proposant une diffusion au niveau communal,
-la fonction <code>get_local_data_by_com</code> facilite le filtrage de
-données sur toutes les communes du territoire de mon choix.</p>
-<p><strong>Exemple :</strong> je souhaite filtrer le jeu de données sur
-les populations de référence issues du recensement de la population
-(identifiant <code>DS_POPULATIONS_REFERENCE</code>) sur toutes les
-communes de Nantes Métropole (<code>GEO=244400404</code> et
-<code>GEO_OBJECT=EPCI</code>)</p>
+<div class="section level3">
+<h3 id="la-géographie-get_range_geo">La géographie : get_range_geo<a class="anchor" aria-label="anchor" href="#la-g%C3%A9ographie-get_range_geo"></a>
+</h3>
+<p>L’usage le plus courant consiste à récupérer les libellés des codes
+géographiques.</p>
+<p>Exemple : “Nantes” pour la commune (GEO_OBJECT=‘COM’) dont le code
+GEO est ‘44109’.</p>
+<p>Pour cela, une fonction dédiée a été créée, permettant d’obtenir
+codes et libellés de tous les territoires du jeu de données passé en
+paramètre : <code>get_range_geo</code></p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">my_local_data_by_com</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_local_data_by_com.html">get_local_data_by_com</a></span><span class="op">(</span></span>
-<span>  ds_name <span class="op">=</span> <span class="st">"DS_POPULATIONS_REFERENCE"</span>,</span>
-<span>  geo <span class="op">=</span> <span class="st">"244400404"</span>,</span>
-<span>  geo_object <span class="op">=</span> <span class="st">"EPCI"</span></span>
-<span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_range_geo.html">get_range_geo</a></span><span class="op">(</span><span class="st">"DS_POPULATIONS_REFERENCE"</span><span class="op">)</span></span>
+<span><span class="co"># GEO_LABEL contient le libellé associé aux codes GEO et GEO_OBJECT identifiant</span></span>
+<span><span class="co"># un territoire dans le DS concerné</span></span></code></pre></div>
+</div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>

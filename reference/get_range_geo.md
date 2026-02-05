@@ -6,11 +6,7 @@ Retrieves the list of geo dimensions and all their possible values
 ## Usage
 
 ``` r
-get_range_geo(
-  ds_name,
-  base_url_melodi = "https://api.insee.fr/melodi",
-  lang = "fr"
-)
+get_range_geo(ds_name, lang = "fr")
 ```
 
 ## Arguments
@@ -18,10 +14,6 @@ get_range_geo(
 - ds_name:
 
   dataset name
-
-- base_url_melodi:
-
-  API Melodi URL - default production URL
 
 - lang:
 
@@ -39,7 +31,7 @@ For other dimensions, refer to get_range()
 
 ``` r
 get_range_geo("DS_POPULATIONS_REFERENCE") |>
-head()
+  head()
 #> Request dataset range : https://api.insee.fr/melodi/range/DS_POPULATIONS_REFERENCE
 #>   GEO_REF GEO_OBJECT   GEO                    GEO_LABEL
 #> 1    2025        ARM 13201 Marseille 1er Arrondissement

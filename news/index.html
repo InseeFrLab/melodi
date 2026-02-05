@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">melodi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +21,8 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/A-filtre-explorateur.html">Filtrer à l'aide de l’explorateur</a></li>
     <li><a class="dropdown-item" href="../articles/B-donnees-locales.html">Filtrer par critère géographique</a></li>
-    <li><a class="dropdown-item" href="../articles/C-usage_backoffice.html">Autres usages catalogue</a></li>
+    <li><a class="dropdown-item" href="../articles/C-range.html">Travailler avec les libellés (range)</a></li>
+    <li><a class="dropdown-item" href="../articles/D-usage_backoffice.html">Autres usages</a></li>
   </ul></li>
 <li class="active nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
@@ -38,6 +39,15 @@
       <small>Source: <a href="https://github.com/InseeFrLab/melodi/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="1.0.0" id="melodi-100">melodi 1.0.0<a class="anchor" aria-label="anchor" href="#melodi-100"></a></h2>
+<ul><li>Relèvement du seuil de <code>get_data</code> à <strong>100 000</strong> lignes (amélioration de l’API Melodi)</li>
+<li>Centralisation en <strong>options</strong> des paramètres techniques d’appel à l’API, plutôt qu’en paramètre (ou caché) dans les fonctions
+<ul><li>En tant qu’utilisateur, si besoin de changer un paramètre, simplement lancer : <code>options(rmelodi.base_url_api = "https://...")</code>
+</li>
+</ul></li>
+<li>Relectures diverses de documentation et du code (styler)</li>
+</ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.3.1" id="melodi-031">melodi 0.3.1<a class="anchor" aria-label="anchor" href="#melodi-031"></a></h2>
 <ul><li>Correction d’exemples ne fonctionnant plus ou pas lisible dans la doc</li>
@@ -61,7 +71,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Cédric Bobinec.</p>
+  <p>Developed by Cédric Bobinec, Christophe Goudeau.</p>
 </div>
 
 <div class="pkgdown-footer-right">

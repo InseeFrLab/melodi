@@ -9,8 +9,7 @@ get_file(
   ds_name,
   file_name,
   download_file_name,
-  download_directory = tempdir(),
-  base_url_melodi = "https://api.insee.fr/melodi"
+  download_directory = tempdir()
 )
 ```
 
@@ -32,10 +31,6 @@ get_file(
 
   Download directory - default system tempdir
 
-- base_url_melodi:
-
-  API Melodi URL - default production URL
-
 ## Value
 
 downloaded file name on disk
@@ -44,11 +39,11 @@ downloaded file name on disk
 
 ``` r
 get_file(
-ds_name = "DS_EC_DECES",
-file_name = "T1_DECES_JOUR_NAT_FR",
-download_file_name = "T1_DECES_JOUR_NAT_FR.xlsx"
+  ds_name = "DS_EC_DECES",
+  file_name = "T1_DECES_JOUR_NAT_FR",
+  download_file_name = "T1_DECES_JOUR_NAT_FR.xlsx"
 )
 #> Request file : https://api.insee.fr/melodi/file/DS_EC_DECES/T1_DECES_JOUR_NAT_FR
-#> Downloaded path : /tmp/RtmpP0dfRT/T1_DECES_JOUR_NAT_FR.xlsx
-#> [1] "/tmp/RtmpP0dfRT/T1_DECES_JOUR_NAT_FR.xlsx"
+#> Downloaded path : /tmp/RtmpcnZlqC/T1_DECES_JOUR_NAT_FR.xlsx
+#> [1] "/tmp/RtmpcnZlqC/T1_DECES_JOUR_NAT_FR.xlsx"
 ```

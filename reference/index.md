@@ -7,8 +7,7 @@
 - [`get_catalog()`](https://InseeFrLab.github.io/melodi/reference/get_catalog.md)
   : Get list of available datasets
 - [`get_data()`](https://InseeFrLab.github.io/melodi/reference/get_data.md)
-  : Get Melodi data by URL. This URL can be copy/paste from explorer
-  https://catalogue-donnees.insee.fr
+  : Get Melodi data by URL.
 - [`get_file()`](https://InseeFrLab.github.io/melodi/reference/get_file.md)
   : Get file attached to a dataset : extract (XLSX), or full CSV file
 - [`get_local_data()`](https://InseeFrLab.github.io/melodi/reference/get_local_data.md)

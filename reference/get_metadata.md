@@ -5,7 +5,7 @@ Get dataset metadata
 ## Usage
 
 ``` r
-get_metadata(ds_name, base_url_melodi = "https://api.insee.fr/melodi")
+get_metadata(ds_name)
 ```
 
 ## Arguments
@@ -13,10 +13,6 @@ get_metadata(ds_name, base_url_melodi = "https://api.insee.fr/melodi")
 - ds_name:
 
   Dataset name
-
-- base_url_melodi:
-
-  API Melodi URL - default production URL
 
 ## Value
 

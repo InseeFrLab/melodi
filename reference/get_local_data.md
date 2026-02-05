@@ -5,13 +5,7 @@ Get data on one territory
 ## Usage
 
 ``` r
-get_local_data(
-  ds_name,
-  geo,
-  geo_object,
-  filter = "",
-  base_url_melodi = "https://api.insee.fr/melodi"
-)
+get_local_data(ds_name, geo, geo_object, filter = "")
 ```
 
 ## Arguments
@@ -31,10 +25,6 @@ get_local_data(
 - filter:
 
   additionnal filter on request - default : ""
-
-- base_url_melodi:
-
-  API Melodi URL - default production URL
 
 ## Value
 
