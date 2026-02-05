@@ -22,11 +22,6 @@ remotes::install_github("InseeFrLab/melodi", build_vignettes = TRUE)
 install.packages("melodi", repos = "https://nexus.insee.fr/repository/r-public/")
 ```
 
-(en environnement sans accès à github.com) télécharger la dernière "Release" disponible puis :
-```R
-install.packages("~/Downloads/melodi-1.0.0.tar.gz")
-```
-
 ## Exemples
 
 Lister les jeux de données proposés par l'Insee via Melodi :
