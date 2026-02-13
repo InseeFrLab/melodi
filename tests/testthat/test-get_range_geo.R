@@ -5,7 +5,7 @@ vcr::use_cassette("get_range_geo_ec_deces", {
     expect_s3_class(range_geo, "data.frame")
     expect_true(
       all(
-        c("GEO_REF", "GEO_OBJECT", "GEO", "GEO_LABEL") %in%
+        c("GEO_REF", "GEO_OBJECT", "GEO_OBJECT_LABEL", "GEO", "GEO_LABEL") %in%
           colnames(range_geo)
       )
       )
@@ -20,12 +20,20 @@ vcr::use_cassette("get_range_geo_ec_deces", {
       object = unique(range_geo$GEO_OBJECT),
       expected = c("DEP", "FRANCE", "OTHER", "REG")
     )
-    # Check one label is OK
+    # Check one GEO label is OK
     expect_equal(
       object = range_geo %>%
         dplyr::filter(GEO == "44" & GEO_OBJECT == "DEP") %>%
         dplyr::pull(GEO_LABEL),
       expected = "Loire-Atlantique"
+    )
+    # Check one GEO_OBJECT label is OK
+    expect_equal(
+      object = range_geo %>%
+        dplyr::filter(GEO_OBJECT == "DEP") %>%
+        dplyr::pull(GEO_OBJECT_LABEL) %>%
+        unique(),
+      expected = "Département"
     )
   })
 })

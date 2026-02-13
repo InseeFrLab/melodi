@@ -27,59 +27,30 @@ get_range_geo <- function(
   message("Request dataset range : ", url)
 
   dataset <- httr2::request(url) |>
-    httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
     httr2::req_perform() |>
     httr2::resp_body_json(simplifyVector = FALSE)
 
-  range <- dataset[["range"]]
-
   # Keep GEO only
-  range <- Filter(function(x) {
-    x[["concept"]][["code"]] == "GEO"
-  }, range)
+  range_geo <- dataset$range |>
+    purrr::keep(\(x) x$concept$code == "GEO") |>
+    purrr::pluck(1, "values")
 
-  if (length(range) == 0) {
+  if (is.null(range_geo) || length(range_geo) == 0) {
     stop("Error: 'GEO' dimension is not present in the dataset.")
   }
 
-  # for null cases (English GEO labels...)
-  safe_extract <- function(x) {
-    if (is.null(x)) NA else x
-  }
-
-  codebook_list <- list()
-
-  for (i in seq_along(range)) {
-    # concepts returned by the API are effectively dimensions of the dataset
-    dimension <- range[[i]][["concept"]][["code"]] |> safe_extract()
-    dimension_label <- range[[i]][["concept"]][["label"]][[lang]] |> safe_extract()
-
-    values <- range[[i]][["values"]] |> safe_extract()
-
-    for (j in seq_along(values)) {
-      value <- values[[j]][["code"]] |> safe_extract()
-      value_label <- values[[j]][["label"]][[lang]] |> safe_extract()
-      value_id <- values[[j]][["id"]] |> safe_extract()
-
-      # Créer la liste sans geo_object si dimension_geo est FALSE
-      codebook_list[[length(codebook_list) + 1]] <- list(
-        dimension = dimension,
-        dimension_label = dimension_label,
-        value = value,
-        value_label = value_label,
-        value_id = value_id
-      )
-    }
-  }
-
-  codebook_df <- do.call(rbind, lapply(codebook_list, as.data.frame))
-  rownames(codebook_df) <- NULL
-
-  codebook_df <- codebook_df |>
-    dplyr::arrange(dimension, value) |>
-    tidyr::separate(value_id, into = c("GEO_REF", "GEO_OBJECT", "GEO"), sep = "-") |>
-    dplyr::mutate(GEO_LABEL = value_label) |>
-    dplyr::select(GEO_REF, GEO_OBJECT, GEO, GEO_LABEL) |>
+  # Unfold
+  codebook_df <- tibble::tibble(
+    GEO_LABEL        = purrr::map_chr(range_geo, ~ .x$label[[lang]] %||% NA_character_),
+    GEO_OBJECT_LABEL = purrr::map_chr(range_geo, ~ .x$type[[lang]]  %||% NA_character_),
+    value_id         = purrr::map_chr(range_geo, "id", .default = NA_character_)
+  ) |>
+    tidyr::separate_wider_delim(
+      value_id,
+      delim = "-",
+      names = c("GEO_REF", "GEO_OBJECT", "GEO"),
+    ) |>
+    dplyr::select(GEO_REF, GEO_OBJECT, GEO_OBJECT_LABEL, GEO, GEO_LABEL) |>
     dplyr::arrange(GEO_OBJECT, GEO)
 
   return(codebook_df)
