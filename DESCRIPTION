@@ -30,7 +30,8 @@ Imports:
     zip,
     labelled,
     tibble,
-    stats
+    stats,
+    purrr
 VignetteBuilder: knitr
 URL: https://InseeFrLab.github.io/melodi/, https://github.com/InseeFrLab/melodi
 BugReports: https://github.com/InseeFrLab/melodi/issues
