@@ -1,3 +1,6 @@
+# melodi 1.0.1
+- #12 : `get_range_geo` : ajout GEO_OBJECT_LABEL + remplacement des boucles par purrr
+
 # melodi 1.0.0
 - Relèvement du seuil de `get_data` à **100 000** lignes (amélioration de l'API Melodi)
 - Centralisation en **options** des paramètres techniques d'appel à l'API, plutôt qu'en paramètre (ou caché) dans les fonctions
