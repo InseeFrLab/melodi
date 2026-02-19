@@ -12,7 +12,7 @@ get_range_geo(ds_name, lang = "fr")
 \item{lang}{french or english labels - default french ("fr")}
 }
 \value{
-A data frame with columns \code{GEO_REF}, \code{GEO_OBJECT}, \code{GEO}, \code{GEO_LABEL}
+A data frame with columns \code{GEO_REF}, \code{GEO_OBJECT}, \code{GEO_OBJECT_LABEL}, \code{GEO}, \code{GEO_LABEL}
 }
 \description{
 Retrieves the list of geo dimensions and all their possible values
