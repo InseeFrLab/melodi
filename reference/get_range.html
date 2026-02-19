@@ -11,7 +11,7 @@ For GEO dimension, it is recommanded to used dedicated function : get_range_geo(
 
     <a class="navbar-brand me-2" href="../index.html">melodi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,26 +80,18 @@ For GEO dimension, it is recommanded to used dedicated function : get_range_geo(
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">get_range</span><span class="op">(</span><span class="st">"DS_POPULATIONS_REFERENCE"</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Request dataset range : https://api.insee.fr/melodi/range/DS_POPULATIONS_REFERENCE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>              DIM          DIM_LABEL              MOD                 MOD_LABEL</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1           FREQ          Fréquence                A                    Annuel</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    TIME_PERIOD Période temporelle             2023                      2023</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 POPREF_MEASURE             Mesure             PCAP Population comptée à part</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 POPREF_MEASURE             Mesure             PMUN     Population municipale</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 POPREF_MEASURE             Mesure             PTOT         Population totale</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6        MEASURE             Mesure OBS_VALUE_NIVEAU                    Valeur</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> parse error: premature EOF</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span>                                        {   "code" : "DS_POPULATIONS_RE</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span>                      (right here) ------^</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">get_range</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  ds_name <span class="op">=</span> <span class="st">"DS_POPULATIONS_REFERENCE"</span>,</span></span>
 <span class="r-in"><span>  lang <span class="op">=</span> <span class="st">"en"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Request dataset range : https://api.insee.fr/melodi/range/DS_POPULATIONS_REFERENCE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>              DIM   DIM_LABEL              MOD                MOD_LABEL</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1           FREQ   Frequency                A                   Annual</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    TIME_PERIOD Time period             2023                     2023</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 POPREF_MEASURE     Measure             PCAP Population counted apart</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 POPREF_MEASURE     Measure             PMUN     Municipal population</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 POPREF_MEASURE     Measure             PTOT         Total population</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6        MEASURE     Measure OBS_VALUE_NIVEAU                    Value</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> parse error: premature EOF</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span>                                        {   "code" : "DS_POPULATIONS_RE</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span>                      (right here) ------^</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">get_range</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  ds_name <span class="op">=</span> <span class="st">"DS_EC_DECES"</span>,</span></span>
@@ -115,20 +107,20 @@ For GEO dimension, it is recommanded to used dedicated function : get_range_geo(
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6            SEX              Sexe                M</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 7            SEX              Sexe               _T</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 8           FREQ         Fréquence                A</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9           FREQ         Fréquence                M</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10          FREQ         Fréquence                D</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11     DTH_PLACE     Lieu du décès                2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12     DTH_PLACE     Lieu du décès                3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13     DTH_PLACE     Lieu du décès                4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14     DTH_PLACE     Lieu du décès                5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15     DTH_PLACE     Lieu du décès                1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9           FREQ         Fréquence                D</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10          FREQ         Fréquence                M</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11     DTH_PLACE     Lieu du décès                1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12     DTH_PLACE     Lieu du décès                2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13     DTH_PLACE     Lieu du décès                3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14     DTH_PLACE     Lieu du décès                4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15     DTH_PLACE     Lieu du décès                5</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 16     DTH_PLACE     Lieu du décès               _T</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 17           AGE               Âge           Y25T49</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18           AGE               Âge           Y50T64</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18           AGE               Âge           Y75T84</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 19           AGE               Âge           Y65T74</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20           AGE               Âge           Y75T84</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21           AGE               Âge           Y_GE85</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22           AGE               Âge           Y_LT25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20           AGE               Âge           Y_GE85</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21           AGE               Âge           Y_LT25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22           AGE               Âge           Y50T64</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 23           AGE               Âge               _T</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 24       MEASURE            Mesure OBS_VALUE_NIVEAU</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 25 OBS_STATUS_FR           Version                D</span>
@@ -142,20 +134,20 @@ For GEO dimension, it is recommanded to used dedicated function : get_range_geo(
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6                                                         Homme</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 7                                                         Total</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 8                                                        Annuel</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                                       Mensuel</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10                                                    Quotidien</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11                                       Établissement de santé</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12                                    Ephad, maison de retraite</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13                                          Voie ou lieu public</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14                                   Autre lieu ou lieu inconnu</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15                                                     Domicile</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                                     Quotidien</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                                                      Mensuel</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11                                                     Domicile</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12                                       Établissement de santé</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13                                    Ephad, maison de retraite</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14                                          Voie ou lieu public</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15                                   Autre lieu ou lieu inconnu</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 16                                                        Total</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 17                                               De 25 à 49 ans</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18                                              De 50 à 64 ans </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18                                               De 75 à 84 ans</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 19                                               De 65 à 74 ans</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20                                               De 75 à 84 ans</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21                                              85 ans ou plus </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22                                              Moins de 25 ans</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20                                               85 ans ou plus</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21                                              Moins de 25 ans</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22                                               De 50 à 64 ans</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 23                                                        Total</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 24                                                       Valeur</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 25                                                    Définitif</span>

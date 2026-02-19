@@ -35,26 +35,18 @@ A data frame with dimensions and modalities codes and labels
 ``` r
 get_range("DS_POPULATIONS_REFERENCE")
 #> Request dataset range : https://api.insee.fr/melodi/range/DS_POPULATIONS_REFERENCE
-#>              DIM          DIM_LABEL              MOD                 MOD_LABEL
-#> 1           FREQ          Fréquence                A                    Annuel
-#> 2    TIME_PERIOD Période temporelle             2023                      2023
-#> 3 POPREF_MEASURE             Mesure             PCAP Population comptée à part
-#> 4 POPREF_MEASURE             Mesure             PMUN     Population municipale
-#> 5 POPREF_MEASURE             Mesure             PTOT         Population totale
-#> 6        MEASURE             Mesure OBS_VALUE_NIVEAU                    Valeur
+#> Error: parse error: premature EOF
+#>                                        {   "code" : "DS_POPULATIONS_RE
+#>                      (right here) ------^
 
 get_range(
   ds_name = "DS_POPULATIONS_REFERENCE",
   lang = "en"
 )
 #> Request dataset range : https://api.insee.fr/melodi/range/DS_POPULATIONS_REFERENCE
-#>              DIM   DIM_LABEL              MOD                MOD_LABEL
-#> 1           FREQ   Frequency                A                   Annual
-#> 2    TIME_PERIOD Time period             2023                     2023
-#> 3 POPREF_MEASURE     Measure             PCAP Population counted apart
-#> 4 POPREF_MEASURE     Measure             PMUN     Municipal population
-#> 5 POPREF_MEASURE     Measure             PTOT         Total population
-#> 6        MEASURE     Measure OBS_VALUE_NIVEAU                    Value
+#> Error: parse error: premature EOF
+#>                                        {   "code" : "DS_POPULATIONS_RE
+#>                      (right here) ------^
 
 get_range(
   ds_name = "DS_EC_DECES",
@@ -70,20 +62,20 @@ get_range(
 #> 6            SEX              Sexe                M
 #> 7            SEX              Sexe               _T
 #> 8           FREQ         Fréquence                A
-#> 9           FREQ         Fréquence                M
-#> 10          FREQ         Fréquence                D
-#> 11     DTH_PLACE     Lieu du décès                2
-#> 12     DTH_PLACE     Lieu du décès                3
-#> 13     DTH_PLACE     Lieu du décès                4
-#> 14     DTH_PLACE     Lieu du décès                5
-#> 15     DTH_PLACE     Lieu du décès                1
+#> 9           FREQ         Fréquence                D
+#> 10          FREQ         Fréquence                M
+#> 11     DTH_PLACE     Lieu du décès                1
+#> 12     DTH_PLACE     Lieu du décès                2
+#> 13     DTH_PLACE     Lieu du décès                3
+#> 14     DTH_PLACE     Lieu du décès                4
+#> 15     DTH_PLACE     Lieu du décès                5
 #> 16     DTH_PLACE     Lieu du décès               _T
 #> 17           AGE               Âge           Y25T49
-#> 18           AGE               Âge           Y50T64
+#> 18           AGE               Âge           Y75T84
 #> 19           AGE               Âge           Y65T74
-#> 20           AGE               Âge           Y75T84
-#> 21           AGE               Âge           Y_GE85
-#> 22           AGE               Âge           Y_LT25
+#> 20           AGE               Âge           Y_GE85
+#> 21           AGE               Âge           Y_LT25
+#> 22           AGE               Âge           Y50T64
 #> 23           AGE               Âge               _T
 #> 24       MEASURE            Mesure OBS_VALUE_NIVEAU
 #> 25 OBS_STATUS_FR           Version                D
@@ -97,20 +89,20 @@ get_range(
 #> 6                                                         Homme
 #> 7                                                         Total
 #> 8                                                        Annuel
-#> 9                                                       Mensuel
-#> 10                                                    Quotidien
-#> 11                                       Établissement de santé
-#> 12                                    Ephad, maison de retraite
-#> 13                                          Voie ou lieu public
-#> 14                                   Autre lieu ou lieu inconnu
-#> 15                                                     Domicile
+#> 9                                                     Quotidien
+#> 10                                                      Mensuel
+#> 11                                                     Domicile
+#> 12                                       Établissement de santé
+#> 13                                    Ephad, maison de retraite
+#> 14                                          Voie ou lieu public
+#> 15                                   Autre lieu ou lieu inconnu
 #> 16                                                        Total
 #> 17                                               De 25 à 49 ans
-#> 18                                              De 50 à 64 ans 
+#> 18                                               De 75 à 84 ans
 #> 19                                               De 65 à 74 ans
-#> 20                                               De 75 à 84 ans
-#> 21                                              85 ans ou plus 
-#> 22                                              Moins de 25 ans
+#> 20                                               85 ans ou plus
+#> 21                                              Moins de 25 ans
+#> 22                                               De 50 à 64 ans
 #> 23                                                        Total
 #> 24                                                       Valeur
 #> 25                                                    Définitif

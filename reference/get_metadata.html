@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">melodi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,128 +66,56 @@
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">get_metadata</span><span class="op">(</span><span class="st">"DS_POPULATIONS_REFERENCE"</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Request dataset : https://api.insee.fr/melodi/catalog/DS_POPULATIONS_REFERENCE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $identifier</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "DS_POPULATIONS_REFERENCE"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $uri</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "http://id.insee.fr/catalogues/jeuDeDonnees/c322eb4d-ec91-4723-8804-ea62e492612b"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $title</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   lang                  content</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   fr Populations de référence</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   en   Reference populations </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $subtitle</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   lang                      content</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   fr Recensement de la population</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   en                             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $description</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $abstract</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                                                                                                                                                                                                                                                                          content</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                                                                                                                                                                       Données de populations de référence : population municipale, population comptée à part et population totale pour les différentes circonscriptions administratives : régions, départements, arrondissements et communes. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 The population data as of January 1, 2022, within the territorial boundaries of the municipalities as of January 1, 2024, is official and authenticated by decree. This data will take effect on January 1, 2025. The population figures are available for the various administrative divisions as of January 1, 2024, based on their territorial boundaries on that date: regions, departments, districts, and municipalities</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   lang</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1   fr</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2   en</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  content</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 La loi du 27 février 2002 relative à la démocratie de proximité fixe comme premier objectif du recensement de la population la publication tous les ans des chiffres des populations de référence (ou populations légales) : population municipale, population comptée à part et population totale. Ces chiffres sont calculés pour la France, toutes ses communes et circonscriptions administratives. La responsabilité du calcul des populations de référence est confiée à l'Insee. \n\nLes données de population au 1er janvier 2023 dans les limites territoriales des communes au 1er janvier 2025 sont officielles et authentifiées par décret. Elles entrent en vigueur au 1er janvier 2026. </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                                                                                                                                                                                                                                      The law of February 27, 2002, concerning local democracy, establishes as the primary objective of the population census the annual publication of legal population figures: municipal population, population counted separately, and total population. These figures are calculated for France, all its municipalities, and administrative districts. The responsibility for calculating legal populations is entrusted to INSEE.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $accessRights</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   lang content</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   fr   Libre</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   en    Free</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   content lang</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   Libre   fr</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    Free   en</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $processStep</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   lang  content</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   fr inseeApi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   en inseeApi</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $accrualPeriodicity</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $accrualPeriodicity$label</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   content lang</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  Annuel   fr</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  Annual   en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $confidentialityStatus</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   lang content</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   fr   Libre</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   en    Free</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $type</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   lang          content</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   fr Données agrégées</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   en  Aggregated data</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $issued</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2025-12-17T08:35:21"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   content lang</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   Libre   fr</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    Free   en</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $creator</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Insee"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $modified</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2025-12-18T12:00:16"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $description</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  content</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 La loi du 27 février 2002 relative à la démocratie de proximité fixe comme premier objectif du recensement de la population la publication tous les ans des chiffres des populations de référence (ou populations légales) : population municipale, population comptée à part et population totale. Ces chiffres sont calculés pour la France, toutes ses communes et circonscriptions administratives. La responsabilité du calcul des populations de référence est confiée à l'Insee. \n\nLes données de population au 1er janvier 2023 dans les limites territoriales des communes au 1er janvier 2025 sont officielles et authentifiées par décret. Elles entrent en vigueur au 1er janvier 2026. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                                                                                                                                                                                                                                      The law of February 27, 2002, concerning local democracy, establishes as the primary objective of the population census the annual publication of legal population figures: municipal population, population counted separately, and total population. These figures are calculated for France, all its municipalities, and administrative districts. The responsibility for calculating legal populations is entrusted to INSEE.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   lang</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   fr</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   en</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $publisher</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $publisher$id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "INSEE"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $identifier</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "DS_POPULATIONS_REFERENCE"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $publisher$label</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   lang                                                               content</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   fr Institut national de la statistique et des etudes economiques (INSEE)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   en                 National Institute of Statistics and Economic Studies</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $issued</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2025-12-17T08:35:21.000297779"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $wasGeneratedBy</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      id                                                   label</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 s1321 fr, en, Recensement de la population, Population census</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   s21 fr, en, Recensement de la population, Population census</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $temporal</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $temporal$startPeriod</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-01-01T00:00:00"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $temporal$endPeriod</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-01-01T00:00:00"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $temporalResolution</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                    label</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 fr, en, Annuel, Annual</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $accrualPeriodicity</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $accrualPeriodicity$label</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   lang content</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   fr  Annuel</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   en  Annual</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $spatial</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $spatial$id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "FEHM"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $spatial$label</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   lang                  content</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   fr      France hors Mayotte</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   en France excluding Mayotte</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $spatialResolution</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       id                                                label</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1    COM                             fr, en, Commune, Commune</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    ARM fr, en, Arrondissement municipal, Municipal district</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3    ARR                     fr, en, Arrondissement, District</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4    DEP                      fr, en, Département, Department</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5    REG                               fr, en, Région, Region</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 FRANCE                               fr, en, France, France</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $spatialTemporal</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2025-01-01T01:00:00"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $statisticalUnit</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      label</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 fr, en, Individu, Person</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $theme</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                      label</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1                      fr, en, 1.1 Population et immigration, 1.1 Population and migration</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 fr, en, 1. Statistiques démographiques et sociales, 1. Demographic and social statistics</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                                          fr, en, Démographie, Demography</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                       themeTaxonomy</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 classificationOfStatisticalDomain</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 classificationOfStatisticalDomain</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3                        inseeTheme</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $keyword</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                         label</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                              population, population, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2        population municipale , municipal population, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 population comptée à part, population counted apart, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                 population totale, total population, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5              populations légales, legal populations, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6       population de référence, reference population, fr, en</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $landingPage</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $landingPage[[1]]</span>
@@ -196,20 +124,8 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2   en    </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $structure</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $structure$dsd</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "DSD_POPULATIONS_REFERENCE"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $product</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                     id format              issued</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 DS_POPULATIONS_REFERENCE_2023_CSV_FR    CSV 2025-12-17T08:50:56</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>              modified                    title</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 2025-12-17T08:50:56 Populations de référence</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                        accessURL</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 https://api.insee.fr/melodi/file/DS_POPULATIONS_REFERENCE/DS_POPULATIONS_REFERENCE_2023_CSV_FR</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   byteSize   packageFormat mediaType language</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   926388 application/zip  text/csv       FR</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $modified</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2025-12-18T12:00:16.299984912"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $numObservations</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 106065</span>
@@ -217,38 +133,125 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> $numSeries</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $keyword</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                         label</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1                              fr, en, population, population</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2        fr, en, population municipale , municipal population</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 fr, en, population comptée à part, population counted apart</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4                 fr, en, population totale, total population</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5              fr, en, populations légales, legal populations</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6       fr, en, population de référence, reference population</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $processStep</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    content lang</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 inseeApi   fr</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 inseeApi   en</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $scopeNote</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   lang</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   fr</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   en</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                            content</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                                                                                                                                                 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 The term “reference populations” replaces the former term “legal populations” used until 2021. This change is based on a recommendation from the official statistics authority. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $product</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                        accessURL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 https://api.insee.fr/melodi/file/DS_POPULATIONS_REFERENCE/DS_POPULATIONS_REFERENCE_2023_CSV_FR</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   byteSize format                                   id              issued</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   926388    CSV DS_POPULATIONS_REFERENCE_2023_CSV_FR 2025-12-17T08:50:56</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   language mediaType            modified   packageFormat</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1       FR  text/csv 2025-12-17T08:50:56 application/zip</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                      title</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Populations de référence</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $publisher</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $publisher$id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "INSEE"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $publisher$label</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                 content lang</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Institut national de la statistique et des etudes economiques (INSEE)   fr</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                 National Institute of Statistics and Economic Studies   en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $relations</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        title                                      titleComplement</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 fr, en, ,  fr, en, Documentation et données complémentaires, NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 fr, en, ,                                          fr, en, , NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 , , fr, en Documentation et données complémentaires, NA, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 , , fr, en                                         , NA, fr, en</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                                                        url</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 fr, en, https://www.insee.fr/fr/statistiques/8681011, NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                             fr, en, , NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 https://www.insee.fr/fr/statistiques/8681011, NA, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                             , NA, fr, en</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $abstract</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $scopeNote</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                            content</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                                                                                                                                                 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 The term “reference populations” replaces the former term “legal populations” used until 2021. This change is based on a recommendation from the official statistics authority. </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   lang</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1   fr</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2   en</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                                                                                                                                                                                                                                                                          content</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                                                                                                                                                                       Données de populations de référence : population municipale, population comptée à part et population totale pour les différentes circonscriptions administratives : régions, départements, arrondissements et communes. </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 The population data as of January 1, 2022, within the territorial boundaries of the municipalities as of January 1, 2024, is official and authenticated by decree. This data will take effect on January 1, 2025. The population figures are available for the various administrative divisions as of January 1, 2024, based on their territorial boundaries on that date: regions, departments, districts, and municipalities</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $spatial</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $spatial$id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "FEHM"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $spatial$label</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                    content lang</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1      France hors Mayotte   fr</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 France excluding Mayotte   en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $spatialResolution</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       id                                                label</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    COM                             Commune, Commune, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    ARM Arrondissement municipal, Municipal district, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    ARR                     Arrondissement, District, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4    DEP                      Département, Department, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5    REG                               Région, Region, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 FRANCE                               France, France, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $spatialTemporal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2025-01-01T01:00:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $statisticalUnit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                      label</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Individu, Person, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $structure</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $structure$dsd</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "DSD_POPULATIONS_REFERENCE"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $subtitle</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                        content lang</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Recensement de la population   fr</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $temporal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $temporal$endPeriod</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-01-01T00:00:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $temporal$startPeriod</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-01-01T00:00:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $temporalResolution</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                    label</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Annuel, Annual, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $theme</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                      label</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                      1.1 Population et immigration, 1.1 Population and migration, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 1. Statistiques démographiques et sociales, 1. Demographic and social statistics, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                                          Démographie, Demography, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                       themeTaxonomy</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 classificationOfStatisticalDomain</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 classificationOfStatisticalDomain</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                        inseeTheme</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $title</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                    content lang</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Populations de référence   fr</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   Reference populations    en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $type</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            content lang</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Données agrégées   fr</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  Aggregated data   en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $uri</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "http://id.insee.fr/catalogues/jeuDeDonnees/c322eb4d-ec91-4723-8804-ea62e492612b"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $uuid</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1d485ee2-734b-fd75-1bdf-43dacf2465a8"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $wasGeneratedBy</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      id                                                   label</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 s1321 Recensement de la population, Population census, fr, en</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   s21 Recensement de la population, Population census, fr, en</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>

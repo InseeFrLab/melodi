@@ -37,8 +37,8 @@ get_catalog()
 #>  9 DD_CNA_REBS                Ressources e… Comptes nationa… ""                 
 #> 10 DD_CNA_SUT                 Tableau des … Comptes nationa… "Le tableau des en…
 #> # ℹ 96 more rows
-#> # ℹ 8 more variables: abstract_content <chr>, temporal_startPeriod <date>,
-#> #   temporal_endPeriod <date>, modified <date>, spatialResolution <chr>,
+#> # ℹ 8 more variables: abstract_content <chr>, temporal_endPeriod <date>,
+#> #   temporal_startPeriod <date>, modified <date>, spatialResolution <chr>,
 #> #   spatialTemporal <int>, numObservations <int>, numSeries <int>
 get_catalog(lang = "en")
 #> Request all catalog : https://api.insee.fr/melodi/catalog/all
@@ -56,7 +56,7 @@ get_catalog(lang = "en")
 #>  9 DD_CNA_REBS                Goods and se… Base 2020 - Ann… ""                 
 #> 10 DD_CNA_SUT                 Supply and u… Base 2020 - Ann… "The input-output …
 #> # ℹ 96 more rows
-#> # ℹ 8 more variables: abstract_content <chr>, temporal_startPeriod <date>,
-#> #   temporal_endPeriod <date>, modified <date>, spatialResolution <chr>,
+#> # ℹ 8 more variables: abstract_content <chr>, temporal_endPeriod <date>,
+#> #   temporal_startPeriod <date>, modified <date>, spatialResolution <chr>,
 #> #   spatialTemporal <int>, numObservations <int>, numSeries <int>
 ```
