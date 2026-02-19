@@ -8,7 +8,7 @@
 #' @param ds_name dataset name
 #' @param lang french or english labels - default french ("fr")
 #'
-#' @return A data frame with columns `GEO_REF`, `GEO_OBJECT`, `GEO`, `GEO_LABEL`
+#' @return A data frame with columns `GEO_REF`, `GEO_OBJECT`, `GEO_OBJECT_LABEL`, `GEO`, `GEO_LABEL`
 #' @export
 #'
 #' @examples
