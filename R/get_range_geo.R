@@ -27,6 +27,7 @@ get_range_geo <- function(
   message("Request dataset range : ", url)
 
   dataset <- httr2::request(url) |>
+    httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
     httr2::req_perform() |>
     httr2::resp_body_json(simplifyVector = FALSE)
 
@@ -42,7 +43,7 @@ get_range_geo <- function(
   # Unfold
   codebook_df <- tibble::tibble(
     GEO_LABEL        = purrr::map_chr(range_geo, ~ .x$label[[lang]] %||% NA_character_),
-    GEO_OBJECT_LABEL = purrr::map_chr(range_geo, ~ .x$type[[lang]]  %||% NA_character_),
+    GEO_OBJECT_LABEL = purrr::map_chr(range_geo, ~ .x$type[[lang]] %||% NA_character_),
     value_id         = purrr::map_chr(range_geo, "id", .default = NA_character_)
   ) |>
     tidyr::separate_wider_delim(
