@@ -45,3 +45,16 @@ vcr::use_cassette("get_data_not_exist", {
     )
   })
 })
+
+vcr::use_cassette("get_data_obs_value_indice_prix", {
+  # Reproduction du bug lorsque le retour n'est pas OBS_VALUE_NIVEAU
+  test_that("get data OBS_VALUE_INDICE_DE_PRIX", {
+    expect_no_error(
+      data <- get_data(
+        "https://api.insee.fr/melodi/data/DS_IPC_PRINC?IND_TYPE=IX&GEO=DEP-974&TIME_PERIOD=2026-01&PRODUCT_GROUP=4000"
+      )
+    )
+
+    # TODO test verifier OBS_VALUE
+  })
+})
