@@ -1,0 +1,119 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.insee.fr/melodi/data/DS_IPC_PRINC?IND_TYPE=IX&GEO=DEP-974&TIME_PERIOD=2026-01&PRODUCT_GROUP=4000&totalCount=TRUE&maxResult=0
+  response:
+    status: 200
+    headers:
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      content-type: application/json
+      date: Mon, 16 Mar 2026 16:01:25 GMT
+      expires: '0'
+      pragma: no-cache
+      set-cookie: INSEE=rd4o00000000000000000000ffff0ac3084ao8082; expires=Mon, 16-Mar-2026
+        16:21:25 GMT; path=/; Httponly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=100000; includeSubDomains
+      vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-gravitee-request-id: abd76e90-b2c8-4a66-976e-90b2c8ca66b8
+      x-gravitee-transaction-id: abd76e90-b2c8-4a66-976e-90b2c8ca66b8
+      x-xss-protection: '0'
+    body:
+      string: |-
+        {
+          "observations" : [ ],
+          "identifier" : "DS_IPC_PRINC",
+          "paging" : {
+            "count" : 1,
+            "first" : "https://api.insee.fr/melodi/data/DS_IPC_PRINC?IND_TYPE=IX&GEO=DEP-974&TIME_PERIOD=2026-01&PRODUCT_GROUP=4000&totalCount=TRUE&maxResult=0&page=1"
+          },
+          "publisher" : {
+            "id" : "INSEE",
+            "label" : [ {
+              "content" : "Institut national de la statistique et des etudes economiques (INSEE)",
+              "lang" : "fr"
+            }, {
+              "content" : "National Institute of Statistics and Economic Studies",
+              "lang" : "en"
+            } ]
+          },
+          "title" : {
+            "en" : "Consumption Price Index (CPI) - main dataset",
+            "fr" : "Indice des prix à la consommation - jeu de données principal"
+          }
+        }
+  recorded_at: 2026-03-16 16:01:25
+- request:
+    method: GET
+    uri: https://api.insee.fr/melodi/data/DS_IPC_PRINC?IND_TYPE=IX&GEO=DEP-974&TIME_PERIOD=2026-01&PRODUCT_GROUP=4000&idTerritoire=TRUE&maxResult=100000
+  response:
+    status: 200
+    headers:
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      content-type: application/json
+      date: Mon, 16 Mar 2026 16:01:26 GMT
+      expires: '0'
+      pragma: no-cache
+      set-cookie: INSEE=rd4o00000000000000000000ffff0ac30849o8082; expires=Mon, 16-Mar-2026
+        16:21:26 GMT; path=/; Httponly; Secure
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=100000; includeSubDomains
+      vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-gravitee-request-id: b44d3a4a-26bc-4560-8d3a-4a26bc6560fd
+      x-gravitee-transaction-id: b44d3a4a-26bc-4560-8d3a-4a26bc6560fd
+      x-xss-protection: '0'
+    body:
+      string: |-
+        {
+          "observations" : [ {
+            "attributes" : {
+              "OBS_STATUS" : "A",
+              "DECIMALS" : "2",
+              "CONF_STATUS" : "F"
+            },
+            "dimensions" : {
+              "GEO" : "2025-DEP-974",
+              "SEASONAL_ADJUST" : "N",
+              "BASE_PER" : "2025",
+              "PRODUCT_GROUP" : "4000",
+              "COICOP_2018" : "_Z",
+              "IDX_TYPE" : "CPI",
+              "TPH_CPI" : "_T",
+              "FREQ" : "M",
+              "TIME_PERIOD" : "2026-01",
+              "UNIT_MEASURE" : "IX",
+              "IND_TYPE" : "IX"
+            },
+            "measures" : {
+              "OBS_VALUE_INDICE_DE_PRIX" : {
+                "value" : 99.14
+              }
+            }
+          } ],
+          "identifier" : "DS_IPC_PRINC",
+          "paging" : {
+            "first" : "https://api.insee.fr/melodi/data/DS_IPC_PRINC?IND_TYPE=IX&GEO=DEP-974&TIME_PERIOD=2026-01&PRODUCT_GROUP=4000&idTerritoire=TRUE&maxResult=100000&page=1"
+          },
+          "publisher" : {
+            "id" : "INSEE",
+            "label" : [ {
+              "content" : "Institut national de la statistique et des etudes economiques (INSEE)",
+              "lang" : "fr"
+            }, {
+              "content" : "National Institute of Statistics and Economic Studies",
+              "lang" : "en"
+            } ]
+          },
+          "title" : {
+            "en" : "Consumption Price Index (CPI) - main dataset",
+            "fr" : "Indice des prix à la consommation - jeu de données principal"
+          }
+        }
+  recorded_at: 2026-03-16 16:01:26
+recorded_with: VCR-vcr/2.1.0
