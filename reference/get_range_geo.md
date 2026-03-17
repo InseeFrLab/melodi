@@ -34,7 +34,13 @@ For other dimensions, refer to get_range()
 get_range_geo("DS_POPULATIONS_REFERENCE") |>
   head()
 #> Request dataset range : https://api.insee.fr/melodi/range/DS_POPULATIONS_REFERENCE
-#> Error: parse error: premature EOF
-#>                                        {   "code" : "DS_POPULATIONS_RE
-#>                      (right here) ------^
+#> # A tibble: 6 × 5
+#>   GEO_REF GEO_OBJECT GEO_OBJECT_LABEL         GEO   GEO_LABEL                   
+#>   <chr>   <chr>      <chr>                    <chr> <chr>                       
+#> 1 2025    ARM        Arrondissement municipal 13201 Marseille 1er Arrondissement
+#> 2 2025    ARM        Arrondissement municipal 13202 Marseille 2e Arrondissement 
+#> 3 2025    ARM        Arrondissement municipal 13203 Marseille 3e Arrondissement 
+#> 4 2025    ARM        Arrondissement municipal 13204 Marseille 4e Arrondissement 
+#> 5 2025    ARM        Arrondissement municipal 13205 Marseille 5e Arrondissement 
+#> 6 2025    ARM        Arrondissement municipal 13206 Marseille 6e Arrondissement 
 ```
