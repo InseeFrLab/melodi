@@ -1,3 +1,6 @@
+# melodi 1.0.2
+- #16 : `get_data` : gestion des cas où OBS_VALUE est nommé autrement que OBS_VALUE_NIVEAU (notamment sur DS_IPC_PRINC)
+
 # melodi 1.0.1
 - #12 : `get_range_geo` : ajout GEO_OBJECT_LABEL et amélioration des performances (usage de purrr au lieu de boucles)
 
