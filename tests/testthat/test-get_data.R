@@ -11,6 +11,14 @@ vcr::use_cassette("get_data_popref_nantes", {
       object = nrow(data),
       expected = 0
     )
+
+    # verifier OBS_VALUE car gestion du OBS_VALUE avec un nom différent parfois
+    expect_true(
+      all(
+        c("OBS_VALUE") %in%
+          colnames(data)
+      )
+    )
   })
 })
 
@@ -55,6 +63,12 @@ vcr::use_cassette("get_data_obs_value_indice_prix", {
       )
     )
 
-    # TODO test verifier OBS_VALUE
+    # l'API renvoie OBS_VALUE_INDICE_DE_PRIX : on teste que tout remonte bien en OBS_VALUE
+    expect_true(
+      all(
+        c("OBS_VALUE") %in%
+          colnames(data)
+      )
+    )
   })
 })
