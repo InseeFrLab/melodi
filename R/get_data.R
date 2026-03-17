@@ -58,7 +58,9 @@ get_data <- function(
 
   # bind datas in one dataframe
   dimensions_obj <- result[["observations"]][["dimensions"]]
-  measures_obj <- result[["observations"]][["measures"]][["OBS_VALUE_NIVEAU"]]
+  # OBS_VALUE may have different names : OBS_VALUE_NIVEAU, OBS_VALUE_INDICE_DE_PRIX, etc.
+  # => get the first result, whatever its name
+  measures_obj <- result[["observations"]][["measures"]][[1]]
   attributes_obj <- result[["observations"]][["attributes"]]
   data <- dplyr::bind_cols(
     dimensions_obj,
