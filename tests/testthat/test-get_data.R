@@ -63,12 +63,10 @@ vcr::use_cassette("get_data_obs_value_indice_prix", {
       )
     )
 
-    # l'API renvoie OBS_VALUE_INDICE_DE_PRIX : on teste que tout remonte bien en OBS_VALUE
+    # l'API renvoie OBS_VALUE_INDICE_DE_PRIX :
+    # on teste que tout remonte bien en OBS_VALUE
     expect_true(
-      all(
-        c("OBS_VALUE") %in%
-          colnames(data)
-      )
+      "OBS_VALUE" %in% colnames(data)
     )
   })
 })
