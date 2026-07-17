@@ -140,16 +140,7 @@ usethis::use_github_action("check-standard")
 # All functions must have either `@noRd` or an `@export`.
 checkhelper::audit_tags()
 
-
 # install.packages("checktor")
 
-library(checktor)
-
 # Run all diagnostics on the current package
-results <- checktor()
-
-# Treatment recommendations for the issues found
-prescribe(results)
-
-# Generate a Markdown / HTML / text report
-cat(health_report(results, format = "markdown"), sep = "\n")
+results <- checktor::checktor()

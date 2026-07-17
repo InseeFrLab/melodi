@@ -1,0 +1,1058 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.insee.fr/melodi/range/DS_SUIVI_DDE_TOUR
+  response:
+    status: 200
+    headers:
+      cache-control: max-age=600, public
+      content-encoding: gzip
+      content-type: application/json
+      date: Fri, 17 Jul 2026 13:35:14 GMT
+      set-cookie: INSEE=rd4o00000000000000000000ffff0ac30849o8082; expires=Fri, 17-Jul-2026
+        13:55:13 GMT; path=/; Httponly; Secure
+      strict-transport-security:
+      - max-age=31536000 ; includeSubDomains
+      - max-age=100000; includeSubDomains
+      vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-gravitee-request-id: 5859201b-7b84-4b59-9920-1b7b844b5967
+      x-gravitee-transaction-id: 5859201b-7b84-4b59-9920-1b7b844b5967
+      x-xss-protection: '0'
+    body:
+      string: |-
+        {
+          "code" : "DS_SUIVI_DDE_TOUR",
+          "label" : {
+            "en" : "Monitoring tourist demand ",
+            "fr" : "Suivi de la demande touristique"
+          },
+          "range" : [ {
+            "concept" : {
+              "code" : "TOUR_MEASURE",
+              "label" : {
+                "en" : "Tourism measure",
+                "fr" : "Mesure du tourisme"
+              }
+            },
+            "type" : "modalites",
+            "values" : [ {
+              "code" : "TRIPS",
+              "label" : {
+                "en" : "Number of trips",
+                "fr" : "Nombre de voyages"
+              }
+            }, {
+              "code" : "NIGHT_SPENT",
+              "label" : {
+                "en" : "Number of overnight stays",
+                "fr" : "Nombre de nuitées"
+              }
+            }, {
+              "code" : "DEPARTURE_TRAVEL_RATE",
+              "label" : {
+                "en" : "Departure travel rate",
+                "fr" : "Taux de départ en voyage"
+              }
+            }, {
+              "code" : "SAME_DAY_VISIT",
+              "label" : {
+                "en" : "Monthly evolution index of the number of same-day visits",
+                "fr" : "Indice d’évolution mensuel du nombre d’allers-retours"
+              }
+            } ]
+          }, {
+            "concept" : {
+              "code" : "TRAVEL_DEST",
+              "label" : {
+                "en" : "Travel destination",
+                "fr" : "Destination du voyage"
+              }
+            },
+            "type" : "modalites",
+            "values" : [ {
+              "code" : "250",
+              "label" : {
+                "en" : "France",
+                "fr" : "France"
+              }
+            }, {
+              "code" : "EU_EFTA_X_250",
+              "label" : {
+                "en" : "European Union and European Free Trade Association countries (EFTA), excluding France",
+                "fr" : "Pays de l’Union Européenne et de l’Association Européenne de Libre-Échange (AELE), hors France"
+              }
+            }, {
+              "code" : "1_X_150",
+              "label" : {
+                "en" : "World excluding Europe",
+                "fr" : "Etranger hors Europe"
+              }
+            }, {
+              "code" : "1_X_250",
+              "label" : {
+                "en" : "World excluding France",
+                "fr" : "Etranger "
+              }
+            }, {
+              "code" : "_T",
+              "label" : {
+                "en" : "Total",
+                "fr" : "Total"
+              }
+            } ]
+          }, {
+            "concept" : {
+              "code" : "SEASONAL_ADJUST",
+              "label" : {
+                "en" : "Seasonal adjustment",
+                "fr" : " Ajustement saisonnier "
+              }
+            },
+            "type" : "modalites",
+            "values" : [ {
+              "code" : "N",
+              "label" : {
+                "en" : "Neither seasonally adjusted nor calendar adjusted data",
+                "fr" : "Brut"
+              }
+            } ]
+          }, {
+            "concept" : {
+              "code" : "TYPE_TOUR_ACCOMODATION",
+              "label" : {
+                "en" : "Type of tourist accommodation ",
+                "fr" : "Type d’hébergement touristique"
+              }
+            },
+            "type" : "modalites",
+            "values" : [ {
+              "code" : "HOTEL",
+              "label" : {
+                "en" : "Hotel or similar accomodation",
+                "fr" : "Hôtel"
+              }
+            }, {
+              "code" : "RENTAL",
+              "label" : {
+                "en" : "Rental properties, cottages or bed-and-breakfasts",
+                "fr" : "Location, gîte ou chambre d'hôte"
+              }
+            }, {
+              "code" : "CAMPING",
+              "label" : {
+                "en" : "Campsites",
+                "fr" : "Camping"
+              }
+            }, {
+              "code" : "SECOND_HOME",
+              "label" : {
+                "en" : "Second home",
+                "fr" : "Résidence secondaire"
+              }
+            }, {
+              "code" : "FRIENDS_FAMILY",
+              "label" : {
+                "en" : "Accomodation provided without charge by relatives or friends",
+                "fr" : " Famille, amis"
+              }
+            }, {
+              "code" : "OTH_RENTED_ACCOM",
+              "label" : {
+                "en" : "Other rented accomodation",
+                "fr" : "Autre hébergement payant"
+              }
+            }, {
+              "code" : "OTH_NON_RENTED_ACCOM",
+              "label" : {
+                "en" : "Other non-rented accomodation",
+                "fr" : "Autre hébergement non payant"
+              }
+            }, {
+              "code" : "RENTED_ACCOM",
+              "label" : {
+                "en" : "Rented accomodation",
+                "fr" : "Hébergement principal marchand"
+              }
+            }, {
+              "code" : "NON_RENTED_ACCOM",
+              "label" : {
+                "en" : "Non-rented accomodation",
+                "fr" : "Hébergement principal non marchand"
+              }
+            }, {
+              "code" : "_T",
+              "label" : {
+                "en" : "Total",
+                "fr" : "Total"
+              }
+            } ]
+          }, {
+            "concept" : {
+              "code" : "OBS_STATUS",
+              "label" : {
+                "en" : "Observation status",
+                "fr" : "Statut de l'observation"
+              }
+            },
+            "type" : "modalites",
+            "values" : [ {
+              "code" : "A",
+              "label" : {
+                "en" : "Normal",
+                "fr" : "Normale"
+              }
+            }, {
+              "code" : "R",
+              "label" : {
+                "en" : "Revised value",
+                "fr" : "Valeur révisée"
+              }
+            }, {
+              "code" : "O",
+              "label" : {
+                "en" : "Missing value",
+                "fr" : "Valeur manquante (vm)"
+              }
+            } ]
+          }, {
+            "concept" : {
+              "code" : "GEO",
+              "label" : {
+                "en" : "Geography",
+                "fr" : "Géographie"
+              }
+            },
+            "type" : "geo",
+            "values" : [ {
+              "code" : "FM",
+              "id" : "2025-FRANCE-FM",
+              "iri" : "http://id.insee.fr/geo/france/FM",
+              "label" : {
+                "en" : "Metropolitan France",
+                "fr" : "France métropolitaine"
+              },
+              "type" : {
+                "code" : "FRANCE",
+                "en" : "France",
+                "fr" : "France"
+              }
+            } ]
+          }, {
+            "concept" : {
+              "code" : "FREQ",
+              "label" : {
+                "en" : "Frequency",
+                "fr" : "Fréquence"
+              }
+            },
+            "type" : "modalites",
+            "values" : [ {
+              "code" : "A",
+              "iri" : "A",
+              "label" : {
+                "en" : "Annual",
+                "fr" : "Annuel"
+              }
+            }, {
+              "code" : "M",
+              "iri" : "M",
+              "label" : {
+                "en" : "Monthly",
+                "fr" : "Mensuel"
+              }
+            } ]
+          }, {
+            "concept" : {
+              "code" : "MODE_TRANSPORT",
+              "label" : {
+                "en" : "Mode of transport for tourism",
+                "fr" : "Mode de transport pour le tourisme"
+              }
+            },
+            "type" : "modalites",
+            "values" : [ {
+              "code" : "7",
+              "label" : {
+                "en" : " Road transport",
+                "fr" : "Route (voiture et camping car)"
+              }
+            }, {
+              "code" : "OTH_X_7",
+              "label" : {
+                "en" : " Other mode of transport excluding road",
+                "fr" : " Autre modes de transport principal hors route"
+              }
+            }, {
+              "code" : "_T",
+              "label" : {
+                "en" : "Total",
+                "fr" : "Total"
+              }
+            } ]
+          }, {
+            "concept" : {
+              "code" : "TIME_PERIOD",
+              "label" : {
+                "en" : "Time period",
+                "fr" : "Période temporelle"
+              }
+            },
+            "type" : "date",
+            "values" : [ {
+              "code" : "2024",
+              "label" : {
+                "en" : "2024",
+                "fr" : "2024"
+              }
+            }, {
+              "code" : "2024-01",
+              "label" : {
+                "en" : "2024-01",
+                "fr" : "2024-01"
+              }
+            }, {
+              "code" : "2023",
+              "label" : {
+                "en" : "2023",
+                "fr" : "2023"
+              }
+            }, {
+              "code" : "2023-01",
+              "label" : {
+                "en" : "2023-01",
+                "fr" : "2023-01"
+              }
+            }, {
+              "code" : "2022",
+              "label" : {
+                "en" : "2022",
+                "fr" : "2022"
+              }
+            }, {
+              "code" : "2022-01",
+              "label" : {
+                "en" : "2022-01",
+                "fr" : "2022-01"
+              }
+            }, {
+              "code" : "2021",
+              "label" : {
+                "en" : "2021",
+                "fr" : "2021"
+              }
+            }, {
+              "code" : "2021-01",
+              "label" : {
+                "en" : "2021-01",
+                "fr" : "2021-01"
+              }
+            }, {
+              "code" : "2020",
+              "label" : {
+                "en" : "2020",
+                "fr" : "2020"
+              }
+            }, {
+              "code" : "2020-01",
+              "label" : {
+                "en" : "2020-01",
+                "fr" : "2020-01"
+              }
+            }, {
+              "code" : "2019",
+              "label" : {
+                "en" : "2019",
+                "fr" : "2019"
+              }
+            }, {
+              "code" : "2019-01",
+              "label" : {
+                "en" : "2019-01",
+                "fr" : "2019-01"
+              }
+            }, {
+              "code" : "2018",
+              "label" : {
+                "en" : "2018",
+                "fr" : "2018"
+              }
+            }, {
+              "code" : "2018-01",
+              "label" : {
+                "en" : "2018-01",
+                "fr" : "2018-01"
+              }
+            }, {
+              "code" : "2025",
+              "label" : {
+                "en" : "2025",
+                "fr" : "2025"
+              }
+            }, {
+              "code" : "2025-01",
+              "label" : {
+                "en" : "2025-01",
+                "fr" : "2025-01"
+              }
+            }, {
+              "code" : "2023-08",
+              "label" : {
+                "en" : "2023-08",
+                "fr" : "2023-08"
+              }
+            }, {
+              "code" : "2023-07",
+              "label" : {
+                "en" : "2023-07",
+                "fr" : "2023-07"
+              }
+            }, {
+              "code" : "2023-06",
+              "label" : {
+                "en" : "2023-06",
+                "fr" : "2023-06"
+              }
+            }, {
+              "code" : "2023-05",
+              "label" : {
+                "en" : "2023-05",
+                "fr" : "2023-05"
+              }
+            }, {
+              "code" : "2023-04",
+              "label" : {
+                "en" : "2023-04",
+                "fr" : "2023-04"
+              }
+            }, {
+              "code" : "2023-03",
+              "label" : {
+                "en" : "2023-03",
+                "fr" : "2023-03"
+              }
+            }, {
+              "code" : "2023-02",
+              "label" : {
+                "en" : "2023-02",
+                "fr" : "2023-02"
+              }
+            }, {
+              "code" : "2022-12",
+              "label" : {
+                "en" : "2022-12",
+                "fr" : "2022-12"
+              }
+            }, {
+              "code" : "2022-11",
+              "label" : {
+                "en" : "2022-11",
+                "fr" : "2022-11"
+              }
+            }, {
+              "code" : "2022-10",
+              "label" : {
+                "en" : "2022-10",
+                "fr" : "2022-10"
+              }
+            }, {
+              "code" : "2022-09",
+              "label" : {
+                "en" : "2022-09",
+                "fr" : "2022-09"
+              }
+            }, {
+              "code" : "2022-08",
+              "label" : {
+                "en" : "2022-08",
+                "fr" : "2022-08"
+              }
+            }, {
+              "code" : "2022-07",
+              "label" : {
+                "en" : "2022-07",
+                "fr" : "2022-07"
+              }
+            }, {
+              "code" : "2022-06",
+              "label" : {
+                "en" : "2022-06",
+                "fr" : "2022-06"
+              }
+            }, {
+              "code" : "2022-05",
+              "label" : {
+                "en" : "2022-05",
+                "fr" : "2022-05"
+              }
+            }, {
+              "code" : "2022-04",
+              "label" : {
+                "en" : "2022-04",
+                "fr" : "2022-04"
+              }
+            }, {
+              "code" : "2022-03",
+              "label" : {
+                "en" : "2022-03",
+                "fr" : "2022-03"
+              }
+            }, {
+              "code" : "2022-02",
+              "label" : {
+                "en" : "2022-02",
+                "fr" : "2022-02"
+              }
+            }, {
+              "code" : "2021-12",
+              "label" : {
+                "en" : "2021-12",
+                "fr" : "2021-12"
+              }
+            }, {
+              "code" : "2021-11",
+              "label" : {
+                "en" : "2021-11",
+                "fr" : "2021-11"
+              }
+            }, {
+              "code" : "2021-10",
+              "label" : {
+                "en" : "2021-10",
+                "fr" : "2021-10"
+              }
+            }, {
+              "code" : "2021-09",
+              "label" : {
+                "en" : "2021-09",
+                "fr" : "2021-09"
+              }
+            }, {
+              "code" : "2021-08",
+              "label" : {
+                "en" : "2021-08",
+                "fr" : "2021-08"
+              }
+            }, {
+              "code" : "2021-07",
+              "label" : {
+                "en" : "2021-07",
+                "fr" : "2021-07"
+              }
+            }, {
+              "code" : "2021-06",
+              "label" : {
+                "en" : "2021-06",
+                "fr" : "2021-06"
+              }
+            }, {
+              "code" : "2021-05",
+              "label" : {
+                "en" : "2021-05",
+                "fr" : "2021-05"
+              }
+            }, {
+              "code" : "2021-04",
+              "label" : {
+                "en" : "2021-04",
+                "fr" : "2021-04"
+              }
+            }, {
+              "code" : "2021-03",
+              "label" : {
+                "en" : "2021-03",
+                "fr" : "2021-03"
+              }
+            }, {
+              "code" : "2021-02",
+              "label" : {
+                "en" : "2021-02",
+                "fr" : "2021-02"
+              }
+            }, {
+              "code" : "2020-12",
+              "label" : {
+                "en" : "2020-12",
+                "fr" : "2020-12"
+              }
+            }, {
+              "code" : "2020-11",
+              "label" : {
+                "en" : "2020-11",
+                "fr" : "2020-11"
+              }
+            }, {
+              "code" : "2020-10",
+              "label" : {
+                "en" : "2020-10",
+                "fr" : "2020-10"
+              }
+            }, {
+              "code" : "2020-09",
+              "label" : {
+                "en" : "2020-09",
+                "fr" : "2020-09"
+              }
+            }, {
+              "code" : "2020-08",
+              "label" : {
+                "en" : "2020-08",
+                "fr" : "2020-08"
+              }
+            }, {
+              "code" : "2020-07",
+              "label" : {
+                "en" : "2020-07",
+                "fr" : "2020-07"
+              }
+            }, {
+              "code" : "2020-06",
+              "label" : {
+                "en" : "2020-06",
+                "fr" : "2020-06"
+              }
+            }, {
+              "code" : "2020-05",
+              "label" : {
+                "en" : "2020-05",
+                "fr" : "2020-05"
+              }
+            }, {
+              "code" : "2020-04",
+              "label" : {
+                "en" : "2020-04",
+                "fr" : "2020-04"
+              }
+            }, {
+              "code" : "2020-03",
+              "label" : {
+                "en" : "2020-03",
+                "fr" : "2020-03"
+              }
+            }, {
+              "code" : "2020-02",
+              "label" : {
+                "en" : "2020-02",
+                "fr" : "2020-02"
+              }
+            }, {
+              "code" : "2019-12",
+              "label" : {
+                "en" : "2019-12",
+                "fr" : "2019-12"
+              }
+            }, {
+              "code" : "2019-11",
+              "label" : {
+                "en" : "2019-11",
+                "fr" : "2019-11"
+              }
+            }, {
+              "code" : "2019-10",
+              "label" : {
+                "en" : "2019-10",
+                "fr" : "2019-10"
+              }
+            }, {
+              "code" : "2019-09",
+              "label" : {
+                "en" : "2019-09",
+                "fr" : "2019-09"
+              }
+            }, {
+              "code" : "2019-08",
+              "label" : {
+                "en" : "2019-08",
+                "fr" : "2019-08"
+              }
+            }, {
+              "code" : "2019-07",
+              "label" : {
+                "en" : "2019-07",
+                "fr" : "2019-07"
+              }
+            }, {
+              "code" : "2019-06",
+              "label" : {
+                "en" : "2019-06",
+                "fr" : "2019-06"
+              }
+            }, {
+              "code" : "2019-05",
+              "label" : {
+                "en" : "2019-05",
+                "fr" : "2019-05"
+              }
+            }, {
+              "code" : "2019-04",
+              "label" : {
+                "en" : "2019-04",
+                "fr" : "2019-04"
+              }
+            }, {
+              "code" : "2019-03",
+              "label" : {
+                "en" : "2019-03",
+                "fr" : "2019-03"
+              }
+            }, {
+              "code" : "2019-02",
+              "label" : {
+                "en" : "2019-02",
+                "fr" : "2019-02"
+              }
+            }, {
+              "code" : "2018-12",
+              "label" : {
+                "en" : "2018-12",
+                "fr" : "2018-12"
+              }
+            }, {
+              "code" : "2018-11",
+              "label" : {
+                "en" : "2018-11",
+                "fr" : "2018-11"
+              }
+            }, {
+              "code" : "2018-10",
+              "label" : {
+                "en" : "2018-10",
+                "fr" : "2018-10"
+              }
+            }, {
+              "code" : "2018-09",
+              "label" : {
+                "en" : "2018-09",
+                "fr" : "2018-09"
+              }
+            }, {
+              "code" : "2018-08",
+              "label" : {
+                "en" : "2018-08",
+                "fr" : "2018-08"
+              }
+            }, {
+              "code" : "2018-07",
+              "label" : {
+                "en" : "2018-07",
+                "fr" : "2018-07"
+              }
+            }, {
+              "code" : "2018-06",
+              "label" : {
+                "en" : "2018-06",
+                "fr" : "2018-06"
+              }
+            }, {
+              "code" : "2018-05",
+              "label" : {
+                "en" : "2018-05",
+                "fr" : "2018-05"
+              }
+            }, {
+              "code" : "2018-04",
+              "label" : {
+                "en" : "2018-04",
+                "fr" : "2018-04"
+              }
+            }, {
+              "code" : "2018-03",
+              "label" : {
+                "en" : "2018-03",
+                "fr" : "2018-03"
+              }
+            }, {
+              "code" : "2018-02",
+              "label" : {
+                "en" : "2018-02",
+                "fr" : "2018-02"
+              }
+            }, {
+              "code" : "2025-12",
+              "label" : {
+                "en" : "2025-12",
+                "fr" : "2025-12"
+              }
+            }, {
+              "code" : "2025-11",
+              "label" : {
+                "en" : "2025-11",
+                "fr" : "2025-11"
+              }
+            }, {
+              "code" : "2025-10",
+              "label" : {
+                "en" : "2025-10",
+                "fr" : "2025-10"
+              }
+            }, {
+              "code" : "2025-09",
+              "label" : {
+                "en" : "2025-09",
+                "fr" : "2025-09"
+              }
+            }, {
+              "code" : "2025-08",
+              "label" : {
+                "en" : "2025-08",
+                "fr" : "2025-08"
+              }
+            }, {
+              "code" : "2025-07",
+              "label" : {
+                "en" : "2025-07",
+                "fr" : "2025-07"
+              }
+            }, {
+              "code" : "2025-06",
+              "label" : {
+                "en" : "2025-06",
+                "fr" : "2025-06"
+              }
+            }, {
+              "code" : "2025-05",
+              "label" : {
+                "en" : "2025-05",
+                "fr" : "2025-05"
+              }
+            }, {
+              "code" : "2025-04",
+              "label" : {
+                "en" : "2025-04",
+                "fr" : "2025-04"
+              }
+            }, {
+              "code" : "2025-03",
+              "label" : {
+                "en" : "2025-03",
+                "fr" : "2025-03"
+              }
+            }, {
+              "code" : "2025-02",
+              "label" : {
+                "en" : "2025-02",
+                "fr" : "2025-02"
+              }
+            }, {
+              "code" : "2024-12",
+              "label" : {
+                "en" : "2024-12",
+                "fr" : "2024-12"
+              }
+            }, {
+              "code" : "2024-11",
+              "label" : {
+                "en" : "2024-11",
+                "fr" : "2024-11"
+              }
+            }, {
+              "code" : "2024-10",
+              "label" : {
+                "en" : "2024-10",
+                "fr" : "2024-10"
+              }
+            }, {
+              "code" : "2024-09",
+              "label" : {
+                "en" : "2024-09",
+                "fr" : "2024-09"
+              }
+            }, {
+              "code" : "2024-08",
+              "label" : {
+                "en" : "2024-08",
+                "fr" : "2024-08"
+              }
+            }, {
+              "code" : "2024-07",
+              "label" : {
+                "en" : "2024-07",
+                "fr" : "2024-07"
+              }
+            }, {
+              "code" : "2024-06",
+              "label" : {
+                "en" : "2024-06",
+                "fr" : "2024-06"
+              }
+            }, {
+              "code" : "2024-05",
+              "label" : {
+                "en" : "2024-05",
+                "fr" : "2024-05"
+              }
+            }, {
+              "code" : "2024-04",
+              "label" : {
+                "en" : "2024-04",
+                "fr" : "2024-04"
+              }
+            }, {
+              "code" : "2024-03",
+              "label" : {
+                "en" : "2024-03",
+                "fr" : "2024-03"
+              }
+            }, {
+              "code" : "2024-02",
+              "label" : {
+                "en" : "2024-02",
+                "fr" : "2024-02"
+              }
+            }, {
+              "code" : "2023-12",
+              "label" : {
+                "en" : "2023-12",
+                "fr" : "2023-12"
+              }
+            }, {
+              "code" : "2023-11",
+              "label" : {
+                "en" : "2023-11",
+                "fr" : "2023-11"
+              }
+            }, {
+              "code" : "2023-10",
+              "label" : {
+                "en" : "2023-10",
+                "fr" : "2023-10"
+              }
+            }, {
+              "code" : "2023-09",
+              "label" : {
+                "en" : "2023-09",
+                "fr" : "2023-09"
+              }
+            } ]
+          }, {
+            "concept" : {
+              "code" : "DECIMALS",
+              "label" : {
+                "en" : "Decimals",
+                "fr" : "Décimales"
+              }
+            },
+            "type" : "modalites",
+            "values" : [ {
+              "code" : "1",
+              "label" : {
+                "en" : "One",
+                "fr" : "Un"
+              }
+            }, {
+              "code" : "0",
+              "label" : {
+                "en" : "Zero",
+                "fr" : "Zéro"
+              }
+            } ]
+          }, {
+            "concept" : {
+              "code" : "UNIT_MEASURE",
+              "label" : {
+                "en" : "Unit measure",
+                "fr" : "Unité de mesure"
+              }
+            },
+            "type" : "modalites",
+            "values" : [ {
+              "code" : "NR",
+              "label" : {
+                "en" : "Number",
+                "fr" : "Nombre"
+              }
+            }, {
+              "code" : "PT",
+              "label" : {
+                "en" : "Percent",
+                "fr" : "Pourcentage"
+              }
+            }, {
+              "code" : "IX",
+              "label" : {
+                "en" : "Index",
+                "fr" : "Indice"
+              }
+            } ]
+          }, {
+            "concept" : {
+              "code" : "UNIT_MULT",
+              "label" : {
+                "en" : "Quantity of units (in power of 10)",
+                "fr" : "Quantité d'unités (en puissance de 10)"
+              }
+            },
+            "type" : "modalites",
+            "values" : [ {
+              "code" : "6",
+              "label" : {
+                "en" : "Millions",
+                "fr" : "Millions"
+              }
+            }, {
+              "code" : "0",
+              "label" : {
+                "en" : "Units",
+                "fr" : "Unités"
+              }
+            } ]
+          }, {
+            "concept" : {
+              "code" : "TRAVEL_REASON",
+              "label" : {
+                "en" : "Purpose of travel",
+                "fr" : "Motif de voyage"
+              }
+            },
+            "type" : "modalites",
+            "values" : [ {
+              "code" : "VST_PERSO",
+              "label" : {
+                "en" : "Travel for personal reasons",
+                "fr" : "Voyage pour motif personnel"
+              }
+            }, {
+              "code" : "VST_PROF",
+              "label" : {
+                "en" : "Travel for professional or mixed purposes",
+                "fr" : "Voyage pour motif professionnel ou mixte"
+              }
+            }, {
+              "code" : "_T",
+              "label" : {
+                "en" : "Total",
+                "fr" : "Total"
+              }
+            } ]
+          }, {
+            "concept" : {
+              "code" : "MEASURE",
+              "label" : {
+                "en" : "Measure",
+                "fr" : "Mesure"
+              }
+            },
+            "type" : "mesures",
+            "values" : [ {
+              "code" : "OBS_VALUE_NIVEAU",
+              "label" : {
+                "en" : "Value",
+                "fr" : "Valeur"
+              },
+              "measureType" : {
+                "code" : "NIVEAU",
+                "id" : "NIVEAU",
+                "libelle" : {
+                  "en" : "Niveau",
+                  "fr" : "Niveau"
+                },
+                "ordreRmes" : 1,
+                "total" : false,
+                "uri" : "NIVEAU"
+              }
+            } ]
+          } ]
+        }
+  recorded_at: 2026-07-17 13:35:13
+recorded_with: VCR-vcr/2.1.0
