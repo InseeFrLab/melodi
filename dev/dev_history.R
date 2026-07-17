@@ -20,14 +20,9 @@ devtools::test()
 covr::report()
 
 # Assurer la conformité globale du package
-# Un peu long mais à lancer régulièrement pour contrôler les régressions
+# à lancer régulièrement pour contrôler les régressions
 # Objectif : 0 error, 0 warning, 0 notes !
-devtools::check(
-  # vignettes gourmandes en requêtes Melodi, à faire à part sinon "429 Too many requests"
-  vignettes = FALSE,
-  # éviter le test CRAN inutile et qui soulève une note
-  cran = TRUE
-)
+devtools::check()
 
 # Créée le site documentaire  --------------
 # cette étape est faite par github CI, lancer manuellement au besoin pour voir le resultat
