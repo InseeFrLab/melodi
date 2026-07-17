@@ -10,7 +10,6 @@ Description: A wrapper for the Insee Melodi APIs that returns data frames and me
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
 Language: fr
 Suggests: 
     knitr,
@@ -35,3 +34,4 @@ Imports:
 VignetteBuilder: knitr
 URL: https://InseeFrLab.github.io/melodi/, https://github.com/InseeFrLab/melodi
 BugReports: https://github.com/InseeFrLab/melodi/issues
+Config/roxygen2/version: 8.0.0
