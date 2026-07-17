@@ -1,5 +1,5 @@
 Package: melodi
-Title: Tools for Insee Open Data, French Institute of Statistics
+Title: Download Insee French Institute of Statistics Open Data 
 Version: 1.1.0
 Authors@R: c(
     person("Cédric", "Bobinec", , "cedric.bobinec@insee.fr", role = c("aut", "cre")),
@@ -7,8 +7,9 @@ Authors@R: c(
     person(, "Institut national de la statistique et des études économiques", role = "cph")
   )
 Description: A wrapper for the French Institute of Statistics (Insee) API
-    Melodi to download and search data and metadata from
-    <https://catalogue-donnees.insee.fr>.
+    Melodi <https://catalogue-donnees.insee.fr>. Download, search, filter data 
+    and metadata from open data statistical public datasets, 
+    in french or in english.
 License: MIT + file LICENSE
 URL: https://InseeFrLab.github.io/melodi/,
     https://github.com/InseeFrLab/melodi
