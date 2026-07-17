@@ -7,20 +7,24 @@
 [![R-CMD-check](https://github.com/InseeFrLab/melodi/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/InseeFrLab/melodi/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-Package facilitant l'utilisation des données et métadonnées diffusées par l'Insee 
+Package facilitant l'utilisation des données ouvertes et métadonnées diffusées par l'Insee 
 sur [le catalogue de données de l'Insee (melodi)](https://catalogue-donnees.insee.fr)
 
 ## Installation
 
-Installer la dernière version stable depuis github :
+Pour installer la dernière version stable depuis le [CRAN](https://CRAN.R-project.org/package=melodi) :
+
+``` r
+install.packages("melodi")
+```
+
+### Development
+
+Pour installer une version de développement depuis [GitHub](https://github.com/):
+
 ```R
 # install.packages("remotes")
 remotes::install_github("InseeFrLab/melodi", build_vignettes = TRUE)
-```
-
-(pour les agents Insee uniquement) installer la dernière version stable :
-```R
-install.packages("melodi", repos = "https://nexus.insee.fr/repository/r-public/")
 ```
 
 ## Exemples
