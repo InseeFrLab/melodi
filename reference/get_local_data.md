@@ -53,8 +53,12 @@ get_local_data(
 )
 #> Total count request : https://api.insee.fr/melodi/data/DS_RP_POPULATION_PRINC?GEO=DEP-69&SEX=F&AGE=Y20T64&totalCount=TRUE&maxResult=0
 #> Number of lines : 3
-#>   GEO_REF GEO_OBJECT GEO SEX TIME_PERIOD RP_MEASURE    AGE OBS_VALUE
-#> 1    2025        DEP  69   F        2011        POP Y20T64  529046.9
-#> 2    2025        DEP  69   F        2022        POP Y20T64  562310.0
-#> 3    2025        DEP  69   F        2016        POP Y20T64  544085.5
+#>   GEO_REF GEO_OBJECT GEO SEX FREQ TIME_PERIOD RP_MEASURE    AGE OBS_STATUS
+#> 1    2026        DEP  69   F    A        2012        POP Y20T64          A
+#> 2    2026        DEP  69   F    A        2017        POP Y20T64          A
+#> 3    2026        DEP  69   F    A        2023        POP Y20T64          A
+#>   OBS_VALUE
+#> 1  532626.2
+#> 2  545585.7
+#> 3  564715.7
 ```

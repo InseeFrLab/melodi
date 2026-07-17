@@ -40,7 +40,7 @@ get_local_data_by_com(
 ) |>
   head()
 #> Total count request : https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=DEP-44%2ACOM&totalCount=TRUE&maxResult=0
-#> Number of lines : 615
+#> Number of lines : 621
 #>   GEO_REF GEO_OBJECT   GEO FREQ TIME_PERIOD POPREF_MEASURE OBS_VALUE
 #> 1    2025        COM 44141    A        2023           PCAP        24
 #> 2    2025        COM 44129    A        2023           PCAP       324
@@ -57,12 +57,19 @@ get_local_data_by_com(
 ) |>
   head()
 #> Total count request : https://api.insee.fr/melodi/data/DS_RP_POPULATION_PRINC?GEO=DEP-44%2ACOM&SEX=F&AGE=Y20T64&totalCount=TRUE&maxResult=0
-#> Number of lines : 615
-#>   GEO_REF GEO_OBJECT   GEO SEX TIME_PERIOD RP_MEASURE    AGE OBS_VALUE
-#> 1    2025        COM 44003   F        2022        POP Y20T64 3046.6872
-#> 2    2025        COM 44069   F        2022        POP Y20T64 4605.4263
-#> 3    2025        COM 44220   F        2022        POP Y20T64  514.5749
-#> 4    2025        COM 44129   F        2022        POP Y20T64 3038.7726
-#> 5    2025        COM 44188   F        2022        POP Y20T64 2603.6244
-#> 6    2025        COM 44132   F        2022        POP Y20T64 3101.0829
+#> Number of lines : 621
+#>   GEO_REF GEO_OBJECT   GEO SEX FREQ TIME_PERIOD RP_MEASURE    AGE OBS_STATUS
+#> 1    2026        COM 44001   F    A        2012        POP Y20T64          A
+#> 2    2026        COM 44001   F    A        2017        POP Y20T64          A
+#> 3    2026        COM 44001   F    A        2023        POP Y20T64          A
+#> 4    2026        COM 44002   F    A        2012        POP Y20T64          A
+#> 5    2026        COM 44002   F    A        2017        POP Y20T64          A
+#> 6    2026        COM 44002   F    A        2023        POP Y20T64          A
+#>   OBS_VALUE
+#> 1  526.7781
+#> 2  551.1005
+#> 3  553.6263
+#> 4  940.0980
+#> 5 1068.6638
+#> 6 1163.9297
 ```

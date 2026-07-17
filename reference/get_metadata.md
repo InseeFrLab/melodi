@@ -33,8 +33,8 @@ get_metadata("DS_POPULATIONS_REFERENCE")
 #> 
 #> $accessRights
 #>   content lang
-#> 1   Libre   fr
-#> 2    Free   en
+#> 1  Public   fr
+#> 2  Public   en
 #> 
 #> $accrualPeriodicity
 #> $accrualPeriodicity$label
@@ -99,9 +99,9 @@ get_metadata("DS_POPULATIONS_REFERENCE")
 #>                                                                                        accessURL
 #> 1 https://api.insee.fr/melodi/file/DS_POPULATIONS_REFERENCE/DS_POPULATIONS_REFERENCE_2023_CSV_FR
 #>   byteSize format                                   id              issued
-#> 1   926388    CSV DS_POPULATIONS_REFERENCE_2023_CSV_FR 2025-12-17T08:50:56
-#>   language mediaType            modified   packageFormat
-#> 1       FR  text/csv 2025-12-17T08:50:56 application/zip
+#> 1   985016    CSV DS_POPULATIONS_REFERENCE_2023_CSV_FR 2025-12-17T08:50:56
+#>   language mediaType                      modified   packageFormat
+#> 1       FR  text/csv 2026-02-17T12:08:49.311695357 application/zip
 #>                      title
 #> 1 Populations de référence
 #> 
@@ -157,6 +157,16 @@ get_metadata("DS_POPULATIONS_REFERENCE")
 #>                      label
 #> 1 Individu, Person, fr, en
 #> 
+#> $status
+#> $status$id
+#> [1] "publie"
+#> 
+#> $status$label
+#>     content lang
+#> 1    Publié   fr
+#> 2 Completed   en
+#> 
+#> 
 #> $structure
 #> $structure$dsd
 #> [1] "DSD_POPULATIONS_REFERENCE"
@@ -195,15 +205,15 @@ get_metadata("DS_POPULATIONS_REFERENCE")
 #> 2   Reference populations    en
 #> 
 #> $type
-#>            content lang
-#> 1 Données agrégées   fr
-#> 2  Aggregated data   en
+#>    content lang
+#> 1 Datacube   fr
+#> 2 Datacube   en
 #> 
 #> $uri
 #> [1] "http://id.insee.fr/catalogues/jeuDeDonnees/c322eb4d-ec91-4723-8804-ea62e492612b"
 #> 
 #> $uuid
-#> [1] "1d485ee2-734b-fd75-1bdf-43dacf2465a8"
+#> [1] "3f4f0ee8-0ddd-173f-3565-a1110e66c088"
 #> 
 #> $wasGeneratedBy
 #>      id                                                   label
