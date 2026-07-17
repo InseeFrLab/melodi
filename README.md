@@ -3,16 +3,19 @@
 <!-- badges: start -->
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![CRAN status](https://www.r-pkg.org/badges/version/melodi)](https://cran.r-project.org/package=melodi)
 [![R-CMD-check](https://github.com/InseeFrLab/melodi/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/InseeFrLab/melodi/actions/workflows/R-CMD-check.yaml)
+[![CRAN status](https://www.r-pkg.org/badges/version/melodi)](https://cran.r-project.org/package=melodi)
 <!-- badges: end -->
 
-Package facilitant l'utilisation des données ouvertes et métadonnées diffusées par l'Insee 
+🇫🇷 Télécharger, parcourir, filtrer les données et métadonnées diffusées par l'Insee en open data
 sur [le catalogue de données de l'Insee (melodi)](https://catalogue-donnees.insee.fr)
+
+🇬🇧 Download, search, filter data and metadata from open data statistical public datasets, from
+[Insee Data catalogue (melodi)](https://catalogue-donnees.insee.fr). 
 
 ## Installation
 
-Pour installer la dernière version stable depuis le [CRAN](https://CRAN.R-project.org/package=melodi) :
+Installer la dernière version stable depuis le [CRAN](https://CRAN.R-project.org/package=melodi) :
 
 ``` r
 install.packages("melodi")
