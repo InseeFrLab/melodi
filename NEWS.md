@@ -1,3 +1,6 @@
+# melodi 1.1.0
+- Mise en place lint, travaux préparatoires passage au CRAN
+
 # melodi 1.0.2
 - #16 : `get_data` : gestion des cas où OBS_VALUE est nommé autrement que OBS_VALUE_NIVEAU (notamment sur DS_IPC_PRINC)
 
