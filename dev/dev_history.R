@@ -69,8 +69,12 @@ devtools::build()
 # Dans Package Path renseigner : "src/contrib"
 # C'est tout !
 
+# Pré-requis pour le CRAN ---------------------
 
-# Test pour depot sur le CRAN
+# Update dependencies in DESCRIPTION
+# install.packages('attachment', repos = 'https://thinkr-open.r-universe.dev')
+attachment::att_amend_desc()
+
 # _win devel CRAN
 devtools::check_win_devel()
 # _win release CRAN

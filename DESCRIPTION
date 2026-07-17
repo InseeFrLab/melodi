@@ -1,39 +1,41 @@
 Package: melodi
-Title: Tools for Insee Open Data, French Institute of Statistics 
+Title: Tools for Insee Open Data, French Institute of Statistics
 Version: 1.1.0
 Authors@R: c(
-    person("Cédric", "Bobinec", email = "cedric.bobinec@insee.fr", role = c("aut", "cre")),
-    person("Christophe", "Goudeau", role = "aut", email = "christophe.goudeau@insee.fr"),
-    person(family = "Institut national de la statistique et des études économiques", role = "cph")
+    person("Cédric", "Bobinec", , "cedric.bobinec@insee.fr", role = c("aut", "cre")),
+    person("Christophe", "Goudeau", , "christophe.goudeau@insee.fr", role = "aut"),
+    person(, "Institut national de la statistique et des études économiques", role = "cph")
   )
-Description: A wrapper for the French Institute of Statistics (Insee) 
-    API Melodi to download and search data and metadata 
-    from <https://catalogue-donnees.insee.fr>.
+Description: A wrapper for the French Institute of Statistics (Insee) API
+    Melodi to download and search data and metadata from
+    <https://catalogue-donnees.insee.fr>.
 License: MIT + file LICENSE
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-Language: fr
+URL: https://InseeFrLab.github.io/melodi/,
+    https://github.com/InseeFrLab/melodi
+BugReports: https://github.com/InseeFrLab/melodi/issues
+Depends: 
+    R (>= 4.1.0)
+Imports: 
+    data.table,
+    dplyr,
+    glue,
+    httr2,
+    labelled,
+    magrittr,
+    purrr,
+    stats,
+    tibble,
+    tidyr,
+    zip
 Suggests: 
     knitr,
     rmarkdown,
     testthat (>= 3.0.0),
     vcr (>= 0.6.0)
-Config/testthat/edition: 3
-Depends: 
-    R (>= 4.1.0)
-Imports: 
-    dplyr,
-    tidyr,
-    httr2,
-    magrittr,
-    glue,
-    data.table,
-    zip,
-    labelled,
-    tibble,
-    stats,
-    purrr
-VignetteBuilder: knitr
-URL: https://InseeFrLab.github.io/melodi/, https://github.com/InseeFrLab/melodi
-BugReports: https://github.com/InseeFrLab/melodi/issues
+VignetteBuilder: 
+    knitr
 Config/roxygen2/version: 8.0.0
+Config/testthat/edition: 3
+Encoding: UTF-8
+Language: fr
+Roxygen: list(markdown = TRUE)
