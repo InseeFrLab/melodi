@@ -2,8 +2,7 @@
 ^\.Rproj\.user$
 ^LICENSE\.md$
 ^\.gitlab-ci\.yml$
-^dev/creation_history\.R$
-^dev/dev_history\.R$
+^dev$
 ^README\.Rmd$
 ^doc$
 ^docs$

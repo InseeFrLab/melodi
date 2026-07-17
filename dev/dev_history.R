@@ -26,7 +26,7 @@ devtools::check(
   # vignettes gourmandes en requêtes Melodi, à faire à part sinon "429 Too many requests"
   vignettes = FALSE,
   # éviter le test CRAN inutile et qui soulève une note
-  cran = FALSE
+  cran = TRUE
 )
 
 # Créée le site documentaire  --------------
