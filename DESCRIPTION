@@ -1,5 +1,5 @@
 Package: melodi
-Title: Melodi Insee Open Data French Institute of Statistics 
+Title: Tools for Insee Open Data, French Institute of Statistics 
 Version: 1.1.0
 Authors@R: c(
     person("Cédric", "Bobinec", email = "cedric.bobinec@insee.fr", role = c("aut", "cre")),

@@ -48,8 +48,8 @@ A l'aide de l'identifiant du jeu de données, `get_all_data()` permet d'obtenir 
 data <- get_all_data(ds_name = "DS_POPULATIONS_REFERENCE")
 ```
 
-# Filtrer ses données à l'aide de l’explorateur
-[Se référer à l'article dédié](filtre-explorateur.html)
+# Aller plus loin
 
-# Filtrer ses données locales sur un territoire
-[Se référer à l'article dédié](donnees-locales.html)
+Se référerer aux autres articles pour d'autres cas d'usage : 
+filtrer à l'aide de l'explorateur, filtrer par critère géographique, etc.
+
