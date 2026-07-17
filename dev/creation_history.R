@@ -126,6 +126,7 @@ pkgdown::build_favicons()
 lintr::use_lintr(type = "tidyverse")
 
 # Quelques docs utiles
+# https://r-pkgs.org/release.html
 # https://github.com/r-lib/actions/blob/v2/examples/README.md
 # https://github.com/ThinkR-open/prepare-for-cran
 # https://r-pkg.thecoatlessprofessor.com/checktor/
@@ -133,3 +134,22 @@ lintr::use_lintr(type = "tidyverse")
 # Add check via the rcmdcheck package on the three major OSs (linux, macOS and Windows)
 # with the current, development, and previous versions of R
 usethis::use_github_action("check-standard")
+
+# Check content
+# install.packages('checkhelper', repos = 'https://thinkr-open.r-universe.dev')
+# All functions must have either `@noRd` or an `@export`.
+checkhelper::audit_tags()
+
+
+# install.packages("checktor")
+
+library(checktor)
+
+# Run all diagnostics on the current package
+results <- checktor()
+
+# Treatment recommendations for the issues found
+prescribe(results)
+
+# Generate a Markdown / HTML / text report
+cat(health_report(results, format = "markdown"), sep = "\n")
