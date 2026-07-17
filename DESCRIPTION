@@ -7,8 +7,8 @@ Authors@R: c(
     person(family = "Institut national de la statistique et des études économiques", role = "cph")
   )
 Description: A wrapper for the French Institute of Statistics (Insee) 
-  API Melodi to download and search data and metadata 
-  from <https://catalogue-donnees.insee.fr>.
+    API Melodi to download and search data and metadata 
+    from <https://catalogue-donnees.insee.fr>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

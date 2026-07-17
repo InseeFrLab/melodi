@@ -68,3 +68,13 @@ devtools::build()
 # Cliquer sur Browse et envoyer le .tar.gz
 # Dans Package Path renseigner : "src/contrib"
 # C'est tout !
+
+
+# Test pour depot sur le CRAN
+# _win devel CRAN
+devtools::check_win_devel()
+# _win release CRAN
+devtools::check_win_release()
+# _macos CRAN
+# Need to follow the URL proposed to see the results
+devtools::check_mac_release()
