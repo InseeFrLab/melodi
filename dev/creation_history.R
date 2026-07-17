@@ -144,3 +144,5 @@ checkhelper::audit_tags()
 
 # Run all diagnostics on the current package
 results <- checktor::checktor()
+
+urlchecker::url_check()

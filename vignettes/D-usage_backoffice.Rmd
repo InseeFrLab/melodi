@@ -72,7 +72,7 @@ S'il s'agit d'environnements internes, penser au besoin à désactiver le proxy 
 ```{r interne, eval = FALSE}
 Sys.setenv(no_proxy = "autre_url_api_melodi.fr")
 
-options(rmelodi.base_url_api = "https://autre_url_api_melodi.fr")
+options(rmelodi.base_url_api = "autre_url_api_melodi")
 
-get_catalog() # <- appelle https://autre_url_api_melodi.fr/catalog/all
+get_catalog() # <- appelle autre_url_api_melodi/catalog/all
 ```
