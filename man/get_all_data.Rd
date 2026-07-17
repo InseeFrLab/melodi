@@ -16,9 +16,13 @@ get_all_data(
 
 \item{download_directory}{Download directory - default system tempdir}
 
-\item{stringsAsFactors}{if TRUE, strings variables in data.frame are converted to factors - Default FALSE}
+\item{stringsAsFactors}{if TRUE, strings variables in data.frame are
+converted to factors - Default FALSE}
 
-\item{remove_file}{Remove downloaded data file after loading data - Default TRUE}
+\item{remove_file}{Remove downloaded data file after loading data
+\itemize{
+\item Default TRUE
+}}
 }
 \value{
 data.frame with data

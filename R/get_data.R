@@ -1,20 +1,22 @@
 #' Get Melodi data by URL.
 #'
-#' URL parameter can be copied/pasted from explorer https://catalogue-donnees.insee.fr
+#' URL parameter can be copied/pasted from explorer
+#' https://catalogue-donnees.insee.fr
 #'
-#' @param url URL API data Melodi - Start by "https://api.insee.fr/melodi/data/..."
+#' @param url URL API data Melodi - Start by
+#' "https://api.insee.fr/melodi/data/..."
 #'
 #' @return data.frame with data
 #' @export
 #'
 #' @examples
 #' get_data(
-#'   "https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?POPREF_MEASURE=PMUN&GEO=FRANCE-F"
+#'   "https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=FRANCE-F"
 #' )
 get_data <- function(
   url
 ) {
-  maxResultAPI <- getOption("rmelodi.max_result_api")
+  max_result_api <- getOption("rmelodi.max_result_api")
 
   # 1 - Count numer of lines of request
   request_count <- httr2::request(url) |>
@@ -37,9 +39,10 @@ get_data <- function(
 
   if (count == 0) {
     stop("No result for request ", url)
-  } else if (count > maxResultAPI) {
+  } else if (count > max_result_api) {
     stop(
-      "Request over ", format(maxResultAPI, big.mark = " ", scientific = FALSE),
+      "Request over ",
+      format(max_result_api, big.mark = " ", scientific = FALSE),
       " lines not supported yet, please filter your request or use get_all_data"
     )
   }
@@ -49,7 +52,7 @@ get_data <- function(
     # TODO useless ? this is the default value now
     httr2::req_url_query(idTerritoire = TRUE) |>
     # maximum maxResult authorized by Melodi API
-    httr2::req_url_query(maxResult = maxResultAPI)
+    httr2::req_url_query(maxResult = max_result_api)
 
   result <- request |>
     httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
@@ -58,7 +61,8 @@ get_data <- function(
 
   # bind datas in one dataframe
   dimensions_obj <- result[["observations"]][["dimensions"]]
-  # OBS_VALUE may have different names : OBS_VALUE_NIVEAU, OBS_VALUE_INDICE_DE_PRIX, etc.
+  # OBS_VALUE may have different names :
+  # OBS_VALUE_NIVEAU, OBS_VALUE_INDICE_DE_PRIX, etc.
   # => get the first result, whatever its name
   measures_obj <- result[["observations"]][["measures"]][[1]]
   attributes_obj <- result[["observations"]][["attributes"]]

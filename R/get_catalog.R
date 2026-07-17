@@ -50,7 +50,10 @@ get_catalog <- function(
     dplyr::arrange(identifier) |>
     # lines are duplicated (fr and en) : filter and delete lang parameter
     dplyr::filter(title_lang == {{ lang }}) |>
-    dplyr::select(-title_lang, -subtitle_lang, -description_lang, -abstract_lang) |>
+    dplyr::select(
+      -title_lang, -subtitle_lang,
+      -description_lang, -abstract_lang
+    ) |>
     dplyr::mutate(
       modified = as.Date(modified),
       temporal_startPeriod = as.Date(temporal_startPeriod),

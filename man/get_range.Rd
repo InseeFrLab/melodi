@@ -11,7 +11,8 @@ get_range(ds_name, lang = "fr", exclusions_list = c("GEO"))
 
 \item{lang}{french or english labels - default french ("fr")}
 
-\item{exclusions_list}{exclude some dimensions for a faster and light result - default : "GEO"}
+\item{exclusions_list}{exclude some dimensions for a faster and
+light result - default : "GEO"}
 }
 \value{
 A data frame with dimensions and modalities codes and labels
@@ -19,7 +20,8 @@ A data frame with dimensions and modalities codes and labels
 \description{
 Retrieves the list of dimensions and all their possible modalities values
 (codes and human-readable labels) for a given dataset.
-For GEO dimension, it is recommanded to used dedicated function : get_range_geo()
+For GEO dimension, it is recommanded to used dedicated function :
+get_range_geo()
 }
 \examples{
 get_range("DS_POPULATIONS_REFERENCE")

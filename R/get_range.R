@@ -2,11 +2,13 @@
 #'
 #' Retrieves the list of dimensions and all their possible modalities values
 #' (codes and human-readable labels) for a given dataset.
-#' For GEO dimension, it is recommanded to used dedicated function : get_range_geo()
+#' For GEO dimension, it is recommanded to used dedicated function :
+#' get_range_geo()
 #'
 #' @param ds_name dataset name
 #' @param lang french or english labels - default french ("fr")
-#' @param exclusions_list exclude some dimensions for a faster and light result - default : "GEO"
+#' @param exclusions_list exclude some dimensions for a faster and
+#' light result - default : "GEO"
 #'
 #' @return A data frame with dimensions and modalities codes and labels
 #' @export
@@ -58,8 +60,10 @@ get_range <- function(
 
   for (i in seq_along(range)) {
     # concepts returned by the API are effectively dimensions of the dataset
-    dimension <- range[[i]][["concept"]][["code"]] |> safe_extract()
-    dimension_label <- range[[i]][["concept"]][["label"]][[lang]] |> safe_extract()
+    dimension <- range[[i]][["concept"]][["code"]] |>
+      safe_extract()
+    dimension_label <- range[[i]][["concept"]][["label"]][[lang]] |>
+      safe_extract()
 
     values <- range[[i]][["values"]]
 
@@ -83,8 +87,7 @@ get_range <- function(
   rownames(codebook_df) <- NULL
 
   codebook_df <- codebook_df |>
-    dplyr::arrange(dimension, value) # |>
-  # dplyr::add_count(dimension, name = "value_count")
+    dplyr::arrange(dimension, value)
 
   return(codebook_df)
 }

@@ -122,6 +122,9 @@ pkgdown::build_favicons()
 
 # CRAN --------------------------------------------------------------------
 
+# config lintr
+lintr::use_lintr(type = "tidyverse")
+
 # Quelques docs utiles
 # https://github.com/r-lib/actions/blob/v2/examples/README.md
 # https://github.com/ThinkR-open/prepare-for-cran

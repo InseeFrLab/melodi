@@ -28,6 +28,9 @@ devtools::check()
 # cette étape est faite par github CI, lancer manuellement au besoin pour voir le resultat
 pkgdown::build_site()
 
+# A lancer régulièrement : analyse du code : mise en page/vulnérabilité (lint)
+lintr::lint_package()
+
 # Creer une fonction ------------------------------------------------------
 # Pour chaque fonction du package :
 usethis::use_r("get_local_data")

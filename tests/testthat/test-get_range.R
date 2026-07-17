@@ -13,8 +13,8 @@ vcr::use_cassette("get_range_populations_reference", {
     # Check GEO_REF list
     # # Check one label is OK
     expect_equal(
-      object = range %>%
-        dplyr::filter(DIM == "POPREF_MEASURE" & MOD == "PTOT") %>%
+      object = range |>
+        dplyr::filter(DIM == "POPREF_MEASURE" & MOD == "PTOT") |>
         dplyr::pull(MOD_LABEL),
       expected = "Population totale"
     )
@@ -25,7 +25,7 @@ vcr::use_cassette("get_range_populations_reference", {
       ds_name = "DS_POPULATIONS_REFERENCE",
       exclusions_list = c()
     )
-    expect_true(nrow(range %>% dplyr::filter(DIM == "GEO")) > 0)
+    expect_true(nrow(range |> dplyr::filter(DIM == "GEO")) > 0)
   })
 
   test_that("get_range with filter", {
@@ -33,7 +33,7 @@ vcr::use_cassette("get_range_populations_reference", {
       ds_name = "DS_POPULATIONS_REFERENCE",
       exclusions_list = c("GEO", "TIME_PERIOD", "FREQ")
     )
-    expect_true(nrow(range %>% dplyr::filter(DIM == "FREQ")) == 0)
+    expect_true(nrow(range |> dplyr::filter(DIM == "FREQ")) == 0)
   })
 })
 
@@ -46,8 +46,8 @@ vcr::use_cassette("get_range_populations_reference_en", {
     )
     # # Check one label is OK
     expect_equal(
-      object = range %>%
-        dplyr::filter(DIM == "POPREF_MEASURE" & MOD == "PTOT") %>%
+      object = range |>
+        dplyr::filter(DIM == "POPREF_MEASURE" & MOD == "PTOT") |>
         dplyr::pull(MOD_LABEL),
       expected = "Total population"
     )

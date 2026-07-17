@@ -7,16 +7,18 @@
 get_data(url)
 }
 \arguments{
-\item{url}{URL API data Melodi - Start by "https://api.insee.fr/melodi/data/..."}
+\item{url}{URL API data Melodi - Start by
+"https://api.insee.fr/melodi/data/..."}
 }
 \value{
 data.frame with data
 }
 \description{
-URL parameter can be copied/pasted from explorer https://catalogue-donnees.insee.fr
+URL parameter can be copied/pasted from explorer
+https://catalogue-donnees.insee.fr
 }
 \examples{
 get_data(
-  "https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?POPREF_MEASURE=PMUN&GEO=FRANCE-F"
+  "https://api.insee.fr/melodi/data/DS_POPULATIONS_REFERENCE?GEO=FRANCE-F"
 )
 }

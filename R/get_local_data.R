@@ -30,7 +30,10 @@ get_local_data <- function(
   if (filter != "") {
     filter <- glue::glue("&{filter}")
   }
-  url <- glue::glue("{getOption('rmelodi.base_url_api')}/data/{ds_name}?GEO={geo_object}-{geo}{filter}")
+  url <- glue::glue(
+    "{getOption('rmelodi.base_url_api')}",
+    "/data/{ds_name}?GEO={geo_object}-{geo}{filter}"
+  )
 
   return(get_data(url))
 }

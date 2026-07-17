@@ -21,7 +21,9 @@ get_file <- function(
   download_directory = tempdir()
 ) {
   # Build useful parameters
-  url <- glue::glue("{getOption('rmelodi.base_url_api')}/file/{ds_name}/{file_name}")
+  url <- glue::glue(
+    "{getOption('rmelodi.base_url_api')}/file/{ds_name}/{file_name}"
+  )
   path <- file.path(download_directory, download_file_name)
 
   # Download file
