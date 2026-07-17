@@ -44,6 +44,6 @@ get_file(
   download_file_name = "T1_DECES_JOUR_NAT_FR.xlsx"
 )
 #> Request file : https://api.insee.fr/melodi/file/DS_EC_DECES/T1_DECES_JOUR_NAT_FR
-#> Downloaded path : /tmp/RtmpUsSspq/T1_DECES_JOUR_NAT_FR.xlsx
-#> [1] "/tmp/RtmpUsSspq/T1_DECES_JOUR_NAT_FR.xlsx"
+#> Downloaded path : /tmp/RtmpvYVNlJ/T1_DECES_JOUR_NAT_FR.xlsx
+#> [1] "/tmp/RtmpvYVNlJ/T1_DECES_JOUR_NAT_FR.xlsx"
 ```
