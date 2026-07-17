@@ -5,20 +5,20 @@
 
 # Installation des packages utiles à la création de package
 req_pkgs <- c(
-  'available',
-  'desc',
-  'usethis',
-  'gitlabr',
-  'git2r',
-  'devtools',
-  'roxygen2',
-  'roxygen2md',
-  'testthat',
-  'covr'
+  "available",
+  "desc",
+  "usethis",
+  "gitlabr",
+  "git2r",
+  "devtools",
+  "roxygen2",
+  "roxygen2md",
+  "testthat",
+  "covr"
 )
 
 lapply(req_pkgs, function(pkg) {
-  if (system.file(package = pkg) == '') install.packages(pkg)
+  if (system.file(package = pkg) == "") install.packages(pkg)
 })
 
 # 1. Initier un package -------------------------------------
@@ -118,4 +118,15 @@ pkgdown::build_favicons()
 # vcr ---------------------------------------------------------------------
 # https://docs.ropensci.org/vcr/
 # v2 : cette étape n'est plus nécessaire/dépréciée :
-#vcr::use_vcr()
+# vcr::use_vcr()
+
+# CRAN --------------------------------------------------------------------
+
+# Quelques docs utiles
+# https://github.com/r-lib/actions/blob/v2/examples/README.md
+# https://github.com/ThinkR-open/prepare-for-cran
+# https://r-pkg.thecoatlessprofessor.com/checktor/
+
+# Add check via the rcmdcheck package on the three major OSs (linux, macOS and Windows)
+# with the current, development, and previous versions of R
+usethis::use_github_action("check-standard")
