@@ -13,9 +13,9 @@ associés aux codes du jeu de données.
 data <- get_all_data("DS_POPULATIONS_REFERENCE")
 range <- get_range("DS_POPULATIONS_REFERENCE")
 
-# Récupérons par exemples les libellés des codes de "POPREF_MEASURE" : 
-# "Population municipale", "Population totale", etc. 
-data |> 
+# Récupérons par exemples les libellés des codes de "POPREF_MEASURE" :
+# "Population municipale", "Population totale", etc.
+data |>
   left_join(
     y = range,
     by = join_by(POPREF_MEASURE == MOD)

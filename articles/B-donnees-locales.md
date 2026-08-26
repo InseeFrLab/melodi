@@ -18,7 +18,7 @@ get_local_data(
   ds_name = "DS_POPULATIONS_REFERENCE",
   geo = "44",
   geo_object = "DEP"
-) |> 
+) |>
   dplyr::arrange(POPREF_MEASURE, TIME_PERIOD)
 ```
 

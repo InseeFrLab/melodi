@@ -1,23 +1,29 @@
-# Insee/melodi R package
+# Melodi : Insee open data R package
 
-Package facilitant l’utilisation des données et métadonnées diffusées
-par l’Insee sur [le catalogue de données de l’Insee
+🇫🇷 Télécharger, parcourir, filtrer les données et métadonnées diffusées
+par l’Insee en open data sur [le catalogue de données de l’Insee
 (melodi)](https://catalogue-donnees.insee.fr)
+
+🇬🇧 Download, search, filter data and metadata from open data statistical
+public datasets, from [Insee Data catalogue
+(melodi)](https://catalogue-donnees.insee.fr).
 
 ## Installation
 
-Installer la dernière version stable depuis github :
+Installer la dernière version stable depuis le CRAN :
+
+``` r
+install.packages("melodi")
+```
+
+### Development
+
+Pour installer une version de développement depuis
+[GitHub](https://github.com/):
 
 ``` r
 # install.packages("remotes")
 remotes::install_github("InseeFrLab/melodi", build_vignettes = TRUE)
-```
-
-(pour les agents Insee uniquement) installer la dernière version stable
-:
-
-``` r
-install.packages("melodi", repos = "https://nexus.insee.fr/repository/r-public/")
 ```
 
 ## Exemples

@@ -1,4 +1,4 @@
 # License
 
-    YEAR: 2025
+    YEAR: 2026
     COPYRIGHT HOLDER: Institut National de la Statistique et des Études Économiques

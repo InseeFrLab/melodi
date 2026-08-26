@@ -25,7 +25,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">melodi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -87,9 +87,9 @@ associés aux codes du jeu de données.</p>
 <code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_all_data.html">get_all_data</a></span><span class="op">(</span><span class="st">"DS_POPULATIONS_REFERENCE"</span><span class="op">)</span></span>
 <span><span class="va">range</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_range.html">get_range</a></span><span class="op">(</span><span class="st">"DS_POPULATIONS_REFERENCE"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Récupérons par exemples les libellés des codes de "POPREF_MEASURE" : </span></span>
-<span><span class="co"># "Population municipale", "Population totale", etc. </span></span>
-<span><span class="va">data</span> <span class="op">|&gt;</span> </span>
+<span><span class="co"># Récupérons par exemples les libellés des codes de "POPREF_MEASURE" :</span></span>
+<span><span class="co"># "Population municipale", "Population totale", etc.</span></span>
+<span><span class="va">data</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">left_join</span><span class="op">(</span></span>
 <span>    y <span class="op">=</span> <span class="va">range</span>,</span>
 <span>    by <span class="op">=</span> <span class="fu">join_by</span><span class="op">(</span><span class="va">POPREF_MEASURE</span> <span class="op">==</span> <span class="va">MOD</span><span class="op">)</span></span>

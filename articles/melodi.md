@@ -42,12 +42,7 @@ intégralité, non filtré.
 data <- get_all_data(ds_name = "DS_POPULATIONS_REFERENCE")
 ```
 
-## Filtrer ses données à l’aide de l’explorateur
+## Aller plus loin
 
-[Se référer à l’article
-dédié](https://InseeFrLab.github.io/melodi/articles/filtre-explorateur.md)
-
-## Filtrer ses données locales sur un territoire
-
-[Se référer à l’article
-dédié](https://InseeFrLab.github.io/melodi/articles/donnees-locales.md)
+Se référerer aux autres articles pour d’autres cas d’usage : filtrer à
+l’aide de l’explorateur, filtrer par critère géographique, etc.

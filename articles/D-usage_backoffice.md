@@ -9,15 +9,15 @@ Le code suivant permet de constituer et ouvrir un fichier Excel
 récapitulatif des jeux de données en français et en anglais.
 
 ``` r
-catalog_fr <- get_catalog("fr") |> 
+catalog_fr <- get_catalog("fr") |>
   mutate(lang = "fr")
 
-catalog_en <- get_catalog("en") |> 
+catalog_en <- get_catalog("en") |>
   mutate(lang = "en")
 
-catalog_all <- catalog_fr |> 
-  rbind(catalog_en) |> 
-  relocate(lang) |> 
+catalog_all <- catalog_fr |>
+  rbind(catalog_en) |>
+  relocate(lang) |>
   arrange(identifier, desc(lang))
 
 temp_xlsx <- tempfile(fileext = ".xlsx")
@@ -64,7 +64,7 @@ proxy pour l’URL en question.
 ``` r
 Sys.setenv(no_proxy = "autre_url_api_melodi.fr")
 
-options(rmelodi.base_url_api = "https://autre_url_api_melodi.fr")
+options(rmelodi.base_url_api = "autre_url_api_melodi")
 
-get_catalog() # <- La fonction appelle https://autre_url_api_melodi.fr/catalog/all
+get_catalog() # <- appelle autre_url_api_melodi/catalog/all
 ```

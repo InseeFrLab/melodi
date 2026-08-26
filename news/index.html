@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">melodi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,12 +40,18 @@
     </div>
 
     <div class="section level2">
+<h2 class="pkg-version" data-toc-text="1.1.0" id="melodi-110">melodi 1.1.0<a class="anchor" aria-label="anchor" href="#melodi-110"></a></h2><p class="text-muted">CRAN release: 2026-07-29</p>
+<ul><li>Mise au carré pour soumission au CRAN : lint, résolution notes, mise au place check par github actions</li>
+</ul></div>
+    <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.0.2" id="melodi-102">melodi 1.0.2<a class="anchor" aria-label="anchor" href="#melodi-102"></a></h2>
-<ul><li>#16 : <code>get_data</code> : gestion des cas où OBS_VALUE est nommé autrement que OBS_VALUE_NIVEAU (notamment sur DS_IPC_PRINC)</li>
+<ul><li>
+<code>get_data</code> : gestion des cas où OBS_VALUE est nommé autrement que OBS_VALUE_NIVEAU, notamment sur DS_IPC_PRINC (<a href="https://github.com/InseeFrLab/melodi/issues/16" class="external-link">#16</a>)</li>
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.0.1" id="melodi-101">melodi 1.0.1<a class="anchor" aria-label="anchor" href="#melodi-101"></a></h2>
-<ul><li>#12 : <code>get_range_geo</code> : ajout GEO_OBJECT_LABEL et amélioration des performances (usage de purrr au lieu de boucles)</li>
+<ul><li>
+<code>get_range_geo</code> : ajout GEO_OBJECT_LABEL et amélioration des performances par usage de purrr au lieu de boucles (<a href="https://github.com/InseeFrLab/melodi/issues/12" class="external-link">#12</a>)</li>
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.0.0" id="melodi-100">melodi 1.0.0<a class="anchor" aria-label="anchor" href="#melodi-100"></a></h2>
@@ -63,16 +69,19 @@
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.3.0" id="melodi-030">melodi 0.3.0<a class="anchor" aria-label="anchor" href="#melodi-030"></a></h2>
-<ul><li>#5 : ajout de fonctions permettant de récupérer les libellés des codes associés à un jeu de données : <code>get_range_geo</code> (géographie) and <code>get_range</code> (toutes les autres dimensions)</li>
+<ul><li>
+<code>get_range_geo</code> (géographie) and <code>get_range</code> (toutes les autres dimensions) : nouvelles fonctions permettant de récupérer les libellés des codes associés à un jeu de données (<a href="https://github.com/InseeFrLab/melodi/issues/5" class="external-link">#5</a>)</li>
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.2.0" id="melodi-020">melodi 0.2.0<a class="anchor" aria-label="anchor" href="#melodi-020"></a></h2>
-<ul><li>#16 : <code>get_all_data</code> : au lieu de construire la requête d’accès et les noms des fichiers dans le zip manuellement, récupération de l’URL via le catalogue (plus fiable et permet de gérer le cas où le CSV du DS est millésimé)</li>
-<li>#17 : <code>get_catalog</code> : ajout des millésimes géo et niveaux géographiques</li>
+<ul><li>
+<code>get_all_data</code> : au lieu de construire la requête d’accès et les noms des fichiers dans le zip manuellement, récupération de l’URL via le catalogue : plus fiable et permet de gérer le cas où le CSV du DS est millésimé (<a href="https://github.com/InseeFrLab/melodi/issues/16" class="external-link">#16</a>)</li>
+<li>
+<code>get_catalog</code> : ajout des millésimes géo et niveaux géographiques (<a href="https://github.com/InseeFrLab/melodi/issues/17" class="external-link">#17</a>)</li>
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.1.1" id="melodi-011">melodi 0.1.1<a class="anchor" aria-label="anchor" href="#melodi-011"></a></h2>
-<ul><li>Version initiale github</li>
+<ul><li>Version initiale publiée publiquement</li>
 </ul></div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>

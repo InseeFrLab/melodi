@@ -30,7 +30,9 @@ get_all_data(
 
 - remove_file:
 
-  Remove downloaded data file after loading data - Default TRUE
+  Remove downloaded data file after loading data
+
+  - Default TRUE
 
 ## Value
 
