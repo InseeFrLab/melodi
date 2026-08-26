@@ -1,9 +1,10 @@
 # Melodi : Insee open data R package <a href="https://InseeFrLab.github.io/melodi/"><img src="man/figures/logo.png" align="right" height="139" alt="melodi website" /></a>
 
 <!-- badges: start -->
+[![CRAN version](http://www.r-pkg.org/badges/version/melodi)](http://www.r-pkg.org/pkg/melodi)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![R-CMD-check](https://github.com/InseeFrLab/melodi/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/InseeFrLab/melodi/actions/workflows/R-CMD-check.yaml)
+[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/melodi)](http://www.r-pkg.org/pkg/melodi)
 <!-- badges: end -->
 
 🇫🇷 Télécharger, parcourir, filtrer les données et métadonnées diffusées par l'Insee en open data
