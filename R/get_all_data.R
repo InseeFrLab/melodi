@@ -1,9 +1,11 @@
 #' Get all data from a dataset
 #'
 #' @param ds_name Dataset name - use get_ds_list to find a dataset identifier
-#' @param stringsAsFactors if TRUE, strings variables in data.frame are converted to factors - Default FALSE
+#' @param stringsAsFactors if TRUE, strings variables in data.frame are
+#' converted to factors - Default FALSE
 #' @param download_directory Download directory - default system tempdir
-#' @param remove_file Remove downloaded data file after loading data - Default TRUE
+#' @param remove_file Remove downloaded data file after loading data
+#' - Default TRUE
 #'
 #' @return data.frame with data
 #' @export
@@ -39,7 +41,10 @@ get_all_data <- function(
 
   # Download file
   message("Request ZIP CSV file : ", zip_url)
-  downloaded_zip_path <- file.path(download_directory, glue::glue("{ds_name}.zip"))
+  downloaded_zip_path <- file.path(
+    download_directory, glue::glue("{ds_name}.zip")
+  )
+
 
   httr2::request(zip_url) |>
     httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>

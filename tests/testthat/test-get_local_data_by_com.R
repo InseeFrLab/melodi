@@ -32,9 +32,11 @@ vcr::use_cassette("get_local_data_filter_by_com_popref", {
     )
 
     lignes_incorrectes <- local_data |>
-      dplyr::filter(substr(GEO, 1, 2) != "44" |
-        GEO_OBJECT != "COM" |
-        POPREF_MEASURE != "PMUN")
+      dplyr::filter(
+        substr(GEO, 1, 2) != "44" |
+          GEO_OBJECT != "COM" |
+          POPREF_MEASURE != "PMUN"
+      )
 
     expect_equal(
       object = nrow(lignes_incorrectes),

@@ -1,5 +1,5 @@
 vcr::use_cassette("get_range_geo_ec_deces", {
-  test_that("get_range_geo returns a data frame with expected columns and values", {
+  test_that("returns a data frame with expected columns and values", {
     range_geo <- get_range_geo("DS_EC_DECES")
 
     expect_s3_class(range_geo, "data.frame")
@@ -8,7 +8,7 @@ vcr::use_cassette("get_range_geo_ec_deces", {
         c("GEO_REF", "GEO_OBJECT", "GEO_OBJECT_LABEL", "GEO", "GEO_LABEL") %in%
           colnames(range_geo)
       )
-      )
+    )
     expect_true(nrow(range_geo) > 0)
     # Check GEO_REF list
     expect_equal(
@@ -22,16 +22,16 @@ vcr::use_cassette("get_range_geo_ec_deces", {
     )
     # Check one GEO label is OK
     expect_equal(
-      object = range_geo %>%
-        dplyr::filter(GEO == "44" & GEO_OBJECT == "DEP") %>%
+      object = range_geo |>
+        dplyr::filter(GEO == "44" & GEO_OBJECT == "DEP") |>
         dplyr::pull(GEO_LABEL),
       expected = "Loire-Atlantique"
     )
     # Check one GEO_OBJECT label is OK
     expect_equal(
-      object = range_geo %>%
-        dplyr::filter(GEO_OBJECT == "DEP") %>%
-        dplyr::pull(GEO_OBJECT_LABEL) %>%
+      object = range_geo |>
+        dplyr::filter(GEO_OBJECT == "DEP") |>
+        dplyr::pull(GEO_OBJECT_LABEL) |>
         unique(),
       expected = "Département"
     )

@@ -8,7 +8,8 @@
 #' @param ds_name dataset name
 #' @param lang french or english labels - default french ("fr")
 #'
-#' @return A data frame with columns `GEO_REF`, `GEO_OBJECT`, `GEO_OBJECT_LABEL`, `GEO`, `GEO_LABEL`
+#' @return A data frame with columns
+#' `GEO_REF`, `GEO_OBJECT`, `GEO_OBJECT_LABEL`, `GEO`, `GEO_LABEL`
 #' @export
 #'
 #' @examples
@@ -42,9 +43,18 @@ get_range_geo <- function(
 
   # Unfold
   codebook_df <- tibble::tibble(
-    GEO_LABEL        = purrr::map_chr(range_geo, ~ .x$label[[lang]] %||% NA_character_),
-    GEO_OBJECT_LABEL = purrr::map_chr(range_geo, ~ .x$type[[lang]] %||% NA_character_),
-    value_id         = purrr::map_chr(range_geo, "id", .default = NA_character_)
+    GEO_LABEL = purrr::map_chr(
+      range_geo,
+      ~ .x$label[[lang]] %||% NA_character_
+    ),
+    GEO_OBJECT_LABEL = purrr::map_chr(
+      range_geo,
+      ~ .x$type[[lang]] %||% NA_character_
+    ),
+    value_id = purrr::map_chr(range_geo,
+      "id",
+      .default = NA_character_
+    )
   ) |>
     tidyr::separate_wider_delim(
       value_id,

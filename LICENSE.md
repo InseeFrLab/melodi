@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2025 Institut National de la Statistique et des Études Économiques
+Copyright (c) 2026 Institut National de la Statistique et des Études Économiques
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

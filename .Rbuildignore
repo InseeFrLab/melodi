@@ -11,3 +11,6 @@ pkgdown
 ^.github
 ^\.github$
 LICENSE.md
+^\.lintr$
+^cran-comments\.md$
+^CRAN-SUBMISSION$

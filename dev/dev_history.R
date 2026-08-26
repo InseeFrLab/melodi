@@ -28,6 +28,9 @@ devtools::check()
 # cette étape est faite par github CI, lancer manuellement au besoin pour voir le resultat
 pkgdown::build_site()
 
+# A lancer régulièrement : analyse du code : mise en page/vulnérabilité (lint)
+lintr::lint_package()
+
 # Creer une fonction ------------------------------------------------------
 # Pour chaque fonction du package :
 usethis::use_r("get_local_data")
@@ -65,3 +68,17 @@ devtools::build()
 # Cliquer sur Browse et envoyer le .tar.gz
 # Dans Package Path renseigner : "src/contrib"
 # C'est tout !
+
+# Pré-requis pour le CRAN ---------------------
+
+# Update dependencies in DESCRIPTION
+# install.packages('attachment', repos = 'https://thinkr-open.r-universe.dev')
+attachment::att_amend_desc()
+
+# _win devel CRAN
+devtools::check_win_devel()
+# _win release CRAN
+devtools::check_win_release()
+# _macos CRAN
+# Need to follow the URL proposed to see the results
+devtools::check_mac_release()
