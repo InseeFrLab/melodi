@@ -1,3 +1,6 @@
+# melodi 1.1.1
+- `get_all_data` : paramétrage de lecture CSV supplémentaire pour supporter certains fichiers metadata mal formées dans Melodi (#20, #19)
+
 # melodi 1.1.0
 - Mise au carré pour soumission au CRAN : lint, résolution notes, mise au place check par github actions
 
