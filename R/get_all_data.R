@@ -82,7 +82,11 @@ get_all_data <- function(
     stringsAsFactors = stringsAsFactors
   )
 
-  metadata <- data.table::fread(input = metadata_path)
+  metadata <- data.table::fread(
+    input = metadata_path,
+    header = TRUE,
+    fill = TRUE
+  )
 
   # Use metadata for labels
   metadata_var <- metadata |>
