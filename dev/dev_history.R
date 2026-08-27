@@ -71,14 +71,17 @@ devtools::build()
 
 # Pré-requis pour le CRAN ---------------------
 
-# Update dependencies in DESCRIPTION
-# install.packages('attachment', repos = 'https://thinkr-open.r-universe.dev')
-attachment::att_amend_desc()
-
+# Check sur différents environnements (retour par mail)
 # _win devel CRAN
 devtools::check_win_devel()
 # _win release CRAN
 devtools::check_win_release()
 # _macos CRAN
 # Need to follow the URL proposed to see the results
-devtools::check_mac_release()
+# KO?
+# devtools::check_mac_release()
+
+# Vérifier le CI github qui lance également ces tests
+
+# C'est parti !
+devtools::submit_cran()
