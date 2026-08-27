@@ -1,5 +1,12 @@
 # Changelog
 
+## melodi 1.1.1
+
+- `get_all_data` : paramétrage de lecture CSV supplémentaire pour
+  supporter certains fichiers metadata mal formées dans Melodi
+  ([\#20](https://github.com/InseeFrLab/melodi/issues/20),
+  [\#19](https://github.com/InseeFrLab/melodi/issues/19))
+
 ## melodi 1.1.0
 
 CRAN release: 2026-07-29
