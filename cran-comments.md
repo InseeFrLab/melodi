@@ -1,4 +1,4 @@
-# Submission of {melodi} 1.1.1
+# Submission of {melodi} 1.1.2
 
 ## R CMD check results
 

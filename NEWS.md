@@ -1,3 +1,6 @@
+# melodi 1.1.2
+- Correctif URL dans le README (génére une note bloquante pour soumission au CRAN)
+
 # melodi 1.1.1
 - `get_all_data` : paramétrage de lecture CSV supplémentaire pour supporter certains fichiers metadata mal formées dans Melodi (#20, #19)
 

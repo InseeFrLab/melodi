@@ -60,18 +60,10 @@ usethis::use_version(push = FALSE)
 # Remplir les actus liées à cette nouvelle version
 file.edit("NEWS.md")
 
-# Livrer une version sur un repository ---------------------
-# Générer une archive des sources du package
-devtools::build()
-# Puis le déposer sur un repository
-# En interne Insee, se rentre sur https://nexus.insee.fr/#browse/upload:r-local
-# Cliquer sur Browse et envoyer le .tar.gz
-# Dans Package Path renseigner : "src/contrib"
-# C'est tout !
-
-# Pré-requis pour le CRAN ---------------------
+# Envoi au CRAN ---------------------
 
 # Check sur différents environnements (retour par mail)
+# Il faut 0 note, 0 warning, sinon c'est bloquant !
 # _win devel CRAN
 devtools::check_win_devel()
 # _win release CRAN
@@ -85,3 +77,13 @@ devtools::check_win_release()
 
 # C'est parti !
 devtools::submit_cran()
+
+# Livrer une version sur un repository  ---------------------
+# (plus nécessaire si livré sur le CRAN)
+# Générer une archive des sources du package
+devtools::build()
+# Puis le déposer sur un repository
+# En interne Insee, se rentre sur https://nexus.insee.fr/#browse/upload:r-local
+# Cliquer sur Browse et envoyer le .tar.gz
+# Dans Package Path renseigner : "src/contrib"
+# C'est tout !
