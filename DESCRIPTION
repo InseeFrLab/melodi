@@ -1,6 +1,6 @@
 Package: melodi
 Title: Download Insee French Institute of Statistics Open Data 
-Version: 1.1.1
+Version: 1.1.2
 Authors@R: c(
     person("Cédric", "Bobinec", , "cedric.bobinec@insee.fr", role = c("aut", "cre")),
     person("Christophe", "Goudeau", , "christophe.goudeau@insee.fr", role = "aut"),
