@@ -2,6 +2,8 @@
 
 ## melodi 1.1.2
 
+CRAN release: 2026-08-28
+
 - Correctif URL dans le README (génére une note bloquante pour
   soumission au CRAN)
 
