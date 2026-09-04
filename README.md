@@ -5,6 +5,7 @@
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![R-CMD-check](https://github.com/InseeFrLab/melodi/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/InseeFrLab/melodi/actions/workflows/R-CMD-check.yaml)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/melodi)](https://www.r-pkg.org/pkg/melodi)
+[![codecov](https://codecov.io/github/InseeFrLab/melodi/graph/badge.svg?token=849S6LIOHR)](https://codecov.io/github/InseeFrLab/melodi)
 <!-- badges: end -->
 
 🇫🇷 Télécharger, parcourir, filtrer les données et métadonnées diffusées par l'Insee en open data
