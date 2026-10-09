@@ -20,6 +20,10 @@ get_data <- function(
 
   # 1 - Count numer of lines of request
   request_count <- httr2::request(url) |>
+    httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
+    httr2::req_retry(max_tries = 3, max_seconds = 30, retry_on_failure = TRUE) |>
+    httr2::req_timeout(30) |>
+    httr2::req_error(is_error = function(resp) FALSE) |>
     # Add Melodi /data parameters to only count lines
     httr2::req_url_query(totalCount = TRUE) |>
     httr2::req_url_query(maxResult = 0)
@@ -27,7 +31,6 @@ get_data <- function(
   message("Total count request : ", request_count$url)
 
   data_count <- request_count |>
-    httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
     httr2::req_perform() |>
     httr2::resp_body_json(simplifyVector = TRUE)
 
@@ -49,13 +52,16 @@ get_data <- function(
 
   # 2 - request is OK, get results
   request <- httr2::request(url) |>
+    httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
+    httr2::req_retry(max_tries = 3, max_seconds = 30, retry_on_failure = TRUE) |>
+    httr2::req_timeout(30) |>
+    httr2::req_error(is_error = function(resp) FALSE) |>
     # TODO useless ? this is the default value now
     httr2::req_url_query(idTerritoire = TRUE) |>
     # maximum maxResult authorized by Melodi API
     httr2::req_url_query(maxResult = max_result_api)
 
   result <- request |>
-    httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
     httr2::req_perform() |>
     httr2::resp_body_json(simplifyVector = TRUE)
 

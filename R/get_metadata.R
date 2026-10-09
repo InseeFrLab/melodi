@@ -16,6 +16,9 @@ get_metadata <- function(
 
   dataset <- httr2::request(url) |>
     httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
+    httr2::req_retry(max_tries = 3, max_seconds = 30, retry_on_failure = TRUE) |>
+    httr2::req_timeout(30) |>
+    httr2::req_error(is_error = function(resp) FALSE) |>
     httr2::req_perform() |>
     httr2::resp_body_json(simplifyVector = TRUE)
 
