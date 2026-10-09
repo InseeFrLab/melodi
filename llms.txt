@@ -46,9 +46,6 @@ data <- get_all_data("DS_POPULATIONS_REFERENCE")
 
 Le package repose sur l’API Melodi, accessible sans authentification.
 
-Son usage est limité à **30 requêtes par minute** : au delà, un code
-réponse **429** est obtenu.
-
 ### Proxy
 
 Dans le cas d’une utilisation du package depuis un réseau d’entreprise,

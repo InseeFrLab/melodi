@@ -96,8 +96,8 @@ get_metadata("DS_POPULATIONS_REFERENCE")
 #> 2 inseeApi   en
 #> 
 #> $product
-#>                                                                                        accessURL
-#> 1 https://api.insee.fr/melodi/file/DS_POPULATIONS_REFERENCE/DS_POPULATIONS_REFERENCE_2023_CSV_FR
+#>                                                                                                                     accessURL
+#> 1 https://api-diffusion-catalogue-donnees-externe.insee.fr/file/DS_POPULATIONS_REFERENCE/DS_POPULATIONS_REFERENCE_2023_CSV_FR
 #>   byteSize format                                   id              issued
 #> 1   985016    CSV DS_POPULATIONS_REFERENCE_2023_CSV_FR 2025-12-17T08:50:56
 #>   language mediaType                      modified   packageFormat

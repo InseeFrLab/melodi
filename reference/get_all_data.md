@@ -43,6 +43,9 @@ data.frame with data
 ``` r
 data <- get_all_data("DS_TICM_PRATIQUES")
 #> Request dataset : https://api.insee.fr/melodi/catalog/DS_TICM_PRATIQUES
-#> Request ZIP CSV file : https://api.insee.fr/melodi/file/DS_TICM_PRATIQUES/DS_TICM_PRATIQUES_CSV_FR
-#> Remove downloaded files
+#> Request ZIP CSV file : https://api-diffusion-catalogue-donnees-externe.insee.fr/file/DS_TICM_PRATIQUES/DS_TICM_PRATIQUES_CSV_FR
+#> Error in httr2::req_perform(httr2::req_progress(httr2::req_user_agent(httr2::request(zip_url),     getOption("rmelodi.req_user_agent"))), downloaded_zip_path): Failed to perform HTTP request.
+#> Caused by error in `curl::curl_fetch_disk()`:
+#> ! Couldn't resolve host name [api-diffusion-catalogue-donnees-externe.insee.fr]:
+#> Could not resolve host: api-diffusion-catalogue-donnees-externe.insee.fr
 ```
