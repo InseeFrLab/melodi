@@ -30,13 +30,14 @@ get_file <- function(
   message("Request file : ", url)
   message("Downloaded path : ", path)
 
-  httr2::request(url) |>
+  resp <- httr2::request(url) |>
     httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
     httr2::req_retry(max_tries = 3, max_seconds = 30, retry_on_failure = TRUE) |>
-    httr2::req_timeout(30) |>
-    httr2::req_error(is_error = function(resp) FALSE) |>
     httr2::req_progress() |>
-    httr2::req_perform(path = path)
+    httr2::req_perform(path = path) |>
+    tryCatch(error = \(e) message("Could not get data: ", conditionMessage(e)))
+  # API failed: exit quietly (return() only works inside a function)
+  if (is.null(resp)) return(invisible(NULL))
 
   return(path)
 }

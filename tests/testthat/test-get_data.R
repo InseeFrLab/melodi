@@ -52,11 +52,16 @@ vcr::use_cassette("get_data_popref_over", {
 
 vcr::use_cassette("get_data_not_exist", {
   test_that("get data DS not exists", {
-    expect_error(
-      object = get_data(
-        "https://api.insee.fr/melodi/data/DS_NEXISTEPAS"
-      )
+    # expect_error(
+    #   object = get_data(
+    #     "https://api.insee.fr/melodi/data/DS_NEXISTEPAS"
+    #   )
+    # )
+    expect_message(
+      res <- get_data("https://api.insee.fr/melodi/data/DS_NEXISTEPAS"),
+      "Could not get data"
     )
+    expect_null(res)
   })
 })
 

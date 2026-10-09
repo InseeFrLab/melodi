@@ -18,12 +18,10 @@ get_data <- function(
 ) {
   max_result_api <- getOption("rmelodi.max_result_api")
 
-  # 1 - Count numer of lines of request
+  # 1 - Count number of lines of request
   request_count <- httr2::request(url) |>
     httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
     httr2::req_retry(max_tries = 3, max_seconds = 30, retry_on_failure = TRUE) |>
-    httr2::req_timeout(30) |>
-    httr2::req_error(is_error = function(resp) FALSE) |>
     # Add Melodi /data parameters to only count lines
     httr2::req_url_query(totalCount = TRUE) |>
     httr2::req_url_query(maxResult = 0)
@@ -32,7 +30,10 @@ get_data <- function(
 
   data_count <- request_count |>
     httr2::req_perform() |>
-    httr2::resp_body_json(simplifyVector = TRUE)
+    httr2::resp_body_json(simplifyVector = TRUE) |>
+    tryCatch(error = \(e) message("Could not get data: ", conditionMessage(e)))
+  # API failed: exit quietly (return() only works inside a function)
+  if (is.null(data_count)) return(invisible(NULL))
 
   count <- data_count[["paging"]][["count"]]
   message(
@@ -54,8 +55,6 @@ get_data <- function(
   request <- httr2::request(url) |>
     httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
     httr2::req_retry(max_tries = 3, max_seconds = 30, retry_on_failure = TRUE) |>
-    httr2::req_timeout(30) |>
-    httr2::req_error(is_error = function(resp) FALSE) |>
     # TODO useless ? this is the default value now
     httr2::req_url_query(idTerritoire = TRUE) |>
     # maximum maxResult authorized by Melodi API
@@ -63,7 +62,10 @@ get_data <- function(
 
   result <- request |>
     httr2::req_perform() |>
-    httr2::resp_body_json(simplifyVector = TRUE)
+    httr2::resp_body_json(simplifyVector = TRUE) |>
+    tryCatch(error = \(e) message("Could not get data: ", conditionMessage(e)))
+  # API failed: exit quietly (return() only works inside a function)
+  if (is.null(result)) return(invisible(NULL))
 
   # bind datas in one dataframe
   dimensions_obj <- result[["observations"]][["dimensions"]]

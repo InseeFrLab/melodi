@@ -45,13 +45,14 @@ get_all_data <- function(
     download_directory, glue::glue("{ds_name}.zip")
   )
 
-  httr2::request(zip_url) |>
+  resp <- httr2::request(zip_url) |>
     httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
     httr2::req_retry(max_tries = 3, max_seconds = 30, retry_on_failure = TRUE) |>
-    httr2::req_timeout(30) |>
-    httr2::req_error(is_error = function(resp) FALSE) |>
     httr2::req_progress() |>
-    httr2::req_perform(downloaded_zip_path)
+    httr2::req_perform(downloaded_zip_path) |>
+    tryCatch(error = \(e) message("Could not get data: ", conditionMessage(e)))
+  # API failed: exit quietly (return() only works inside a function)
+  if (is.null(resp)) return(invisible(NULL))
 
   files_in_zip <- zip::zip_list(downloaded_zip_path)
 
