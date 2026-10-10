@@ -25,7 +25,7 @@ get_catalog <- function(
     httr2::req_perform() |>
     httr2::resp_body_json(simplifyVector = TRUE) |>
     tryCatch(error = \(e) message("Could not get data: ", conditionMessage(e)))
-  # API failed: exit quietly (return() only works inside a function)
+  # API failed gracefully: exit quietly (return() only works inside a function)
   if (is.null(all_dataset)) return(invisible(NULL))
 
   # extract only usefull informations

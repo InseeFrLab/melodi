@@ -20,7 +20,7 @@ get_metadata <- function(
     httr2::req_perform() |>
     httr2::resp_body_json(simplifyVector = TRUE) |>
     tryCatch(error = \(e) message("Could not get data: ", conditionMessage(e)))
-  # API failed: exit quietly (return() only works inside a function)
+  # API failed gracefully: exit quietly (return() only works inside a function)
   if (is.null(dataset)) return(invisible(NULL))
 
   return(dataset)

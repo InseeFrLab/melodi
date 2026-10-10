@@ -33,7 +33,7 @@ get_range_geo <- function(
     httr2::req_perform() |>
     httr2::resp_body_json(simplifyVector = FALSE) |>
     tryCatch(error = \(e) message("Could not get data: ", conditionMessage(e)))
-  # API failed: exit quietly (return() only works inside a function)
+  # API failed gracefully: exit quietly (return() only works inside a function)
   if (is.null(dataset)) return(invisible(NULL))
 
   # Keep GEO only

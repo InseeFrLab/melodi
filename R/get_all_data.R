@@ -51,7 +51,7 @@ get_all_data <- function(
     httr2::req_progress() |>
     httr2::req_perform(downloaded_zip_path) |>
     tryCatch(error = \(e) message("Could not get data: ", conditionMessage(e)))
-  # API failed: exit quietly (return() only works inside a function)
+  # API failed gracefully: exit quietly (return() only works inside a function)
   if (is.null(resp)) return(invisible(NULL))
 
   files_in_zip <- zip::zip_list(downloaded_zip_path)
