@@ -48,6 +48,9 @@ get_all_data <- function(
   resp <- httr2::request(zip_url) |>
     httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
     httr2::req_retry(max_tries = 3, max_seconds = 30, retry_on_failure = TRUE) |>
+    #httr2::req_error(is_error = function(resp) FALSE) |> # pour pb cran
+    #httr2::req_timeout(30) |> #coupe les telechargements longs... > 180s ?
+    #httr2::req_cache(tempdir()) |>
     httr2::req_progress() |>
     httr2::req_perform(downloaded_zip_path) |>
     tryCatch(error = \(e) message("Could not get data: ", conditionMessage(e)))

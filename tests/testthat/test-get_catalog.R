@@ -35,3 +35,17 @@ vcr::use_cassette("get_catalog_empty", {
     )
   })
 })
+
+# test valable pour toutes les fonctions requetant l'API Melodi
+# en cas d'erreur côté API, verifier l'absence d'erreur du package (gestion "gracieuse")
+test_that("Error API, OK", {
+
+  #erreur API similee par erreur d'url
+  expect_no_error({
+    options(rmelodi.base_url_api = "https://apis.insee.fr/melodi")
+    list_ds <- get_catalog()
+  })
+
+  expect_null(list_ds)
+})
+
