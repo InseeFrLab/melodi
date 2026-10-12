@@ -3,8 +3,10 @@
 #' @param ds_name Dataset name
 #' @param file_name File name
 #' @param download_file_name Filename on disk after download - default
-#' melodi filename
+#' system tempfile
 #' @param download_directory Download directory - default system tempdir
+#' @param keep_original_file_name Keep original file name from Melodi on disk
+#' - default FALSE
 #'
 #' @return downloaded file name on disk
 #' @export
@@ -18,8 +20,9 @@
 get_file <- function(
   ds_name,
   file_name,
-  download_file_name = NULL,
-  download_directory = tempdir()
+  download_file_name = tempfile(),
+  download_directory = tempdir(),
+  keep_original_file_name = FALSE
 ) {
   # Build useful parameters
   url <- glue::glue(
@@ -31,10 +34,23 @@ get_file <- function(
   message("Request file : ", url)
   message("Downloaded path : ", path)
 
-  httr2::request(url) |>
+  resp <- httr2::request(url) |>
     httr2::req_user_agent(getOption("rmelodi.req_user_agent")) |>
     httr2::req_progress() |>
     httr2::req_perform(path = path)
 
-  return(path)
+  if (keep_original_file_name) {
+    # Extract original filename from content-disposition in request
+    cd <- httr2::resp_headers(resp)[["content-disposition"]]
+    m <- regmatches(cd, regexec('filename\\*?="?([^";]+)"?', cd))
+    original_file_name <- if (length(m[[1]]) > 1) m[[1]][2] else basename(tmp)
+
+    # Rename the file on disk with this new name
+    renamed_path <- file.path(download_directory, original_file_name)
+    file.rename(path, original_file_name)
+
+    return(renamed_path)
+  } else {
+    return(path)
+  }
 }
