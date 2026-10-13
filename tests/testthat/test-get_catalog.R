@@ -1,6 +1,5 @@
 vcr::use_cassette("get_catalog_fr", {
   test_that("get catalog OK", {
-
     expect_no_error(
       list_ds <- get_catalog()
     )
@@ -14,7 +13,6 @@ vcr::use_cassette("get_catalog_fr", {
 
 vcr::use_cassette("get_catalog_en", {
   test_that("get catalog lang EN OK", {
-
     expect_no_error(
       list_ds_en <- get_catalog(lang = "en")
     )
@@ -28,7 +26,6 @@ vcr::use_cassette("get_catalog_en", {
 
 vcr::use_cassette("get_catalog_empty", {
   test_that("get catalog lang KO", {
-
     expect_error(
       object = get_catalog(lang = "nexiste-pas"),
       regexp = "lang must be"
@@ -39,13 +36,14 @@ vcr::use_cassette("get_catalog_empty", {
 # test valable pour toutes les fonctions requetant l'API Melodi
 # en cas d'erreur côté API, verifier l'absence d'erreur du package (gestion "gracieuse")
 test_that("Error API, OK", {
+  # erreur API simulee par erreur d'url
+  options(rmelodi.base_url_api = "https://url-qui-n-existe-pas.com")
 
-  #erreur API similee par erreur d'url
-  expect_no_error({
-    options(rmelodi.base_url_api = "https://apis.insee.fr/melodi")
-    list_ds <- get_catalog()
-  })
+  expect_message(
+    object = get_catalog(),
+    regexp = "Could not get data"
+  )
 
-  expect_null(list_ds)
+  # on remet l'option par défaut pour que les autres tests passent
+  options(rmelodi.base_url_api = "https://api.insee.fr/melodi")
 })
-
