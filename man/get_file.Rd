@@ -7,9 +7,8 @@
 get_file(
   ds_name,
   file_name,
-  download_file_name = tempfile(),
-  download_directory = tempdir(),
-  keep_original_file_name = FALSE
+  download_file_name = NULL,
+  download_directory = tempdir()
 )
 }
 \arguments{
@@ -17,15 +16,11 @@ get_file(
 
 \item{file_name}{File name}
 
-\item{download_file_name}{Filename on disk after download - default
-system tempfile}
+\item{download_file_name}{Filename on disk after download - if not specified,
+preserve original file name from Melodi - default NULL (preserve original
+file name)}
 
 \item{download_directory}{Download directory - default system tempdir}
-
-\item{keep_original_file_name}{Keep original file name from Melodi on disk
-\itemize{
-\item default FALSE
-}}
 }
 \value{
 downloaded file name on disk
