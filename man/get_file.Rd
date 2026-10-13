@@ -7,7 +7,7 @@
 get_file(
   ds_name,
   file_name,
-  download_file_name,
+  download_file_name = NULL,
   download_directory = tempdir()
 )
 }
@@ -16,7 +16,9 @@ get_file(
 
 \item{file_name}{File name}
 
-\item{download_file_name}{Filename on disk after download}
+\item{download_file_name}{Filename on disk after download - if not specified,
+preserve original file name from Melodi - default NULL (preserve original
+file name)}
 
 \item{download_directory}{Download directory - default system tempdir}
 }
