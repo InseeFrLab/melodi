@@ -47,7 +47,9 @@ get_file <- function(
     httr2::req_perform(path = path) |>
     tryCatch(error = \(e) message("Could not get data: ", conditionMessage(e)))
   # API failed gracefully: exit quietly (return() only works inside a function)
-  if (is.null(resp)) return(invisible(NULL))
+  if (is.null(resp)) {
+    return(invisible(NULL))
+  }
 
   if (is.null(download_file_name)) {
     # Extract original filename from content-disposition in request header
@@ -55,18 +57,19 @@ get_file <- function(
     # inline; filename="DS_SRCV_CONFIANCE_2025_CSV_FR.zip"
     cd <- httr2::resp_headers(resp)[["content-disposition"]]
     m <- regmatches(cd, regexec('filename\\*?="?([^";]+)"?', cd))
-    original_file_name <- if (length(m[[1]]) > 1) m[[1]][2] else basename(tmp)
-    message("Original file name in Melodi : ", original_file_name)
 
-    # Rename the file on disk with this new name
-    renamed_path <- file.path(download_directory, original_file_name)
-    message("Move file to path : ", renamed_path)
-    file.copy(path, renamed_path)
-    message("Remove temporary file : ", path)
-    unlink(path)
-
-    return(renamed_path)
-  } else {
-    return(path)
+    if (length(m[[1]]) > 1) {
+      original_file_name <- m[[1]][2]
+      message("Original file name from Melodi : ", original_file_name)
+      # Rename the file on disk with this new name
+      renamed_path <- file.path(download_directory, original_file_name)
+      message("Move file to path : ", renamed_path)
+      file.copy(path, renamed_path)
+      message("Remove temporary file : ", path)
+      unlink(path)
+      return(renamed_path)
+    }
+    # else : no rename, preserve tempfile name
   }
+  return(path)
 }
