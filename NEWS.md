@@ -1,3 +1,9 @@
+# melodi 1.2.0
+- `get_file`: download_file_name devient facultatif : par défaut, le nom du fichier dans Melodi est repris pour le fichier téléchargé (#32)
+- Améliorations générales des fonctions d'appel à Melodi : 
+  - Remonte proprement une erreur en cas de problème de connexion à l'API Melodi (#28)
+  - Relance automatique des appels en cas d'erreur (`req_retry`) (#15)
+
 # melodi 1.1.2
 - Correctif URL dans le README (génére une note bloquante pour soumission au CRAN)
 

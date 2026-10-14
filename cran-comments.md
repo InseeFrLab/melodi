@@ -1,3 +1,15 @@
+# Submission of {melodi} 1.2.0
+
+This version fixes the issue "Packages that use Internet resources should fail gracefully" 
+by adding try/catch blocks and error messages to every function that calls Internet resources.
+
+## R CMD check results
+
+* checked on windows, mac, ubuntu (with GitHub actions) checked on CRAN [win-builder](https://win-builder.r-project.org/)
+
+0 errors | 0 warnings | 0 note
+
+
 # Submission of {melodi} 1.1.2
 
 ## R CMD check results
