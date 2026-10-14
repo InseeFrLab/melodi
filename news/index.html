@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">melodi</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.2.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,6 +39,15 @@
       <small>Source: <a href="https://github.com/InseeFrLab/melodi/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="1.2.0" id="melodi-120">melodi 1.2.0<a class="anchor" aria-label="anchor" href="#melodi-120"></a></h2>
+<ul><li>
+<code>get_file</code>: download_file_name devient facultatif : par défaut, le nom du fichier dans Melodi est repris pour le fichier téléchargé (<a href="https://github.com/InseeFrLab/melodi/issues/32" class="external-link">#32</a>)</li>
+<li>Améliorations générales des fonctions d’appel à Melodi :
+<ul><li>Remonte proprement une erreur en cas de problème de connexion à l’API Melodi (<a href="https://github.com/InseeFrLab/melodi/issues/28" class="external-link">#28</a>)</li>
+<li>Relance automatique des appels en cas d’erreur (<code>req_retry</code>) (<a href="https://github.com/InseeFrLab/melodi/issues/15" class="external-link">#15</a>)</li>
+</ul></li>
+</ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.1.2" id="melodi-112">melodi 1.1.2<a class="anchor" aria-label="anchor" href="#melodi-112"></a></h2><p class="text-muted">CRAN release: 2026-08-28</p>
 <ul><li>Correctif URL dans le README (génére une note bloquante pour soumission au CRAN)</li>
