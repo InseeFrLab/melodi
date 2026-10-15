@@ -9,7 +9,7 @@
 #' get_catalog()
 #' get_catalog(lang = "en")
 get_catalog <- function(
-  lang = "fr"
+    lang = "fr"
 ) {
   # check parameters
   if (!lang %in% c("fr", "en")) {
@@ -65,7 +65,7 @@ get_catalog <- function(
       subtitle = subtitle_content,
       description = description_content,
       abstract = abstract_content,
-      warning = scopeNote_content, #TODO, format DCAT, simplement renommer note ?
+      warning = scopeNote_content,
       startPeriod = temporal_startPeriod,
       endPeriod = temporal_endPeriod,
       urlParquet = accessURLParquet,
@@ -96,7 +96,7 @@ get_catalog <- function(
     dplyr::select(identifier, theme) |>
     tidyr::unnest_longer(theme, keep_empty = TRUE) |>
     tidyr::unnest_wider(theme, names_sep = "_") |>
-    dplyr::filter(theme_themeTaxonomy == "inseeTheme") |> # theme sans le chapitrage
+    dplyr::filter(theme_themeTaxonomy == "inseeTheme") |>
     tidyr::unnest_longer(theme_label, keep_empty = TRUE) |>
     tidyr::unnest_wider(theme_label, names_sep = "_") |>
     dplyr::filter(theme_label_lang == .env$lang) |>
