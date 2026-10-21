@@ -2,6 +2,8 @@
 
 ## melodi 1.2.0
 
+CRAN release: 2026-10-14
+
 - `get_file`: download_file_name devient facultatif : par défaut, le nom
   du fichier dans Melodi est repris pour le fichier téléchargé
   ([\#32](https://github.com/InseeFrLab/melodi/issues/32))
