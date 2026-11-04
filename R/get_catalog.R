@@ -2,7 +2,19 @@
 #'
 #' @param lang lang of metadata informations (default: fr)
 #'
-#' @return a data.frame containing list of available datasets
+#' @return a tibble with one row per dataset
+#' (or `NULL`, invisibly, if the API request fails).
+#' Multi-valued fields are collapsed into a single string separated by `", "`.
+#'
+#'   Main columns renamed from the API fields:
+#'   \itemize{
+#'     \item `warning`: scope note of the dataset (`scopeNote` in the API);
+#'     \item `source`: operation or survey that generated the data
+#'       (`wasGeneratedBy` in the API);
+#'     \item `periodicity`: update frequency (`accrualPeriodicity`);
+#'     \item `startPeriod`, `endPeriod`: start and end of the covered period
+#'       (`temporal`), as `Date`.
+#'   }
 #' @export
 #'
 #' @examples
@@ -37,20 +49,21 @@ get_catalog <- function(
     dplyr::select(identifier, title, subtitle, description, abstract, scopeNote,
                   issued, modified, temporal, spatialResolution, spatialTemporal,
                   structure, numObservations, numSeries, accessURLParquet,
-                  tailleFichierParquetEnOctets, uri, uuid) |>
+                  tailleFichierParquetEnOctets) |>
     dplyr::mutate(spatialResolution = purrr::map_chr(spatialResolution, ~ {
       ids <- purrr::map_chr(.x, ~ toString(purrr::pluck(.x, "id", .default = NA_character_)))
       toString(ids)
     })) |>
-    dplyr::mutate(structure = purrr::map_chr(structure, ~ toString(purrr::pluck(.x, "dsd", .default = NA_character_)))) |>
+    dplyr::mutate(structure = purrr::map_chr(
+      structure, ~ toString(purrr::pluck(.x, "dsd", .default = NA_character_)))) |>
     # multilingual : {content, lang}
     tidyr::unnest_longer(c(title, subtitle, description, abstract, scopeNote),
                          keep_empty = TRUE) |>
     tidyr::unnest_wider(c(title, subtitle, description, abstract, scopeNote),
                         names_sep = "_") |>
-    dplyr::filter(title_lang == .env$lang) |>
-    dplyr::select(-ends_with("_lang")) |>
-    # temporal : objet unique {startPeriod, endPeriod}
+    dplyr::filter(title_lang == !!lang) |>
+    dplyr::select(-dplyr::ends_with("_lang")) |>
+    # temporal : {startPeriod, endPeriod}
     tidyr::unnest_wider(temporal, names_sep = "_") |>
     dplyr::arrange(identifier) |>
     dplyr::mutate(
@@ -68,8 +81,8 @@ get_catalog <- function(
       warning = scopeNote_content,
       startPeriod = temporal_startPeriod,
       endPeriod = temporal_endPeriod,
-      urlParquet = accessURLParquet,
-      sizeParquet = tailleFichierParquetEnOctets,
+      parquetUrl = accessURLParquet,
+      parquetSize = tailleFichierParquetEnOctets,
       dsd = structure
     )
 
@@ -78,14 +91,17 @@ get_catalog <- function(
     dplyr::select(identifier, relations) |>
     tidyr::unnest_longer(relations, keep_empty = TRUE) |>
     tidyr::unnest_wider(relations, names_sep = "_") |>
-    tidyr::unnest_longer(c(relations_title, relations_titleComplement, relations_url), keep_empty = TRUE) |>
-    tidyr::unnest_wider(c(relations_title, relations_titleComplement, relations_url), names_sep = "_") |>
-    dplyr::filter(relations_title_lang == .env$lang) |>
+    tidyr::unnest_longer(c(relations_title, relations_titleComplement, relations_url),
+                         keep_empty = TRUE) |>
+    tidyr::unnest_wider(c(relations_title, relations_titleComplement, relations_url),
+                        names_sep = "_") |>
+    dplyr::filter(relations_title_lang == !!lang) |>
     dplyr::mutate(
       dplyr::across(
         .cols = c(relations_title_content, relations_titleComplement_content, relations_url_content),
         .fns = ~ tidyr::replace_na(.x, ""))) |>
-    dplyr::mutate(relationsTitle = paste(relations_title_content, relations_titleComplement_content, sep = " ")) |>
+    dplyr::mutate(relationsTitle = paste(relations_title_content, relations_titleComplement_content,
+                                         sep = " ")) |>
     dplyr::summarise(
       relationsTitle = paste(relationsTitle, collapse = ", "),
       relationsUrl = paste(relations_url_content, collapse = ", "),
@@ -99,7 +115,7 @@ get_catalog <- function(
     dplyr::filter(theme_themeTaxonomy == "inseeTheme") |>
     tidyr::unnest_longer(theme_label, keep_empty = TRUE) |>
     tidyr::unnest_wider(theme_label, names_sep = "_") |>
-    dplyr::filter(theme_label_lang == .env$lang) |>
+    dplyr::filter(theme_label_lang == !!lang) |>
     dplyr::summarise(
       theme = paste(theme_label_content, collapse = ", "),
       .by = identifier
@@ -111,7 +127,7 @@ get_catalog <- function(
     dplyr::filter(spatial_id == "label") |>
     tidyr::unnest_longer(spatial, keep_empty = TRUE) |>
     tidyr::unnest_wider(spatial, names_sep = "_") |>
-    dplyr::filter(spatial_lang == .env$lang) |>
+    dplyr::filter(spatial_lang == !!lang) |>
     dplyr::select(identifier, spatial = spatial_content)
 
   keyword_extract <- all_dataset_extract |>
@@ -120,7 +136,7 @@ get_catalog <- function(
     tidyr::unnest_wider(keyword, names_sep = "_") |>
     tidyr::unnest_longer(keyword_label, keep_empty = TRUE) |>
     tidyr::unnest_wider(keyword_label, names_sep = "_") |>
-    dplyr::filter(keyword_label_lang == .env$lang) |>
+    dplyr::filter(keyword_label_lang == !!lang) |>
     dplyr::summarise(
       keyword = paste(keyword_label_content, collapse = ", "),
       .by = identifier
@@ -132,15 +148,15 @@ get_catalog <- function(
     tidyr::unnest_wider(product, names_sep = "_") |>
     dplyr::filter(product_format == "CSV") |>
     dplyr::transmute(identifier,
-                     urlCSV = product_accessURL,
-                     sizeCSV = product_byteSize)
+                     csvUrl = product_accessURL,
+                     csvSize = product_byteSize)
 
   periodicity_extract <- all_dataset_extract |>
     dplyr::select(identifier, accrualPeriodicity) |>
     tidyr::unnest_wider(accrualPeriodicity, names_sep = "_") |>
     tidyr::unnest_longer(accrualPeriodicity_label, keep_empty = TRUE) |>
     tidyr::unnest_wider(accrualPeriodicity_label, names_sep = "_") |>
-    dplyr::filter(accrualPeriodicity_label_lang == .env$lang) |>
+    dplyr::filter(accrualPeriodicity_label_lang == !!lang) |>
     dplyr::transmute(identifier, periodicity = accrualPeriodicity_label_content)
 
   unit_extract <- all_dataset_extract |>
@@ -149,7 +165,7 @@ get_catalog <- function(
     tidyr::unnest_wider(statisticalUnit, names_sep = "_") |>
     tidyr::unnest_longer(statisticalUnit_label, keep_empty = TRUE) |>
     tidyr::unnest_wider(statisticalUnit_label, names_sep = "_") |>
-    dplyr::filter(statisticalUnit_label_lang == .env$lang) |>
+    dplyr::filter(statisticalUnit_label_lang == !!lang) |>
     dplyr::summarise(
       statisticalUnit = paste(unique(statisticalUnit_label_content), collapse = ", "),
       .by = identifier
@@ -161,13 +177,16 @@ get_catalog <- function(
     tidyr::unnest_wider(wasGeneratedBy, names_sep = "_") |>
     tidyr::unnest_longer(wasGeneratedBy_label, keep_empty = TRUE) |>
     tidyr::unnest_wider(wasGeneratedBy_label, names_sep = "_") |>
-    dplyr::filter(wasGeneratedBy_label_lang == .env$lang) |>
+    dplyr::filter(wasGeneratedBy_label_lang == !!lang) |>
     dplyr::summarise(
       source = paste(unique(wasGeneratedBy_label_content), collapse = ", "),
       .by = identifier
     )
 
   #intern
+  uri_extract <- all_dataset_extract |>
+    dplyr::select(identifier, uri, uuid)
+
   ordre_extract <- all_dataset_extract |>
     dplyr::select(identifier, ordreComposants) |>
     dplyr::mutate(ordreComposants = purrr::map_chr(
@@ -177,7 +196,7 @@ get_catalog <- function(
     dplyr::select(identifier, raccourcis) |>
     dplyr::mutate(raccourcis = !purrr::map_lgl(raccourcis, ~ identical(.x, NULL)))
 
-  # together ----
+  # together
   catalog <- catalog_extract |>
     dplyr::left_join(spatial_extract, by = "identifier") |>
     dplyr::left_join(periodicity_extract, by = "identifier") |>
@@ -187,11 +206,14 @@ get_catalog <- function(
     dplyr::left_join(source_extract, by = "identifier") |>
     dplyr::left_join(relations_extract, by = "identifier") |>
     dplyr::left_join(file_extract, by = "identifier") |>
-    dplyr::relocate(any_of(c("numObservations", "urlCSV", "sizeCSV", "urlParquet", "sizeParquet")),
+    dplyr::relocate(dplyr::any_of(c("numObservations", "csvUrl", "csvSize",
+                                         "parquetUrl", "parquetSize")),
                     .after = warning) |>
     dplyr::relocate(endPeriod, .after = startPeriod) |>
     dplyr::relocate(periodicity, .before = startPeriod) |>
-    dplyr::relocate(any_of(c("numSeries", "dsd", "uri", "uuid")), .after = dplyr::last_col()) |>
+    dplyr::relocate(dplyr::any_of(c("numSeries", "dsd")),
+                    .after = dplyr::last_col()) |>
+    dplyr::left_join(uri_extract, by = "identifier") |>
     dplyr::left_join(ordre_extract, by = "identifier") |>
     dplyr::left_join(raccourcis_extract, by = "identifier")
 
