@@ -63,56 +63,56 @@ get_range(
 #> Request dataset range : https://api.insee.fr/melodi/range/DS_EC_DECES
 #>              DIM         DIM_LABEL              MOD
 #> 1     EC_MEASURE Mesure état civil              DTH
-#> 2     EC_MEASURE Mesure état civil         DTH_CUMR
-#> 3     EC_MEASURE Mesure état civil        DTH_MEAN1
-#> 4     EC_MEASURE Mesure état civil        DTH_MEAN2
+#> 2     EC_MEASURE Mesure état civil        DTH_MEAN1
+#> 3     EC_MEASURE Mesure état civil        DTH_MEAN2
+#> 4     EC_MEASURE Mesure état civil         DTH_CUMR
 #> 5            SEX              Sexe                F
 #> 6            SEX              Sexe                M
 #> 7            SEX              Sexe               _T
-#> 8           FREQ         Fréquence                A
+#> 8           FREQ         Fréquence                D
 #> 9           FREQ         Fréquence                M
-#> 10          FREQ         Fréquence                D
-#> 11     DTH_PLACE     Lieu du décès                1
-#> 12     DTH_PLACE     Lieu du décès                2
-#> 13     DTH_PLACE     Lieu du décès                3
-#> 14     DTH_PLACE     Lieu du décès                4
-#> 15     DTH_PLACE     Lieu du décès                5
+#> 10          FREQ         Fréquence                A
+#> 11     DTH_PLACE     Lieu du décès                5
+#> 12     DTH_PLACE     Lieu du décès                1
+#> 13     DTH_PLACE     Lieu du décès                4
+#> 14     DTH_PLACE     Lieu du décès                3
+#> 15     DTH_PLACE     Lieu du décès                2
 #> 16     DTH_PLACE     Lieu du décès               _T
-#> 17           AGE               Âge           Y25T49
-#> 18           AGE               Âge           Y50T64
-#> 19           AGE               Âge           Y65T74
+#> 17           AGE               Âge           Y50T64
+#> 18           AGE               Âge           Y65T74
+#> 19           AGE               Âge           Y_GE85
 #> 20           AGE               Âge           Y75T84
-#> 21           AGE               Âge           Y_GE85
+#> 21           AGE               Âge           Y25T49
 #> 22           AGE               Âge           Y_LT25
 #> 23           AGE               Âge               _T
 #> 24       MEASURE            Mesure OBS_VALUE_NIVEAU
-#> 25 OBS_STATUS_FR           Version                D
-#> 26 OBS_STATUS_FR           Version             PROV
+#> 25 OBS_STATUS_FR           Version             PROV
+#> 26 OBS_STATUS_FR           Version                D
 #>                                                       MOD_LABEL
 #> 1                                               Nombre de décès
-#> 2  Nombre de décès du 1er janvier à la fin du mois de référence
-#> 3                                Nombre moyen de décès par jour
-#> 4       Nombre moyen de décès par jour sur les 7 derniers jours
+#> 2                                Nombre moyen de décès par jour
+#> 3       Nombre moyen de décès par jour sur les 7 derniers jours
+#> 4  Nombre de décès du 1er janvier à la fin du mois de référence
 #> 5                                                         Femme
 #> 6                                                         Homme
 #> 7                                                         Total
-#> 8                                                        Annuel
+#> 8                                                     Quotidien
 #> 9                                                       Mensuel
-#> 10                                                    Quotidien
-#> 11                                                     Domicile
-#> 12                                       Établissement de santé
-#> 13                                    Ephad, maison de retraite
-#> 14                                          Voie ou lieu public
-#> 15                                   Autre lieu ou lieu inconnu
+#> 10                                                       Annuel
+#> 11                                   Autre lieu ou lieu inconnu
+#> 12                                                     Domicile
+#> 13                                          Voie ou lieu public
+#> 14                                    Ephad, maison de retraite
+#> 15                                       Établissement de santé
 #> 16                                                        Total
-#> 17                                               De 25 à 49 ans
-#> 18                                               De 50 à 64 ans
-#> 19                                               De 65 à 74 ans
+#> 17                                               De 50 à 64 ans
+#> 18                                               De 65 à 74 ans
+#> 19                                               85 ans ou plus
 #> 20                                               De 75 à 84 ans
-#> 21                                               85 ans ou plus
+#> 21                                               De 25 à 49 ans
 #> 22                                              Moins de 25 ans
 #> 23                                                        Total
 #> 24                                                       Valeur
-#> 25                                                    Définitif
-#> 26                                                   Provisoire
+#> 25                                                   Provisoire
+#> 26                                                    Définitif
 ```

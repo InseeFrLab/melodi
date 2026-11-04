@@ -1,5 +1,11 @@
 # Changelog
 
+## melodi 1.2.1
+
+- `get_catalog` : retour plus complet avec toutes les informations
+  disponibles via l’API
+  ([\#30](https://github.com/InseeFrLab/melodi/issues/30))
+
 ## melodi 1.2.0
 
 CRAN release: 2026-10-14
