@@ -32,7 +32,7 @@ globalVariables(
     ## source
     "wasGeneratedBy", "wasGeneratedBy_label", "wasGeneratedBy_label_lang",
     "wasGeneratedBy_label_content",
-    # intern
+    ## intern
     "uri", "uuid","ordreComposants", "raccourcis",
 
     # get_all_data
