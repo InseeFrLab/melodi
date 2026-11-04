@@ -1,3 +1,6 @@
+# melodi 1.2.1
+- `get_catalog` : retour plus complet avec toutes les informations disponibles via l'API (#30)
+
 # melodi 1.2.0
 - `get_file`: download_file_name devient facultatif : par défaut, le nom du fichier dans Melodi est repris pour le fichier téléchargé (#32)
 - Améliorations générales des fonctions d'appel à Melodi : 
