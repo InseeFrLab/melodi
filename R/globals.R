@@ -2,7 +2,7 @@ globalVariables(
   c(
     # get_catalog
     ## general/description
-    "json", "identifier", "title", "subtitle", "description", "abstract",
+    "identifier", "title", "subtitle", "description", "abstract",
     "scopeNote", "issued", "modified", "spatialResolution",
     "spatialTemporal", "structure",
     "title_lang", "title_content", "subtitle_content", "description_content",
@@ -33,7 +33,7 @@ globalVariables(
     "wasGeneratedBy", "wasGeneratedBy_label", "wasGeneratedBy_label_lang",
     "wasGeneratedBy_label_content",
     ## intern
-    "uri", "uuid","ordreComposants", "raccourcis",
+    "json", "uri", "uuid", "ordreComposants", "raccourcis",
 
     # get_all_data
     "COD_VAR", "LIB_VAR", "language", "accessURL", "filename",
